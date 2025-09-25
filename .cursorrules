@@ -1,0 +1,132 @@
+# RestoPi Website Development Context
+
+## Project Overview
+Building AI-native website for RestoPi - Restaurant Intelligence Revolution platform that helps restaurant owners save ₹2 lakhs monthly and get home by 10 PM.
+
+## Tech Stack
+- Framework: Astro 4.x
+- Styling: Tailwind CSS
+- Content: MDX
+- Deployment: Vercel
+- Analytics: Google Analytics (ID: G-9PQMMM6L6R)
+
+## Brand Guidelines
+
+### Core Messaging
+- ALWAYS mention "₹2 Lakhs monthly savings"
+- ALWAYS mention "Home by 10 PM"
+- Use "liberation" instead of "optimization"
+- Show money, not metrics
+- Emotion over logic
+
+### Brand Colors
+- Pi Indigo: #2D2A6E
+- Spiced Saffron: #C2410C  
+- Success Green: #16A34A
+- Danger Red: #DC2626
+- Deep Teal: #0F766E
+
+### Brand Voice
+- Clear, not clever
+- Specific, not general
+- Confident, not cocky
+- Human, not robotic
+- Urgent and empathetic
+
+### Key Value Propositions
+1. Waste Prevention: Save ₹2 lakhs monthly
+2. Time Liberation: Home by 10 PM
+3. Predictive Intelligence: Know Monday on Saturday
+4. Zero Friction: 4-hour setup
+5. Guaranteed Results: 60-day money back
+
+## Target Segments
+1. Fine Dining
+2. QSR (Quick Service Restaurants)
+3. Casual Dining
+4. Cloud Kitchens
+5. Banquet Halls & Catering
+
+## Website Architecture
+
+### Core Pages Structure
+/
+├── /solutions
+│   ├── /waste-prevention
+│   ├── /home-by-10pm
+│   ├── /demand-prediction
+│   ├── /labor-optimization
+│   └── /menu-intelligence
+├── /segments
+│   ├── /fine-dining
+│   ├── /qsr
+│   ├── /casual-dining
+│   ├── /cloud-kitchen
+│   └── /banquet-catering
+├── /cities
+│   ├── /mumbai
+│   ├── /delhi
+│   ├── /bangalore
+│   └── [10 major cities]
+├── /tools
+│   ├── /restaurant-iq-calculator
+│   ├── /roi-calculator
+│   └── /waste-audit
+├── /pricing
+├── /resources
+│   ├── /blog
+│   ├── /guides
+│   └── /case-studies
+├── /about
+└── /contact
+
+## SEO Requirements
+- Every page needs meta tags
+- Schema.org markup (LocalBusiness, Organization, FAQPage)
+- Open Graph tags
+- City-specific geo-targeting
+- Mobile-first optimization
+
+## Conversion Elements
+- WhatsApp CTAs on every page (919884248927)
+- Live waste counter showing losses
+- Testimonials with specific savings amounts
+- Urgency elements (limited spots)
+- Trust badges (60-day guarantee)
+
+## Development Principles
+1. 100% AI-generated code
+2. No external dependencies beyond core
+3. Static generation preferred
+4. Mobile-first responsive
+5. Performance: <3s load time
+6. Accessibility: WCAG AA compliant
+
+## Key Personas
+1. "Overwhelmed Owner" - Single outlet, 14-hour days
+2. "Scaling Struggler" - 2-5 outlets, losing control
+3. "Chain Champion" - 5+ outlets, seeking intelligence
+
+## Content Guidelines
+- Every number should be specific
+- Use Indian context (₹, Indian cities, local food)
+- Show transformation stories
+- Before/After comparisons
+- Emotional outcomes over features
+
+## WhatsApp Integration
+Phone: +91 98842-48927
+Default Message: "I want to save ₹2 lakhs monthly with RestoPi!"
+
+## Success Metrics
+- Conversion: WhatsApp clicks
+- Engagement: Calculator completions
+- Trust: Testimonial views
+- Intent: Pricing page visits
+
+When creating any component or page:
+1. Lead with liberation promise
+2. Show specific money saved
+3. Include social proof
+4. Add WhatsApp CTA
+5. Create urgency

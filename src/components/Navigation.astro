@@ -1,0 +1,64 @@
+---
+// src/components/Navigation.astro
+---
+
+<nav class="fixed top-0 left-0 right-0 bg-[#2D2A6E] text-white z-40 shadow-lg">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="/" class="text-2xl font-bold">
+          Resto<span class="text-[#C2410C]">Pi</span>
+        </a>
+      </div>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="/solutions" class="hover:text-yellow-300 transition-colors">Solutions</a>
+        <a href="/segments" class="hover:text-yellow-300 transition-colors">Segments</a>
+        <a href="/pricing" class="hover:text-yellow-300 transition-colors">Pricing</a>
+        <a href="/resources" class="hover:text-yellow-300 transition-colors">Resources</a>
+        <a href="/about" class="hover:text-yellow-300 transition-colors">About</a>
+        <a 
+          href="https://wa.me/919884248927?text=I%20want%20to%20save%20₹2%20lakhs%20monthly!"
+          target="_blank"
+          class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-full transition-all"
+        >
+          WhatsApp Us
+        </a>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden pb-4">
+      <a href="/solutions" class="block py-2 hover:text-yellow-300">Solutions</a>
+      <a href="/segments" class="block py-2 hover:text-yellow-300">Segments</a>
+      <a href="/pricing" class="block py-2 hover:text-yellow-300">Pricing</a>
+      <a href="/resources" class="block py-2 hover:text-yellow-300">Resources</a>
+      <a href="/about" class="block py-2 hover:text-yellow-300">About</a>
+      <a 
+        href="https://wa.me/919884248927?text=I%20want%20to%20save%20₹2%20lakhs%20monthly!"
+        target="_blank"
+        class="inline-block bg-green-500 hover:bg-green-600 px-4 py-2 rounded-full mt-2"
+      >
+        WhatsApp Us
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  menuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>

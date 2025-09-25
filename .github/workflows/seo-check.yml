@@ -1,0 +1,29 @@
+# .github/workflows/seo-check.yml
+name: SEO Validation
+on: [push]
+
+jobs:
+  seo-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Meta Tags
+        run: |
+          # Check title length
+          # Check description uniqueness
+          # Check canonical URLs
+          
+      - name: Validate Schema
+        run: |
+          # Google Rich Results Test API
+          # Schema.org validator
+          
+      - name: Test Open Graph
+        run: |
+          # OG image dimensions
+          # OG tag completeness
+          
+      - name: Core Web Vitals
+        run: |
+          # LCP < 2.5s
+          # FID < 100ms
+          # CLS < 0.1

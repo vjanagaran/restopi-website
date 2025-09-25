@@ -1,0 +1,82 @@
+<!-- src/components/SEO/MasterSEO.astro -->
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  image?: string;
+  type?: 'website' | 'article' | 'product';
+  city?: string;
+  segment?: string;
+  solution?: string;
+  savings?: string;
+  schema?: object;
+  noindex?: boolean;
+}
+
+const {
+  title = "RestoPi - Restaurant Intelligence Revolution | Save ₹2 Lakhs Monthly",
+  description = "RestoPi helps restaurant owners save ₹2 lakhs monthly and get home by 10 PM. AI-powered waste prevention and profit optimization.",
+  canonical = Astro.url.href,
+  image = "/og-default.jpg",
+  type = "website",
+  city,
+  segment,
+  solution,
+  savings = "₹2 Lakhs",
+  schema,
+  noindex = false
+} = Astro.props;
+
+// Generate full title
+const fullTitle = city && segment 
+  ? `${city} ${segment} ${solution} | Save ${savings} Monthly - RestoPi`
+  : title;
+
+// Generate full OG image URL
+const ogImage = new URL(image, Astro.site).href;
+---
+
+<!-- Primary Meta Tags -->
+<title>{fullTitle}</title>
+<meta name="title" content={fullTitle} />
+<meta name="description" content={description} />
+<meta name="keywords" content={`restaurant waste prevention, ${city} restaurant software, save money restaurant, restaurant intelligence, home by 10pm, ${segment} optimization, ${solution}`} />
+<meta name="author" content="RestoPi" />
+<meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+<meta name="language" content="en" />
+<link rel="canonical" href={canonical} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="RestoPi" />
+<meta property="og:locale" content="en_IN" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonical} />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:site" content="@RestoPi" />
+<meta name="twitter:creator" content="@RestoPi" />
+
+<!-- Additional Meta -->
+<meta name="apple-mobile-web-app-title" content="RestoPi" />
+<meta name="application-name" content="RestoPi" />
+<meta name="theme-color" content="#2D2A6E" />
+
+<!-- Geo Tags for Local SEO -->
+{city && (
+  <>
+    <meta name="geo.placename" content={city} />
+    <meta name="geo.region" content="IN" />
+    <meta name="ICBM" content={getCityCoordinates(city)} />
+  </>
+)}

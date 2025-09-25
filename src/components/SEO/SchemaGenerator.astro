@@ -1,0 +1,208 @@
+<!-- src/components/SEO/SchemaGenerator.astro -->
+---
+const { type, data } = Astro.props;
+
+// Generate schema based on page type
+function generateSchema(type, data) {
+  const baseSchema = {
+    "@context": "https://schema.org",
+    "@graph": []
+  };
+
+  // Organization Schema (on every page)
+  const organization = {
+    "@type": "Organization",
+    "@id": "https://restopi.com/#organization",
+    "name": "RestoPi",
+    "url": "https://restopi.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://restopi.com/logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "sameAs": [
+      "https://twitter.com/restopi",
+      "https://linkedin.com/company/restopi",
+      "https://facebook.com/restopi"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-98765-43210",
+      "contactType": "sales",
+      "areaServed": "IN",
+      "availableLanguage": ["en", "hi"]
+    }
+  };
+
+  // Website Schema
+  const website = {
+    "@type": "WebSite",
+    "@id": "https://restopi.com/#website",
+    "url": "https://restopi.com",
+    "name": "RestoPi",
+    "description": "Restaurant Intelligence Revolution",
+    "publisher": {
+      "@id": "https://restopi.com/#organization"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://restopi.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  // Page-specific schemas
+  const schemas = {
+    software: {
+      "@type": "SoftwareApplication",
+      "name": "RestoPi Restaurant Intelligence Platform",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "40000",
+        "priceCurrency": "INR",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "127",
+        "bestRating": "5"
+      }
+    },
+    
+    localBusiness: {
+      "@type": "LocalBusiness",
+      "@id": `https://restopi.com/${data.city}/#localbusiness`,
+      "name": `RestoPi ${data.city}`,
+      "image": data.image,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": data.city,
+        "addressRegion": data.state || "Maharashtra",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": data.lat,
+        "longitude": data.lng
+      },
+      "url": `https://restopi.com/${data.city}`,
+      "telephone": "+91-98765-43210",
+      "priceRange": "₹₹₹",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    },
+    
+    faq: {
+      "@type": "FAQPage",
+      "mainEntity": data.questions?.map(q => ({
+        "@type": "Question",
+        "name": q.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": q.answer
+        }
+      }))
+    },
+    
+    howTo: {
+      "@type": "HowTo",
+      "name": "How to Save ₹2 Lakhs Monthly with RestoPi",
+      "description": "Step-by-step guide to implement RestoPi and achieve restaurant liberation",
+      "totalTime": "PT30D",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "INR",
+        "value": "40000"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Sign Up",
+          "text": "WhatsApp LIBERATION to 98765-43210",
+          "url": "https://restopi.com/signup"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Connect Systems",
+          "text": "Connect your POS in 4 hours",
+          "url": "https://restopi.com/integration"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Start Saving",
+          "text": "Receive first waste alert within 48 hours",
+          "url": "https://restopi.com/success"
+        }
+      ]
+    },
+    
+    product: {
+      "@type": "Product",
+      "name": "RestoPi Restaurant Intelligence Platform",
+      "description": data.description,
+      "image": data.images,
+      "brand": {
+        "@type": "Brand",
+        "name": "RestoPi"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "20000",
+        "highPrice": "100000",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "offerCount": "3"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "127"
+      },
+      "review": data.reviews?.map(r => ({
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": r.rating,
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": r.author
+        },
+        "reviewBody": r.text
+      }))
+    },
+    
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      "itemListElement": data.breadcrumbs?.map((item, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "name": item.name,
+        "item": item.url
+      }))
+    }
+  };
+
+  baseSchema["@graph"] = [
+    organization,
+    website,
+    schemas[type]
+  ].filter(Boolean);
+
+  return baseSchema;
+}
+
+const schema = generateSchema(type, data);
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

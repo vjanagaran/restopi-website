@@ -1,0 +1,334 @@
+{
+  "segments": [
+    {
+      "id": "qsr",
+      "name": "Quick Service Restaurants",
+      "shortName": "QSR",
+      "slug": "quick-service-restaurants",
+      "description": "Fast-food chains and quick service outlets optimizing speed and efficiency",
+      "painPoints": [
+        "High volume waste during peak hours",
+        "Inconsistent portion control",
+        "Rapid inventory turnover",
+        "Managing multiple delivery platforms"
+      ],
+      "averageWaste": "₹2.5 Lakhs",
+      "averageOutlets": "1-5",
+      "keyMetrics": {
+        "dailyOrders": "200-500",
+        "avgTicketSize": "₹250-400",
+        "wastePercentage": "15-20%",
+        "peakHours": "12-2 PM, 7-9 PM"
+      },
+      "solutions": [
+        "Real-time waste tracking",
+        "Predictive ordering system",
+        "Automated portion control",
+        "Multi-platform integration"
+      ],
+      "testimonial": {
+        "quote": "RestoPi helped us reduce waste by 35% in just 2 months. Now I'm home by 9:30 PM every day.",
+        "author": "Rajesh Kumar",
+        "business": "Burger Junction, Mumbai",
+        "savings": "₹2.8 Lakhs/month"
+      }
+    },
+    {
+      "id": "fine-dining",
+      "name": "Fine Dining Restaurants",
+      "shortName": "Fine Dining",
+      "slug": "fine-dining",
+      "description": "Premium restaurants focusing on experience and quality",
+      "painPoints": [
+        "High-value ingredient waste",
+        "Complex menu management",
+        "Seasonal menu changes",
+        "Premium ingredient tracking"
+      ],
+      "averageWaste": "₹3.5 Lakhs",
+      "averageOutlets": "1-2",
+      "keyMetrics": {
+        "dailyOrders": "50-150",
+        "avgTicketSize": "₹1500-3000",
+        "wastePercentage": "10-15%",
+        "peakHours": "7-10 PM"
+      },
+      "solutions": [
+        "Premium ingredient tracking",
+        "Menu engineering analytics",
+        "Reservation-based prep planning",
+        "Wine & beverage optimization"
+      ],
+      "testimonial": {
+        "quote": "We saved ₹4 lakhs monthly on premium ingredients alone. RestoPi's predictions are incredibly accurate.",
+        "author": "Chef Arjun Mehta",
+        "business": "The Golden Spoon, Delhi",
+        "savings": "₹4.2 Lakhs/month"
+      }
+    },
+    {
+      "id": "casual-dining",
+      "name": "Casual Dining Restaurants",
+      "shortName": "Casual Dining",
+      "slug": "casual-dining",
+      "description": "Family restaurants balancing quality and affordability",
+      "painPoints": [
+        "Unpredictable family group sizes",
+        "Weekend vs weekday variance",
+        "Large menu variety",
+        "Managing buffet waste"
+      ],
+      "averageWaste": "₹2.2 Lakhs",
+      "averageOutlets": "1-3",
+      "keyMetrics": {
+        "dailyOrders": "100-300",
+        "avgTicketSize": "₹600-1200",
+        "wastePercentage": "12-18%",
+        "peakHours": "12-3 PM, 7-10 PM"
+      },
+      "solutions": [
+        "Family meal optimization",
+        "Weekend demand forecasting",
+        "Buffet waste prevention",
+        "Kids menu analytics"
+      ],
+      "testimonial": {
+        "quote": "Our weekend waste dropped by 40%. Now I actually enjoy Sundays with my family.",
+        "author": "Priya Sharma",
+        "business": "Family Kitchen, Bangalore",
+        "savings": "₹2.5 Lakhs/month"
+      }
+    },
+    {
+      "id": "cloud-kitchen",
+      "name": "Cloud Kitchens",
+      "shortName": "Cloud Kitchen",
+      "slug": "cloud-kitchens",
+      "description": "Delivery-only kitchens maximizing efficiency",
+      "painPoints": [
+        "Multi-brand inventory management",
+        "Delivery platform commission optimization",
+        "Peak hour capacity planning",
+        "Ghost kitchen efficiency"
+      ],
+      "averageWaste": "₹1.8 Lakhs",
+      "averageOutlets": "1-10",
+      "keyMetrics": {
+        "dailyOrders": "150-400",
+        "avgTicketSize": "₹350-500",
+        "wastePercentage": "8-12%",
+        "peakHours": "12-2 PM, 7-9 PM"
+      },
+      "solutions": [
+        "Multi-brand inventory sync",
+        "Delivery demand prediction",
+        "Virtual brand optimization",
+        "Commission analytics"
+      ],
+      "testimonial": {
+        "quote": "Managing 5 virtual brands became simple. RestoPi saved us ₹2 lakhs monthly across all brands.",
+        "author": "Amit Verma",
+        "business": "CloudEats Hub, Pune",
+        "savings": "₹2.1 Lakhs/month"
+      }
+    },
+    {
+      "id": "cafe-bakery",
+      "name": "Cafes & Bakeries",
+      "shortName": "Cafe & Bakery",
+      "slug": "cafes-bakeries",
+      "description": "Coffee shops and bakeries managing perishables",
+      "painPoints": [
+        "Daily fresh batch planning",
+        "Perishable inventory management",
+        "Morning rush predictions",
+        "Seasonal beverage trends"
+      ],
+      "averageWaste": "₹1.5 Lakhs",
+      "averageOutlets": "1-5",
+      "keyMetrics": {
+        "dailyOrders": "100-250",
+        "avgTicketSize": "₹200-400",
+        "wastePercentage": "15-25%",
+        "peakHours": "7-10 AM, 4-7 PM"
+      },
+      "solutions": [
+        "Fresh batch optimization",
+        "Shelf life tracking",
+        "Morning demand forecasting",
+        "Seasonal menu planning"
+      ],
+      "testimonial": {
+        "quote": "No more throwing away unsold pastries. We now bake exactly what we'll sell.",
+        "author": "Sarah D'Souza",
+        "business": "The Daily Grind, Goa",
+        "savings": "₹1.6 Lakhs/month"
+      }
+    },
+    {
+      "id": "bar-pub",
+      "name": "Bars & Pubs",
+      "shortName": "Bar & Pub",
+      "slug": "bars-pubs",
+      "description": "Bars and pubs optimizing beverage operations",
+      "painPoints": [
+        "Liquor inventory tracking",
+        "Pour cost optimization",
+        "Weekend crowd management",
+        "Cocktail ingredient waste"
+      ],
+      "averageWaste": "₹2.8 Lakhs",
+      "averageOutlets": "1-2",
+      "keyMetrics": {
+        "dailyOrders": "80-200",
+        "avgTicketSize": "₹800-1500",
+        "wastePercentage": "10-15%",
+        "peakHours": "8 PM-12 AM"
+      },
+      "solutions": [
+        "Beverage cost analytics",
+        "Pour tracking system",
+        "Happy hour optimization",
+        "Cocktail recipe management"
+      ],
+      "testimonial": {
+        "quote": "Our pour costs dropped 30%. RestoPi pays for itself in beverage savings alone.",
+        "author": "Mike Fernandes",
+        "business": "The Brew House, Mumbai",
+        "savings": "₹3.1 Lakhs/month"
+      }
+    },
+    {
+      "id": "food-court",
+      "name": "Food Court Outlets",
+      "shortName": "Food Court",
+      "slug": "food-court-outlets",
+      "description": "Mall and food court vendors maximizing small spaces",
+      "painPoints": [
+        "Limited storage space",
+        "Mall hour restrictions",
+        "High rent pressure",
+        "Weekend vs weekday variance"
+      ],
+      "averageWaste": "₹1.2 Lakhs",
+      "averageOutlets": "1-5",
+      "keyMetrics": {
+        "dailyOrders": "100-300",
+        "avgTicketSize": "₹250-400",
+        "wastePercentage": "10-15%",
+        "peakHours": "12-3 PM, 6-9 PM"
+      },
+      "solutions": [
+        "Space-optimized inventory",
+        "Mall traffic predictions",
+        "Compact prep planning",
+        "Multi-outlet sync"
+      ],
+      "testimonial": {
+        "quote": "Even with tiny storage, we reduced waste by 45%. Game changer for food court business.",
+        "author": "Ravi Patel",
+        "business": "Wok Express, Phoenix Mall",
+        "savings": "₹1.4 Lakhs/month"
+      }
+    },
+    {
+      "id": "multi-cuisine",
+      "name": "Multi-Cuisine Restaurants",
+      "shortName": "Multi-Cuisine",
+      "slug": "multi-cuisine",
+      "description": "Restaurants managing diverse menu offerings",
+      "painPoints": [
+        "Complex inventory across cuisines",
+        "Varied prep requirements",
+        "Multiple chef coordination",
+        "Diverse ingredient sourcing"
+      ],
+      "averageWaste": "₹2.6 Lakhs",
+      "averageOutlets": "1-3",
+      "keyMetrics": {
+        "dailyOrders": "150-350",
+        "avgTicketSize": "₹500-1000",
+        "wastePercentage": "15-20%",
+        "peakHours": "12-3 PM, 7-10 PM"
+      },
+      "solutions": [
+        "Multi-cuisine inventory sync",
+        "Cross-kitchen coordination",
+        "Unified prep planning",
+        "Cuisine-wise analytics"
+      ],
+      "testimonial": {
+        "quote": "Managing Indian, Chinese, and Continental became simple. Waste down 38% across all cuisines.",
+        "author": "Chef Suresh",
+        "business": "Global Flavors, Chennai",
+        "savings": "₹2.7 Lakhs/month"
+      }
+    },
+    {
+      "id": "sweet-shop",
+      "name": "Sweet Shops & Mithai Stores",
+      "shortName": "Sweet Shop",
+      "slug": "sweet-shops",
+      "description": "Traditional sweet shops and modern dessert stores",
+      "painPoints": [
+        "Festival demand spikes",
+        "Milk product shelf life",
+        "Seasonal variety management",
+        "Bulk order predictions"
+      ],
+      "averageWaste": "₹1.6 Lakhs",
+      "averageOutlets": "1-10",
+      "keyMetrics": {
+        "dailyOrders": "50-200",
+        "avgTicketSize": "₹300-800",
+        "wastePercentage": "12-18%",
+        "peakHours": "10 AM-1 PM, 5-8 PM"
+      },
+      "solutions": [
+        "Festival demand forecasting",
+        "Shelf life optimization",
+        "Bulk order management",
+        "Traditional recipe scaling"
+      ],
+      "testimonial": {
+        "quote": "Diwali prep is no longer a nightmare. We saved ₹5 lakhs during festival season alone.",
+        "author": "Krishnan Iyer",
+        "business": "Sri Krishna Sweets, Hyderabad",
+        "savings": "₹1.8 Lakhs/month"
+      }
+    },
+    {
+      "id": "franchise",
+      "name": "Franchise Restaurants",
+      "shortName": "Franchise",
+      "slug": "franchise-restaurants",
+      "description": "Franchise outlets maintaining brand standards",
+      "painPoints": [
+        "Brand compliance requirements",
+        "Central vs local procurement",
+        "Standardization challenges",
+        "Multi-location reporting"
+      ],
+      "averageWaste": "₹2.3 Lakhs",
+      "averageOutlets": "5-50",
+      "keyMetrics": {
+        "dailyOrders": "200-400",
+        "avgTicketSize": "₹400-700",
+        "wastePercentage": "10-15%",
+        "peakHours": "12-2 PM, 7-9 PM"
+      },
+      "solutions": [
+        "Brand standard compliance",
+        "Multi-location analytics",
+        "Central procurement sync",
+        "Franchise comparison dashboards"
+      ],
+      "testimonial": {
+        "quote": "All 8 outlets now run like clockwork. Consistency improved, waste dropped 42%.",
+        "author": "Franchise Owner",
+        "business": "Pizza Paradise Franchise, NCR",
+        "savings": "₹2.4 Lakhs/month per outlet"
+      }
+    }
+  ]
+}

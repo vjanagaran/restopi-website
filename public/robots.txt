@@ -16,8 +16,9 @@ Allow: /resources/
 Allow: /about
 Allow: /contact
 
-# Sitemap location
-Sitemap: https://restopi.com/sitemap.xml
+# Sitemap location (Astro generates sitemap-index.xml and sitemap-0.xml)
+Sitemap: https://www.restopi.com/sitemap-index.xml
+Sitemap: https://www.restopi.com/sitemap-0.xml
 
 # Crawl delay (in seconds) - be respectful
 Crawl-delay: 1

@@ -1,0 +1,609 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Food Court Liberation - Small Space, Big Profits | RestoPi"
+  description="Transform your food court outlet from a space-constrained struggle into a profit-maximizing machine. Achieve ₹1.5L+ monthly savings in minimal space."
+>
+
+<style>
+  @keyframes mallPulse {
+    0%, 100% { transform: scale(1) brightness(1); }
+    50% { transform: scale(1.1) brightness(1.2); }
+  }
+  
+  @keyframes compactGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(34, 197, 94, 0.6); }
+  }
+  
+  .court-gradient {
+    background: linear-gradient(135deg, #065f46 0%, #059669 50%, #10b981 100%);
+  }
+  
+  .compact-accent {
+    background: linear-gradient(45deg, #10b981, #34d399);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .compact-counter {
+    animation: compactGlow 3s ease-in-out infinite;
+  }
+  
+  .mall-icon {
+    animation: mallPulse 4s ease-in-out infinite;
+  }
+  
+  .court-bg {
+    background: radial-gradient(circle at center, rgba(34, 197, 94, 0.1) 0%, transparent 70%);
+  }
+</style>
+
+<!-- Hero Section: Small Space, Big Challenges -->
+<section class="court-gradient text-white py-20 relative overflow-hidden court-bg">
+  <div class="container mx-auto px-6 text-center relative z-10">
+    <div class="mb-8">
+      <span class="inline-block mall-icon text-6xl mb-4">🏪</span>
+      <h1 class="text-6xl font-black mb-6 leading-tight">
+        <span class="text-green-200">Small Space</span><br>
+        Shouldn't Mean <span class="compact-accent">Small Profits</span>
+      </h1>
+    </div>
+    
+    <div class="max-w-4xl mx-auto mb-12">
+      <p class="text-2xl text-gray-100 mb-8 leading-relaxed">
+        Food courts charge premium rent for minimal space, then expect you to compete with full restaurants. 
+        You're trapped between <span class="text-red-300 font-bold">sky-high rent and razor-thin margins</span>, 
+        while big chains dominate with systems you can't afford.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-red-900/40 p-6 rounded-lg border border-red-400/30">
+          <h3 class="text-xl font-bold text-red-300 mb-4">📦 The Space Constraint Prison</h3>
+          <ul class="text-left space-y-2 text-gray-100">
+            <li>• ₹50,000+ monthly rent for 200 sq ft</li>
+            <li>• No storage = daily inventory chaos</li>
+            <li>• Mall hours controlling your entire life</li>
+            <li>• Competing with 20 other outlets</li>
+            <li>• Weekend crowds but weekday losses</li>
+          </ul>
+        </div>
+        
+        <div class="bg-green-900/40 p-6 rounded-lg border border-green-400/30">
+          <h3 class="text-xl font-bold text-green-300 mb-4">💎 The Compact Profit Machine</h3>
+          <ul class="text-left space-y-2 text-gray-100">
+            <li>• Rent becomes profitable through efficiency</li>
+            <li>• Zero-waste space optimization</li>
+            <li>• Automated systems working within mall hours</li>
+            <li>• Standing out through consistent quality</li>
+            <li>• Every day profitable, not just weekends</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Live Food Court Metrics -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="compact-counter bg-black/50 p-6 rounded-lg border border-green-400/30">
+        <div class="text-3xl font-black text-green-300">₹4,67,000</div>
+        <div class="text-sm text-gray-200">Saved by food courts this month</div>
+      </div>
+      <div class="compact-counter bg-black/50 p-6 rounded-lg border border-green-400/30">
+        <div class="text-3xl font-black text-yellow-300">89%</div>
+        <div class="text-sm text-gray-200">Space efficiency improvement</div>
+      </div>
+      <div class="compact-counter bg-black/50 p-6 rounded-lg border border-green-400/30">
+        <div class="text-3xl font-black text-blue-300">312</div>
+        <div class="text-sm text-gray-200">Food court outlets optimized</div>
+      </div>
+    </div>
+    
+    <button 
+      onclick="window.trackEvent('hero_cta_clicked', {segment: 'food_court', position: 'hero'}); window.open('https://wa.me/918047366622?text=I want to transform my food court outlet from a space-constrained struggle into a compact profit machine', '_blank')"
+      class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-12 py-6 rounded-lg text-xl font-bold hover:from-green-400 hover:to-emerald-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+    >
+      🏪 Maximize My Small Space
+    </button>
+    
+    <p class="mt-4 text-gray-200">
+      <span class="text-red-300 font-bold">SPACE REALITY:</span> Every sq ft must generate ₹15,000+ monthly
+    </p>
+  </div>
+</section>
+
+<!-- The Food Court Challenge -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="compact-accent">Premium Rent Trap</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Food courts charge restaurant-level rent for kiosk-level space, 
+        then expect you to deliver restaurant-quality food and service. 
+        It's designed to favor big chains with deep pockets.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-red-500">
+        <div class="text-4xl mb-4">📦</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Storage Nightmare</h3>
+        <p class="text-gray-600 mb-4">
+          200 sq ft total space, 50 sq ft for storage. Daily inventory runs, 
+          no bulk buying discounts, constant restocking during busy hours.
+        </p>
+        <div class="text-sm text-red-600 font-semibold">
+          Efficiency Loss: 40% compared to full restaurants
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-orange-500">
+        <div class="text-4xl mb-4">⏰</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Mall Hours Trap</h3>
+        <p class="text-gray-600 mb-4">
+          10 AM to 10 PM, no choice. Prep time cuts into serving time. 
+          Can't extend hours for late crowds or early prep like street outlets.
+        </p>
+        <div class="text-sm text-orange-600 font-semibold">
+          Revenue Loss: 15-20% vs independent timing
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-blue-500">
+        <div class="text-4xl mb-4">🏢</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Chain Competition</h3>
+        <p class="text-gray-600 mb-4">
+          Competing with McDonald's, KFC, Subway - they have systems, 
+          supply chains, and marketing budgets you'll never match.
+        </p>
+        <div class="text-sm text-blue-600 font-semibold">
+          Market Share: Fighting for scraps
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The Transformation Story -->
+<section class="py-20 court-gradient text-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-black mb-6">
+        From <span class="text-red-300">Space Struggle</span> to 
+        <span class="text-green-200">Compact Champion</span>
+      </h2>
+      <p class="text-xl text-gray-100 max-w-3xl mx-auto">
+        Ravi Patel's transformation from barely breaking even to ₹1.4L monthly savings
+      </p>
+    </div>
+    
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="bg-red-900/40 p-8 rounded-lg border border-red-400/30">
+          <h3 class="text-2xl font-bold text-red-300 mb-6">📦 BEFORE: The Space Prisoner</h3>
+          <ul class="space-y-4 text-gray-100">
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">💸</span>
+              <span>₹60,000 rent eating 40% of revenue monthly</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">📦</span>
+              <span>Daily inventory runs costing ₹25,000 monthly</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">⏰</span>
+              <span>Spending 3 hours daily on inventory management</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">📉</span>
+              <span>Weekdays barely covering costs, weekends stressful</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">😰</span>
+              <span>Constantly running out of popular items</span>
+            </li>
+          </ul>
+          
+          <div class="mt-6 p-4 bg-red-800/40 rounded-lg">
+            <p class="text-red-200 italic">
+              "200 sq ft felt like a prison. I was paying restaurant rent 
+              with kiosk profits. Barely surviving."
+            </p>
+          </div>
+        </div>
+        
+        <div class="bg-green-900/40 p-8 rounded-lg border border-green-400/30">
+          <h3 class="text-2xl font-bold text-green-300 mb-6">💎 AFTER: The Compact Champion</h3>
+          <ul class="space-y-4 text-gray-100">
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">💰</span>
+              <span>Rent now just 18% of revenue, highly profitable</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">📊</span>
+              <span>Optimized ordering saving ₹18,000 monthly</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">⚡</span>
+              <span>15 minutes daily inventory, fully automated</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">📈</span>
+              <span>Every day profitable, not just weekends</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">🎯</span>
+              <span>Never running out, perfect demand prediction</span>
+            </li>
+          </ul>
+          
+          <div class="mt-6 p-4 bg-green-800/40 rounded-lg">
+            <p class="text-green-200 italic">
+              "My 200 sq ft now generates more profit than some full restaurants. 
+              Small space, big systems, huge results."
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <div class="bg-black/50 p-8 rounded-lg border border-green-400/30 inline-block">
+          <h4 class="text-2xl font-bold compact-accent mb-4">The Compact Transformation</h4>
+          <div class="grid grid-cols-3 gap-8 text-center">
+            <div>
+              <div class="text-3xl font-black text-green-300">267%</div>
+              <div class="text-sm text-gray-200">Space Efficiency</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-blue-300">78%</div>
+              <div class="text-sm text-gray-200">Waste Reduction</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-yellow-300">189%</div>
+              <div class="text-sm text-gray-200">Profit Increase</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Food Court Specific Solutions -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="compact-accent">Space Maximizer</span> System
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Turn space constraints into competitive advantages
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <div class="space-y-8">
+        <div class="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-lg border-l-4 border-green-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">📦 Micro-Space Inventory Optimization</h3>
+          <p class="text-gray-600 mb-4">
+            AI-powered inventory for tiny spaces. Predict exactly what you'll sell, 
+            when to restock, how to maximize every square foot of storage.
+          </p>
+          <div class="text-sm font-semibold text-green-700">
+            Space Efficiency: +200%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg border-l-4 border-blue-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">🏢 Mall Traffic Prediction</h3>
+          <p class="text-gray-600 mb-4">
+            Analyze mall patterns, seasonal trends, event calendars. 
+            Prep perfectly for busy days, avoid waste on slow ones.
+          </p>
+          <div class="text-sm font-semibold text-blue-700">
+            Demand Accuracy: 92%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-purple-50 to-purple-100 p-6 rounded-lg border-l-4 border-purple-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">⚡ Speed-Service Optimization</h3>
+          <p class="text-gray-600 mb-4">
+            Optimize prep sequences for minimal space. Faster service means 
+            more customers, higher revenue per square foot.
+          </p>
+          <div class="text-sm font-semibold text-purple-700">
+            Service Speed: +45%
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-8">
+        <div class="bg-gradient-to-r from-orange-50 to-orange-100 p-6 rounded-lg border-l-4 border-orange-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">💰 Revenue Per Sq Ft Maximization</h3>
+          <p class="text-gray-600 mb-4">
+            Track revenue per square foot, optimize menu for space constraints, 
+            focus on high-margin items that move fast.
+          </p>
+          <div class="text-sm font-semibold text-orange-700">
+            Revenue/Sq Ft: +150%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-red-50 to-red-100 p-6 rounded-lg border-l-4 border-red-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">🎯 Competition Differentiation</h3>
+          <p class="text-gray-600 mb-4">
+            Stand out from chains through consistent quality, faster service, 
+            and personalized customer experience that big brands can't match.
+          </p>
+          <div class="text-sm font-semibold text-red-700">
+            Customer Retention: +85%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-teal-50 to-teal-100 p-6 rounded-lg border-l-4 border-teal-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">📊 Multi-Outlet Scaling</h3>
+          <p class="text-gray-600 mb-4">
+            Perfect the model in one court, then scale to multiple malls. 
+            Standardized systems that work in any food court space.
+          </p>
+          <div class="text-sm font-semibold text-teal-700">
+            Scaling Success: 95% replication rate
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI Calculator -->
+<section class="py-20 court-gradient text-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black mb-6">
+        Your <span class="text-green-200">Space Maximizer</span> Calculator
+      </h2>
+      <p class="text-xl text-gray-100">
+        Calculate your small space profit potential
+      </p>
+    </div>
+    
+    <div class="max-w-4xl mx-auto bg-black/50 p-8 rounded-lg border border-green-400/30">
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <label class="block text-gray-100 mb-2">Monthly Rent (₹)</label>
+          <input type="number" id="monthlyRent" placeholder="e.g., 60,000" 
+                 class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-green-500">
+        </div>
+        <div>
+          <label class="block text-gray-100 mb-2">Daily Orders</label>
+          <input type="number" id="dailyOrders" placeholder="e.g., 180" 
+                 class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-green-500">
+        </div>
+      </div>
+      
+      <button onclick="calculateFoodCourtROI()" 
+              class="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white py-4 rounded-lg text-xl font-bold hover:from-green-400 hover:to-emerald-400 transition-all duration-300">
+        Calculate My Space Optimization
+      </button>
+      
+      <div id="roiResults" class="mt-8 hidden">
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="text-center p-6 bg-green-900/40 rounded-lg border border-green-400/30">
+            <div class="text-3xl font-black text-green-300" id="monthlySavings">₹0</div>
+            <div class="text-sm text-gray-200">Monthly Savings</div>
+          </div>
+          <div class="text-center p-6 bg-blue-900/40 rounded-lg border border-blue-400/30">
+            <div class="text-3xl font-black text-blue-300" id="rentEfficiency">0%</div>
+            <div class="text-sm text-gray-200">Rent Efficiency Gain</div>
+          </div>
+          <div class="text-center p-6 bg-yellow-900/40 rounded-lg border border-yellow-400/30">
+            <div class="text-3xl font-black text-yellow-300" id="spaceROI">₹0</div>
+            <div class="text-sm text-gray-200">Revenue Per Sq Ft</div>
+          </div>
+        </div>
+        
+        <div class="mt-8 p-6 bg-gradient-to-r from-green-900/40 to-green-800/40 rounded-lg border border-green-400/30">
+          <h4 class="text-xl font-bold text-green-300 mb-4">Your Space Optimization Timeline</h4>
+          <div class="space-y-2 text-gray-100">
+            <div><strong>Week 1:</strong> Micro-inventory setup & space optimization</div>
+            <div><strong>Week 2:</strong> Mall traffic analysis & demand prediction</div>
+            <div><strong>Week 3:</strong> Service speed optimization & menu focus</div>
+            <div><strong>Week 4:</strong> Maximum space efficiency achieved</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Social Proof -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="compact-accent">Compact Champions</span> Club
+      </h2>
+      <p class="text-xl text-gray-600">
+        Food court owners who maximized their small spaces into profit powerhouses
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">RP</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Ravi Patel</h4>
+            <p class="text-sm text-gray-600">Wok Express, Phoenix Mall</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "My 200 sq ft outlet now generates ₹25,000 per sq ft monthly. 
+          Better than many full restaurants. Small space, smart systems!"
+        </p>
+        <div class="text-sm font-semibold text-green-700">
+          Space Efficiency: 267% improvement
+        </div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">SK</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Suresh Kumar</h4>
+            <p class="text-sm text-gray-600">Spice Box, Forum Mall</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "Never running out of ingredients anymore, and inventory takes 15 minutes daily. 
+          RestoPi solved my storage nightmare completely."
+        </p>
+        <div class="text-sm font-semibold text-blue-700">
+          Inventory Time: 90% reduction
+        </div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-teal-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">MP</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Maya Prasad</h4>
+            <p class="text-sm text-gray-600">Rolls & Wraps, City Center</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "Scaled from one food court to four using the same system. 
+          Each outlet is profitable from day one now."
+        </p>
+        <div class="text-sm font-semibold text-teal-700">
+          Scaling Success: 4 profitable outlets
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Urgency & Scarcity -->
+<section class="py-20 bg-red-900 text-white">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-black mb-6">
+      ⚠️ Your <span class="text-green-300">Premium Rent</span> is Eating Your Dreams
+    </h2>
+    
+    <div class="max-w-3xl mx-auto mb-12">
+      <p class="text-xl mb-8">
+        Every day you operate inefficiently in your expensive food court space, 
+        you're essentially paying premium rent for basement-level profits. 
+        Meanwhile, optimized outlets are thriving in the same conditions.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div class="bg-red-800/50 p-6 rounded-lg">
+          <h3 class="text-2xl font-bold mb-4">💸 The Rent Trap</h3>
+          <ul class="text-left space-y-2">
+            <li>• ₹2,000+ daily just to keep the lights on</li>
+            <li>• Competing with chains that have deep pockets</li>
+            <li>• Storage costs adding ₹20,000+ monthly</li>
+            <li>• Weekend dependency for survival</li>
+          </ul>
+        </div>
+        
+        <div class="bg-green-800/50 p-6 rounded-lg">
+          <h3 class="text-2xl font-bold mb-4">🏪 The Space Champion</h3>
+          <ul class="text-left space-y-2">
+            <li>• Every sq ft generating maximum revenue</li>
+            <li>• Outperforming chains through efficiency</li>
+            <li>• Zero waste, optimized storage systems</li>
+            <li>• Every day profitable, not just weekends</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="bg-black/50 p-6 rounded-lg mb-8">
+        <h3 class="text-2xl font-bold text-green-300 mb-4">🎯 Food Court Rescue Program</h3>
+        <p class="text-lg mb-4">
+          Emergency space optimization for outlets bleeding money to rent. 
+          Complete transformation system with profitability guarantee.
+        </p>
+        <div class="text-3xl font-black text-red-300">
+          Space optimization active in <span id="hoursToOptimize">48</span> hours
+        </div>
+      </div>
+    </div>
+    
+    <button 
+      onclick="window.trackEvent('urgency_cta_clicked', {segment: 'food_court', position: 'urgency'}); window.open('https://wa.me/918047366622?text=URGENT: My food court outlet is being killed by rent costs. I need space optimization immediately', '_blank')"
+      class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-16 py-6 rounded-lg text-2xl font-black hover:from-green-400 hover:to-emerald-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+    >
+      🚨 MAXIMIZE MY SPACE NOW
+    </button>
+    
+    <p class="mt-6 text-gray-200">
+      Setup time: <span class="text-green-300 font-bold">48 hours</span> | 
+      Profitability: <span class="text-yellow-300 font-bold">Within 2 weeks</span>
+    </p>
+  </div>
+</section>
+
+<script>
+function calculateFoodCourtROI() {
+  const monthlyRent = parseInt(document.getElementById('monthlyRent').value) || 0;
+  const dailyOrders = parseInt(document.getElementById('dailyOrders').value) || 0;
+  
+  if (monthlyRent === 0 || dailyOrders === 0) {
+    alert('Please enter your monthly rent and daily orders');
+    return;
+  }
+  
+  // Food court specific calculations
+  const monthlyRevenue = dailyOrders * 320 * 30; // Assuming ₹320 average order value
+  const currentRentRatio = (monthlyRent / monthlyRevenue) * 100;
+  
+  // Efficiency improvements
+  const wasteReduction = monthlyRevenue * 0.12; // 12% waste reduction
+  const inventoryOptimization = monthlyRent * 0.3; // 30% rent efficiency through better inventory
+  const serviceSpeedGains = monthlyRevenue * 0.08; // 8% revenue increase from faster service
+  
+  const totalSavings = wasteReduction + inventoryOptimization + serviceSpeedGains;
+  const restopiCost = 25000; // Food court pricing
+  const netMonthlySavings = totalSavings - restopiCost;
+  
+  const newRentRatio = ((monthlyRent - inventoryOptimization) / (monthlyRevenue + serviceSpeedGains)) * 100;
+  const rentEfficiencyGain = currentRentRatio - newRentRatio;
+  
+  // Assuming 200 sq ft space
+  const revenuePerSqFt = (monthlyRevenue + serviceSpeedGains) / 200;
+  
+  document.getElementById('monthlySavings').textContent = '₹' + Math.round(netMonthlySavings).toLocaleString();
+  document.getElementById('rentEfficiency').textContent = Math.round(rentEfficiencyGain) + '%';
+  document.getElementById('spaceROI').textContent = '₹' + Math.round(revenuePerSqFt).toLocaleString();
+  
+  document.getElementById('roiResults').classList.remove('hidden');
+  
+  // Track calculation
+  window.trackEvent('roi_calculated', {
+    segment: 'food_court',
+    monthly_rent: monthlyRent,
+    daily_orders: dailyOrders,
+    savings: netMonthlySavings
+  });
+}
+
+// Track page engagement
+window.trackEvent('food_court_page_view', {
+  segment: 'food_court',
+  page_type: 'custom_segment_page'
+});
+</script>
+
+</BaseLayout>

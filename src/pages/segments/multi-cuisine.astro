@@ -1,0 +1,604 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Multi-Cuisine Liberation - Master All, Waste None | RestoPi"
+  description="Transform your multi-cuisine restaurant from an inventory nightmare into a unified profit machine. Achieve ₹2.7L+ monthly savings across all cuisines."
+>
+
+<style>
+  @keyframes worldSpin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
+  }
+  
+  @keyframes diverseGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(249, 115, 22, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(249, 115, 22, 0.6); }
+  }
+  
+  .multi-gradient {
+    background: linear-gradient(135deg, #7c2d12 0%, #ea580c 25%, #dc2626 50%, #7c3aed 75%, #059669 100%);
+  }
+  
+  .diverse-accent {
+    background: linear-gradient(45deg, #f97316, #ef4444, #8b5cf6, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .diverse-counter {
+    animation: diverseGlow 3s ease-in-out infinite;
+  }
+  
+  .world-icon {
+    animation: worldSpin 6s ease-in-out infinite;
+  }
+  
+  .multi-bg {
+    background: radial-gradient(circle at center, rgba(249, 115, 22, 0.1) 0%, transparent 70%);
+  }
+</style>
+
+<!-- Hero Section: The Complexity Chaos -->
+<section class="multi-gradient text-white py-20 relative overflow-hidden multi-bg">
+  <div class="container mx-auto px-6 text-center relative z-10">
+    <div class="mb-8">
+      <span class="inline-block world-icon text-6xl mb-4">🌍</span>
+      <h1 class="text-6xl font-black mb-6 leading-tight">
+        <span class="text-orange-200">World of Flavors</span><br>
+        Shouldn't Be a <span class="diverse-accent">World of Chaos</span>
+      </h1>
+    </div>
+    
+    <div class="max-w-4xl mx-auto mb-12">
+      <p class="text-2xl text-gray-100 mb-8 leading-relaxed">
+        You wanted to serve the world's best cuisines under one roof. Instead, you're drowning in 
+        <span class="text-red-300 font-bold">inventory complexity</span>, chef coordination nightmares, 
+        and supply chain chaos. Each cuisine is a different business, and you're managing 5 at once.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-red-900/40 p-6 rounded-lg border border-red-400/30">
+          <h3 class="text-xl font-bold text-red-300 mb-4">🌪️ The Complexity Nightmare</h3>
+          <ul class="text-left space-y-2 text-gray-100">
+            <li>• 500+ ingredients across 5 different cuisines</li>
+            <li>• Italian chef fighting with Indian chef over prep space</li>
+            <li>• Chinese ingredients expiring while Mexican runs out</li>
+            <li>• No clue which cuisine actually makes money</li>
+            <li>• Working 16 hours managing 5 different businesses</li>
+          </ul>
+        </div>
+        
+        <div class="bg-green-900/40 p-6 rounded-lg border border-green-400/30">
+          <h3 class="text-xl font-bold text-green-300 mb-4">🎯 The Unified Powerhouse</h3>
+          <ul class="text-left space-y-2 text-gray-100">
+            <li>• Synchronized inventory across all cuisines</li>
+            <li>• Harmonious kitchen with optimized workflows</li>
+            <li>• Zero waste through cross-cuisine ingredient sharing</li>
+            <li>• Data-driven focus on profitable cuisines</li>
+            <li>• Working 8 hours while all cuisines thrive</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Live Multi-Cuisine Metrics -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="diverse-counter bg-black/50 p-6 rounded-lg border border-orange-400/30">
+        <div class="text-3xl font-black text-orange-300">₹7,89,000</div>
+        <div class="text-sm text-gray-200">Saved by multi-cuisine this month</div>
+      </div>
+      <div class="diverse-counter bg-black/50 p-6 rounded-lg border border-orange-400/30">
+        <div class="text-3xl font-black text-purple-300">74%</div>
+        <div class="text-sm text-gray-200">Cross-cuisine efficiency gain</div>
+      </div>
+      <div class="diverse-counter bg-black/50 p-6 rounded-lg border border-orange-400/30">
+        <div class="text-3xl font-black text-green-300">89</div>
+        <div class="text-sm text-gray-200">Multi-cuisine restaurants unified</div>
+      </div>
+    </div>
+    
+    <button 
+      onclick="window.trackEvent('hero_cta_clicked', {segment: 'multi_cuisine', position: 'hero'}); window.open('https://wa.me/918047366622?text=I want to transform my multi-cuisine chaos into a unified profit machine across all cuisines', '_blank')"
+      class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-12 py-6 rounded-lg text-xl font-bold hover:from-orange-400 hover:to-red-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+    >
+      🌍 Unify My Cuisine Empire
+    </button>
+    
+    <p class="mt-4 text-gray-200">
+      <span class="text-red-300 font-bold">COMPLEXITY COST:</span> Managing 5 cuisines = 5x the chaos
+    </p>
+  </div>
+</section>
+
+<!-- The Multi-Cuisine Challenge -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="diverse-accent">Diversity Trap</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        You thought offering multiple cuisines would attract more customers. 
+        Instead, you created 5 different businesses with 5x the complexity, 
+        5x the inventory, and 5x the headaches.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-red-500">
+        <div class="text-4xl mb-4">📦</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Inventory Explosion</h3>
+        <p class="text-gray-600 mb-4">
+          500+ different ingredients, each with different suppliers, shelf lives, 
+          storage requirements. Your walk-in cooler looks like a UN food warehouse.
+        </p>
+        <div class="text-sm text-red-600 font-semibold">
+          Waste Cost: ₹50,000-80,000 monthly
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-orange-500">
+        <div class="text-4xl mb-4">👨‍🍳</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Chef Coordination Nightmare</h3>
+        <p class="text-gray-600 mb-4">
+          Italian chef needs basil, Indian chef needs the same counter space, 
+          Chinese chef is steaming, Mexican chef needs the grill. Kitchen warfare daily.
+        </p>
+        <div class="text-sm text-orange-600 font-semibold">
+          Efficiency Loss: 40% from kitchen conflicts
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-blue-500">
+        <div class="text-4xl mb-4">📊</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Profit Blindness</h3>
+        <p class="text-gray-600 mb-4">
+          No clue which cuisine makes money. That ₹800 pasta might cost ₹650 to make 
+          while the ₹400 dal tadka gives 80% margin.
+        </p>
+        <div class="text-sm text-blue-600 font-semibold">
+          Hidden Reality: Promoting loss leaders
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The Transformation Story -->
+<section class="py-20 multi-gradient text-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-black mb-6">
+        From <span class="text-red-300">Cuisine Chaos</span> to 
+        <span class="text-orange-200">Unified Empire</span>
+      </h2>
+      <p class="text-xl text-gray-100 max-w-3xl mx-auto">
+        Chef Suresh's transformation from managing 5 separate nightmares to 1 unified success
+      </p>
+    </div>
+    
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="bg-red-900/40 p-8 rounded-lg border border-red-400/30">
+          <h3 class="text-2xl font-bold text-red-300 mb-6">🌪️ BEFORE: The Chaos Manager</h3>
+          <ul class="space-y-4 text-gray-100">
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">📦</span>
+              <span>Managing 500+ ingredients, constant shortages and waste</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">👨‍🍳</span>
+              <span>5 chefs fighting daily, kitchen coordination nightmare</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">💸</span>
+              <span>Losing ₹2.7 lakhs monthly across all cuisines</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">😰</span>
+              <span>Working 16 hours managing 5 different businesses</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">📉</span>
+              <span>No idea which cuisines were profitable</span>
+            </li>
+          </ul>
+          
+          <div class="mt-6 p-4 bg-red-800/40 rounded-lg">
+            <p class="text-red-200 italic">
+              "I was running 5 different restaurants badly instead of 1 unified 
+              restaurant well. Drowning in complexity."
+            </p>
+          </div>
+        </div>
+        
+        <div class="bg-green-900/40 p-8 rounded-lg border border-green-400/30">
+          <h3 class="text-2xl font-bold text-green-300 mb-6">🎯 AFTER: The Unified Master</h3>
+          <ul class="space-y-4 text-gray-100">
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">🔄</span>
+              <span>Cross-cuisine ingredient sharing, 70% waste reduction</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">⚡</span>
+              <span>Unified kitchen workflow, harmonious chef coordination</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">💰</span>
+              <span>Saving ₹2.2 lakhs monthly with improved margins</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">😌</span>
+              <span>Working 8 hours with all cuisines running smoothly</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">📈</span>
+              <span>Data-driven focus on most profitable cuisines</span>
+            </li>
+          </ul>
+          
+          <div class="mt-6 p-4 bg-green-800/40 rounded-lg">
+            <p class="text-green-200 italic">
+              "Now I run one unified restaurant with diverse offerings. 
+              Same complexity, 10x better results."
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <div class="bg-black/50 p-8 rounded-lg border border-orange-400/30 inline-block">
+          <h4 class="text-2xl font-bold diverse-accent mb-4">The Unity Transformation</h4>
+          <div class="grid grid-cols-3 gap-8 text-center">
+            <div>
+              <div class="text-3xl font-black text-green-300">74%</div>
+              <div class="text-sm text-gray-200">Efficiency Gain</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-blue-300">68%</div>
+              <div class="text-sm text-gray-200">Waste Reduction</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-yellow-300">234%</div>
+              <div class="text-sm text-gray-200">Profit Increase</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Multi-Cuisine Specific Solutions -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="diverse-accent">Unity Engine</span> System
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Transform cuisine diversity from chaos into competitive advantage
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <div class="space-y-8">
+        <div class="bg-gradient-to-r from-orange-50 to-orange-100 p-6 rounded-lg border-l-4 border-orange-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">🔄 Cross-Cuisine Inventory Sync</h3>
+          <p class="text-gray-600 mb-4">
+            Unified inventory system that identifies shared ingredients across cuisines. 
+            Onions for Italian, Indian, Mexican - one smart ordering system.
+          </p>
+          <div class="text-sm font-semibold text-orange-700">
+            Inventory Efficiency: +200%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-red-50 to-red-100 p-6 rounded-lg border-l-4 border-red-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">👨‍🍳 Unified Kitchen Workflow</h3>
+          <p class="text-gray-600 mb-4">
+            Optimize prep schedules, equipment sharing, space allocation. 
+            Transform kitchen conflicts into coordinated choreography.
+          </p>
+          <div class="text-sm font-semibold text-red-700">
+            Kitchen Efficiency: +150%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-purple-50 to-purple-100 p-6 rounded-lg border-l-4 border-purple-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">📊 Cuisine Profitability Analytics</h3>
+          <p class="text-gray-600 mb-4">
+            True cost analysis per cuisine, identify your profit champions, 
+            optimize menu mix for maximum overall profitability.
+          </p>
+          <div class="text-sm font-semibold text-purple-700">
+            Profit Clarity: 100% visibility
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-8">
+        <div class="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-lg border-l-4 border-green-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">🎯 Smart Menu Engineering</h3>
+          <p class="text-gray-600 mb-4">
+            Cross-cuisine menu optimization, seasonal adjustments, 
+            promote high-margin dishes from any cuisine strategically.
+          </p>
+          <div class="text-sm font-semibold text-green-700">
+            Menu ROI: +180%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg border-l-4 border-blue-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">⚡ Shared Resource Optimization</h3>
+          <p class="text-gray-600 mb-4">
+            Equipment sharing calendars, staff cross-training, 
+            bulk purchasing power across all cuisines for better margins.
+          </p>
+          <div class="text-sm font-semibold text-blue-700">
+            Resource Efficiency: +120%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-teal-50 to-teal-100 p-6 rounded-lg border-l-4 border-teal-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">📈 Unified Performance Dashboard</h3>
+          <p class="text-gray-600 mb-4">
+            Single dashboard for all cuisines, comparative analytics, 
+            unified reporting that makes sense of the complexity.
+          </p>
+          <div class="text-sm font-semibold text-teal-700">
+            Management Simplicity: 80% time saved
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI Calculator -->
+<section class="py-20 multi-gradient text-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black mb-6">
+        Your <span class="text-orange-200">Unity Engine</span> Calculator
+      </h2>
+      <p class="text-xl text-gray-100">
+        Calculate your multi-cuisine optimization potential
+      </p>
+    </div>
+    
+    <div class="max-w-4xl mx-auto bg-black/50 p-8 rounded-lg border border-orange-400/30">
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <label class="block text-gray-100 mb-2">Number of Cuisines</label>
+          <input type="number" id="numCuisines" placeholder="e.g., 5" min="2" max="10"
+                 class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-orange-500">
+        </div>
+        <div>
+          <label class="block text-gray-100 mb-2">Monthly Revenue (₹)</label>
+          <input type="number" id="monthlyRevenue" placeholder="e.g., 18,00,000" 
+                 class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-orange-500">
+        </div>
+      </div>
+      
+      <button onclick="calculateMultiCuisineROI()" 
+              class="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-4 rounded-lg text-xl font-bold hover:from-orange-400 hover:to-red-400 transition-all duration-300">
+        Calculate My Unity Potential
+      </button>
+      
+      <div id="roiResults" class="mt-8 hidden">
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="text-center p-6 bg-green-900/40 rounded-lg border border-green-400/30">
+            <div class="text-3xl font-black text-green-300" id="monthlySavings">₹0</div>
+            <div class="text-sm text-gray-200">Monthly Savings</div>
+          </div>
+          <div class="text-center p-6 bg-blue-900/40 rounded-lg border border-blue-400/30">
+            <div class="text-3xl font-black text-blue-300" id="efficiencyGain">0%</div>
+            <div class="text-sm text-gray-200">Efficiency Improvement</div>
+          </div>
+          <div class="text-center p-6 bg-purple-900/40 rounded-lg border border-purple-400/30">
+            <div class="text-3xl font-black text-purple-300" id="complexityReduction">0%</div>
+            <div class="text-sm text-gray-200">Complexity Reduction</div>
+          </div>
+        </div>
+        
+        <div class="mt-8 p-6 bg-gradient-to-r from-green-900/40 to-green-800/40 rounded-lg border border-green-400/30">
+          <h4 class="text-xl font-bold text-green-300 mb-4">Your Unity Timeline</h4>
+          <div class="space-y-2 text-gray-100">
+            <div><strong>Week 1:</strong> Cross-cuisine inventory analysis & unification</div>
+            <div><strong>Week 2:</strong> Kitchen workflow optimization & chef coordination</div>
+            <div><strong>Week 3:</strong> Menu engineering & profitability analysis</div>
+            <div><strong>Week 4:</strong> Unified operations - harmony achieved</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Social Proof -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="diverse-accent">Unity Masters</span> Club
+      </h2>
+      <p class="text-xl text-gray-600">
+        Multi-cuisine owners who transformed chaos into unified success
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">CS</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Chef Suresh</h4>
+            <p class="text-sm text-gray-600">Global Flavors, Chennai</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "5 cuisines, 1 system. Waste down 68%, chefs working together, 
+          and I finally know which cuisine makes the most money."
+        </p>
+        <div class="text-sm font-semibold text-orange-700">
+          Unity Achievement: 5 cuisines harmonized
+        </div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">RK</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Raj Kumar</h4>
+            <p class="text-sm text-gray-600">Spice Junction, Mumbai</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "Italian and Indian sharing ingredients, Chinese and Mexican coordinating prep. 
+          My kitchen became a symphony instead of chaos."
+        </p>
+        <div class="text-sm font-semibold text-red-700">
+          Kitchen Harmony: 150% efficiency gain
+        </div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">AS</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Anita Sharma</h4>
+            <p class="text-sm text-gray-600">World Kitchen, Bangalore</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "From managing 6 separate nightmares to 1 unified success. 
+          Same variety, 234% better profits. Customers love the consistency."
+        </p>
+        <div class="text-sm font-semibold text-purple-700">
+          Profit Increase: 234%
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Urgency & Scarcity -->
+<section class="py-20 bg-red-900 text-white">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-black mb-6">
+      ⚠️ Your <span class="text-orange-300">Cuisine Chaos</span> is Killing Your Dreams
+    </h2>
+    
+    <div class="max-w-3xl mx-auto mb-12">
+      <p class="text-xl mb-8">
+        Every day you operate with cuisine chaos instead of unified systems, 
+        you're essentially running 5 different failing businesses instead of 
+        1 successful multi-cuisine restaurant.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div class="bg-red-800/50 p-6 rounded-lg">
+          <h3 class="text-2xl font-bold mb-4">🌪️ The Chaos Cost</h3>
+          <ul class="text-left space-y-2">
+            <li>• ₹8,000+ daily waste across cuisines</li>
+            <li>• Chef conflicts destroying kitchen efficiency</li>
+            <li>• Inventory chaos eating profits</li>
+            <li>• Managing 5 businesses badly instead of 1 well</li>
+          </ul>
+        </div>
+        
+        <div class="bg-green-800/50 p-6 rounded-lg">
+          <h3 class="text-2xl font-bold mb-4">🎯 The Unity Power</h3>
+          <ul class="text-left space-y-2">
+            <li>• ₹2-3 lakhs monthly through unification</li>
+            <li>• Harmonious kitchen operations</li>
+            <li>• Cross-cuisine efficiency gains</li>
+            <li>• One unified profitable restaurant</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="bg-black/50 p-6 rounded-lg mb-8">
+        <h3 class="text-2xl font-bold text-orange-300 mb-4">🌍 Multi-Cuisine Unity Program</h3>
+        <p class="text-lg mb-4">
+          Emergency unification for restaurants drowning in multi-cuisine chaos. 
+          Complete harmony system with profit multiplication guarantee.
+        </p>
+        <div class="text-3xl font-black text-red-300">
+          Unity system active in <span id="daysToUnity">72</span> hours
+        </div>
+      </div>
+    </div>
+    
+    <button 
+      onclick="window.trackEvent('urgency_cta_clicked', {segment: 'multi_cuisine', position: 'urgency'}); window.open('https://wa.me/918047366622?text=URGENT: My multi-cuisine restaurant is chaos. I need the unity system to harmonize all cuisines immediately', '_blank')"
+      class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-16 py-6 rounded-lg text-2xl font-black hover:from-orange-400 hover:to-red-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+    >
+      🚨 UNIFY MY CUISINES NOW
+    </button>
+    
+    <p class="mt-6 text-gray-200">
+      Setup time: <span class="text-orange-300 font-bold">72 hours</span> | 
+      Full harmony: <span class="text-green-300 font-bold">Within 1 month</span>
+    </p>
+  </div>
+</section>
+
+<script>
+function calculateMultiCuisineROI() {
+  const numCuisines = parseInt(document.getElementById('numCuisines').value) || 0;
+  const monthlyRevenue = parseInt(document.getElementById('monthlyRevenue').value) || 0;
+  
+  if (numCuisines === 0 || monthlyRevenue === 0 || numCuisines < 2) {
+    alert('Please enter number of cuisines (minimum 2) and monthly revenue');
+    return;
+  }
+  
+  // Multi-cuisine specific calculations
+  const complexityMultiplier = Math.min(numCuisines * 0.15, 0.6); // Complexity increases with more cuisines
+  const wasteReduction = monthlyRevenue * complexityMultiplier; // Higher waste with more cuisines
+  const inventoryOptimization = monthlyRevenue * 0.12; // 12% through unified inventory
+  const kitchenEfficiency = monthlyRevenue * (numCuisines * 0.03); // 3% per cuisine through coordination
+  
+  const totalSavings = wasteReduction + inventoryOptimization + kitchenEfficiency;
+  const restopiCost = 40000; // Multi-cuisine pricing
+  const netMonthlySavings = totalSavings - restopiCost;
+  
+  const efficiencyGain = Math.min(numCuisines * 15, 75); // 15% per cuisine, max 75%
+  const complexityReduction = Math.min(numCuisines * 12, 60); // 12% per cuisine, max 60%
+  
+  document.getElementById('monthlySavings').textContent = '₹' + Math.round(netMonthlySavings).toLocaleString();
+  document.getElementById('efficiencyGain').textContent = efficiencyGain + '%';
+  document.getElementById('complexityReduction').textContent = complexityReduction + '%';
+  
+  document.getElementById('roiResults').classList.remove('hidden');
+  
+  // Track calculation
+  window.trackEvent('roi_calculated', {
+    segment: 'multi_cuisine',
+    num_cuisines: numCuisines,
+    monthly_revenue: monthlyRevenue,
+    savings: netMonthlySavings
+  });
+}
+
+// Track page engagement
+window.trackEvent('multi_cuisine_page_view', {
+  segment: 'multi_cuisine',
+  page_type: 'custom_segment_page'
+});
+</script>
+
+</BaseLayout>

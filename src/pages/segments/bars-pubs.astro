@@ -1,0 +1,601 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Bar & Pub Liberation - Pour Profits, Not Losses | RestoPi"
+  description="Transform your bar from a pour-cost nightmare into a profit powerhouse. Achieve ₹3L+ monthly savings while building the social hub you dreamed of."
+>
+
+<style>
+  @keyframes pourFlow {
+    0%, 100% { transform: scaleY(1) rotate(0deg); }
+    50% { transform: scaleY(1.2) rotate(5deg); }
+  }
+  
+  @keyframes neonGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.4); }
+    50% { box-shadow: 0 0 40px rgba(168, 85, 247, 0.8); }
+  }
+  
+  .bar-gradient {
+    background: linear-gradient(135deg, #7c2d12 0%, #dc2626 50%, #7c3aed 100%);
+  }
+  
+  .neon-accent {
+    background: linear-gradient(45deg, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .neon-counter {
+    animation: neonGlow 3s ease-in-out infinite;
+  }
+  
+  .pour-icon {
+    animation: pourFlow 4s ease-in-out infinite;
+  }
+  
+  .bar-bg {
+    background: radial-gradient(circle at center, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+  }
+</style>
+
+<!-- Hero Section: The Pour Cost Nightmare -->
+<section class="bar-gradient text-white py-20 relative overflow-hidden bar-bg">
+  <div class="container mx-auto px-6 text-center relative z-10">
+    <div class="mb-8">
+      <span class="inline-block pour-icon text-6xl mb-4">🍺</span>
+      <h1 class="text-6xl font-black mb-6 leading-tight">
+        Stop <span class="text-red-300">Pouring Money</span><br>
+        Down the <span class="neon-accent">Drain</span>
+      </h1>
+    </div>
+    
+    <div class="max-w-4xl mx-auto mb-12">
+      <p class="text-2xl text-gray-100 mb-8 leading-relaxed">
+        Your bar should be the most profitable business model - high margins, repeat customers, social atmosphere. 
+        Instead, you're <span class="text-red-300 font-bold">hemorrhaging ₹3 lakhs monthly</span> 
+        through pour costs, theft, and inventory chaos.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-red-900/40 p-6 rounded-lg border border-red-400/30">
+          <h3 class="text-xl font-bold text-red-300 mb-4">🔴 The Pour Cost Nightmare</h3>
+          <ul class="text-left space-y-2 text-gray-100">
+            <li>• Free pours destroying 30% margins</li>
+            <li>• Staff "sampling" expensive liquor daily</li>
+            <li>• No clue which drinks actually make money</li>
+            <li>• Inventory "shrinkage" every week</li>
+            <li>• Working weekends while margins evaporate</li>
+          </ul>
+        </div>
+        
+        <div class="bg-green-900/40 p-6 rounded-lg border border-green-400/30">
+          <h3 class="text-xl font-bold text-green-300 mb-4">💎 The Profit Powerhouse</h3>
+          <ul class="text-left space-y-2 text-gray-100">
+            <li>• Perfect pours ensuring 65%+ margins</li>
+            <li>• Zero theft, complete accountability</li>
+            <li>• Data-driven menu optimization</li>
+            <li>• Automated inventory that pays for itself</li>
+            <li>• Weekend profits while you enjoy life</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Live Bar Metrics -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="neon-counter bg-black/50 p-6 rounded-lg border border-purple-400/30">
+        <div class="text-3xl font-black text-purple-300">₹8,91,000</div>
+        <div class="text-sm text-gray-200">Saved by bars this month</div>
+      </div>
+      <div class="neon-counter bg-black/50 p-6 rounded-lg border border-purple-400/30">
+        <div class="text-3xl font-black text-pink-300">68%</div>
+        <div class="text-sm text-gray-200">Average margin improvement</div>
+      </div>
+      <div class="neon-counter bg-black/50 p-6 rounded-lg border border-purple-400/30">
+        <div class="text-3xl font-black text-green-300">127</div>
+        <div class="text-sm text-gray-200">Bars transformed</div>
+      </div>
+    </div>
+    
+    <button 
+      onclick="window.trackEvent('hero_cta_clicked', {segment: 'bar_pub', position: 'hero'}); window.open('https://wa.me/918047366622?text=I want to stop pouring money down the drain and transform my bar into a profit powerhouse', '_blank')"
+      class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-12 py-6 rounded-lg text-xl font-bold hover:from-purple-400 hover:to-pink-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+    >
+      🍻 Stop the Pour Cost Bleeding
+    </button>
+    
+    <p class="mt-4 text-gray-200">
+      <span class="text-red-300 font-bold">REALITY CHECK:</span> Every over-pour costs you ₹50-200 per drink
+    </p>
+  </div>
+</section>
+
+<!-- The Bar Owner's Dilemma -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="neon-accent">Hospitality Trap</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        You want to create a welcoming atmosphere with generous pours and happy customers. 
+        But "generous" is killing your business, and you can't watch every bartender 24/7.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-red-500">
+        <div class="text-4xl mb-4">🍹</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Free Pour Fallacy</h3>
+        <p class="text-gray-600 mb-4">
+          "Generous pours build loyalty" - but 2oz instead of 1.5oz means 25% less profit. 
+          Your "loyal" customers are bankrupting you.
+        </p>
+        <div class="text-sm text-red-600 font-semibold">
+          Hidden Cost: ₹1,500-3,000 per bottle
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-orange-500">
+        <div class="text-4xl mb-4">👥</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Staff Sampling Problem</h3>
+        <p class="text-gray-600 mb-4">
+          Staff "need to taste" drinks for customers. But premium whiskey tastings 
+          add up to thousands monthly, while you don't even know it's happening.
+        </p>
+        <div class="text-sm text-orange-600 font-semibold">
+          Monthly Theft: ₹15,000-50,000
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-blue-500">
+        <div class="text-4xl mb-4">📊</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Blind Profit Problem</h3>
+        <p class="text-gray-600 mb-4">
+          No clue which cocktails actually make money. That ₹800 craft cocktail 
+          might cost ₹650 to make while the ₹200 beer gives 80% margin.
+        </p>
+        <div class="text-sm text-blue-600 font-semibold">
+          Wrong Focus: Promoting loss leaders
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The Transformation Story -->
+<section class="py-20 bar-gradient text-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-black mb-6">
+        From <span class="text-red-300">Bleeding Bar</span> to 
+        <span class="text-purple-200">Profit Powerhouse</span>
+      </h2>
+      <p class="text-xl text-gray-100 max-w-3xl mx-auto">
+        Mike Fernandes' transformation from 35% pour costs to 68% margins
+      </p>
+    </div>
+    
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="bg-red-900/40 p-8 rounded-lg border border-red-400/30">
+          <h3 class="text-2xl font-bold text-red-300 mb-6">🔴 BEFORE: The Money Drain</h3>
+          <ul class="space-y-4 text-gray-100">
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">💸</span>
+              <span>35% pour costs - bleeding ₹3.1 lakhs monthly</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">🕵️</span>
+              <span>No way to track staff theft or over-pouring</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">📉</span>
+              <span>Promoting wrong drinks, losing money on "bestsellers"</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">😰</span>
+              <span>Working every weekend, afraid to hire managers</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">📊</span>
+              <span>Inventory counts taking 6 hours, always wrong</span>
+            </li>
+          </ul>
+          
+          <div class="mt-6 p-4 bg-red-800/40 rounded-lg">
+            <p class="text-red-200 italic">
+              "I was running a charity disguised as a bar. Everyone was drinking 
+              my profits except me."
+            </p>
+          </div>
+        </div>
+        
+        <div class="bg-green-900/40 p-8 rounded-lg border border-green-400/30">
+          <h3 class="text-2xl font-bold text-green-300 mb-6">💎 AFTER: The Profit Machine</h3>
+          <ul class="space-y-4 text-gray-100">
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">💰</span>
+              <span>18% pour costs - saving ₹3.8 lakhs monthly</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">🎯</span>
+              <span>Real-time pour tracking, zero theft tolerance</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">📈</span>
+              <span>Promoting high-margin cocktails, optimized menu</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">🏖️</span>
+              <span>Weekends off, trusted managers with data oversight</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">⚡</span>
+              <span>15-minute inventory counts, 99% accuracy</span>
+            </li>
+          </ul>
+          
+          <div class="mt-6 p-4 bg-green-800/40 rounded-lg">
+            <p class="text-green-200 italic">
+              "Now I know exactly where every drop goes. My bar finally makes 
+              the money it should have been making all along."
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <div class="bg-black/50 p-8 rounded-lg border border-purple-400/30 inline-block">
+          <h4 class="text-2xl font-bold neon-accent mb-4">The Profit Transformation</h4>
+          <div class="grid grid-cols-3 gap-8 text-center">
+            <div>
+              <div class="text-3xl font-black text-green-300">68%</div>
+              <div class="text-sm text-gray-200">Margin Improvement</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-blue-300">89%</div>
+              <div class="text-sm text-gray-200">Theft Reduction</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-yellow-300">267%</div>
+              <div class="text-sm text-gray-200">Profit Increase</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bar & Pub Specific Solutions -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="neon-accent">Profit Pour</span> System
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Transform every pour from a profit leak into a profit stream
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <div class="space-y-8">
+        <div class="bg-gradient-to-r from-purple-50 to-purple-100 p-6 rounded-lg border-l-4 border-purple-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">🎯 Pour Cost Precision Tracking</h3>
+          <p class="text-gray-600 mb-4">
+            Monitor every ounce poured, track bartender performance, identify 
+            theft patterns. Real-time alerts for over-pours or unusual consumption.
+          </p>
+          <div class="text-sm font-semibold text-purple-700">
+            Pour Cost Reduction: 40-60%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-pink-50 to-pink-100 p-6 rounded-lg border-l-4 border-pink-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">📊 Smart Menu Engineering</h3>
+          <p class="text-gray-600 mb-4">
+            Analyze true profit per drink, optimize cocktail recipes, identify 
+            your most profitable offerings and promote them strategically.
+          </p>
+          <div class="text-sm font-semibold text-pink-700">
+            Menu Profitability: +45% increase
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg border-l-4 border-blue-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">🍻 Beverage Inventory Automation</h3>
+          <p class="text-gray-600 mb-4">
+            Automated inventory counts, predictive ordering, supplier optimization. 
+            Never run out of popular drinks or over-stock slow movers.
+          </p>
+          <div class="text-sm font-semibold text-blue-700">
+            Inventory Efficiency: 70% improvement
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-8">
+        <div class="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-lg border-l-4 border-green-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">🕒 Happy Hour Optimization</h3>
+          <p class="text-gray-600 mb-4">
+            Data-driven happy hour timing, dynamic pricing strategies, 
+            crowd flow predictions to maximize revenue during peak times.
+          </p>
+          <div class="text-sm font-semibold text-green-700">
+            Happy Hour Revenue: +35%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-red-50 to-red-100 p-6 rounded-lg border-l-4 border-red-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">👥 Staff Performance Analytics</h3>
+          <p class="text-gray-600 mb-4">
+            Track bartender efficiency, identify training needs, 
+            reward top performers. Build accountability without micromanagement.
+          </p>
+          <div class="text-sm font-semibold text-red-700">
+            Staff Efficiency: +50%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-orange-50 to-orange-100 p-6 rounded-lg border-l-4 border-orange-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">📱 Remote Bar Monitoring</h3>
+          <p class="text-gray-600 mb-4">
+            Monitor your bar from anywhere, real-time sales data, 
+            instant alerts for anomalies. Enjoy weekends while staying in control.
+          </p>
+          <div class="text-sm font-semibold text-orange-700">
+            Management Time: 60% reduction
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI Calculator -->
+<section class="py-20 bar-gradient text-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black mb-6">
+        Your <span class="text-purple-200">Profit Pour</span> Calculator
+      </h2>
+      <p class="text-xl text-gray-100">
+        Calculate your exact savings potential
+      </p>
+    </div>
+    
+    <div class="max-w-4xl mx-auto bg-black/50 p-8 rounded-lg border border-purple-400/30">
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <label class="block text-gray-100 mb-2">Monthly Beverage Revenue (₹)</label>
+          <input type="number" id="beverageRevenue" placeholder="e.g., 8,00,000" 
+                 class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-purple-500">
+        </div>
+        <div>
+          <label class="block text-gray-100 mb-2">Current Pour Cost %</label>
+          <input type="number" id="pourCost" placeholder="e.g., 35" 
+                 class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-purple-500">
+        </div>
+      </div>
+      
+      <button onclick="calculateBarROI()" 
+              class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-4 rounded-lg text-xl font-bold hover:from-purple-400 hover:to-pink-400 transition-all duration-300">
+        Calculate My Profit Potential
+      </button>
+      
+      <div id="roiResults" class="mt-8 hidden">
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="text-center p-6 bg-green-900/40 rounded-lg border border-green-400/30">
+            <div class="text-3xl font-black text-green-300" id="monthlySavings">₹0</div>
+            <div class="text-sm text-gray-200">Monthly Savings</div>
+          </div>
+          <div class="text-center p-6 bg-blue-900/40 rounded-lg border border-blue-400/30">
+            <div class="text-3xl font-black text-blue-300" id="marginImprovement">0%</div>
+            <div class="text-sm text-gray-200">Margin Improvement</div>
+          </div>
+          <div class="text-center p-6 bg-purple-900/40 rounded-lg border border-purple-400/30">
+            <div class="text-3xl font-black text-purple-300" id="yearlyProfit">₹0</div>
+            <div class="text-sm text-gray-200">Annual Profit Gain</div>
+          </div>
+        </div>
+        
+        <div class="mt-8 p-6 bg-gradient-to-r from-green-900/40 to-green-800/40 rounded-lg border border-green-400/30">
+          <h4 class="text-xl font-bold text-green-300 mb-4">Your Profit Timeline</h4>
+          <div class="space-y-2 text-gray-100">
+            <div><strong>Week 1:</strong> Pour tracking setup & staff training</div>
+            <div><strong>Week 2:</strong> Menu optimization & inventory automation</div>
+            <div><strong>Week 3:</strong> Performance analytics & theft elimination</div>
+            <div><strong>Week 4:</strong> Profit powerhouse - maximum margins achieved</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Social Proof -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="neon-accent">Profit Pour</span> Club
+      </h2>
+      <p class="text-xl text-gray-600">
+        Bar owners who transformed bleeding businesses into profit powerhouses
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">MF</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Mike Fernandes</h4>
+            <p class="text-sm text-gray-600">The Brew House, Mumbai</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "From 35% pour costs to 18%. RestoPi saved my bar from bankruptcy. 
+          Now I actually make money from every bottle I sell."
+        </p>
+        <div class="text-sm font-semibold text-purple-700">
+          Monthly Savings: ₹3.8 lakhs
+        </div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">RD</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Raj Desai</h4>
+            <p class="text-sm text-gray-600">Neon Nights, Bangalore</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "I finally know which cocktails make money. Switched focus to high-margin 
+          drinks and profits jumped 180% without raising prices."
+        </p>
+        <div class="text-sm font-semibold text-pink-700">
+          Profit Increase: 180%
+        </div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">SK</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Sanjay Khanna</h4>
+            <p class="text-sm text-gray-600">Purple Haze, Delhi</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "Staff theft dropped to zero. Everyone knows I'm watching every pour. 
+          My trusted bartenders love the transparency too."
+        </p>
+        <div class="text-sm font-semibold text-blue-700">
+          Theft Elimination: 100%
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Urgency & Scarcity -->
+<section class="py-20 bg-red-900 text-white">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-black mb-6">
+      ⚠️ Your <span class="text-purple-300">Pour Costs</span> Are Bleeding You Dry Tonight
+    </h2>
+    
+    <div class="max-w-3xl mx-auto mb-12">
+      <p class="text-xl mb-8">
+        While you're reading this, every drink being poured at your bar is either 
+        making you money or losing it. With 35% pour costs, you're literally 
+        pouring away ₹35 from every ₹100 of liquor sales.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div class="bg-red-800/50 p-6 rounded-lg">
+          <h3 class="text-2xl font-bold mb-4">🔴 Tonight's Reality</h3>
+          <ul class="text-left space-y-2">
+            <li>• ₹8,000-15,000 lost to over-pours tonight</li>
+            <li>• Staff "sampling" expensive inventory</li>
+            <li>• Zero visibility into actual profitability</li>
+            <li>• Working weekends while margins disappear</li>
+          </ul>
+        </div>
+        
+        <div class="bg-green-800/50 p-6 rounded-lg">
+          <h3 class="text-2xl font-bold mb-4">💎 Tomorrow's Possibility</h3>
+          <ul class="text-left space-y-2">
+            <li>• Perfect pours saving ₹3-5 lakhs monthly</li>
+            <li>• Complete accountability and transparency</li>
+            <li>• Data-driven profitability insights</li>
+            <li>• Weekend freedom with automated monitoring</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="bg-black/50 p-6 rounded-lg mb-8">
+        <h3 class="text-2xl font-bold text-purple-300 mb-4">🍻 Bar Profit Rescue Program</h3>
+        <p class="text-lg mb-4">
+          Emergency intervention for bars losing ₹2+ lakhs monthly to pour costs. 
+          Complete profit recovery system with theft elimination guarantee.
+        </p>
+        <div class="text-3xl font-black text-red-300">
+          Pour tracking active in <span id="hoursToSetup">24</span> hours
+        </div>
+      </div>
+    </div>
+    
+    <button 
+      onclick="window.trackEvent('urgency_cta_clicked', {segment: 'bar_pub', position: 'urgency'}); window.open('https://wa.me/918047366622?text=EMERGENCY: My bar is bleeding money through pour costs. I need the profit rescue system immediately', '_blank')"
+      class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-16 py-6 rounded-lg text-2xl font-black hover:from-purple-400 hover:to-pink-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+    >
+      🚨 RESCUE MY BAR PROFITS NOW
+    </button>
+    
+    <p class="mt-6 text-gray-200">
+      Setup time: <span class="text-purple-300 font-bold">24 hours</span> | 
+      Profit tracking: <span class="text-green-300 font-bold">Immediate</span>
+    </p>
+  </div>
+</section>
+
+<script>
+function calculateBarROI() {
+  const beverageRevenue = parseInt(document.getElementById('beverageRevenue').value) || 0;
+  const pourCost = parseFloat(document.getElementById('pourCost').value) || 0;
+  
+  if (beverageRevenue === 0 || pourCost === 0) {
+    alert('Please enter your monthly beverage revenue and current pour cost percentage');
+    return;
+  }
+  
+  // Bar-specific calculations
+  const currentPourCostAmount = beverageRevenue * (pourCost / 100);
+  const optimizedPourCost = Math.max(18, pourCost * 0.6); // Reduce by 40% minimum
+  const newPourCostAmount = beverageRevenue * (optimizedPourCost / 100);
+  
+  const monthlySavings = currentPourCostAmount - newPourCostAmount;
+  const marginImprovement = pourCost - optimizedPourCost;
+  const yearlyProfit = monthlySavings * 12;
+  
+  const restopiCost = 35000; // Bar pricing
+  const netMonthlySavings = monthlySavings - restopiCost;
+  
+  document.getElementById('monthlySavings').textContent = '₹' + Math.round(netMonthlySavings).toLocaleString();
+  document.getElementById('marginImprovement').textContent = Math.round(marginImprovement) + '%';
+  document.getElementById('yearlyProfit').textContent = '₹' + Math.round(yearlyProfit).toLocaleString();
+  
+  document.getElementById('roiResults').classList.remove('hidden');
+  
+  // Track calculation
+  window.trackEvent('roi_calculated', {
+    segment: 'bar_pub',
+    beverage_revenue: beverageRevenue,
+    savings: netMonthlySavings,
+    margin_improvement: marginImprovement
+  });
+}
+
+// Track page engagement
+window.trackEvent('bar_pub_page_view', {
+  segment: 'bar_pub',
+  page_type: 'custom_segment_page'
+});
+</script>
+
+</BaseLayout>

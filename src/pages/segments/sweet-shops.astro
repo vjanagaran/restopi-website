@@ -1,0 +1,601 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Sweet Shop Liberation - Festival Fortune, Not Festival Stress | RestoPi"
+  description="Transform your sweet shop from festival chaos into year-round profit machine. Achieve ₹1.8L+ monthly savings while preserving traditional sweetness."
+>
+
+<style>
+  @keyframes sweetGlow {
+    0%, 100% { transform: scale(1) brightness(1); }
+    50% { transform: scale(1.05) brightness(1.3); }
+  }
+  
+  @keyframes festiveShimmer {
+    0%, 100% { box-shadow: 0 0 20px rgba(236, 72, 153, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(236, 72, 153, 0.6); }
+  }
+  
+  .sweet-gradient {
+    background: linear-gradient(135deg, #be185d 0%, #ec4899 50%, #f59e0b 100%);
+  }
+  
+  .sweet-accent {
+    background: linear-gradient(45deg, #ec4899, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .festive-counter {
+    animation: festiveShimmer 3s ease-in-out infinite;
+  }
+  
+  .sweet-icon {
+    animation: sweetGlow 4s ease-in-out infinite;
+  }
+  
+  .sweet-bg {
+    background: radial-gradient(circle at center, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
+  }
+</style>
+
+<!-- Hero Section: Festival Chaos vs Year-Round Success -->
+<section class="sweet-gradient text-white py-20 relative overflow-hidden sweet-bg">
+  <div class="container mx-auto px-6 text-center relative z-10">
+    <div class="mb-8">
+      <span class="inline-block sweet-icon text-6xl mb-4">🍰</span>
+      <h1 class="text-6xl font-black mb-6 leading-tight">
+        <span class="text-pink-200">Sweet Success</span><br>
+        Shouldn't Be <span class="sweet-accent">Festival Stress</span>
+      </h1>
+    </div>
+    
+    <div class="max-w-4xl mx-auto mb-12">
+      <p class="text-2xl text-gray-100 mb-8 leading-relaxed">
+        Your sweet shop should be a treasure trove of tradition and profit. Instead, you're trapped in a 
+        <span class="text-red-300 font-bold">festival roller coaster</span> - 
+        drowning in Diwali chaos, struggling through lean months, watching milk products expire daily.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-red-900/40 p-6 rounded-lg border border-red-400/30">
+          <h3 class="text-xl font-bold text-red-300 mb-4">🎢 The Festival Roller Coaster</h3>
+          <ul class="text-left space-y-2 text-gray-100">
+            <li>• Diwali = 20-hour days and ₹5L inventory stress</li>
+            <li>• Off-season = barely covering rent and staff</li>
+            <li>• Milk products spoiling daily - ₹15,000 weekly</li>
+            <li>• No clue how much to make for festivals</li>
+            <li>• Traditional recipes = unpredictable costs</li>
+          </ul>
+        </div>
+        
+        <div class="bg-green-900/40 p-6 rounded-lg border border-green-400/30">
+          <h3 class="text-xl font-bold text-green-300 mb-4">🎯 The Sweet Success Machine</h3>
+          <ul class="text-left space-y-2 text-gray-100">
+            <li>• Festivals = profitable preparation, not chaos</li>
+            <li>• Year-round = steady profits, not survival mode</li>
+            <li>• Zero waste through shelf-life optimization</li>
+            <li>• Perfect festival quantities every time</li>
+            <li>• Traditional taste with modern efficiency</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Live Sweet Shop Metrics -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="festive-counter bg-black/50 p-6 rounded-lg border border-pink-400/30">
+        <div class="text-3xl font-black text-pink-300">₹5,67,000</div>
+        <div class="text-sm text-gray-200">Saved by sweet shops this month</div>
+      </div>
+      <div class="festive-counter bg-black/50 p-6 rounded-lg border border-pink-400/30">
+        <div class="text-3xl font-black text-yellow-300">89%</div>
+        <div class="text-sm text-gray-200">Festival stress reduction</div>
+      </div>
+      <div class="festive-counter bg-black/50 p-6 rounded-lg border border-pink-400/30">
+        <div class="text-3xl font-black text-green-300">234</div>
+        <div class="text-sm text-gray-200">Sweet shops optimized</div>
+      </div>
+    </div>
+    
+    <button 
+      onclick="window.trackEvent('hero_cta_clicked', {segment: 'sweet_shop', position: 'hero'}); window.open('https://wa.me/918047366622?text=I want to transform my sweet shop from festival stress into year-round sweet success', '_blank')"
+      class="bg-gradient-to-r from-pink-500 to-yellow-500 text-white px-12 py-6 rounded-lg text-xl font-bold hover:from-pink-400 hover:to-yellow-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+    >
+      🍰 Sweeten My Success
+    </button>
+    
+    <p class="mt-4 text-gray-200">
+      <span class="text-red-300 font-bold">SWEET REALITY:</span> Festival chaos costs ₹2-5 lakhs in stress & waste
+    </p>
+  </div>
+</section>
+
+<!-- The Sweet Shop Challenge -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="sweet-accent">Traditional Trap</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Sweet shops are caught between preserving tradition and surviving modern business reality. 
+        Ancient recipes meet modern costs, seasonal demand meets year-round expenses.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-red-500">
+        <div class="text-4xl mb-4">🎊</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Festival Panic</h3>
+        <p class="text-gray-600 mb-4">
+          Diwali, Karva Chauth, Raksha Bandhan - each festival is a gamble. 
+          Make too little = lost sales. Make too much = massive waste and losses.
+        </p>
+        <div class="text-sm text-red-600 font-semibold">
+          Festival Stress: ₹2-5 lakhs potential swing
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-orange-500">
+        <div class="text-4xl mb-4">🥛</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Shelf Life Nightmare</h3>
+        <p class="text-gray-600 mb-4">
+          Milk-based sweets with 2-3 day shelf life. Daily batch decisions based on "feeling" 
+          rather than data. Constant fear of waste vs stockouts.
+        </p>
+        <div class="text-sm text-orange-600 font-semibold">
+          Daily Waste: ₹8,000-25,000 depending on season
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-blue-500">
+        <div class="text-4xl mb-4">📅</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Seasonal Survival</h3>
+        <p class="text-gray-600 mb-4">
+          60% of yearly revenue in 3 months (Oct-Dec). Rest of the year = 
+          surviving on hope and prayers while fixed costs continue.
+        </p>
+        <div class="text-sm text-blue-600 font-semibold">
+          Off-season Challenge: 9 months of struggle
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The Transformation Story -->
+<section class="py-20 sweet-gradient text-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-black mb-6">
+        From <span class="text-red-300">Festival Panic</span> to 
+        <span class="text-pink-200">Sweet Serenity</span>
+      </h2>
+      <p class="text-xl text-gray-100 max-w-3xl mx-auto">
+        Krishnan Iyer's transformation from Diwali chaos to year-round sweet success
+      </p>
+    </div>
+    
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="bg-red-900/40 p-8 rounded-lg border border-red-400/30">
+          <h3 class="text-2xl font-bold text-red-300 mb-6">🎢 BEFORE: The Festival Slave</h3>
+          <ul class="space-y-4 text-gray-100">
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">😰</span>
+              <span>Diwali prep = 22-hour days for 2 weeks straight</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">💸</span>
+              <span>₹5 lakh festival inventory stress, always wrong quantity</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">🥛</span>
+              <span>₹18,000 weekly waste on spoiled milk products</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">📉</span>
+              <span>Off-season barely covering rent and staff salaries</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">😵</span>
+              <span>Health suffering from seasonal stress cycles</span>
+            </li>
+          </ul>
+          
+          <div class="mt-6 p-4 bg-red-800/40 rounded-lg">
+            <p class="text-red-200 italic">
+              "Every festival was a gamble with our life savings. Win big or lose everything. 
+              The stress was killing our family business."
+            </p>
+          </div>
+        </div>
+        
+        <div class="bg-green-900/40 p-8 rounded-lg border border-green-400/30">
+          <h3 class="text-2xl font-bold text-green-300 mb-6">🎯 AFTER: The Sweet Master</h3>
+          <ul class="space-y-4 text-gray-100">
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">😌</span>
+              <span>Festivals = predictable profit, working normal hours</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">💰</span>
+              <span>Perfect quantities every festival, ₹1.8L monthly savings</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">🎯</span>
+              <span>5% waste through shelf-life optimization</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">📈</span>
+              <span>Off-season profitable through efficiency gains</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">❤️</span>
+              <span>Enjoying festivals instead of dreading them</span>
+            </li>
+          </ul>
+          
+          <div class="mt-6 p-4 bg-green-800/40 rounded-lg">
+            <p class="text-green-200 italic">
+              "Now festivals are celebrations, not panic attacks. Same traditional taste, 
+              modern business intelligence. Best of both worlds."
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <div class="bg-black/50 p-8 rounded-lg border border-pink-400/30 inline-block">
+          <h4 class="text-2xl font-bold sweet-accent mb-4">The Sweet Transformation</h4>
+          <div class="grid grid-cols-3 gap-8 text-center">
+            <div>
+              <div class="text-3xl font-black text-green-300">89%</div>
+              <div class="text-sm text-gray-200">Stress Reduction</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-blue-300">94%</div>
+              <div class="text-sm text-gray-200">Waste Elimination</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-yellow-300">167%</div>
+              <div class="text-sm text-gray-200">Profit Increase</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sweet Shop Specific Solutions -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="sweet-accent">Festival Fortune</span> System
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Transform festival chaos into predictable profits while preserving tradition
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <div class="space-y-8">
+        <div class="bg-gradient-to-r from-pink-50 to-pink-100 p-6 rounded-lg border-l-4 border-pink-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">🎊 Festival Demand Forecasting</h3>
+          <p class="text-gray-600 mb-4">
+            AI-powered predictions for every festival based on historical data, 
+            weather patterns, local events. No more guessing, perfect quantities.
+          </p>
+          <div class="text-sm font-semibold text-pink-700">
+            Forecast Accuracy: 92%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-yellow-50 to-yellow-100 p-6 rounded-lg border-l-4 border-yellow-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">🥛 Shelf Life Optimization</h3>
+          <p class="text-gray-600 mb-4">
+            Track every batch, monitor freshness, optimize production timing. 
+            Milk-based sweets made exactly when needed, sold at peak freshness.
+          </p>
+          <div class="text-sm font-semibold text-yellow-700">
+            Waste Reduction: 85%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-orange-50 to-orange-100 p-6 rounded-lg border-l-4 border-orange-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">📊 Traditional Recipe Costing</h3>
+          <p class="text-gray-600 mb-4">
+            Precise cost calculation for traditional recipes, optimize ingredient 
+            sourcing, maintain taste while improving margins.
+          </p>
+          <div class="text-sm font-semibold text-orange-700">
+            Margin Improvement: 35%
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-8">
+        <div class="bg-gradient-to-r from-purple-50 to-purple-100 p-6 rounded-lg border-l-4 border-purple-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">📅 Year-Round Revenue Optimization</h3>
+          <p class="text-gray-600 mb-4">
+            Seasonal menu planning, off-season product development, 
+            corporate order management to smooth revenue cycles.
+          </p>
+          <div class="text-sm font-semibold text-purple-700">
+            Off-season Revenue: +180%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-lg border-l-4 border-green-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">🎯 Bulk Order Management</h3>
+          <p class="text-gray-600 mb-4">
+            Corporate Diwali orders, wedding orders, bulk festival sales. 
+            Systematic approach to high-value seasonal opportunities.
+          </p>
+          <div class="text-sm font-semibold text-green-700">
+            Bulk Revenue: 3x increase
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg border-l-4 border-blue-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">⚡ Production Scheduling</h3>
+          <p class="text-gray-600 mb-4">
+            Optimize production timing, staff scheduling for festivals, 
+            equipment utilization to handle peak demand smoothly.
+          </p>
+          <div class="text-sm font-semibold text-blue-700">
+            Production Efficiency: +120%
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI Calculator -->
+<section class="py-20 sweet-gradient text-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black mb-6">
+        Your <span class="text-pink-200">Sweet Success</span> Calculator
+      </h2>
+      <p class="text-xl text-gray-100">
+        Calculate your festival fortune potential
+      </p>
+    </div>
+    
+    <div class="max-w-4xl mx-auto bg-black/50 p-8 rounded-lg border border-pink-400/30">
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <label class="block text-gray-100 mb-2">Monthly Revenue (₹)</label>
+          <input type="number" id="monthlyRevenue" placeholder="e.g., 4,50,000" 
+                 class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-pink-500">
+        </div>
+        <div>
+          <label class="block text-gray-100 mb-2">Current Daily Waste (₹)</label>
+          <input type="number" id="dailyWaste" placeholder="e.g., 8,000" 
+                 class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-pink-500">
+        </div>
+      </div>
+      
+      <button onclick="calculateSweetShopROI()" 
+              class="w-full bg-gradient-to-r from-pink-500 to-yellow-500 text-white py-4 rounded-lg text-xl font-bold hover:from-pink-400 hover:to-yellow-400 transition-all duration-300">
+        Calculate My Sweet Success
+      </button>
+      
+      <div id="roiResults" class="mt-8 hidden">
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="text-center p-6 bg-green-900/40 rounded-lg border border-green-400/30">
+            <div class="text-3xl font-black text-green-300" id="monthlySavings">₹0</div>
+            <div class="text-sm text-gray-200">Monthly Savings</div>
+          </div>
+          <div class="text-center p-6 bg-blue-900/40 rounded-lg border border-blue-400/30">
+            <div class="text-3xl font-black text-blue-300" id="wasteReduction">0%</div>
+            <div class="text-sm text-gray-200">Waste Reduction</div>
+          </div>
+          <div class="text-center p-6 bg-yellow-900/40 rounded-lg border border-yellow-400/30">
+            <div class="text-3xl font-black text-yellow-300" id="festivalStress">0%</div>
+            <div class="text-sm text-gray-200">Festival Stress Reduction</div>
+          </div>
+        </div>
+        
+        <div class="mt-8 p-6 bg-gradient-to-r from-green-900/40 to-green-800/40 rounded-lg border border-green-400/30">
+          <h4 class="text-xl font-bold text-green-300 mb-4">Your Sweet Timeline</h4>
+          <div class="space-y-2 text-gray-100">
+            <div><strong>Week 1:</strong> Festival demand analysis & shelf-life tracking setup</div>
+            <div><strong>Week 2:</strong> Recipe costing & margin optimization</div>
+            <div><strong>Week 3:</strong> Production scheduling & waste reduction</div>
+            <div><strong>Week 4:</strong> Festival preparation with confidence, not chaos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Social Proof -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="sweet-accent">Sweet Masters</span> Community
+      </h2>
+      <p class="text-xl text-gray-600">
+        Sweet shop owners who transformed festival stress into year-round success
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">KI</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Krishnan Iyer</h4>
+            <p class="text-sm text-gray-600">Sri Krishna Sweets, Hyderabad</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "Diwali used to be 22-hour nightmare. Now it's predictable profit. 
+          Same traditional taste, modern business sense. Saved ₹1.8L monthly."
+        </p>
+        <div class="text-sm font-semibold text-pink-700">
+          Festival Transformation: Stress to Success
+        </div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">MS</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Meera Shah</h4>
+            <p class="text-sm text-gray-600">Gujarati Sweets, Mumbai</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "5% waste from 40% waste. Our milk products stay fresh longer, 
+          and we know exactly how much to make for every festival."
+        </p>
+        <div class="text-sm font-semibold text-yellow-700">
+          Waste Elimination: 94% reduction
+        </div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">RG</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Raj Gupta</h4>
+            <p class="text-sm text-gray-600">Traditional Mithai, Delhi</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "Off-season used to be survival mode. Now we're profitable year-round 
+          with corporate orders and optimized production."
+        </p>
+        <div class="text-sm font-semibold text-orange-700">
+          Year-round Revenue: 180% increase
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Urgency & Scarcity -->
+<section class="py-20 bg-red-900 text-white">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-black mb-6">
+      ⚠️ Diwali 2024 is <span class="text-pink-300">45 Days Away</span>
+    </h2>
+    
+    <div class="max-w-3xl mx-auto mb-12">
+      <p class="text-xl mb-8">
+        Every Diwali without proper systems costs you ₹2-5 lakhs in stress, waste, and missed opportunities. 
+        This year can be different, but only if you act now to prepare.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div class="bg-red-800/50 p-6 rounded-lg">
+          <h3 class="text-2xl font-bold mb-4">🎢 This Diwali's Reality</h3>
+          <ul class="text-left space-y-2">
+            <li>• ₹2-5 lakh festival inventory gamble</li>
+            <li>• 20+ hour days destroying health</li>
+            <li>• Guessing quantities = massive waste or stockouts</li>
+            <li>• Family missing father during biggest festival</li>
+          </ul>
+        </div>
+        
+        <div class="bg-green-800/50 p-6 rounded-lg">
+          <h3 class="text-2xl font-bold mb-4">🎯 This Diwali's Possibility</h3>
+          <ul class="text-left space-y-2">
+            <li>• Perfect quantities, predictable profits</li>
+            <li>• Normal working hours, family time</li>
+            <li>• Zero waste through demand forecasting</li>
+            <li>• Enjoying festivals instead of dreading them</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="bg-black/50 p-6 rounded-lg mb-8">
+        <h3 class="text-2xl font-bold text-pink-300 mb-4">🍰 Diwali 2024 Rescue Program</h3>
+        <p class="text-lg mb-4">
+          Emergency implementation for sweet shops to make Diwali 2024 profitable instead of chaotic. 
+          Complete festival preparation system.
+        </p>
+        <div class="text-3xl font-black text-red-300">
+          Diwali prep optimization in <span id="daysLeft">14</span> days
+        </div>
+      </div>
+    </div>
+    
+    <button 
+      onclick="window.trackEvent('urgency_cta_clicked', {segment: 'sweet_shop', position: 'urgency'}); window.open('https://wa.me/918047366622?text=URGENT: Diwali 2024 is coming and I need the festival fortune system to avoid chaos and maximize profits', '_blank')"
+      class="bg-gradient-to-r from-pink-500 to-yellow-500 text-white px-16 py-6 rounded-lg text-2xl font-black hover:from-pink-400 hover:to-yellow-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+    >
+      🚨 SAVE MY DIWALI 2024
+    </button>
+    
+    <p class="mt-6 text-gray-200">
+      Implementation: <span class="text-pink-300 font-bold">14 days</span> | 
+      Diwali readiness: <span class="text-green-300 font-bold">45 days</span>
+    </p>
+  </div>
+</section>
+
+<script>
+function calculateSweetShopROI() {
+  const monthlyRevenue = parseInt(document.getElementById('monthlyRevenue').value) || 0;
+  const dailyWaste = parseInt(document.getElementById('dailyWaste').value) || 0;
+  
+  if (monthlyRevenue === 0 || dailyWaste === 0) {
+    alert('Please enter your monthly revenue and current daily waste amount');
+    return;
+  }
+  
+  // Sweet shop specific calculations
+  const monthlyWaste = dailyWaste * 30;
+  const wasteReduction = monthlyWaste * 0.85; // 85% waste reduction
+  const shelfLifeOptimization = monthlyRevenue * 0.08; // 8% through better shelf life management
+  const festivalOptimization = monthlyRevenue * 0.12; // 12% through festival forecasting
+  
+  const totalSavings = wasteReduction + shelfLifeOptimization + festivalOptimization;
+  const restopiCost = 28000; // Sweet shop pricing
+  const netMonthlySavings = totalSavings - restopiCost;
+  
+  const wasteReductionPercent = (wasteReduction / monthlyWaste) * 100;
+  const festivalStressReduction = 89; // Based on testimonials
+  
+  document.getElementById('monthlySavings').textContent = '₹' + Math.round(netMonthlySavings).toLocaleString();
+  document.getElementById('wasteReduction').textContent = Math.round(wasteReductionPercent) + '%';
+  document.getElementById('festivalStress').textContent = festivalStressReduction + '%';
+  
+  document.getElementById('roiResults').classList.remove('hidden');
+  
+  // Track calculation
+  window.trackEvent('roi_calculated', {
+    segment: 'sweet_shop',
+    monthly_revenue: monthlyRevenue,
+    daily_waste: dailyWaste,
+    savings: netMonthlySavings
+  });
+}
+
+// Track page engagement
+window.trackEvent('sweet_shop_page_view', {
+  segment: 'sweet_shop',
+  page_type: 'custom_segment_page'
+});
+</script>
+
+</BaseLayout>

@@ -385,3 +385,4 @@ const emotionalTriggers = {
     accountability_partner: "Buddy system"
   }
 };
+

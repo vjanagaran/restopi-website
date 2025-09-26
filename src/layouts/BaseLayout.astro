@@ -25,13 +25,106 @@ const {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   
-  <!-- Google Analytics -->
+  <!-- Google Analytics 4 with Enhanced Tracking -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PQMMM6L6R"></script>
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-9PQMMM6L6R');
+    
+    // Enhanced ecommerce and conversion tracking
+    gtag('config', 'G-9PQMMM6L6R', {
+      // Enhanced measurement features
+      enhanced_measurement: true,
+      page_title: document.title,
+      page_location: window.location.href,
+      
+      // Custom parameters for restaurant tracking
+      custom_map: {
+        'custom_parameter_1': 'segment',
+        'custom_parameter_2': 'solution',
+        'custom_parameter_3': 'savings_potential'
+      },
+      
+      // Conversion tracking
+      send_page_view: true,
+      allow_google_signals: true,
+      allow_ad_personalization_signals: true
+    });
+
+    // Track page performance
+    gtag('event', 'page_view', {
+      page_title: document.title,
+      page_location: window.location.href,
+      page_path: window.location.pathname
+    });
+
+    // Global analytics utility functions
+    window.trackEvent = function(eventName, parameters = {}) {
+      gtag('event', eventName, {
+        event_category: parameters.category || 'engagement',
+        event_label: parameters.label || '',
+        value: parameters.value || 0,
+        ...parameters
+      });
+    };
+
+    window.trackConversion = function(conversionAction, value = 0, currency = 'INR') {
+      gtag('event', 'conversion', {
+        send_to: 'G-9PQMMM6L6R',
+        value: value,
+        currency: currency,
+        transaction_id: Date.now().toString(),
+        event_category: 'conversion',
+        event_label: conversionAction
+      });
+    };
+
+    window.trackRestaurantData = function(data) {
+      gtag('event', 'restaurant_interaction', {
+        event_category: 'restaurant_data',
+        segment: data.segment || '',
+        solution: data.solution || '',
+        savings_potential: data.savings || 0,
+        city: data.city || '',
+        outlet_count: data.outlets || 1
+      });
+    };
+
+    // Track scroll depth
+    let maxScroll = 0;
+    window.addEventListener('scroll', function() {
+      const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      if (scrollPercent > maxScroll && scrollPercent % 25 === 0) {
+        maxScroll = scrollPercent;
+        gtag('event', 'scroll', {
+          event_category: 'engagement',
+          event_label: scrollPercent + '%',
+          value: scrollPercent
+        });
+      }
+    });
+
+    // Track time on page
+    let startTime = Date.now();
+    window.addEventListener('beforeunload', function() {
+      const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+      gtag('event', 'time_on_page', {
+        event_category: 'engagement',
+        value: timeOnPage,
+        event_label: timeOnPage + ' seconds'
+      });
+    });
+
+    // Initialize conversion tracking
+    document.addEventListener('DOMContentLoaded', function() {
+      // Import and initialize conversion tracking
+      import('/src/utils/conversionTracking.js').then(module => {
+        window.RestoPiConversionTracker = new module.ConversionTracker();
+      }).catch(err => {
+        console.warn('Could not load conversion tracking:', err);
+      });
+    });
   </script>
 </head>
 <body>

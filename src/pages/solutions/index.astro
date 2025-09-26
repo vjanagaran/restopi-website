@@ -1,0 +1,206 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import solutions from '../../data/solutions.json';
+---
+
+<BaseLayout title="RestoPi Solutions - Save ₹2+ Lakhs Monthly | Restaurant Intelligence">
+  <Navigation />
+  <main class="container mx-auto px-4 py-8 mt-16">
+    <section class="hero bg-gradient-to-br from-orange-50 to-white py-16 rounded-lg mb-12">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          RestoPi Solutions That Transform Restaurants
+        </h1>
+        <p class="text-xl text-gray-700 mb-8">
+          From waste prevention to profit optimization - each solution is designed to save you money and give you your life back.
+        </p>
+        <div class="grid md:grid-cols-3 gap-6 text-center">
+          <div class="bg-white rounded-lg p-4 shadow-md">
+            <div class="text-3xl font-bold text-green-600">₹2+ Lakhs</div>
+            <div class="text-sm text-gray-600">Average Monthly Savings</div>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-md">
+            <div class="text-3xl font-bold text-blue-600">10 PM</div>
+            <div class="text-sm text-gray-600">Go Home Every Night</div>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-md">
+            <div class="text-3xl font-bold text-purple-600">14 Days</div>
+            <div class="text-sm text-gray-600">Free Trial Period</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {solutions.solutions.map((solution) => (
+          <a href={`/solutions/${solution.slug}`} class="block group">
+            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 h-full border-l-4 border-orange-600">
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <div class="text-4xl mr-4">{solution.icon}</div>
+                  <h3 class="text-xl font-bold text-gray-900 group-hover:text-orange-600 transition">
+                    {solution.name}
+                  </h3>
+                </div>
+                
+                <p class="text-gray-600 mb-4">
+                  {solution.description}
+                </p>
+
+                <div class="space-y-3 mb-6">
+                  <div class="bg-red-50 rounded-lg p-3">
+                    <div class="text-sm font-semibold text-red-700 mb-1">Problem:</div>
+                    <div class="text-sm text-red-600">{solution.problem}</div>
+                  </div>
+                  <div class="bg-green-50 rounded-lg p-3">
+                    <div class="text-sm font-semibold text-green-700 mb-1">Solution:</div>
+                    <div class="text-sm text-green-600">{solution.solution}</div>
+                  </div>
+                </div>
+
+                <div class="border-t pt-4">
+                  <div class="text-sm text-gray-600 mb-2">Key Benefits:</div>
+                  <ul class="text-sm text-gray-700 space-y-1">
+                    {solution.benefits.slice(0, 2).map((benefit) => (
+                      <li class="flex items-start gap-2">
+                        <span class="text-green-500 mt-0.5">✓</span>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div class="mt-6 flex items-center justify-between">
+                  <span class="text-orange-600 font-semibold group-hover:underline">
+                    Learn More →
+                  </span>
+                  <div class="text-right">
+                    <div class="text-xs text-gray-500">Monthly Savings</div>
+                    <div class="text-lg font-bold text-green-600">{solution.roi.savings.split('/')[0]}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- ROI Overview Section -->
+    <section class="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg p-8 mb-12">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-8">
+          The RestoPi ROI Promise
+        </h2>
+        <div class="grid md:grid-cols-4 gap-6 text-center">
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+            <div class="text-3xl font-bold mb-2">₹25K</div>
+            <div class="text-sm text-green-50">Average Monthly Investment</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+            <div class="text-3xl font-bold mb-2">₹2.5L</div>
+            <div class="text-sm text-green-50">Average Monthly Savings</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+            <div class="text-3xl font-bold mb-2">10:1</div>
+            <div class="text-sm text-green-50">Return on Investment</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+            <div class="text-3xl font-bold mb-2">1 Week</div>
+            <div class="text-sm text-green-50">Typical Payback Period</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">How RestoPi Solutions Work Together</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="bg-orange-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">📊</span>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Data Collection</h3>
+          <p class="text-gray-600 text-sm">AI analyzes your operations, sales patterns, and waste data</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-orange-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">🤖</span>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">AI Analysis</h3>
+          <p class="text-gray-600 text-sm">Machine learning identifies patterns and optimization opportunities</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-orange-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">💡</span>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Smart Recommendations</h3>
+          <p class="text-gray-600 text-sm">Get actionable insights and automated solutions</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">💰</span>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Watch Profits Grow</h3>
+          <p class="text-gray-600 text-sm">See immediate results with reduced costs and increased efficiency</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="bg-gray-50 rounded-lg p-8 mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 text-center mb-8">Success Stories Across Solutions</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <div class="text-4xl mb-3">🗑️</div>
+          <h4 class="font-bold text-gray-900 mb-2">Waste Prevention Winner</h4>
+          <p class="text-gray-600 text-sm mb-3">"Reduced waste from 22% to 8% in 45 days. RestoPi paid for itself in the first month."</p>
+          <div class="text-green-600 font-semibold">- Mumbai QSR Owner</div>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <div class="text-4xl mb-3">🏠</div>
+          <h4 class="font-bold text-gray-900 mb-2">10 PM Liberation</h4>
+          <p class="text-gray-600 text-sm mb-3">"First time in 7 years I'm home for my kid's bedtime story every night."</p>
+          <div class="text-green-600 font-semibold">- Bangalore Cafe Owner</div>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <div class="text-4xl mb-3">📈</div>
+          <h4 class="font-bold text-gray-900 mb-2">Profit Optimization</h4>
+          <p class="text-gray-600 text-sm mb-3">"Same menu, same customers, 40% higher profit margins. RestoPi found money I didn't know existed."</p>
+          <div class="text-green-600 font-semibold">- Delhi Fine Dining</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Free Trial CTA -->
+    <section class="text-center py-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">
+        Choose Your Solution, Start Saving Today
+      </h2>
+      <p class="text-xl text-gray-700 mb-8">
+        14-day free trial • No credit card required • Cancel anytime
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/demo" class="bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-700 transition text-lg">
+          Book Free Demo
+        </a>
+        <a href="https://wa.me/919884248927?text=I want to save ₹2 lakhs monthly with RestoPi solutions!" class="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition text-lg">
+          WhatsApp: Get Started
+        </a>
+        <a href="/calculator" class="border-2 border-orange-600 text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-orange-50 transition text-lg">
+          Calculate ROI
+        </a>
+      </div>
+      <p class="text-sm text-gray-500 mt-4">
+        ✓ 60-Day Money Back Guarantee &nbsp;&nbsp; ✓ No Setup Fees &nbsp;&nbsp; ✓ 24/7 Support
+      </p>
+    </section>
+  </main>
+  <Footer />
+  <WhatsAppButton />
+</BaseLayout>

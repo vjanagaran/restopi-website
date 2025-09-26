@@ -1,0 +1,256 @@
+{
+  "solutions": [
+    {
+      "id": "waste-prevention",
+      "name": "Waste Prevention System",
+      "shortName": "Waste Prevention",
+      "slug": "waste-prevention",
+      "description": "AI-powered waste tracking and prevention that saves ₹2+ lakhs monthly",
+      "icon": "🗑️",
+      "problem": "Restaurants lose ₹2-5 lakhs monthly to preventable food waste",
+      "solution": "Real-time waste tracking with predictive analytics to prevent waste before it happens",
+      "benefits": [
+        "Reduce waste by 35-45%",
+        "Save ₹2-3 lakhs monthly",
+        "Real-time waste alerts",
+        "Predictive inventory management"
+      ],
+      "features": [
+        "Smart inventory tracking",
+        "Expiry date management",
+        "Waste pattern analysis",
+        "Automated reorder alerts",
+        "Cost impact dashboard"
+      ],
+      "roi": {
+        "investment": "₹25,000/month",
+        "savings": "₹2,50,000/month",
+        "netProfit": "₹2,25,000/month",
+        "paybackPeriod": "1 week"
+      },
+      "testimonial": {
+        "quote": "Waste dropped from 18% to 6% in two months. RestoPi's predictions are scary accurate.",
+        "author": "Rajesh Kumar",
+        "business": "Spice Garden, Mumbai",
+        "savings": "₹2.8 Lakhs/month"
+      },
+      "caseStudy": {
+        "title": "Mumbai QSR Cuts Waste by 42%",
+        "before": "₹18,000 daily waste",
+        "after": "₹6,500 daily waste",
+        "timeframe": "60 days",
+        "methods": ["Predictive ordering", "Expiry tracking", "Portion optimization"]
+      }
+    },
+    {
+      "id": "home-by-10pm",
+      "name": "10 PM Liberation System",
+      "shortName": "10 PM Liberation",
+      "slug": "home-by-10pm",
+      "description": "Automated operations that guarantee owners get home by 10 PM every night",
+      "icon": "🏠",
+      "problem": "Restaurant owners work 14+ hour days, missing family time and burning out",
+      "solution": "Automated systems handle closing operations, prep planning, and next-day setup",
+      "benefits": [
+        "Home by 10 PM guaranteed",
+        "Automated closing procedures",
+        "Next-day prep planning",
+        "Staff task automation"
+      ],
+      "features": [
+        "Auto-closing checklists",
+        "Tomorrow's prep calculator",
+        "Staff scheduling optimization",
+        "Automated inventory counts",
+        "End-of-day reporting"
+      ],
+      "roi": {
+        "investment": "₹20,000/month",
+        "savings": "₹1,50,000/month",
+        "netProfit": "₹1,30,000/month",
+        "paybackPeriod": "5 days"
+      },
+      "testimonial": {
+        "quote": "First time in 8 years I had dinner with my family every night this week. Life changing.",
+        "author": "Priya Sharma",
+        "business": "Family Kitchen, Bangalore",
+        "savings": "₹1.5 Lakhs/month"
+      },
+      "caseStudy": {
+        "title": "Bangalore Owner Gets Life Back",
+        "before": "Leaving at 12:30 AM daily",
+        "after": "Home by 9:45 PM consistently",
+        "timeframe": "21 days",
+        "methods": ["Automated checklists", "Staff optimization", "Prep automation"]
+      }
+    },
+    {
+      "id": "demand-prediction",
+      "name": "Demand Prediction Engine",
+      "shortName": "Demand Prediction",
+      "slug": "demand-prediction",
+      "description": "Know tomorrow's demand today with 95% accuracy AI predictions",
+      "icon": "📈",
+      "problem": "Guessing tomorrow's demand leads to overstock or stockouts costing lakhs",
+      "solution": "AI analyzes weather, events, trends to predict exact demand 7 days ahead",
+      "benefits": [
+        "95% prediction accuracy",
+        "Eliminate stockouts",
+        "Reduce overstock by 60%",
+        "Perfect prep planning"
+      ],
+      "features": [
+        "7-day demand forecast",
+        "Weather impact analysis",
+        "Event-based predictions",
+        "Seasonal trend analysis",
+        "Menu item demand tracking"
+      ],
+      "roi": {
+        "investment": "₹30,000/month",
+        "savings": "₹3,00,000/month",
+        "netProfit": "₹2,70,000/month",
+        "paybackPeriod": "3 days"
+      },
+      "testimonial": {
+        "quote": "We know Tuesday's rush on Sunday morning. No more panic buying or throwing away excess.",
+        "author": "Chef Arjun",
+        "business": "The Golden Spoon, Delhi",
+        "savings": "₹3.2 Lakhs/month"
+      },
+      "caseStudy": {
+        "title": "Delhi Fine Dining Perfects Forecasting",
+        "before": "30% forecast accuracy",
+        "after": "94% forecast accuracy",
+        "timeframe": "45 days",
+        "methods": ["AI learning", "Pattern recognition", "External data integration"]
+      }
+    },
+    {
+      "id": "profit-optimization",
+      "name": "Profit Optimization Suite",
+      "shortName": "Profit Optimization",
+      "slug": "profit-optimization",
+      "description": "Maximize profits through menu engineering and cost optimization",
+      "icon": "💰",
+      "problem": "Hidden profit leaks in menu pricing, portion sizes, and cost structure",
+      "solution": "AI-powered menu engineering and cost analysis to maximize every dish's profitability",
+      "benefits": [
+        "Increase profit margins by 25%",
+        "Optimize menu pricing",
+        "Perfect portion control",
+        "Cost structure analysis"
+      ],
+      "features": [
+        "Menu profitability analysis",
+        "Dynamic pricing suggestions",
+        "Portion size optimization",
+        "Cost tracking by dish",
+        "Competitor pricing analysis"
+      ],
+      "roi": {
+        "investment": "₹25,000/month",
+        "savings": "₹2,75,000/month",
+        "netProfit": "₹2,50,000/month",
+        "paybackPeriod": "3 days"
+      },
+      "testimonial": {
+        "quote": "Our profit per dish increased 28%. Same customers, same food, better margins.",
+        "author": "Amit Verma",
+        "business": "CloudEats Hub, Pune",
+        "savings": "₹2.6 Lakhs/month"
+      },
+      "caseStudy": {
+        "title": "Pune Cloud Kitchen Boosts Margins",
+        "before": "12% profit margin",
+        "after": "32% profit margin",
+        "timeframe": "30 days",
+        "methods": ["Menu engineering", "Cost optimization", "Pricing strategy"]
+      }
+    },
+    {
+      "id": "staff-optimization",
+      "name": "Staff Optimization System",
+      "shortName": "Staff Optimization",
+      "slug": "staff-optimization",
+      "description": "Right staff at right time - eliminate overstaffing and understaffing",
+      "icon": "👥",
+      "problem": "Overstaffing during slow hours and understaffing during rush costs lakhs monthly",
+      "solution": "AI predicts exact staffing needs by hour, reducing labor costs while improving service",
+      "benefits": [
+        "Reduce labor costs by 25%",
+        "Perfect staffing levels",
+        "Improved service quality",
+        "Happy staff with optimal hours"
+      ],
+      "features": [
+        "Hourly staffing predictions",
+        "Skill-based scheduling",
+        "Performance tracking",
+        "Shift optimization",
+        "Labor cost analysis"
+      ],
+      "roi": {
+        "investment": "₹20,000/month",
+        "savings": "₹1,80,000/month",
+        "netProfit": "₹1,60,000/month",
+        "paybackPeriod": "4 days"
+      },
+      "testimonial": {
+        "quote": "Cut staff costs 30% while improving service. Our team is happier with better schedules.",
+        "author": "Sarah D'Souza",
+        "business": "The Daily Grind, Goa",
+        "savings": "₹1.8 Lakhs/month"
+      },
+      "caseStudy": {
+        "title": "Goa Cafe Optimizes Team Performance",
+        "before": "₹2.5L monthly labor cost",
+        "after": "₹1.8L monthly labor cost",
+        "timeframe": "35 days",
+        "methods": ["Predictive scheduling", "Performance optimization", "Skill matching"]
+      }
+    },
+    {
+      "id": "multi-outlet-management",
+      "name": "Multi-Outlet Management",
+      "shortName": "Multi-Outlet",
+      "slug": "multi-outlet-management",
+      "description": "Manage multiple restaurants from one dashboard with centralized intelligence",
+      "icon": "🏪",
+      "problem": "Managing multiple outlets is chaotic with no unified view of operations",
+      "solution": "Centralized dashboard with individual outlet intelligence and cross-location optimization",
+      "benefits": [
+        "Unified multi-outlet dashboard",
+        "Cross-location optimization",
+        "Centralized inventory management",
+        "Standardized operations"
+      ],
+      "features": [
+        "Multi-location dashboard",
+        "Cross-outlet analytics",
+        "Centralized procurement",
+        "Performance comparison",
+        "Standard operating procedures"
+      ],
+      "roi": {
+        "investment": "₹40,000/month",
+        "savings": "₹4,00,000/month",
+        "netProfit": "₹3,60,000/month",
+        "paybackPeriod": "3 days"
+      },
+      "testimonial": {
+        "quote": "Managing 5 outlets is now easier than managing 1 outlet was before RestoPi.",
+        "author": "Franchise Owner",
+        "business": "Pizza Paradise Chain, NCR",
+        "savings": "₹4.2 Lakhs/month"
+      },
+      "caseStudy": {
+        "title": "NCR Franchise Scales Efficiently",
+        "before": "Visiting each outlet daily",
+        "after": "Managing all from single dashboard",
+        "timeframe": "30 days",
+        "methods": ["Centralized monitoring", "Standardized processes", "Remote management"]
+      }
+    }
+  ]
+}

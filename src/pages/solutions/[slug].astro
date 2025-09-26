@@ -1,0 +1,247 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import solutions from '../../data/solutions.json';
+
+export function getStaticPaths() {
+  return solutions.solutions.map(solution => ({
+    params: { slug: solution.slug },
+    props: { solution }
+  }));
+}
+
+const { solution } = Astro.props;
+---
+
+<BaseLayout title={`${solution.name} - ${solution.roi.savings} Monthly Savings | RestoPi`}>
+  <Navigation />
+  <main class="container mx-auto px-4 py-8 mt-16">
+    <!-- Hero Section -->
+    <section class="hero bg-gradient-to-br from-orange-50 to-white py-16 rounded-lg mb-12">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <div class="text-6xl mb-4">{solution.icon}</div>
+          <div class="inline-block bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            RESTOPI SOLUTION
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            {solution.name}
+          </h1>
+          <p class="text-xl text-gray-700 mb-8">
+            {solution.description}
+          </p>
+          
+          <!-- ROI Summary Cards -->
+          <div class="grid md:grid-cols-4 gap-4 mb-8">
+            <div class="bg-white rounded-lg p-4 shadow-md">
+              <div class="text-sm text-gray-600">Investment</div>
+              <div class="text-2xl font-bold text-orange-600">{solution.roi.investment}</div>
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-md">
+              <div class="text-sm text-gray-600">Monthly Savings</div>
+              <div class="text-2xl font-bold text-green-600">{solution.roi.savings}</div>
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-md">
+              <div class="text-sm text-gray-600">Net Profit</div>
+              <div class="text-2xl font-bold text-blue-600">{solution.roi.netProfit}</div>
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-md">
+              <div class="text-sm text-gray-600">Payback Period</div>
+              <div class="text-2xl font-bold text-purple-600">{solution.roi.paybackPeriod}</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/demo" class="bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-700 transition text-lg">
+              Start Free Trial
+            </a>
+            <a href="https://wa.me/919884248927?text=I want to implement {solution.name}" class="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition text-lg">
+              WhatsApp Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem vs Solution -->
+    <section class="grid md:grid-cols-2 gap-8 mb-12">
+      <div class="bg-red-50 rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-red-700 mb-4 flex items-center gap-3">
+          <span class="text-3xl">⚠️</span>
+          The Problem You're Facing
+        </h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          {solution.problem}
+        </p>
+        <div class="mt-6 p-4 bg-red-100 rounded-lg">
+          <div class="text-sm text-red-600 font-semibold">This is costing you:</div>
+          <div class="text-2xl font-bold text-red-700">₹2-5 Lakhs Monthly</div>
+        </div>
+      </div>
+      
+      <div class="bg-green-50 rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-green-700 mb-4 flex items-center gap-3">
+          <span class="text-3xl">✅</span>
+          RestoPi's Solution
+        </h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          {solution.solution}
+        </p>
+        <div class="mt-6 p-4 bg-green-100 rounded-lg">
+          <div class="text-sm text-green-600 font-semibold">This will save you:</div>
+          <div class="text-2xl font-bold text-green-700">{solution.roi.savings}</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Benefits -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Key Benefits of {solution.shortName}</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {solution.benefits.map((benefit, index) => (
+          <div class="flex items-start gap-4 bg-white p-6 rounded-lg shadow-md">
+            <div class="bg-green-100 rounded-full p-3 flex-shrink-0">
+              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Benefit #{index + 1}</h3>
+              <p class="text-gray-700">{benefit}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="mb-12 bg-gray-50 rounded-lg p-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Features & Capabilities</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {solution.features.map((feature) => (
+          <div class="bg-white rounded-lg p-4 shadow-md">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-3 h-3 bg-orange-600 rounded-full"></div>
+              <h4 class="font-semibold text-gray-900">{feature}</h4>
+            </div>
+            <p class="text-sm text-gray-600">Automated and intelligent system component</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Case Study -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Real Success Story</h2>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="bg-gradient-to-r from-orange-600 to-orange-700 text-white p-6">
+          <h3 class="text-2xl font-bold mb-2">{solution.caseStudy.title}</h3>
+          <p class="text-orange-100">Transformation completed in {solution.caseStudy.timeframe}</p>
+        </div>
+        <div class="p-6">
+          <div class="grid md:grid-cols-2 gap-8 mb-6">
+            <div class="text-center">
+              <div class="text-sm text-gray-600 mb-2">BEFORE RestoPi</div>
+              <div class="text-3xl font-bold text-red-600 mb-2">{solution.caseStudy.before}</div>
+              <div class="text-sm text-gray-500">Struggling with inefficiency</div>
+            </div>
+            <div class="text-center">
+              <div class="text-sm text-gray-600 mb-2">AFTER RestoPi</div>
+              <div class="text-3xl font-bold text-green-600 mb-2">{solution.caseStudy.after}</div>
+              <div class="text-sm text-gray-500">Optimized operations</div>
+            </div>
+          </div>
+          
+          <div class="border-t pt-6">
+            <h4 class="font-bold text-gray-900 mb-4">Methods Used:</h4>
+            <div class="flex flex-wrap gap-2">
+              {solution.caseStudy.methods.map((method) => (
+                <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm">{method}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg p-8 mb-12">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="text-6xl mb-6 opacity-20">"</div>
+        <blockquote class="text-2xl italic mb-6">
+          {solution.testimonial.quote}
+        </blockquote>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+          <div>
+            <p class="font-bold text-xl">{solution.testimonial.author}</p>
+            <p class="text-green-100">{solution.testimonial.business}</p>
+          </div>
+          <div class="text-center">
+            <p class="text-sm text-green-100 mb-1">Monthly Savings</p>
+            <p class="text-3xl font-bold">{solution.testimonial.savings}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Implementation Timeline -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 text-center mb-8">Implementation Timeline</h2>
+      <div class="grid md:grid-cols-4 gap-4">
+        <div class="text-center">
+          <div class="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+            <span class="text-2xl font-bold text-orange-600">1</span>
+          </div>
+          <h4 class="font-bold text-gray-900 mb-2">Day 1</h4>
+          <p class="text-sm text-gray-600">Setup & Integration</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+            <span class="text-2xl font-bold text-orange-600">7</span>
+          </div>
+          <h4 class="font-bold text-gray-900 mb-2">Week 1</h4>
+          <p class="text-sm text-gray-600">AI Learning Phase</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+            <span class="text-2xl font-bold text-green-600">14</span>
+          </div>
+          <h4 class="font-bold text-gray-900 mb-2">Week 2</h4>
+          <p class="text-sm text-gray-600">First Results</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+            <span class="text-2xl font-bold text-green-600">30</span>
+          </div>
+          <h4 class="font-bold text-gray-900 mb-2">Month 1</h4>
+          <p class="text-sm text-gray-600">Full Optimization</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="bg-gradient-to-br from-orange-600 to-red-600 text-white rounded-lg p-12 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Ready to Implement {solution.shortName}?
+      </h2>
+      <p class="text-xl mb-8 text-orange-50">
+        Join hundreds of restaurants already saving with this solution.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+        <a href="/demo" class="bg-white text-orange-600 px-8 py-4 rounded-lg font-bold hover:bg-orange-50 transition text-lg">
+          Start 14-Day Free Trial
+        </a>
+        <a href="https://wa.me/919884248927?text=I want {solution.name} for my restaurant" class="bg-green-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-green-700 transition text-lg border-2 border-green-600">
+          WhatsApp: Get Started
+        </a>
+      </div>
+      <p class="text-sm text-orange-100">
+        ✓ No Setup Fees &nbsp;&nbsp; ✓ 60-Day Money Back Guarantee &nbsp;&nbsp; ✓ Cancel Anytime
+      </p>
+    </section>
+  </main>
+  <Footer />
+  <WhatsAppButton />
+</BaseLayout>

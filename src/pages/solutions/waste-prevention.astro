@@ -1,0 +1,349 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import solutions from '../../data/solutions.json';
+
+const wasteSolution = solutions.solutions.find(s => s.id === 'waste-prevention');
+---
+
+<BaseLayout title="Waste Prevention System - Save ₹2.5 Lakhs Monthly | RestoPi">
+  <Navigation />
+  <main class="container mx-auto px-4 py-8 mt-16">
+    <!-- Hero Section -->
+    <section class="hero bg-gradient-to-br from-red-50 to-orange-50 py-16 rounded-lg mb-12">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <div class="text-8xl mb-6">🗑️</div>
+          <div class="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            WASTE PREVENTION SYSTEM
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Stop Throwing Away ₹2.5 Lakhs Every Month
+          </h1>
+          <p class="text-xl text-gray-700 mb-8">
+            AI-powered waste tracking and prevention system that identifies waste before it happens. Turn your biggest cost center into your biggest profit driver.
+          </p>
+          
+          <!-- Waste Counter Animation -->
+          <div class="bg-red-100 border-l-4 border-red-500 p-6 mb-8 inline-block rounded-lg">
+            <p class="text-lg text-red-700 mb-2">Money wasted by restaurants right now:</p>
+            <p class="text-4xl font-bold text-red-600">₹<span id="waste-counter">25,000</span></p>
+            <p class="text-sm text-red-600">This counter updates every 5 seconds</p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/demo" class="bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition text-lg">
+              Stop The Bleeding Now
+            </a>
+            <a href="https://wa.me/919884248927?text=Help me stop food waste in my restaurant" class="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition text-lg">
+              WhatsApp: Emergency Help
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Waste Reality Check -->
+    <section class="mb-12 bg-gray-900 text-white rounded-lg p-8">
+      <h2 class="text-3xl font-bold text-center mb-8">The Brutal Reality of Restaurant Waste</h2>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="text-center">
+          <div class="text-4xl font-bold text-red-400 mb-2">18%</div>
+          <div class="text-sm text-gray-300">Average food waste in restaurants</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-red-400 mb-2">₹18K</div>
+          <div class="text-sm text-gray-300">Average daily waste cost</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-red-400 mb-2">₹5.4L</div>
+          <div class="text-sm text-gray-300">Annual waste per restaurant</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-red-400 mb-2">75%</div>
+          <div class="text-sm text-gray-300">Of waste is preventable</div>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <p class="text-xl text-red-300">Your restaurant is literally throwing money in the trash every single day.</p>
+      </div>
+    </section>
+
+    <!-- Where Waste Happens -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Where Your Money is Going to Waste</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-red-50 rounded-lg p-6 border-l-4 border-red-500">
+          <div class="text-3xl mb-3">🥬</div>
+          <h3 class="font-bold text-gray-900 mb-3">Overordering & Spoilage</h3>
+          <div class="text-2xl font-bold text-red-600 mb-2">40% of waste</div>
+          <p class="text-gray-600 text-sm mb-4">Buying too much, items expiring, poor storage</p>
+          <div class="bg-red-100 p-3 rounded">
+            <div class="text-xs text-red-600">Daily Cost</div>
+            <div class="text-xl font-bold text-red-700">₹7,200</div>
+          </div>
+        </div>
+        
+        <div class="bg-orange-50 rounded-lg p-6 border-l-4 border-orange-500">
+          <div class="text-3xl mb-3">🍽️</div>
+          <h3 class="font-bold text-gray-900 mb-3">Kitchen Prep Waste</h3>
+          <div class="text-2xl font-bold text-orange-600 mb-2">35% of waste</div>
+          <p class="text-gray-600 text-sm mb-4">Overprepping, wrong portions, trimming waste</p>
+          <div class="bg-orange-100 p-3 rounded">
+            <div class="text-xs text-orange-600">Daily Cost</div>
+            <div class="text-xl font-bold text-orange-700">₹6,300</div>
+          </div>
+        </div>
+        
+        <div class="bg-yellow-50 rounded-lg p-6 border-l-4 border-yellow-500">
+          <div class="text-3xl mb-3">🍛</div>
+          <h3 class="font-bold text-gray-900 mb-3">Customer Plate Waste</h3>
+          <div class="text-2xl font-bold text-yellow-600 mb-2">25% of waste</div>
+          <p class="text-gray-600 text-sm mb-4">Large portions, wrong orders, returns</p>
+          <div class="bg-yellow-100 p-3 rounded">
+            <div class="text-xs text-yellow-600">Daily Cost</div>
+            <div class="text-xl font-bold text-yellow-700">₹4,500</div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-8 p-6 bg-red-100 rounded-lg">
+        <p class="text-xl font-bold text-red-700">Total Daily Waste Cost: ₹18,000</p>
+        <p class="text-lg text-red-600">Monthly Impact: ₹5.4 Lakhs</p>
+      </div>
+    </section>
+
+    <!-- RestoPi Solution -->
+    <section class="mb-12 bg-green-50 rounded-lg p-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">How RestoPi Stops the Waste</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-2xl font-bold text-green-700 mb-4">🤖 AI Waste Prevention</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="text-green-600 mt-1">✓</span>
+              <span><strong>Smart Ordering:</strong> AI calculates exact quantities needed based on historical data and weather patterns</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-green-600 mt-1">✓</span>
+              <span><strong>Expiry Tracking:</strong> Get alerts 48 hours before items expire with suggested actions</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-green-600 mt-1">✓</span>
+              <span><strong>Prep Optimization:</strong> Perfect portion calculations for each shift</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-green-600 mt-1">✓</span>
+              <span><strong>Real-time Monitoring:</strong> Track waste as it happens, not at month-end</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-green-700 mb-4">📊 Actionable Intelligence</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="text-green-600 mt-1">✓</span>
+              <span><strong>Daily Waste Reports:</strong> See exactly what was wasted and why</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-green-600 mt-1">✓</span>
+              <span><strong>Cost Impact Analysis:</strong> Every waste item shows rupee impact</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-green-600 mt-1">✓</span>
+              <span><strong>Trend Analysis:</strong> Identify patterns and eliminate recurring waste</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-green-600 mt-1">✓</span>
+              <span><strong>Staff Training Insights:</strong> Know which staff need waste training</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Metrics -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 text-center mb-8">Proven Results Across Restaurant Types</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+          <div class="text-4xl mb-3">🍔</div>
+          <h4 class="font-bold text-gray-900 mb-2">QSR Chain, Mumbai</h4>
+          <div class="space-y-2">
+            <div class="flex justify-between">
+              <span class="text-sm text-gray-600">Before:</span>
+              <span class="font-semibold text-red-600">22% waste</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-sm text-gray-600">After:</span>
+              <span class="font-semibold text-green-600">8% waste</span>
+            </div>
+            <div class="border-t pt-2">
+              <span class="text-lg font-bold text-green-700">₹2.8L saved monthly</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+          <div class="text-4xl mb-3">🍽️</div>
+          <h4 class="font-bold text-gray-900 mb-2">Fine Dining, Delhi</h4>
+          <div class="space-y-2">
+            <div class="flex justify-between">
+              <span class="text-sm text-gray-600">Before:</span>
+              <span class="font-semibold text-red-600">15% waste</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-sm text-gray-600">After:</span>
+              <span class="font-semibold text-green-600">5% waste</span>
+            </div>
+            <div class="border-t pt-2">
+              <span class="text-lg font-bold text-green-700">₹4.2L saved monthly</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+          <div class="text-4xl mb-3">☕</div>
+          <h4 class="font-bold text-gray-900 mb-2">Cafe Chain, Bangalore</h4>
+          <div class="space-y-2">
+            <div class="flex justify-between">
+              <span class="text-sm text-gray-600">Before:</span>
+              <span class="font-semibold text-red-600">25% waste</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-sm text-gray-600">After:</span>
+              <span class="font-semibold text-green-600">9% waste</span>
+            </div>
+            <div class="border-t pt-2">
+              <span class="text-lg font-bold text-green-700">₹1.6L saved monthly</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Implementation Process -->
+    <section class="mb-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8">
+      <h2 class="text-3xl font-bold text-gray-900 text-center mb-8">How We Implement Waste Prevention</h2>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="text-center">
+          <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl font-bold text-blue-600">1</span>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Baseline Assessment</h3>
+          <p class="text-gray-600 text-sm">We track your current waste for 7 days to establish baseline</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl font-bold text-blue-600">2</span>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">AI Training</h3>
+          <p class="text-gray-600 text-sm">AI learns your patterns, peak times, and waste triggers</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl font-bold text-green-600">3</span>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Prevention Mode</h3>
+          <p class="text-gray-600 text-sm">Start receiving alerts and recommendations</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl font-bold text-green-600">4</span>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Continuous Optimization</h3>
+          <p class="text-gray-600 text-sm">AI gets smarter, waste gets lower every week</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section class="mb-12 bg-gray-100 rounded-lg p-8">
+      <h2 class="text-3xl font-bold text-gray-900 text-center mb-6">Calculate Your Waste Prevention Savings</h2>
+      <div class="max-w-2xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="bg-white p-4 rounded-lg">
+            <label class="text-sm text-gray-600">Current Daily Food Cost</label>
+            <div class="text-3xl font-bold text-gray-900">₹45,000</div>
+          </div>
+          <div class="bg-white p-4 rounded-lg">
+            <label class="text-sm text-gray-600">Current Waste Percentage</label>
+            <div class="text-3xl font-bold text-red-600">18%</div>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg text-center">
+          <div class="grid md:grid-cols-3 gap-4">
+            <div>
+              <div class="text-sm text-gray-600">Current Monthly Waste</div>
+              <div class="text-2xl font-bold text-red-600">₹2,43,000</div>
+            </div>
+            <div>
+              <div class="text-sm text-gray-600">After RestoPi (6% waste)</div>
+              <div class="text-2xl font-bold text-green-600">₹81,000</div>
+            </div>
+            <div>
+              <div class="text-sm text-gray-600">Monthly Savings</div>
+              <div class="text-3xl font-bold text-blue-600">₹1,62,000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg p-8 mb-12">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="text-6xl mb-6 opacity-20">"</div>
+        <blockquote class="text-2xl italic mb-6">
+          {wasteSolution.testimonial.quote}
+        </blockquote>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+          <div>
+            <p class="font-bold text-xl">{wasteSolution.testimonial.author}</p>
+            <p class="text-green-100">{wasteSolution.testimonial.business}</p>
+          </div>
+          <div class="text-center">
+            <p class="text-sm text-green-100 mb-1">Monthly Waste Savings</p>
+            <p class="text-3xl font-bold">{wasteSolution.testimonial.savings}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="bg-gradient-to-br from-red-600 to-orange-600 text-white rounded-lg p-12 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Every Day You Wait, You Lose ₹18,000
+      </h2>
+      <p class="text-xl mb-8 text-red-50">
+        Stop the bleeding. Start waste prevention today.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+        <a href="/demo" class="bg-white text-red-600 px-8 py-4 rounded-lg font-bold hover:bg-red-50 transition text-lg">
+          Start Waste Prevention Now
+        </a>
+        <a href="https://wa.me/919884248927?text=Help me stop wasting ₹18K daily!" class="bg-green-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-green-700 transition text-lg border-2 border-green-600">
+          WhatsApp: Emergency Help
+        </a>
+      </div>
+      <p class="text-sm text-red-100">
+        ✓ See Results in 7 Days &nbsp;&nbsp; ✓ 60-Day Money Back Guarantee &nbsp;&nbsp; ✓ Average ROI: 900%
+      </p>
+    </section>
+  </main>
+  <Footer />
+  <WhatsAppButton />
+
+  <script>
+    // Waste counter animation
+    let wasteCounter = 25000;
+    setInterval(() => {
+      wasteCounter += Math.floor(Math.random() * 200) + 100;
+      const element = document.getElementById('waste-counter');
+      if (element) {
+        element.textContent = wasteCounter.toLocaleString('en-IN');
+      }
+    }, 5000);
+  </script>
+</BaseLayout>

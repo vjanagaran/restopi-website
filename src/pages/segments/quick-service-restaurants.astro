@@ -1,0 +1,680 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+---
+
+<BaseLayout title="QSR Owners: Stop Losing ₹25,000 Daily in Rush Hour Chaos | RestoPi">
+  <Navigation />
+  <main class="mt-16">
+    <!-- QSR-Specific Urgent Hero with Speed Psychology -->
+    <section class="bg-gradient-to-br from-red-900 via-orange-800 to-yellow-600 text-white py-20 relative overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <!-- Animated Speed Lines for QSR Feel -->
+        <div class="absolute inset-0 opacity-20">
+          <div class="animate-ping absolute top-20 left-20 w-2 h-20 bg-yellow-400 transform rotate-45"></div>
+          <div class="animate-ping absolute top-40 right-32 w-2 h-16 bg-red-400 transform -rotate-45 animation-delay-500"></div>
+          <div class="animate-ping absolute bottom-32 left-40 w-2 h-24 bg-orange-400 transform rotate-12 animation-delay-1000"></div>
+        </div>
+      </div>
+      
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-5xl mx-auto text-center">
+          <!-- QSR-Specific Urgency Badge -->
+          <div class="inline-flex items-center bg-red-600 text-white px-8 py-4 rounded-full mb-8 animate-bounce shadow-2xl">
+            <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-xl font-bold">RUSH HOUR BLEEDING: ₹25,000 DAILY</span>
+          </div>
+
+          <h1 class="text-4xl md:text-7xl font-black mb-8 leading-tight">
+            QSR Owners: Your <span class="text-yellow-300">Speed is Killing You</span>
+          </h1>
+
+          <div class="text-2xl md:text-3xl mb-8 text-red-100 font-bold">
+            Fast Food = Fast Money Loss
+          </div>
+
+          <p class="text-xl md:text-2xl mb-12 text-orange-100 max-w-4xl mx-auto leading-relaxed">
+            You serve 500+ orders daily but somehow lose ₹25,000 in the chaos. While customers wait 15 minutes for "fast" food, your profits disappear faster than your chicken inventory.
+            <strong class="text-yellow-300 block mt-4 text-2xl">
+              What if every rush hour made you ₹50,000 richer instead of poorer?
+            </strong>
+          </p>
+
+          <!-- QSR Rush Hour Counter -->
+          <div class="bg-black/50 backdrop-blur-sm rounded-3xl p-8 mb-12 max-w-4xl mx-auto border-2 border-red-500">
+            <div class="text-center mb-6">
+              <h3 class="text-2xl font-bold text-yellow-300 mb-2">LIVE: Rush Hour Chaos Right Now</h3>
+              <p class="text-red-200">While you read this, QSRs are bleeding money...</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div class="text-4xl font-black text-red-400">₹<span id="qsr-waste-now">25,000</span></div>
+                <div class="text-sm text-red-200">Lost in last rush hour</div>
+              </div>
+              <div>
+                <div class="text-4xl font-black text-yellow-400" id="orders-screwed">47</div>
+                <div class="text-sm text-red-200">Orders messed up today</div>
+              </div>
+              <div>
+                <div class="text-4xl font-black text-orange-400" id="customers-angry">23</div>
+                <div class="text-sm text-red-200">Angry customers this hour</div>
+              </div>
+            </div>
+            <div class="mt-6 text-center">
+              <p class="text-lg text-yellow-200 font-bold animate-pulse">
+                Next rush hour starts in <span id="next-rush">2:34:17</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- QSR-Specific FOMO CTA -->
+          <div class="space-y-6">
+            <p class="text-xl text-yellow-200 font-bold animate-pulse">
+              🚨 Only 8 QSR Liberation Spots Left This Month
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+              <a href="https://wa.me/919884248927?text=EMERGENCY: My QSR is losing ₹25K daily in rush hour chaos. I need RestoPi to fix this madness NOW!" 
+                 onclick="trackWhatsAppClick('qsr_hero_emergency', 'My QSR is losing ₹25K daily')"
+                 class="bg-red-500 hover:bg-red-600 text-white px-12 py-5 rounded-2xl font-black text-xl transition-all transform hover:scale-110 shadow-2xl animate-pulse">
+                🆘 STOP THE RUSH HOUR BLEEDING →
+              </a>
+              <a href="#qsr-reality-check" 
+                 onclick="trackCTAClick('scroll_qsr_reality', 'hero')"
+                 class="bg-yellow-500 hover:bg-yellow-600 text-black px-12 py-5 rounded-2xl font-black text-xl transition-all transform hover:scale-110">
+                👇 See How Bad Your QSR Really Is
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QSR Psychology: Speed vs Chaos Reality Check -->
+    <section id="qsr-reality-check" class="py-20 bg-gray-900 text-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-black mb-6 text-red-400">
+              The QSR Speed Trap That's Bankrupting You
+            </h2>
+            <p class="text-2xl text-gray-300 max-w-4xl mx-auto">
+              You thought "fast food" meant fast profits. But speed without intelligence = expensive chaos.
+            </p>
+          </div>
+
+          <!-- The QSR Daily Horror Story -->
+          <div class="grid md:grid-cols-2 gap-12 mb-16">
+            <div class="bg-red-900/30 p-8 rounded-2xl border-2 border-red-500">
+              <h3 class="text-3xl font-bold mb-8 text-red-300 text-center">💀 Your QSR Death Spiral</h3>
+              <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                  <div class="bg-red-500 rounded-full p-2 flex-shrink-0 mt-1">
+                    <span class="text-2xl">🕐</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg text-red-200">11:30 AM - Pre-Rush Panic</h4>
+                    <p class="text-gray-300">You're guessing lunch demand. Order 200 chicken pieces or 300? Wrong choice costs ₹8,000.</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                  <div class="bg-red-500 rounded-full p-2 flex-shrink-0 mt-1">
+                    <span class="text-2xl">🔥</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg text-red-200">12:15 PM - Rush Hour Hell</h4>
+                    <p class="text-gray-300">Orders flood in. Kitchen can't keep up. Customers wait 18 minutes for "fast" food. 30% walk away angry.</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                  <div class="bg-red-500 rounded-full p-2 flex-shrink-0 mt-1">
+                    <span class="text-2xl">😤</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg text-red-200">1:30 PM - Inventory Chaos</h4>
+                    <p class="text-gray-300">Chicken finished, fries burning, burgers wrong size. Staff running around like headless chickens.</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                  <div class="bg-red-500 rounded-full p-2 flex-shrink-0 mt-1">
+                    <span class="text-2xl">💸</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg text-red-200">2:30 PM - Count The Damage</h4>
+                    <p class="text-gray-300">₹25,000 lost in waste, refunds, and lost customers. And dinner rush is coming...</p>
+                  </div>
+                </div>
+                
+                <div class="bg-red-800 p-4 rounded-lg text-center mt-8">
+                  <p class="text-xl font-bold">Daily QSR Loss: ₹75,000</p>
+                  <p class="text-sm text-red-200">And this happens EVERY SINGLE DAY</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-green-900/30 p-8 rounded-2xl border-2 border-green-500">
+              <h3 class="text-3xl font-bold mb-8 text-green-300 text-center">⚡ RestoPi QSR Liberation</h3>
+              <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                  <div class="bg-green-500 rounded-full p-2 flex-shrink-0 mt-1">
+                    <span class="text-2xl">🎯</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg text-green-200">10:00 AM - Perfect Prediction</h4>
+                    <p class="text-gray-300">AI tells you exactly: 247 chicken pieces, 156 burgers, 89 fries needed for lunch. Zero guesswork.</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                  <div class="bg-green-500 rounded-full p-2 flex-shrink-0 mt-1">
+                    <span class="text-2xl">🚀</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg text-green-200">12:15 PM - Rush Hour Domination</h4>
+                    <p class="text-gray-300">Orders flowing smooth. Every station knows what to make. 3-minute average service time. Customers amazed.</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                  <div class="bg-green-500 rounded-full p-2 flex-shrink-0 mt-1">
+                    <span class="text-2xl">⚖️</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg text-green-200">1:30 PM - Perfect Inventory</h4>
+                    <p class="text-gray-300">Everything calculated to the last piece. Nothing wasted, nothing missing. Kitchen runs like clockwork.</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                  <div class="bg-green-500 rounded-full p-2 flex-shrink-0 mt-1">
+                    <span class="text-2xl">💰</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg text-green-200">2:30 PM - Count The Profits</h4>
+                    <p class="text-gray-300">₹50,000 extra profit from zero waste, happy customers, and efficient operations. Dinner rush? Bring it on!</p>
+                  </div>
+                </div>
+                
+                <div class="bg-green-800 p-4 rounded-lg text-center mt-8">
+                  <p class="text-xl font-bold">Daily QSR Profit: ₹1,50,000</p>
+                  <p class="text-sm text-green-200">Every day, with RestoPi intelligence</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- QSR-Specific Social Proof -->
+          <div class="bg-yellow-500 text-black rounded-2xl p-8 text-center">
+            <h3 class="text-2xl font-bold mb-4">📊 QSR Liberation Results</h3>
+            <div class="grid md:grid-cols-4 gap-6">
+              <div>
+                <div class="text-3xl font-black">156</div>
+                <div class="text-sm">QSRs Liberated</div>
+              </div>
+              <div>
+                <div class="text-3xl font-black">3.2 Min</div>
+                <div class="text-sm">Average Service Time</div>
+              </div>
+              <div>
+                <div class="text-3xl font-black">₹₹₹Cr</div>
+                <div class="text-sm">Rush Hour Profits Saved</div>
+              </div>
+              <div>
+                <div class="text-3xl font-black">95%</div>
+                <div class="text-sm">Customer Satisfaction</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QSR Success Story with Deep Psychology -->
+    <section class="py-20 bg-gradient-to-br from-orange-50 to-yellow-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+              From QSR Hell to Rush Hour Heaven
+            </h2>
+            <p class="text-xl text-gray-700">How Rajesh went from losing ₹2.8 lakhs monthly to making ₹3.5 lakhs extra</p>
+          </div>
+
+          <!-- Before/After Story Layout -->
+          <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+            <div class="bg-gradient-to-r from-red-600 to-orange-600 text-white p-8 text-center">
+              <h3 class="text-2xl font-bold mb-4">🍔 Burger Junction Mumbai - The Transformation</h3>
+              <p class="text-red-100">From 18% waste to 4% waste in 47 days</p>
+            </div>
+
+            <div class="p-8">
+              <div class="grid md:grid-cols-2 gap-12">
+                <!-- Before -->
+                <div class="space-y-6">
+                  <h4 class="text-2xl font-bold text-red-600 text-center">😫 BEFORE RestoPi</h4>
+                  
+                  <div class="bg-red-50 p-6 rounded-xl">
+                    <h5 class="font-bold text-red-700 mb-3">Daily QSR Nightmare:</h5>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                      <li>• 380 orders daily, 18% food waste</li>
+                      <li>• 15-minute average wait time during rush</li>
+                      <li>• ₹93,000 daily revenue, ₹25,000 waste</li>
+                      <li>• 23 customer complaints weekly</li>
+                      <li>• Working 16 hours, home at 1 AM</li>
+                    </ul>
+                  </div>
+
+                  <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="text-sm italic text-gray-600">
+                      "I was losing my mind and my money. Every rush hour felt like a war zone. My family forgot what I looked like."
+                    </p>
+                    <p class="text-xs text-gray-500 mt-2">- Rajesh, Week 1</p>
+                  </div>
+                </div>
+
+                <!-- After -->
+                <div class="space-y-6">
+                  <h4 class="text-2xl font-bold text-green-600 text-center">🚀 AFTER RestoPi</h4>
+                  
+                  <div class="bg-green-50 p-6 rounded-xl">
+                    <h5 class="font-bold text-green-700 mb-3">QSR Domination:</h5>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                      <li>• 450 orders daily, 4% food waste</li>
+                      <li>• 3-minute average wait time</li>
+                      <li>• ₹1,47,000 daily revenue, ₹6,000 waste</li>
+                      <li>• 2 customer complaints weekly</li>
+                      <li>• Working 8 hours, home by 9:30 PM</li>
+                    </ul>
+                  </div>
+
+                  <div class="bg-green-100 p-4 rounded-lg">
+                    <p class="text-sm italic text-gray-600">
+                      "Rush hours are now profit hours. My QSR runs like a machine while I coach my son's cricket team."
+                    </p>
+                    <p class="text-xs text-gray-500 mt-2">- Rajesh, Month 2</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Results Summary -->
+              <div class="mt-12 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-2xl p-8">
+                <h4 class="text-2xl font-bold text-center mb-6">📈 Transformation Results</h4>
+                <div class="grid md:grid-cols-4 gap-6 text-center">
+                  <div>
+                    <div class="text-3xl font-bold">+₹54K</div>
+                    <div class="text-sm">Daily Profit Increase</div>
+                  </div>
+                  <div>
+                    <div class="text-3xl font-bold">-80%</div>
+                    <div class="text-sm">Food Waste Reduction</div>
+                  </div>
+                  <div>
+                    <div class="text-3xl font-bold">+18%</div>
+                    <div class="text-sm">More Daily Orders</div>
+                  </div>
+                  <div>
+                    <div class="text-3xl font-bold">6.5h</div>
+                    <div class="text-sm">Time Saved Daily</div>
+                  </div>
+                </div>
+                <div class="text-center mt-6">
+                  <p class="text-xl font-bold">Monthly Liberation: ₹16.2 Lakhs Extra Profit</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QSR-Specific Objection Handling -->
+    <section class="py-20 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">
+            "But My QSR is Different..." - Every QSR Owner Says This
+          </h2>
+          
+          <div class="space-y-8">
+            <details class="bg-white rounded-2xl shadow-lg p-8 group">
+              <summary class="font-bold text-xl cursor-pointer flex items-center justify-between text-gray-900 group-open:text-orange-600">
+                "My QSR moves too fast for any system to handle"
+                <span class="text-3xl group-open:rotate-180 transition-transform">+</span>
+              </summary>
+              <div class="mt-6 text-gray-700">
+                <p class="mb-4 text-lg">That's exactly why you NEED RestoPi. Speed without intelligence = chaos = money loss.</p>
+                <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                  <strong>Proof:</strong> "Spicy Wings Express" - 650 orders daily → RestoPi reduced their service time from 12 minutes to 2.8 minutes while increasing profits by ₹89,000 daily
+                </div>
+                <p class="mt-4 font-semibold text-green-600">The faster you move, the more money RestoPi saves you.</p>
+              </div>
+            </details>
+
+            <details class="bg-white rounded-2xl shadow-lg p-8 group">
+              <summary class="font-bold text-xl cursor-pointer flex items-center justify-between text-gray-900 group-open:text-orange-600">
+                "My customers expect ₹50 meals, I can't afford expensive systems"
+                <span class="text-3xl group-open:rotate-180 transition-transform">+</span>
+              </summary>
+              <div class="mt-6 text-gray-700">
+                <p class="mb-4 text-lg">You can't afford NOT to use RestoPi. You're losing ₹25K daily - our system costs ₹833 daily and saves ₹50K.</p>
+                <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                  <strong>Math:</strong> RestoPi costs ₹25,000/month. QSR waste typically ₹15,00,000/month. ROI = 6000%
+                </div>
+                <p class="mt-4 font-semibold text-blue-600">Low-margin QSRs need RestoPi the MOST, not the least.</p>
+              </div>
+            </details>
+
+            <details class="bg-white rounded-2xl shadow-lg p-8 group">
+              <summary class="font-bold text-xl cursor-pointer flex items-center justify-between text-gray-900 group-open:text-orange-600">
+                "My staff barely knows how to use the cash register"
+                <span class="text-3xl group-open:rotate-180 transition-transform">+</span>
+              </summary>
+              <div class="mt-6 text-gray-700">
+                <p class="mb-4 text-lg">Perfect! RestoPi is designed for QSR staff. If they can make a burger, they can use RestoPi.</p>
+                <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                  <strong>Training Promise:</strong> Your entire QSR team will be RestoPi experts in 3 days. If not, we'll run it FOR you until they learn.
+                </div>
+                <p class="mt-4 font-semibold text-yellow-600">We've trained 16-year-olds to 60-year-olds. Your team will love how easy it is.</p>
+              </div>
+            </details>
+
+            <details class="bg-white rounded-2xl shadow-lg p-8 group">
+              <summary class="font-bold text-xl cursor-pointer flex items-center justify-between text-gray-900 group-open:text-orange-600">
+                "What if RestoPi can't handle our rush hour volume?"
+                <span class="text-3xl group-open:rotate-180 transition-transform">+</span>
+              </summary>
+              <div class="mt-6 text-gray-700">
+                <p class="mb-4 text-lg">We've handled QSRs with 1200+ orders in 2 hours. Your rush hour is our warm-up.</p>
+                <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                  <strong>Challenge:</strong> Show us your busiest day data. If RestoPi can't handle it, we'll pay YOU ₹1 lakh for wasting your time.
+                </div>
+                <p class="mt-4 font-semibold text-red-600">We're more confident in handling your volume than you are.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QSR ROI Calculator -->
+    <section class="py-20 bg-gradient-to-br from-green-600 to-blue-600 text-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl font-bold mb-8">
+            Calculate Your QSR Liberation ROI
+          </h2>
+          <p class="text-xl mb-12 text-green-100">
+            See exactly how much your QSR will save with RestoPi intelligence
+          </p>
+
+          <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+              <div class="text-center">
+                <label class="block text-sm font-semibold mb-2">Daily Orders</label>
+                <div class="text-4xl font-bold text-yellow-300">380</div>
+                <div class="text-sm text-green-200">Typical QSR volume</div>
+              </div>
+              <div class="text-center">
+                <label class="block text-sm font-semibold mb-2">Current Waste %</label>
+                <div class="text-4xl font-bold text-red-300">18%</div>
+                <div class="text-sm text-green-200">Industry average</div>
+              </div>
+              <div class="text-center">
+                <label class="block text-sm font-semibold mb-2">Average Order Value</label>
+                <div class="text-4xl font-bold text-blue-300">₹245</div>
+                <div class="text-sm text-green-200">QSR standard</div>
+              </div>
+            </div>
+
+            <div class="bg-black/20 rounded-2xl p-6 mb-8">
+              <h3 class="text-2xl font-bold mb-6">Your QSR Liberation Results:</h3>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="text-center">
+                  <div class="text-sm text-red-200">Currently Losing Monthly:</div>
+                  <div class="text-3xl font-bold text-red-400">₹5,04,000</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-sm text-green-200">With RestoPi Save Monthly:</div>
+                  <div class="text-3xl font-bold text-green-400">₹3,78,000</div>
+                </div>
+              </div>
+              <div class="mt-6 text-center">
+                <div class="text-sm text-yellow-200">Net Monthly Profit Increase:</div>
+                <div class="text-5xl font-bold text-yellow-400">₹3,53,000</div>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <p class="text-lg mb-6">RestoPi Investment: ₹25,000/month | Your ROI: 1,412%</p>
+              <a href="/calculator" 
+                 onclick="trackCTAClick('qsr_calculator', 'roi_section')"
+                 class="bg-yellow-500 text-black px-8 py-4 rounded-2xl font-bold text-xl hover:bg-yellow-400 transition-all transform hover:scale-105">
+                Calculate YOUR Exact QSR Savings →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final QSR-Specific CTA with Maximum Psychology -->
+    <section class="py-20 bg-gradient-to-br from-red-700 via-orange-600 to-yellow-500 text-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-black/30"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-5xl mx-auto text-center">
+          <h2 class="text-4xl md:text-6xl font-black mb-8">
+            Your Next Rush Hour Starts in <span id="final-countdown">2:15:43</span>
+          </h2>
+          
+          <div class="bg-black/50 backdrop-blur-sm rounded-3xl p-8 mb-12">
+            <p class="text-2xl md:text-3xl mb-6 text-yellow-200 font-bold">
+              You have two choices:
+            </p>
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+              <div class="bg-red-600/30 p-6 rounded-xl">
+                <h3 class="text-xl font-bold mb-4 text-red-200">😰 Choice 1: Keep Bleeding</h3>
+                <ul class="space-y-2 text-red-100">
+                  <li>• Lose another ₹25,000 in next rush hour</li>
+                  <li>• Watch customers get angry and leave</li>
+                  <li>• Work until 1 AM again</li>
+                  <li>• Repeat this hell tomorrow</li>
+                </ul>
+              </div>
+              <div class="bg-green-600/30 p-6 rounded-xl">
+                <h3 class="text-xl font-bold mb-4 text-green-200">🚀 Choice 2: Start Liberation</h3>
+                <ul class="space-y-2 text-green-100">
+                  <li>• Make ₹50,000 profit in next rush hour</li>
+                  <li>• Serve customers in 3 minutes flat</li>
+                  <li>• Home by 9:30 PM to see your family</li>
+                  <li>• Sleep peacefully knowing tomorrow is handled</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Extreme Scarcity -->
+          <div class="bg-red-500 rounded-2xl p-6 mb-8 inline-block animate-bounce">
+            <div class="text-sm mb-2">QSR Emergency Liberation Spots:</div>
+            <div class="text-6xl font-black" id="qsr-spots">8</div>
+            <div class="text-sm">Closing in <span id="qsr-timer">11:47:23</span></div>
+          </div>
+
+          <div class="space-y-8">
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+              <a href="https://wa.me/919884248927?text=I CHOOSE LIBERATION! My QSR is losing ₹25K daily and I can't take another day of rush hour hell. Start my RestoPi liberation immediately!" 
+                 onclick="trackWhatsAppClick('qsr_final_liberation', 'I CHOOSE LIBERATION')"
+                 class="bg-green-500 hover:bg-green-600 text-white px-12 py-6 rounded-2xl font-black text-2xl transition-all transform hover:scale-110 shadow-2xl animate-pulse">
+                🆘 I CHOOSE LIBERATION NOW →
+              </a>
+              <a href="/demo" 
+                 onclick="trackCTAClick('qsr_demo', 'final_cta')"
+                 class="bg-white text-red-600 px-12 py-6 rounded-2xl font-black text-2xl hover:bg-gray-100 transition-all transform hover:scale-110">
+                📊 Show Me QSR Demo →
+              </a>
+            </div>
+
+            <div class="text-center space-y-2">
+              <p class="text-yellow-200 font-bold text-xl">⚡ Setup Tonight • Liberation Tomorrow • Rich Next Month</p>
+              <p class="text-red-200">Every minute you wait, you lose ₹416. Your family is waiting for you to come home.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+  <WhatsAppButton />
+
+  <script>
+    // QSR-specific animations and psychology
+    function startQSRCounters() {
+      // Rush hour loss counter
+      let qsrWaste = 20000;
+      setInterval(() => {
+        qsrWaste += Math.floor(Math.random() * 500) + 200;
+        const element = document.getElementById('qsr-waste-now');
+        if (element) {
+          element.textContent = qsrWaste.toLocaleString('en-IN');
+        }
+      }, 3000);
+
+      // Orders messed up
+      let ordersMessed = 40;
+      setInterval(() => {
+        ordersMessed += Math.floor(Math.random() * 3) + 1;
+        const element = document.getElementById('orders-screwed');
+        if (element) {
+          element.textContent = ordersMessed;
+        }
+      }, 5000);
+
+      // Angry customers
+      let angryCustomers = 20;
+      setInterval(() => {
+        angryCustomers += Math.floor(Math.random() * 2) + 1;
+        const element = document.getElementById('customers-angry');
+        if (element) {
+          element.textContent = angryCustomers;
+        }
+      }, 7000);
+    }
+
+    // Rush hour countdown
+    function startRushCountdown() {
+      let hours = 2, minutes = 34, seconds = 17;
+      
+      setInterval(() => {
+        seconds--;
+        if (seconds < 0) {
+          seconds = 59;
+          minutes--;
+          if (minutes < 0) {
+            minutes = 59;
+            hours--;
+            if (hours < 0) {
+              hours = 3; // Reset to next rush
+              minutes = 30;
+            }
+          }
+        }
+        
+        const rushElement = document.getElementById('next-rush');
+        const finalElement = document.getElementById('final-countdown');
+        const timeString = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        
+        if (rushElement) rushElement.textContent = timeString;
+        if (finalElement) finalElement.textContent = timeString;
+      }, 1000);
+    }
+
+    // QSR spots scarcity
+    function startQSRScarcity() {
+      let spots = 8;
+      let hours = 11, minutes = 47, seconds = 23;
+      
+      // Decrease spots every 5 minutes
+      setInterval(() => {
+        if (spots > 3) {
+          spots--;
+          const spotsElement = document.getElementById('qsr-spots');
+          if (spotsElement) spotsElement.textContent = spots;
+        }
+      }, 300000);
+
+      // Timer countdown
+      setInterval(() => {
+        seconds--;
+        if (seconds < 0) {
+          seconds = 59;
+          minutes--;
+          if (minutes < 0) {
+            minutes = 59;
+            hours--;
+          }
+        }
+        
+        const timerElement = document.getElementById('qsr-timer');
+        if (timerElement) {
+          timerElement.textContent = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+      }, 1000);
+    }
+
+    // Tracking functions
+    function trackWhatsAppClick(context, message) {
+      if (typeof window.trackEvent !== 'undefined') {
+        window.trackEvent('whatsapp_click', {
+          category: 'communication',
+          label: context,
+          whatsapp_context: context,
+          message_type: message.slice(0, 50),
+          segment: 'qsr'
+        });
+      }
+    }
+
+    function trackCTAClick(ctaType, location) {
+      if (typeof window.trackEvent !== 'undefined') {
+        window.trackEvent('cta_click', {
+          category: 'conversion',
+          label: ctaType,
+          cta_type: ctaType,
+          page_location: location,
+          segment: 'qsr'
+        });
+      }
+    }
+
+    // Initialize all QSR psychology elements
+    document.addEventListener('DOMContentLoaded', function() {
+      startQSRCounters();
+      startRushCountdown();
+      startQSRScarcity();
+      
+      // Track QSR page view
+      if (typeof window.trackEvent !== 'undefined') {
+        window.trackEvent('qsr_page_view', {
+          category: 'segment_engagement',
+          label: 'qsr_custom_page',
+          segment: 'qsr'
+        });
+      }
+    });
+  </script>
+
+  <style>
+    .animation-delay-500 {
+      animation-delay: 0.5s;
+    }
+    .animation-delay-1000 {
+      animation-delay: 1s;
+    }
+  </style>
+</BaseLayout>

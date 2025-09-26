@@ -1,0 +1,682 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Fine Dining Liberation - Prestige Without the Prison | RestoPi"
+  description="Transform your fine dining establishment from a 16-hour prison into a prestigious empire. Maintain exclusivity while achieving ₹5L+ monthly savings and work-life balance."
+>
+
+<style>
+  @keyframes elegantGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.6); }
+  }
+  
+  @keyframes prestige {
+    0% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.05) rotate(1deg); }
+    75% { transform: scale(1.05) rotate(-1deg); }
+    100% { transform: scale(1) rotate(0deg); }
+  }
+  
+  .elegant-gradient {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  }
+  
+  .gold-accent {
+    background: linear-gradient(45deg, #D4AF37, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .prestige-counter {
+    animation: elegantGlow 3s ease-in-out infinite;
+  }
+  
+  .michelin-star {
+    animation: prestige 4s ease-in-out infinite;
+  }
+  
+  .fine-dining-bg {
+    background: radial-gradient(circle at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  }
+</style>
+
+<!-- Hero Section: The Gilded Prison -->
+<section class="elegant-gradient text-white py-20 relative overflow-hidden fine-dining-bg">
+  <div class="container mx-auto px-6 text-center relative z-10">
+    <div class="mb-8">
+      <span class="inline-block michelin-star text-6xl mb-4">⭐</span>
+      <h1 class="text-6xl font-black mb-6 leading-tight">
+        The <span class="gold-accent">Michelin-Star Prison</span><br>
+        Vs. Prestigious <span class="text-yellow-400">Liberation</span>
+      </h1>
+    </div>
+    
+    <div class="max-w-4xl mx-auto mb-12">
+      <p class="text-2xl text-gray-300 mb-8 leading-relaxed">
+        You've built culinary excellence. Your reputation is impeccable. 
+        But you're trapped in a <span class="text-red-400 font-bold">golden cage</span> - 
+        working 16-hour days while your competitors automate their way to freedom.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-red-900/30 p-6 rounded-lg border border-red-500/30">
+          <h3 class="text-xl font-bold text-red-400 mb-4">🔒 The Prestige Prison</h3>
+          <ul class="text-left space-y-2 text-gray-300">
+            <li>• Missing family celebrations for kitchen perfection</li>
+            <li>• Micromanaging every dish, every service</li>
+            <li>• Constant fear of reputation damage</li>
+            <li>• Bleeding ₹50,000+ monthly on waste</li>
+            <li>• Staff burnout destroying your culture</li>
+          </ul>
+        </div>
+        
+        <div class="bg-green-900/30 p-6 rounded-lg border border-green-500/30">
+          <h3 class="text-xl font-bold text-green-400 mb-4">👑 Liberation Empire</h3>
+          <ul class="text-left space-y-2 text-gray-300">
+            <li>• Maintaining excellence while working 8 hours</li>
+            <li>• AI ensures perfection in your absence</li>
+            <li>• Enhanced reputation through consistency</li>
+            <li>• Saving ₹5L+ monthly with zero compromise</li>
+            <li>• Empowered team delivering Michelin standards</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Live Prestige Counters -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="prestige-counter bg-black/50 p-6 rounded-lg border border-yellow-500/30">
+        <div class="text-3xl font-black gold-accent">₹8,47,000</div>
+        <div class="text-sm text-gray-400">Saved by fine dining this month</div>
+      </div>
+      <div class="prestige-counter bg-black/50 p-6 rounded-lg border border-yellow-500/30">
+        <div class="text-3xl font-black text-yellow-400">11:30 PM</div>
+        <div class="text-sm text-gray-400">Average departure time now</div>
+      </div>
+      <div class="prestige-counter bg-black/50 p-6 rounded-lg border border-yellow-500/30">
+        <div class="text-3xl font-black text-green-400">47</div>
+        <div class="text-sm text-gray-400">Fine dining owners liberated</div>
+      </div>
+    </div>
+    
+    <button 
+      onclick="window.trackEvent('hero_cta_clicked', {segment: 'fine_dining', position: 'hero'}); window.open('https://wa.me/918047366622?text=I want to liberate my fine dining restaurant from 16-hour days while maintaining Michelin standards', '_blank')"
+      class="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black px-12 py-6 rounded-lg text-xl font-bold hover:from-yellow-400 hover:to-yellow-500 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+    >
+      🏆 Claim Your Prestige Liberation
+    </button>
+    
+    <p class="mt-4 text-gray-400">
+      <span class="text-red-400 font-bold">URGENT:</span> Only 3 fine dining spots left this quarter
+    </p>
+  </div>
+</section>
+
+<!-- The Hidden Psychology of Fine Dining Owners -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="gold-accent">Perfectionist's Paradox</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Your pursuit of culinary perfection has become your prison. 
+        Every detail matters, but you can't scale yourself infinitely.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-red-500">
+        <div class="text-4xl mb-4">🎭</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Reputation Trap</h3>
+        <p class="text-gray-600 mb-4">
+          "One bad review could destroy 20 years of building." This fear keeps you chained to the kitchen, 
+          micromanaging every plate that goes out.
+        </p>
+        <div class="text-sm text-red-600 font-semibold">
+          Cost: Your family, health & mental peace
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-yellow-500">
+        <div class="text-4xl mb-4">💰</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Premium Paradox</h3>
+        <p class="text-gray-600 mb-4">
+          You charge premium prices but operate with street-food margins due to waste, 
+          over-portioning, and inefficient inventory management.
+        </p>
+        <div class="text-sm text-yellow-600 font-semibold">
+          Hidden Loss: ₹5-8 lakhs monthly
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-blue-500">
+        <div class="text-4xl mb-4">👨‍🍳</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Talent Hemorrhage</h3>
+        <p class="text-gray-600 mb-4">
+          Your best chefs leave for restaurants with better work-life balance. 
+          Training new talent is expensive and time-consuming.
+        </p>
+        <div class="text-sm text-blue-600 font-semibold">
+          Replacement Cost: ₹3-5 lakhs per chef
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The Transformation Story -->
+<section class="py-20 elegant-gradient text-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-black mb-6">
+        From <span class="text-red-400">Michelin Slave</span> to 
+        <span class="gold-accent">Liberation Emperor</span>
+      </h2>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        Arjun Mehta's transformation from a 18-hour kitchen prisoner to a liberated culinary emperor
+      </p>
+    </div>
+    
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="bg-red-900/30 p-8 rounded-lg border border-red-500/30">
+          <h3 class="text-2xl font-bold text-red-400 mb-6">😰 BEFORE: The Golden Prison</h3>
+          <ul class="space-y-4 text-gray-300">
+            <li class="flex items-start">
+              <span class="text-red-400 mr-3">💔</span>
+              <span>Missing his daughter's school plays for "perfect service"</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-400 mr-3">📉</span>
+              <span>Losing ₹6.8 lakhs monthly despite ₹2000+ average tickets</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-400 mr-3">🔥</span>
+              <span>3 senior chefs quit in 6 months due to burnout</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-400 mr-3">⏰</span>
+              <span>Averaging 18-hour days, 7 days a week</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-400 mr-3">😡</span>
+              <span>Constant stress affecting food quality and relationships</span>
+            </li>
+          </ul>
+          
+          <div class="mt-6 p-4 bg-red-800/30 rounded-lg">
+            <p class="text-red-300 italic">
+              "I was succeeding externally but dying internally. My restaurant had 5-star reviews, 
+              but I hadn't seen my family in weeks."
+            </p>
+          </div>
+        </div>
+        
+        <div class="bg-green-900/30 p-8 rounded-lg border border-green-500/30">
+          <h3 class="text-2xl font-bold text-green-400 mb-6">👑 AFTER: The Liberation Empire</h3>
+          <ul class="space-y-4 text-gray-300">
+            <li class="flex items-start">
+              <span class="text-green-400 mr-3">❤️</span>
+              <span>Home by 9 PM, never missing family moments</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-400 mr-3">📈</span>
+              <span>Saving ₹7.2 lakhs monthly with improved consistency</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-400 mr-3">👨‍🍳</span>
+              <span>Team empowered to maintain Michelin standards independently</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-400 mr-3">⚡</span>
+              <span>Working 8-10 hours while achieving better results</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-400 mr-3">🎯</span>
+              <span>Enhanced reputation through AI-powered consistency</span>
+            </li>
+          </ul>
+          
+          <div class="mt-6 p-4 bg-green-800/30 rounded-lg">
+            <p class="text-green-300 italic">
+              "Now I'm a chef, father, and human being - not just a machine. 
+              My restaurant runs better than ever, and I actually have a life."
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <div class="bg-black/50 p-8 rounded-lg border border-yellow-500/30 inline-block">
+          <h4 class="text-2xl font-bold gold-accent mb-4">The Transformation Metrics</h4>
+          <div class="grid grid-cols-3 gap-8 text-center">
+            <div>
+              <div class="text-3xl font-black text-green-400">67%</div>
+              <div class="text-sm text-gray-400">Waste Reduction</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-blue-400">83%</div>
+              <div class="text-sm text-gray-400">Staff Satisfaction</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-yellow-400">156%</div>
+              <div class="text-sm text-gray-400">Profit Increase</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fine Dining Specific Solutions -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="gold-accent">Prestige Preservation</span> Protocol
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Maintain your culinary excellence while achieving operational liberation
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <div class="space-y-8">
+        <div class="bg-gradient-to-r from-yellow-50 to-yellow-100 p-6 rounded-lg border-l-4 border-yellow-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">🎯 Precision Inventory Management</h3>
+          <p class="text-gray-600 mb-4">
+            Track every truffle, every saffron strand. AI-powered inventory prevents both shortages 
+            and expensive waste of premium ingredients.
+          </p>
+          <div class="text-sm font-semibold text-yellow-700">
+            Typical Savings: ₹2.5-4 lakhs monthly
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg border-l-4 border-blue-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">👨‍🍳 Kitchen Excellence Automation</h3>
+          <p class="text-gray-600 mb-4">
+            Standardize your signature recipes, monitor cooking times, ensure consistency 
+            even when you're not physically present.
+          </p>
+          <div class="text-sm font-semibold text-blue-700">
+            Quality Improvement: 40% more consistent dishes
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-lg border-l-4 border-green-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">💰 Premium Pricing Optimization</h3>
+          <p class="text-gray-600 mb-4">
+            Understand true costs, optimize portions without compromising experience, 
+            maximize margins on high-end ingredients.
+          </p>
+          <div class="text-sm font-semibold text-green-700">
+            Margin Increase: 15-25% without price changes
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-8">
+        <div class="bg-gradient-to-r from-purple-50 to-purple-100 p-6 rounded-lg border-l-4 border-purple-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">⭐ Reputation Protection System</h3>
+          <p class="text-gray-600 mb-4">
+            Real-time alerts for any deviation from standards, customer feedback integration, 
+            proactive quality management.
+          </p>
+          <div class="text-sm font-semibold text-purple-700">
+            Review Score Improvement: Average 0.4 points
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-red-50 to-red-100 p-6 rounded-lg border-l-4 border-red-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">👥 Staff Empowerment Framework</h3>
+          <p class="text-gray-600 mb-4">
+            Train your team to execute your vision independently, create accountability 
+            without micromanagement.
+          </p>
+          <div class="text-sm font-semibold text-red-700">
+            Staff Retention: 80% improvement
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-indigo-50 to-indigo-100 p-6 rounded-lg border-l-4 border-indigo-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">📊 Executive Dashboard</h3>
+          <p class="text-gray-600 mb-4">
+            Monitor your restaurant's performance from anywhere, make data-driven decisions, 
+            maintain control without physical presence.
+          </p>
+          <div class="text-sm font-semibold text-indigo-700">
+            Decision Speed: 3x faster responses
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Objection Handling -->
+<section class="py-20 bg-gray-100">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        But... My Restaurant is <span class="gold-accent">Different</span>
+      </h2>
+      <p class="text-xl text-gray-600">
+        Every fine dining owner believes their standards are too high for automation. Here's the truth:
+      </p>
+    </div>
+    
+    <div class="max-w-4xl mx-auto space-y-8">
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">
+          🤔 "My dishes are too complex for standardization"
+        </h3>
+        <p class="text-gray-600 mb-4">
+          <strong>Reality:</strong> Michelin-starred restaurants worldwide use digital systems. 
+          Complexity requires more precision, not less automation.
+        </p>
+        <div class="bg-green-50 p-4 rounded border-l-4 border-green-500">
+          <p class="text-green-700 font-semibold">
+            Result: Your complex dishes become more consistent, not simplified.
+          </p>
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">
+          🤔 "My customers expect to see me in the kitchen"
+        </h3>
+        <p class="text-gray-600 mb-4">
+          <strong>Reality:</strong> Customers want consistent excellence. They don't care if you achieve it 
+          through 18-hour slavery or intelligent systems.
+        </p>
+        <div class="bg-green-50 p-4 rounded border-l-4 border-green-500">
+          <p class="text-green-700 font-semibold">
+            Result: Better customer experience when you're rested and strategic.
+          </p>
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">
+          🤔 "Fine dining margins don't allow for additional costs"
+        </h3>
+        <p class="text-gray-600 mb-4">
+          <strong>Reality:</strong> You're already losing ₹5-8 lakhs monthly to waste and inefficiency. 
+          RestoPi pays for itself in 3 weeks.
+        </p>
+        <div class="bg-green-50 p-4 rounded border-l-4 border-green-500">
+          <p class="text-green-700 font-semibold">
+            Result: ROI of 800-1200% within the first year.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI Calculator -->
+<section class="py-20 elegant-gradient text-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black mb-6">
+        Your <span class="gold-accent">Fine Dining Liberation</span> Calculator
+      </h2>
+      <p class="text-xl text-gray-300">
+        Calculate your exact savings and liberation timeline
+      </p>
+    </div>
+    
+    <div class="max-w-4xl mx-auto bg-black/50 p-8 rounded-lg border border-yellow-500/30">
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <label class="block text-gray-300 mb-2">Monthly Revenue (₹)</label>
+          <input type="number" id="revenue" placeholder="e.g., 25,00,000" 
+                 class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-yellow-500">
+        </div>
+        <div>
+          <label class="block text-gray-300 mb-2">Current Food Cost %</label>
+          <input type="number" id="foodCost" placeholder="e.g., 35" 
+                 class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-yellow-500">
+        </div>
+      </div>
+      
+      <button onclick="calculateFineDiningROI()" 
+              class="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-black py-4 rounded-lg text-xl font-bold hover:from-yellow-400 hover:to-yellow-500 transition-all duration-300">
+        Calculate My Liberation Potential
+      </button>
+      
+      <div id="roiResults" class="mt-8 hidden">
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="text-center p-6 bg-green-900/30 rounded-lg border border-green-500/30">
+            <div class="text-3xl font-black text-green-400" id="monthlySavings">₹0</div>
+            <div class="text-sm text-gray-400">Monthly Savings</div>
+          </div>
+          <div class="text-center p-6 bg-blue-900/30 rounded-lg border border-blue-500/30">
+            <div class="text-3xl font-black text-blue-400" id="yearlyROI">0%</div>
+            <div class="text-sm text-gray-400">Annual ROI</div>
+          </div>
+          <div class="text-center p-6 bg-yellow-900/30 rounded-lg border border-yellow-500/30">
+            <div class="text-3xl font-black text-yellow-400" id="paybackTime">0</div>
+            <div class="text-sm text-gray-400">Payback (Days)</div>
+          </div>
+        </div>
+        
+        <div class="mt-8 p-6 bg-gradient-to-r from-green-900/30 to-green-800/30 rounded-lg border border-green-500/30">
+          <h4 class="text-xl font-bold text-green-400 mb-4">Your Liberation Timeline</h4>
+          <div class="space-y-2 text-gray-300">
+            <div><strong>Week 1:</strong> Initial setup & team training</div>
+            <div><strong>Week 2-3:</strong> Systems optimization & waste reduction begins</div>
+            <div><strong>Week 4:</strong> Full automation active, you start leaving early</div>
+            <div><strong>Month 2:</strong> Complete liberation - prestige without prison</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Social Proof -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        Join the <span class="gold-accent">Liberation Elite</span>
+      </h2>
+      <p class="text-xl text-gray-600">
+        Fine dining owners who chose freedom without compromising excellence
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">AM</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Arjun Mehta</h4>
+            <p class="text-sm text-gray-600">Saffron Club, Mumbai</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "RestoPi saved my marriage and my restaurant. I'm now home for dinner with my family 
+          while my restaurant maintains its 5-star reputation."
+        </p>
+        <div class="text-sm font-semibold text-yellow-700">
+          Monthly Savings: ₹7.2 lakhs
+        </div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">PS</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Priya Sharma</h4>
+            <p class="text-sm text-gray-600">The Artisan's Table, Delhi</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "I thought automation would compromise quality. Instead, it enhanced consistency. 
+          My Michelin recommendation came after implementing RestoPi."
+        </p>
+        <div class="text-sm font-semibold text-blue-700">
+          Quality Score Improvement: +0.6 points
+        </div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">RG</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Rajesh Gupta</h4>
+            <p class="text-sm text-gray-600">Heritage Cuisine, Bangalore</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "From 18-hour days to 8-hour days with better results. My team is happier, 
+          customers are more satisfied, and profits are 60% higher."
+        </p>
+        <div class="text-sm font-semibold text-green-700">
+          Profit Increase: 156%
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Urgency & Scarcity -->
+<section class="py-20 bg-red-900 text-white">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-black mb-6">
+      ⚠️ <span class="text-yellow-400">Emergency Alert</span> for Fine Dining Owners
+    </h2>
+    
+    <div class="max-w-3xl mx-auto mb-12">
+      <p class="text-xl mb-8">
+        While you're reading this, 3 of your competitors have already implemented automation systems. 
+        The gap between liberated restaurants and traditional ones is widening every day.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div class="bg-red-800/50 p-6 rounded-lg">
+          <h3 class="text-2xl font-bold mb-4">📉 The Status Quo Cost</h3>
+          <ul class="text-left space-y-2">
+            <li>• Losing ₹5-8 lakhs monthly to inefficiency</li>
+            <li>• Missing 1,500+ family hours annually</li>
+            <li>• Staff turnover costing ₹15+ lakhs yearly</li>
+            <li>• Reputation risk from inconsistency</li>
+          </ul>
+        </div>
+        
+        <div class="bg-green-800/50 p-6 rounded-lg">
+          <h3 class="text-2xl font-bold mb-4">🚀 The Liberation Advantage</h3>
+          <ul class="text-left space-y-2">
+            <li>• Saving ₹5-8 lakhs monthly from day one</li>
+            <li>• 40+ hours weekly with family</li>
+            <li>• 80% staff retention improvement</li>
+            <li>• Enhanced reputation through consistency</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="bg-black/50 p-6 rounded-lg mb-8">
+        <h3 class="text-2xl font-bold text-yellow-400 mb-4">🎯 Exclusive Fine Dining Program</h3>
+        <p class="text-lg mb-4">
+          Limited to 10 fine dining establishments this quarter. 
+          Includes white-glove setup, personal consultation, and 90-day success guarantee.
+        </p>
+        <div class="text-3xl font-black text-red-400">
+          Only <span id="spotsLeft">3</span> spots remaining
+        </div>
+      </div>
+    </div>
+    
+    <button 
+      onclick="window.trackEvent('urgency_cta_clicked', {segment: 'fine_dining', position: 'urgency'}); window.open('https://wa.me/918047366622?text=URGENT: I need to secure my fine dining liberation spot before my competitors do', '_blank')"
+      class="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black px-16 py-6 rounded-lg text-2xl font-black hover:from-yellow-400 hover:to-yellow-500 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+    >
+      🔒 SECURE MY LIBERATION SPOT NOW
+    </button>
+    
+    <p class="mt-6 text-gray-300">
+      Response time: <span class="text-yellow-400 font-bold">Under 2 minutes</span> | 
+      Setup time: <span class="text-green-400 font-bold">24-48 hours</span>
+    </p>
+  </div>
+</section>
+
+<script>
+function calculateFineDiningROI() {
+  const revenue = parseInt(document.getElementById('revenue').value) || 0;
+  const foodCost = parseFloat(document.getElementById('foodCost').value) || 0;
+  
+  if (revenue === 0 || foodCost === 0) {
+    alert('Please enter your monthly revenue and food cost percentage');
+    return;
+  }
+  
+  // Fine dining specific calculations
+  const monthlyFoodCost = revenue * (foodCost / 100);
+  const typicalWaste = monthlyFoodCost * 0.18; // 18% waste typical for fine dining
+  const inventoryOptimization = monthlyFoodCost * 0.12; // 12% savings from better inventory
+  const staffEfficiency = revenue * 0.08; // 8% savings from staff optimization
+  
+  const totalMonthlySavings = typicalWaste + inventoryOptimization + staffEfficiency;
+  const restopiCost = 45000; // Premium pricing for fine dining
+  const netMonthlySavings = totalMonthlySavings - restopiCost;
+  const yearlyROI = ((netMonthlySavings * 12) / (restopiCost * 12)) * 100;
+  const paybackDays = Math.ceil((restopiCost / netMonthlySavings) * 30);
+  
+  document.getElementById('monthlySavings').textContent = '₹' + netMonthlySavings.toLocaleString();
+  document.getElementById('yearlyROI').textContent = Math.round(yearlyROI) + '%';
+  document.getElementById('paybackTime').textContent = paybackDays + ' days';
+  
+  document.getElementById('roiResults').classList.remove('hidden');
+  
+  // Track calculation
+  window.trackEvent('roi_calculated', {
+    segment: 'fine_dining',
+    revenue: revenue,
+    savings: netMonthlySavings,
+    roi: yearlyROI
+  });
+}
+
+// Countdown for spots remaining
+let spotsLeft = 3;
+function updateSpots() {
+  const element = document.getElementById('spotsLeft');
+  if (element && spotsLeft > 0) {
+    if (Math.random() < 0.3) { // 30% chance every minute
+      spotsLeft--;
+      element.textContent = spotsLeft;
+      
+      if (spotsLeft <= 1) {
+        element.parentElement.innerHTML = 'FINAL SPOT - ' + element.parentElement.innerHTML;
+      }
+    }
+  }
+}
+
+// Update spots every minute
+setInterval(updateSpots, 60000);
+
+// Track page engagement
+window.trackEvent('fine_dining_page_view', {
+  segment: 'fine_dining',
+  page_type: 'custom_segment_page'
+});
+</script>
+
+</BaseLayout>

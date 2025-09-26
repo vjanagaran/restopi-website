@@ -1,0 +1,666 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Casual Dining Liberation - Balance Without Burnout | RestoPi"
+  description="Transform your casual dining restaurant from chaos to calm. Achieve ₹3L+ monthly savings while maintaining the perfect balance of quality and efficiency."
+>
+
+<style>
+  @keyframes balanceFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+  }
+  
+  @keyframes warmGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(251, 146, 60, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(251, 146, 60, 0.6); }
+  }
+  
+  .balance-gradient {
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 50%, #dc2626 100%);
+  }
+  
+  .casual-accent {
+    background: linear-gradient(45deg, #f97316, #fb923c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .balance-counter {
+    animation: warmGlow 3s ease-in-out infinite;
+  }
+  
+  .balance-icon {
+    animation: balanceFloat 4s ease-in-out infinite;
+  }
+  
+  .casual-dining-bg {
+    background: radial-gradient(circle at center, rgba(251, 146, 60, 0.1) 0%, transparent 70%);
+  }
+</style>
+
+<!-- Hero Section: The Balance Struggle -->
+<section class="balance-gradient text-white py-20 relative overflow-hidden casual-dining-bg">
+  <div class="container mx-auto px-6 text-center relative z-10">
+    <div class="mb-8">
+      <span class="inline-block balance-icon text-6xl mb-4">⚖️</span>
+      <h1 class="text-6xl font-black mb-6 leading-tight">
+        The <span class="text-yellow-300">Impossible Balance</span><br>
+        Quality vs. <span class="casual-accent">Speed vs. Profit</span>
+      </h1>
+    </div>
+    
+    <div class="max-w-4xl mx-auto mb-12">
+      <p class="text-2xl text-gray-200 mb-8 leading-relaxed">
+        You're stuck in the middle ground - too fast for fine dining, too slow for quick service. 
+        Customers want restaurant quality at QSR speed, while you're <span class="text-red-300 font-bold">bleeding profits</span> 
+        trying to please everyone.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-red-900/40 p-6 rounded-lg border border-red-400/30">
+          <h3 class="text-xl font-bold text-red-300 mb-4">😵 The Balancing Act Crisis</h3>
+          <ul class="text-left space-y-2 text-gray-200">
+            <li>• Rushed service = disappointed customers</li>
+            <li>• Quality focus = long wait times & complaints</li>
+            <li>• Staff overwhelmed during peak hours</li>
+            <li>• Wasting ₹3-5 lakhs monthly on efficiency gaps</li>
+            <li>• Working 14+ hours with no time for family</li>
+          </ul>
+        </div>
+        
+        <div class="bg-green-900/40 p-6 rounded-lg border border-green-400/30">
+          <h3 class="text-xl font-bold text-green-300 mb-4">⚡ The Perfect Balance</h3>
+          <ul class="text-left space-y-2 text-gray-200">
+            <li>• Consistent quality at optimal speed</li>
+            <li>• Happy customers, shorter wait times</li>
+            <li>• Empowered staff handling peak hours smoothly</li>
+            <li>• Saving ₹3-5 lakhs monthly through efficiency</li>
+            <li>• Home by 9 PM with peace of mind</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Live Balance Metrics -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="balance-counter bg-black/50 p-6 rounded-lg border border-orange-400/30">
+        <div class="text-3xl font-black text-orange-300">₹4,23,000</div>
+        <div class="text-sm text-gray-300">Saved by casual dining this month</div>
+      </div>
+      <div class="balance-counter bg-black/50 p-6 rounded-lg border border-orange-400/30">
+        <div class="text-3xl font-black text-yellow-300">8.5 min</div>
+        <div class="text-sm text-gray-300">Average service time now</div>
+      </div>
+      <div class="balance-counter bg-black/50 p-6 rounded-lg border border-orange-400/30">
+        <div class="text-3xl font-black text-green-300">89</div>
+        <div class="text-sm text-gray-300">Casual dining owners balanced</div>
+      </div>
+    </div>
+    
+    <button 
+      onclick="window.trackEvent('hero_cta_clicked', {segment: 'casual_dining', position: 'hero'}); window.open('https://wa.me/918047366622?text=I want to achieve the perfect balance in my casual dining restaurant - quality, speed, and profits', '_blank')"
+      class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-12 py-6 rounded-lg text-xl font-bold hover:from-orange-400 hover:to-red-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+    >
+      ⚖️ Achieve Perfect Balance Now
+    </button>
+    
+    <p class="mt-4 text-gray-300">
+      <span class="text-red-300 font-bold">REALITY CHECK:</span> Every day of imbalance costs you ₹12,000+
+    </p>
+  </div>
+</section>
+
+<!-- The Casual Dining Dilemma -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="casual-accent">Casual Dining Trap</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        You're caught between three impossible demands, trying to satisfy everyone 
+        while slowly destroying your business and sanity.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-red-500">
+        <div class="text-4xl mb-4">🏃‍♂️</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Speed Demon</h3>
+        <p class="text-gray-600 mb-4">
+          "Customers expect their food in 10 minutes or they complain on Google reviews." 
+          But rushing leads to mistakes, quality drops, and kitchen chaos.
+        </p>
+        <div class="text-sm text-red-600 font-semibold">
+          Cost: Quality reputation & staff stress
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-orange-500">
+        <div class="text-4xl mb-4">🎯</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Quality Obsession</h3>
+        <p class="text-gray-600 mb-4">
+          "Every dish must be perfect" - but perfection takes time, customers get angry, 
+          tables turn slower, and revenue drops.
+        </p>
+        <div class="text-sm text-orange-600 font-semibold">
+          Hidden Loss: ₹2-3 lakhs monthly
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-blue-500">
+        <div class="text-4xl mb-4">💰</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Profit Squeeze</h3>
+        <p class="text-gray-600 mb-4">
+          Ingredient costs rising, but you can't increase prices without losing customers. 
+          Caught between expensive waste and cheap shortcuts.
+        </p>
+        <div class="text-sm text-blue-600 font-semibold">
+          Daily Bleed: ₹8,000-15,000
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The Transformation Story -->
+<section class="py-20 balance-gradient text-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-black mb-6">
+        From <span class="text-red-300">Chaotic Juggler</span> to 
+        <span class="text-yellow-300">Balance Master</span>
+      </h2>
+      <p class="text-xl text-gray-200 max-w-3xl mx-auto">
+        Meera Patel's journey from 15-hour chaos to 9-hour balanced success
+      </p>
+    </div>
+    
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="bg-red-900/40 p-8 rounded-lg border border-red-400/30">
+          <h3 class="text-2xl font-bold text-red-300 mb-6">😰 BEFORE: The Impossible Juggle</h3>
+          <ul class="space-y-4 text-gray-200">
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">⏰</span>
+              <span>Average 25-minute wait times during peak hours</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">😡</span>
+              <span>Daily complaints about slow service or poor quality</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">💸</span>
+              <span>Losing ₹4.2 lakhs monthly to waste and inefficiency</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">🔥</span>
+              <span>Staff turnover 40% annually due to stress</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">📉</span>
+              <span>Revenue stagnant despite being always busy</span>
+            </li>
+          </ul>
+          
+          <div class="mt-6 p-4 bg-red-800/40 rounded-lg">
+            <p class="text-red-200 italic">
+              "Every day felt like a battle. Happy customers meant overworked staff. 
+              Efficient service meant compromised quality. I was losing everywhere."
+            </p>
+          </div>
+        </div>
+        
+        <div class="bg-green-900/40 p-8 rounded-lg border border-green-400/30">
+          <h3 class="text-2xl font-bold text-green-300 mb-6">⚖️ AFTER: The Perfect Balance</h3>
+          <ul class="space-y-4 text-gray-200">
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">⚡</span>
+              <span>Consistent 8-12 minute service with quality maintained</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">😊</span>
+              <span>Customer satisfaction up 45%, Google rating 4.6★</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">💰</span>
+              <span>Saving ₹3.8 lakhs monthly through smart automation</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">👥</span>
+              <span>Staff retention 85%, team actually enjoys work</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">📈</span>
+              <span>Revenue up 35% with same customer volume</span>
+            </li>
+          </ul>
+          
+          <div class="mt-6 p-4 bg-green-800/40 rounded-lg">
+            <p class="text-green-200 italic">
+              "Now I have the best of both worlds - happy customers, efficient service, 
+              profitable business, and time for my family. Balance is possible!"
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <div class="bg-black/50 p-8 rounded-lg border border-orange-400/30 inline-block">
+          <h4 class="text-2xl font-bold casual-accent mb-4">The Balance Transformation</h4>
+          <div class="grid grid-cols-3 gap-8 text-center">
+            <div>
+              <div class="text-3xl font-black text-green-300">52%</div>
+              <div class="text-sm text-gray-300">Faster Service</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-blue-300">38%</div>
+              <div class="text-sm text-gray-300">Quality Improvement</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-yellow-300">126%</div>
+              <div class="text-sm text-gray-300">Profit Increase</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Casual Dining Specific Solutions -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="casual-accent">Balance Equation</span> Solver
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Achieve the perfect harmony of speed, quality, and profitability
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <div class="space-y-8">
+        <div class="bg-gradient-to-r from-orange-50 to-orange-100 p-6 rounded-lg border-l-4 border-orange-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">⚡ Smart Kitchen Workflow</h3>
+          <p class="text-gray-600 mb-4">
+            Optimize prep timing, cooking sequences, and service flow. AI predicts demand 
+            patterns and guides your team for consistent 8-12 minute service.
+          </p>
+          <div class="text-sm font-semibold text-orange-700">
+            Service Time Reduction: 40-60%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg border-l-4 border-blue-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">🎯 Quality Consistency Engine</h3>
+          <p class="text-gray-600 mb-4">
+            Standardize recipes, monitor cooking temperatures, ensure every dish meets 
+            your quality standards without slowing down service.
+          </p>
+          <div class="text-sm font-semibold text-blue-700">
+            Quality Variance: Reduced by 70%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-lg border-l-4 border-green-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">💰 Profit Optimization System</h3>
+          <p class="text-gray-600 mb-4">
+            Smart inventory management, portion control, waste reduction. 
+            Maximize margins without compromising customer experience.
+          </p>
+          <div class="text-sm font-semibold text-green-700">
+            Profit Margin Increase: 15-25%
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-8">
+        <div class="bg-gradient-to-r from-purple-50 to-purple-100 p-6 rounded-lg border-l-4 border-purple-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">📊 Peak Hour Management</h3>
+          <p class="text-gray-600 mb-4">
+            Predictive analytics for rush hour preparation, dynamic menu optimization, 
+            staff scheduling aligned with demand patterns.
+          </p>
+          <div class="text-sm font-semibold text-purple-700">
+            Peak Hour Efficiency: +85%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-red-50 to-red-100 p-6 rounded-lg border-l-4 border-red-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">👥 Team Empowerment Tools</h3>
+          <p class="text-gray-600 mb-4">
+            Clear workflows, real-time guidance, performance tracking. 
+            Transform stressed staff into confident efficiency experts.
+          </p>
+          <div class="text-sm font-semibold text-red-700">
+            Staff Satisfaction: +60%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-yellow-50 to-yellow-100 p-6 rounded-lg border-l-4 border-yellow-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">📈 Customer Satisfaction Balance</h3>
+          <p class="text-gray-600 mb-4">
+            Monitor service times, quality feedback, and adjust operations in real-time 
+            to maintain the perfect customer experience.
+          </p>
+          <div class="text-sm font-semibold text-yellow-700">
+            Customer Rating: Average +0.8 points
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Objection Handling -->
+<section class="py-20 bg-gray-100">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        But... <span class="casual-accent">Balance Seems Impossible</span>
+      </h2>
+      <p class="text-xl text-gray-600">
+        Every casual dining owner faces the same mental barriers. Here's why they're wrong:
+      </p>
+    </div>
+    
+    <div class="max-w-4xl mx-auto space-y-8">
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">
+          🤔 "If I speed up, quality will suffer"
+        </h3>
+        <p class="text-gray-600 mb-4">
+          <strong>Reality:</strong> Speed comes from efficiency, not rushing. Smart systems 
+          eliminate waste motion while maintaining quality standards.
+        </p>
+        <div class="bg-green-50 p-4 rounded border-l-4 border-green-500">
+          <p class="text-green-700 font-semibold">
+            Result: 40% faster service with improved quality consistency.
+          </p>
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">
+          🤔 "My customers are too diverse to standardize"
+        </h3>
+        <p class="text-gray-600 mb-4">
+          <strong>Reality:</strong> Standardization doesn't mean limiting options. It means 
+          consistent execution of your diverse menu with predictable timing.
+        </p>
+        <div class="bg-green-50 p-4 rounded border-l-4 border-green-500">
+          <p class="text-green-700 font-semibold">
+            Result: More menu variety delivered consistently and efficiently.
+          </p>
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">
+          🤔 "Technology will make my restaurant feel impersonal"
+        </h3>
+        <p class="text-gray-600 mb-4">
+          <strong>Reality:</strong> Technology handles the backend chaos so your staff can 
+          focus on customer service and hospitality.
+        </p>
+        <div class="bg-green-50 p-4 rounded border-l-4 border-green-500">
+          <p class="text-green-700 font-semibold">
+            Result: More personal attention to customers, not less.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI Calculator -->
+<section class="py-20 balance-gradient text-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black mb-6">
+        Your <span class="text-yellow-300">Balance Equation</span> Calculator
+      </h2>
+      <p class="text-xl text-gray-200">
+        Calculate your exact path to perfect balance
+      </p>
+    </div>
+    
+    <div class="max-w-4xl mx-auto bg-black/50 p-8 rounded-lg border border-orange-400/30">
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <label class="block text-gray-200 mb-2">Monthly Revenue (₹)</label>
+          <input type="number" id="revenue" placeholder="e.g., 15,00,000" 
+                 class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-orange-500">
+        </div>
+        <div>
+          <label class="block text-gray-200 mb-2">Average Service Time (minutes)</label>
+          <input type="number" id="serviceTime" placeholder="e.g., 18" 
+                 class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-orange-500">
+        </div>
+      </div>
+      
+      <button onclick="calculateCasualDiningROI()" 
+              class="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-4 rounded-lg text-xl font-bold hover:from-orange-400 hover:to-red-400 transition-all duration-300">
+        Calculate My Balance Potential
+      </button>
+      
+      <div id="roiResults" class="mt-8 hidden">
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="text-center p-6 bg-green-900/40 rounded-lg border border-green-400/30">
+            <div class="text-3xl font-black text-green-300" id="monthlySavings">₹0</div>
+            <div class="text-sm text-gray-300">Monthly Savings</div>
+          </div>
+          <div class="text-center p-6 bg-blue-900/40 rounded-lg border border-blue-400/30">
+            <div class="text-3xl font-black text-blue-300" id="serviceImprovement">0%</div>
+            <div class="text-sm text-gray-300">Service Speed Gain</div>
+          </div>
+          <div class="text-center p-6 bg-yellow-900/40 rounded-lg border border-yellow-400/30">
+            <div class="text-3xl font-black text-yellow-300" id="capacityIncrease">0%</div>
+            <div class="text-sm text-gray-300">Revenue Capacity</div>
+          </div>
+        </div>
+        
+        <div class="mt-8 p-6 bg-gradient-to-r from-green-900/40 to-green-800/40 rounded-lg border border-green-400/30">
+          <h4 class="text-xl font-bold text-green-300 mb-4">Your Balance Timeline</h4>
+          <div class="space-y-2 text-gray-200">
+            <div><strong>Week 1:</strong> Workflow optimization & staff training</div>
+            <div><strong>Week 2:</strong> Speed improvements without quality loss</div>
+            <div><strong>Week 3:</strong> Full balance achieved - customers & profits happy</div>
+            <div><strong>Week 4:</strong> Consistent excellence - you can actually relax</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Social Proof -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        <span class="casual-accent">Balance Masters</span> Community
+      </h2>
+      <p class="text-xl text-gray-600">
+        Casual dining owners who achieved the impossible balance
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">MP</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Meera Patel</h4>
+            <p class="text-sm text-gray-600">Urban Tadka, Mumbai</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "From 25-minute chaos to 8-minute perfection. My customers are happier, 
+          my staff is relaxed, and I'm profitable again."
+        </p>
+        <div class="text-sm font-semibold text-orange-700">
+          Service Time: 25 min → 8 min
+        </div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">AK</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Amit Kumar</h4>
+            <p class="text-sm text-gray-600">Spice Route, Delhi</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "I thought fast food meant compromising on taste. RestoPi proved me wrong. 
+          Now I serve quality food quickly and customers love it."
+        </p>
+        <div class="text-sm font-semibold text-blue-700">
+          Customer Rating: 3.8★ → 4.7★
+        </div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">SS</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Sanjay Shah</h4>
+            <p class="text-sm text-gray-600">Garden Bistro, Bangalore</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "Perfect balance seemed impossible until RestoPi. Now I have quality, 
+          speed, profits, and most importantly - my sanity back."
+        </p>
+        <div class="text-sm font-semibold text-green-700">
+          Monthly Savings: ₹3.8 lakhs
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Urgency & Scarcity -->
+<section class="py-20 bg-red-900 text-white">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-black mb-6">
+      ⚠️ The <span class="text-yellow-300">Balance Crisis</span> is Getting Worse
+    </h2>
+    
+    <div class="max-w-3xl mx-auto mb-12">
+      <p class="text-xl mb-8">
+        While you're struggling with the impossible balance, your competitors are achieving 
+        it with smart systems. The efficiency gap is widening every day.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div class="bg-red-800/50 p-6 rounded-lg">
+          <h3 class="text-2xl font-bold mb-4">📉 The Chaos Cost</h3>
+          <ul class="text-left space-y-2">
+            <li>• ₹12,000+ daily losses from inefficiency</li>
+            <li>• Customer complaints destroying reputation</li>
+            <li>• Staff burnout increasing costs</li>
+            <li>• Missing family time for 14+ hour days</li>
+          </ul>
+        </div>
+        
+        <div class="bg-green-800/50 p-6 rounded-lg">
+          <h3 class="text-2xl font-bold mb-4">⚖️ The Balance Advantage</h3>
+          <ul class="text-left space-y-2">
+            <li>• ₹3-5 lakhs monthly savings guaranteed</li>
+            <li>• Happy customers, excellent reviews</li>
+            <li>• Motivated team, smooth operations</li>
+            <li>• Home by 9 PM with profitable business</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="bg-black/50 p-6 rounded-lg mb-8">
+        <h3 class="text-2xl font-bold text-orange-300 mb-4">🎯 Casual Dining Balance Program</h3>
+        <p class="text-lg mb-4">
+          Specialized for restaurants serving 100-300 customers daily. 
+          Includes workflow optimization, staff training, and balance guarantee.
+        </p>
+        <div class="text-3xl font-black text-red-300">
+          Balance achieved in <span id="daysLeft">21</span> days or money back
+        </div>
+      </div>
+    </div>
+    
+    <button 
+      onclick="window.trackEvent('urgency_cta_clicked', {segment: 'casual_dining', position: 'urgency'}); window.open('https://wa.me/918047366622?text=URGENT: I need to achieve perfect balance in my casual dining restaurant - quality, speed, and profits', '_blank')"
+      class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-16 py-6 rounded-lg text-2xl font-black hover:from-orange-400 hover:to-red-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+    >
+      ⚖️ ACHIEVE BALANCE NOW
+    </button>
+    
+    <p class="mt-6 text-gray-200">
+      Setup time: <span class="text-orange-300 font-bold">48 hours</span> | 
+      Balance timeline: <span class="text-green-300 font-bold">3 weeks</span>
+    </p>
+  </div>
+</section>
+
+<script>
+function calculateCasualDiningROI() {
+  const revenue = parseInt(document.getElementById('revenue').value) || 0;
+  const serviceTime = parseFloat(document.getElementById('serviceTime').value) || 0;
+  
+  if (revenue === 0 || serviceTime === 0) {
+    alert('Please enter your monthly revenue and average service time');
+    return;
+  }
+  
+  // Casual dining specific calculations
+  const currentEfficiency = Math.max(0.4, 1 - (serviceTime - 10) * 0.05); // Efficiency based on service time
+  const optimizedServiceTime = Math.max(8, serviceTime * 0.6); // 40% improvement in service time
+  const newEfficiency = Math.min(0.95, currentEfficiency + 0.3);
+  
+  const capacityIncrease = ((1 / optimizedServiceTime) / (1 / serviceTime) - 1) * 100;
+  const serviceImprovement = ((serviceTime - optimizedServiceTime) / serviceTime) * 100;
+  
+  // Financial calculations
+  const wasteReduction = revenue * 0.08; // 8% waste reduction
+  const efficiencyGains = revenue * 0.12; // 12% efficiency gains
+  const capacityRevenue = revenue * (capacityIncrease / 100) * 0.7; // 70% of capacity increase realized
+  
+  const totalMonthlySavings = wasteReduction + efficiencyGains + capacityRevenue;
+  const restopiCost = 35000; // Mid-tier pricing for casual dining
+  const netMonthlySavings = totalMonthlySavings - restopiCost;
+  
+  document.getElementById('monthlySavings').textContent = '₹' + Math.round(netMonthlySavings).toLocaleString();
+  document.getElementById('serviceImprovement').textContent = Math.round(serviceImprovement) + '%';
+  document.getElementById('capacityIncrease').textContent = Math.round(capacityIncrease) + '%';
+  
+  document.getElementById('roiResults').classList.remove('hidden');
+  
+  // Track calculation
+  window.trackEvent('roi_calculated', {
+    segment: 'casual_dining',
+    revenue: revenue,
+    savings: netMonthlySavings,
+    service_improvement: serviceImprovement
+  });
+}
+
+// Track page engagement
+window.trackEvent('casual_dining_page_view', {
+  segment: 'casual_dining',
+  page_type: 'custom_segment_page'
+});
+</script>
+
+</BaseLayout>

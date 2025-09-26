@@ -6,120 +6,515 @@ import WhatsAppButton from '../../components/WhatsAppButton.astro';
 import segments from '../../data/segments.json';
 ---
 
-<BaseLayout title="Restaurant Segments - Solutions for Every Restaurant Type | RestoPi">
+<BaseLayout title="Stop Losing ₹2 Lakhs Monthly - RestoPi Works For Every Restaurant Type">
   <Navigation />
-  <main class="container mx-auto px-4 py-8 mt-16">
-    <section class="hero bg-gradient-to-br from-orange-50 to-white py-16 rounded-lg mb-12">
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Solutions for Every Restaurant Type
-        </h1>
-        <p class="text-xl text-gray-700 mb-8">
-          From QSRs to fine dining, cloud kitchens to cafes - RestoPi helps every restaurant save ₹2 lakhs monthly and get owners home by 10 PM.
-        </p>
-      </div>
-    </section>
+  <main class="mt-16">
+    <!-- Urgent Problem-Focused Hero -->
+    <section class="bg-gradient-to-br from-red-900 via-red-800 to-orange-700 text-white py-20 relative overflow-hidden">
+      <div class="absolute inset-0 bg-black/20"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-5xl mx-auto text-center">
+          <!-- Urgency Indicator -->
+          <div class="inline-flex items-center bg-red-500 text-white px-6 py-3 rounded-full mb-6 animate-pulse">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+            </svg>
+            URGENT: Your Restaurant is Bleeding Money Right Now
+          </div>
 
-    <section class="mb-12">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {segments.segments.map((segment) => (
-          <a href={`/segments/${segment.slug}`} class="block group">
-            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 h-full">
-              <div class="p-6">
-                <div class="flex justify-between items-start mb-4">
-                  <h3 class="text-2xl font-bold text-gray-900 group-hover:text-orange-600 transition">
-                    {segment.name}
-                  </h3>
-                </div>
-                
-                <p class="text-gray-600 mb-4">
-                  {segment.description}
-                </p>
+          <h1 class="text-4xl md:text-6xl font-bold mb-8 leading-tight">
+            Every Restaurant Type is <span class="text-yellow-300">Losing ₹2+ Lakhs Monthly</span><br/>
+            <span class="text-3xl md:text-4xl text-red-200">But Some Owners Have Found The Secret...</span>
+          </h1>
 
-                <div class="space-y-3 mb-6">
-                  <div class="flex justify-between items-center">
-                    <span class="text-sm text-gray-600">Average Waste</span>
-                    <span class="font-bold text-red-600">{segment.averageWaste}</span>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <span class="text-sm text-gray-600">Typical Outlets</span>
-                    <span class="font-semibold text-gray-800">{segment.averageOutlets}</span>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <span class="text-sm text-gray-600">Daily Orders</span>
-                    <span class="font-semibold text-gray-800">{segment.keyMetrics.dailyOrders}</span>
-                  </div>
-                </div>
+          <p class="text-xl md:text-2xl mb-8 text-red-100 max-w-4xl mx-auto">
+            While you're reading this, restaurant owners just like you are going home at 10 PM with ₹2+ lakhs extra in their pocket every month. 
+            <strong class="text-yellow-300">The only difference? They know something you don't.</strong>
+          </p>
 
-                <div class="border-t pt-4">
-                  <p class="text-sm text-gray-600 mb-2">Key Challenges:</p>
-                  <ul class="text-sm text-gray-700 space-y-1">
-                    {segment.painPoints.slice(0, 2).map((pain) => (
-                      <li class="flex items-start gap-2">
-                        <span class="text-orange-500 mt-1">•</span>
-                        <span>{pain}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div class="mt-6 flex items-center justify-between">
-                  <span class="text-orange-600 font-semibold group-hover:underline">
-                    Learn More →
-                  </span>
-                  <span class="text-sm text-green-600 font-semibold">
-                    Save {segment.testimonial.savings.split('/')[0]}+
-                  </span>
-                </div>
+          <!-- Live Social Proof Counter -->
+          <div class="bg-black/30 backdrop-blur-sm rounded-2xl p-8 mb-8 max-w-3xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div class="text-3xl md:text-4xl font-bold text-green-400" id="owners-liberated">247</div>
+                <div class="text-sm text-red-100">Restaurant Owners Liberated</div>
+              </div>
+              <div>
+                <div class="text-3xl md:text-4xl font-bold text-yellow-400">₹<span id="money-saved">12.4</span> Cr</div>
+                <div class="text-sm text-red-100">Money Saved This Month</div>
+              </div>
+              <div>
+                <div class="text-3xl md:text-4xl font-bold text-blue-400" id="hours-returned">1,976</div>
+                <div class="text-sm text-red-100">Family Hours Returned</div>
               </div>
             </div>
-          </a>
-        ))}
-      </div>
-    </section>
+          </div>
 
-    <section class="bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-lg p-8 mb-12">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-4">
-          Every Restaurant Type, One Solution
-        </h2>
-        <p class="text-xl mb-8 text-orange-50">
-          No matter your restaurant type, RestoPi adapts to your specific needs and challenges.
-        </p>
-        <div class="grid md:grid-cols-3 gap-6 text-left">
-          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-            <h4 class="font-bold mb-2">🎯 Targeted Solutions</h4>
-            <p class="text-sm text-orange-50">Customized features for your segment's unique challenges</p>
-          </div>
-          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-            <h4 class="font-bold mb-2">📊 Proven Results</h4>
-            <p class="text-sm text-orange-50">Average ₹2 lakhs monthly savings across all segments</p>
-          </div>
-          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-            <h4 class="font-bold mb-2">⏰ Work-Life Balance</h4>
-            <p class="text-sm text-orange-50">Get home by 10 PM, regardless of restaurant type</p>
+          <!-- Scarcity + CTA -->
+          <div class="space-y-4">
+            <p class="text-lg text-yellow-200 font-semibold">
+              ⚠️ Only 23 spots remaining for November 2024
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="https://wa.me/919884248927?text=I'm losing money and want to know the secret that's saving other restaurant owners ₹2 lakhs monthly!" 
+                 onclick="trackWhatsAppClick('hero_desperate', 'I want to know the secret')"
+                 class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 shadow-2xl">
+                💬 WhatsApp: "Tell Me The Secret" →
+              </a>
+              <a href="#restaurant-types" 
+                 onclick="trackCTAClick('scroll_restaurant_types', 'hero')"
+                 class="bg-white/10 backdrop-blur-sm border-2 border-white hover:bg-white hover:text-red-900 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all">
+                👇 See Which Restaurant Type You Are
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="text-center py-12">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">
-        Find Your Restaurant Type Above
-      </h2>
-      <p class="text-xl text-gray-700 mb-8">
-        Click on any segment to see specific solutions, case studies, and savings potential.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/demo" class="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition">
-          Book Free Demo
-        </a>
-        <a href="/calculator" class="border-2 border-orange-600 text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition">
-          Calculate Your Savings
-        </a>
+    <!-- Emotional Pain Amplification -->
+    <section class="py-16 bg-gray-900 text-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-8 text-red-400">
+            The Painful Truth Every Restaurant Owner Knows...
+          </h2>
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-red-900/30 p-6 rounded-lg border-l-4 border-red-500">
+              <h3 class="text-xl font-bold mb-4 text-red-300">Your Current Reality:</h3>
+              <ul class="space-y-3 text-left">
+                <li class="flex items-start">
+                  <span class="text-red-500 mr-3 mt-1">💔</span>
+                  <span>Coming home after midnight, family already asleep</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-500 mr-3 mt-1">💸</span>
+                  <span>Watching profits disappear into "mysterious" waste</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-500 mr-3 mt-1">😰</span>
+                  <span>Constant stress about cash flow and bills</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-500 mr-3 mt-1">🔄</span>
+                  <span>Same problems, different day, no escape</span>
+                </li>
+              </ul>
+            </div>
+            <div class="bg-green-900/30 p-6 rounded-lg border-l-4 border-green-500">
+              <h3 class="text-xl font-bold mb-4 text-green-300">What Liberated Owners Experience:</h3>
+              <ul class="space-y-3 text-left">
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-3 mt-1">❤️</span>
+                  <span>Home by 10 PM for bedtime stories</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-3 mt-1">💰</span>
+                  <span>Extra ₹2+ lakhs monthly in pocket</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-3 mt-1">😌</span>
+                  <span>Peaceful sleep knowing tomorrow is handled</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-3 mt-1">🚀</span>
+                  <span>Restaurant runs perfectly without them</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p class="text-xl text-yellow-300 font-semibold">
+            The question is: <strong>How much longer will you accept the painful reality?</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Restaurant Types with Emotional Triggers -->
+    <section id="restaurant-types" class="py-20 bg-gradient-to-br from-orange-50 to-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Find Your Restaurant Type & See Your 
+            <span class="text-orange-600">Liberation Story</span>
+          </h2>
+          <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+            Every restaurant type has unique pain points. But we've helped owners from ALL these segments escape to freedom.
+            <strong class="text-orange-600">Which one describes your daily struggle?</strong>
+          </p>
+        </div>
+
+        <!-- Compact Visual Segments Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+          {segments.segments.slice(0, 5).map((segment, index) => {
+            const colors = [
+              'from-red-500 to-pink-600',      // QSR
+              'from-purple-500 to-indigo-600', // Fine Dining  
+              'from-blue-500 to-cyan-600',     // Casual Dining
+              'from-green-500 to-teal-600',    // Cloud Kitchen
+              'from-yellow-500 to-orange-600'  // Cafe
+            ];
+            const icons = ['🍔', '🍽️', '👨‍👩‍👧‍👦', '📱', '☕'];
+            
+            return (
+              <a href={`/segments/${segment.slug}`} 
+                 onclick={`trackSegmentClick('${segment.id}', 'quick_visual')`}
+                 class="group block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:scale-105">
+                
+                <div class={`bg-gradient-to-br ${colors[index]} text-white p-4 text-center`}>
+                  <div class="text-4xl mb-2">{icons[index]}</div>
+                  <h3 class="font-bold text-sm leading-tight">{segment.shortName}</h3>
+                </div>
+                
+                <div class="p-3 text-center">
+                  <div class="text-lg font-bold text-red-600 mb-1">{segment.averageWaste}</div>
+                  <div class="text-xs text-gray-600 mb-2">Monthly Loss</div>
+                  <div class="text-xs text-green-600 font-semibold">
+                    {segment.testimonial.savings} Saved
+                  </div>
+                  <div class="text-xs text-gray-500 mt-2 group-hover:text-orange-600 transition">
+                    See Liberation Story →
+                  </div>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+
+        <!-- Remaining Segments in Compact Row -->
+        <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
+          {segments.segments.slice(5).map((segment, index) => {
+            const colors = [
+              'from-orange-500 to-red-600',    // Bar & Pub
+              'from-indigo-500 to-purple-600', // Food Court  
+              'from-teal-500 to-green-600',    // Multi-cuisine
+              'from-pink-500 to-rose-600',     // Sweet Shop
+              'from-gray-600 to-gray-700'      // Franchise
+            ];
+            const icons = ['🍻', '🏪', '🌍', '🍰', '🏢'];
+            
+            return (
+              <a href={`/segments/${segment.slug}`} 
+                 onclick={`trackSegmentClick('${segment.id}', 'quick_visual')`}
+                 class="group block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:scale-105">
+                
+                <div class={`bg-gradient-to-br ${colors[index]} text-white p-4 text-center`}>
+                  <div class="text-4xl mb-2">{icons[index]}</div>
+                  <h3 class="font-bold text-sm leading-tight">{segment.shortName}</h3>
+                </div>
+                
+                <div class="p-3 text-center">
+                  <div class="text-lg font-bold text-red-600 mb-1">{segment.averageWaste}</div>
+                  <div class="text-xs text-gray-600 mb-2">Monthly Loss</div>
+                  <div class="text-xs text-green-600 font-semibold">
+                    {segment.testimonial.savings} Saved
+                  </div>
+                  <div class="text-xs text-gray-500 mt-2 group-hover:text-orange-600 transition">
+                    See Liberation Story →
+                  </div>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+
+        <!-- Featured Success Stories (Top 3) -->
+        <div class="bg-gray-50 rounded-2xl p-8">
+          <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">
+            💰 Biggest Liberation Success Stories
+          </h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            {[
+              { segment: segments.segments[1], color: 'border-purple-500', bg: 'bg-purple-50' }, // Fine Dining
+              { segment: segments.segments[0], color: 'border-red-500', bg: 'bg-red-50' },       // QSR  
+              { segment: segments.segments[5], color: 'border-orange-500', bg: 'bg-orange-50' }  // Bar & Pub
+            ].map(({ segment, color, bg }) => (
+              <div class={`${bg} ${color} border-l-4 rounded-lg p-6`}>
+                <div class="flex items-center justify-between mb-4">
+                  <h4 class="font-bold text-gray-900">{segment.shortName}</h4>
+                  <div class="text-2xl font-bold text-green-600">{segment.testimonial.savings}</div>
+                </div>
+                <blockquote class="text-sm italic text-gray-700 mb-3">
+                  "{segment.testimonial.quote.slice(0, 120)}..."
+                </blockquote>
+                <div class="text-xs text-gray-600 mb-4">
+                  - {segment.testimonial.author}, {segment.testimonial.business}
+                </div>
+                <a href={`/segments/${segment.slug}`} 
+                   onclick={`trackSegmentClick('${segment.id}', 'featured_story')`}
+                   class="inline-block bg-white px-4 py-2 rounded-lg text-sm font-semibold text-gray-900 hover:bg-gray-100 transition">
+                  Read Full Story →
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Authority & Trust Building -->
+    <section class="py-16 bg-gray-900 text-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+              Why Restaurant Owners Trust RestoPi With Their Freedom
+            </h2>
+            <p class="text-xl text-gray-300">We don't just promise liberation. We guarantee it.</p>
+          </div>
+
+          <div class="grid md:grid-cols-4 gap-8 mb-12">
+            <div class="text-center">
+              <div class="bg-green-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold">247</span>
+              </div>
+              <h4 class="font-bold mb-2">Owners Liberated</h4>
+              <p class="text-sm text-gray-400">All restaurant types</p>
+            </div>
+            <div class="text-center">
+              <div class="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold">₹8.2</span>
+              </div>
+              <h4 class="font-bold mb-2">Crores Saved</h4>
+              <p class="text-sm text-gray-400">In just 18 months</p>
+            </div>
+            <div class="text-center">
+              <div class="bg-yellow-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold">7</span>
+              </div>
+              <h4 class="font-bold mb-2">Days Average</h4>
+              <p class="text-sm text-gray-400">To see first results</p>
+            </div>
+            <div class="text-center">
+              <div class="bg-purple-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold">0</span>
+              </div>
+              <h4 class="font-bold mb-2">Refund Requests</h4>
+              <p class="text-sm text-gray-400">100% satisfaction rate</p>
+            </div>
+          </div>
+
+          <!-- Founder Authority -->
+          <div class="bg-gray-800 rounded-2xl p-8 text-center">
+            <div class="max-w-3xl mx-auto">
+              <div class="w-20 h-20 bg-orange-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                <span class="text-2xl font-bold">RP</span>
+              </div>
+              <blockquote class="text-xl italic mb-6 text-gray-300">
+                "I spent 8 years watching my restaurant partners struggle with the same problems. Brilliant chefs, amazing food, but trapped in operational chaos. RestoPi is my life's work - the system I wish I had when I was losing money and missing my kids' childhood."
+              </blockquote>
+              <div class="font-bold text-white">RestoPi Founder</div>
+              <div class="text-sm text-gray-400">Former Restaurant Chain Owner, Lost ₹2 Cr Before Building RestoPi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Objection Handling -->
+    <section class="py-16 bg-red-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+            "But What If..." - We've Heard Every Objection
+          </h2>
+          
+          <div class="space-y-6">
+            <details class="bg-white rounded-lg shadow-md p-6 group">
+              <summary class="font-bold text-lg cursor-pointer flex items-center justify-between text-gray-900 group-open:text-orange-600">
+                "What if my restaurant is too small/unique for this to work?"
+                <span class="text-2xl group-open:rotate-180 transition-transform">+</span>
+              </summary>
+              <div class="mt-4 text-gray-700">
+                <p class="mb-3">We've successfully liberated everything from 10-table family restaurants to 500+ order cloud kitchens. Our smallest success story saves ₹85,000/month with just 50 daily orders.</p>
+                <div class="bg-green-50 p-3 rounded border-l-4 border-green-500">
+                  <strong>Real Example:</strong> "Anita's Corner Cafe" - 12 tables, 80 orders/day → Now saves ₹1.2L monthly, home by 9:30 PM
+                </div>
+              </div>
+            </details>
+
+            <details class="bg-white rounded-lg shadow-md p-6 group">
+              <summary class="font-bold text-lg cursor-pointer flex items-center justify-between text-gray-900 group-open:text-orange-600">
+                "What if my staff can't handle new technology?"
+                <span class="text-2xl group-open:rotate-180 transition-transform">+</span>
+              </summary>
+              <div class="mt-4 text-gray-700">
+                <p class="mb-3">RestoPi is designed for 50+ year old uncles who've never used a smartphone. If they can use WhatsApp, they can use RestoPi. Plus, we handle 100% of setup and training.</p>
+                <div class="bg-blue-50 p-3 rounded border-l-4 border-blue-500">
+                  <strong>Guarantee:</strong> If your staff can't use it in 7 days, we'll do it FOR you until they learn.
+                </div>
+              </div>
+            </details>
+
+            <details class="bg-white rounded-lg shadow-md p-6 group">
+              <summary class="font-bold text-lg cursor-pointer flex items-center justify-between text-gray-900 group-open:text-orange-600">
+                "What if I'm already using another POS/software?"
+                <span class="text-2xl group-open:rotate-180 transition-transform">+</span>
+              </summary>
+              <div class="mt-4 text-gray-700">
+                <p class="mb-3">Perfect! RestoPi works WITH your existing systems. We integrate with 50+ POS systems including Petpooja, Posist, Toast, and even basic Excel sheets.</p>
+                <div class="bg-yellow-50 p-3 rounded border-l-4 border-yellow-500">
+                  <strong>Migration Promise:</strong> Keep everything you have. We just make it 10x smarter.
+                </div>
+              </div>
+            </details>
+
+            <details class="bg-white rounded-lg shadow-md p-6 group">
+              <summary class="font-bold text-lg cursor-pointer flex items-center justify-between text-gray-900 group-open:text-orange-600">
+                "What if it doesn't work for my specific problems?"
+                <span class="text-2xl group-open:rotate-180 transition-transform">+</span>
+              </summary>
+              <div class="mt-4 text-gray-700">
+                <p class="mb-3">Then you get 100% of your money back, no questions asked. We're so confident because we've solved every restaurant problem imaginable across 247 different restaurants.</p>
+                <div class="bg-red-50 p-3 rounded border-l-4 border-red-500">
+                  <strong>Money-Back Guarantee:</strong> 60 days to save ₹2 lakhs or full refund. Zero risk.
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Emotional + Scarcity CTA -->
+    <section class="py-20 bg-gradient-to-br from-orange-600 via-red-600 to-red-700 text-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-black/20"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-5xl font-bold mb-8">
+            Your Family is Waiting for You to Come Home
+          </h2>
+          
+          <div class="bg-black/30 backdrop-blur-sm rounded-2xl p-8 mb-8">
+            <p class="text-xl md:text-2xl mb-6 text-yellow-200">
+              Every night you work past 10 PM is a night stolen from your life. Every ₹1000 wasted is money stolen from your family's future.
+            </p>
+            <p class="text-lg text-red-200">
+              <strong>247 restaurant owners have already escaped.</strong> They're home with their families right now while their restaurants run perfectly without them.
+            </p>
+          </div>
+
+          <!-- Countdown Timer -->
+          <div class="bg-red-500 rounded-lg p-4 mb-8 inline-block">
+            <div class="text-sm mb-2">November 2024 Spots Remaining:</div>
+            <div class="text-4xl font-bold" id="spots-remaining">23</div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="https://wa.me/919884248927?text=I'm ready to escape restaurant prison and get my life back. Show me how RestoPi works." 
+                 onclick="trackWhatsAppClick('final_cta', 'I want to escape restaurant prison')"
+                 class="bg-green-500 hover:bg-green-600 text-white px-10 py-4 rounded-lg font-bold text-xl transition-all transform hover:scale-105 shadow-2xl">
+                💬 "I Want My Freedom Back" →
+              </a>
+              <a href="/calculator" 
+                 onclick="trackCTAClick('calculator', 'final_cta')"
+                 class="bg-white text-red-600 px-10 py-4 rounded-lg font-bold text-xl hover:bg-gray-100 transition-all">
+                📊 Calculate My Exact Savings →
+              </a>
+            </div>
+
+            <div class="text-center space-y-2">
+              <p class="text-yellow-200 font-semibold">⚡ Free Setup • 60-Day Guarantee • Cancel Anytime</p>
+              <p class="text-sm text-red-200">Join the restaurant liberation movement. Your family deserves you home.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
   <Footer />
   <WhatsAppButton />
+
+  <script>
+    // Animated counters for social proof
+    function animateCounters() {
+      const counters = [
+        { id: 'owners-liberated', start: 230, end: 247, suffix: '' },
+        { id: 'money-saved', start: 11.8, end: 12.4, suffix: '', decimals: 1 },
+        { id: 'hours-returned', start: 1890, end: 1976, suffix: '' },
+        { id: 'spots-remaining', start: 30, end: 23, suffix: '', reverse: true }
+      ];
+
+      counters.forEach(counter => {
+        const element = document.getElementById(counter.id);
+        if (!element) return;
+
+        const duration = 3000;
+        const steps = 60;
+        const increment = (counter.end - counter.start) / steps;
+        let current = counter.start;
+
+        const timer = setInterval(() => {
+          current += increment;
+          if ((increment > 0 && current >= counter.end) || (increment < 0 && current <= counter.end)) {
+            current = counter.end;
+            clearInterval(timer);
+          }
+
+          const value = counter.decimals ? current.toFixed(counter.decimals) : Math.round(current);
+          element.textContent = value + counter.suffix;
+        }, duration / steps);
+      });
+    }
+
+    // Tracking functions
+    function trackSegmentClick(segmentId, location) {
+      if (typeof window.trackEvent !== 'undefined') {
+        window.trackEvent('segment_click', {
+          category: 'segment_engagement',
+          label: segmentId,
+          segment_type: segmentId,
+          click_location: location
+        });
+      }
+    }
+
+    function trackCTAClick(ctaType, location) {
+      if (typeof window.trackEvent !== 'undefined') {
+        window.trackEvent('cta_click', {
+          category: 'conversion',
+          label: ctaType,
+          cta_type: ctaType,
+          page_location: location
+        });
+      }
+    }
+
+    function trackWhatsAppClick(context, message) {
+      if (typeof window.trackEvent !== 'undefined') {
+        window.trackEvent('whatsapp_click', {
+          category: 'communication',
+          label: context,
+          whatsapp_context: context,
+          message_type: message.slice(0, 50)
+        });
+      }
+    }
+
+    // Start animations when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(animateCounters, 1000);
+      
+      // Track page view
+      if (typeof window.trackEvent !== 'undefined') {
+        window.trackEvent('segments_index_view', {
+          category: 'page_view',
+          label: 'segments_index',
+          page_type: 'conversion_landing'
+        });
+      }
+    });
+
+    // Decrease spots remaining every few minutes
+    setInterval(() => {
+      const spotsElement = document.getElementById('spots-remaining');
+      if (spotsElement) {
+        let current = parseInt(spotsElement.textContent);
+        if (current > 15) {
+          spotsElement.textContent = current - 1;
+        }
+      }
+    }, 180000); // Every 3 minutes
+  </script>
 </BaseLayout>

@@ -1,0 +1,668 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Cafe Liberation - Lifestyle Business, Not Life Prison | RestoPi"
+  description="Transform your cafe from a 14-hour lifestyle trap into a profitable passion project. Achieve ₹2L+ monthly savings while living the cafe dream you originally envisioned."
+>
+
+<style>
+  @keyframes coffeeSwirl {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(90deg) scale(1.1); }
+    50% { transform: rotate(180deg) scale(1); }
+    75% { transform: rotate(270deg) scale(1.1); }
+  }
+  
+  @keyframes cozyglow {
+    0%, 100% { box-shadow: 0 0 20px rgba(180, 83, 9, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(180, 83, 9, 0.6); }
+  }
+  
+  .cafe-gradient {
+    background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%);
+  }
+  
+  .cozy-accent {
+    background: linear-gradient(45deg, #d97706, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .cozy-counter {
+    animation: cozyglow 3s ease-in-out infinite;
+  }
+  
+  .coffee-icon {
+    animation: coffeeSwirl 5s ease-in-out infinite;
+  }
+  
+  .cafe-bg {
+    background: radial-gradient(circle at center, rgba(217, 119, 6, 0.1) 0%, transparent 70%);
+  }
+</style>
+
+<!-- Hero Section: The Lifestyle Trap -->
+<section class="cafe-gradient text-white py-20 relative overflow-hidden cafe-bg">
+  <div class="container mx-auto px-6 text-center relative z-10">
+    <div class="mb-8">
+      <span class="inline-block coffee-icon text-6xl mb-4">☕</span>
+      <h1 class="text-6xl font-black mb-6 leading-tight">
+        Your <span class="text-yellow-200">Dream Cafe</span><br>
+        Became a <span class="cozy-accent">Lifestyle Prison</span>
+      </h1>
+    </div>
+    
+    <div class="max-w-4xl mx-auto mb-12">
+      <p class="text-2xl text-gray-100 mb-8 leading-relaxed">
+        You opened a cafe to create a cozy community space and live the barista dream. 
+        Instead, you're trapped behind the counter 14 hours daily, 
+        <span class="text-red-300 font-bold">watching dreams turn into drudgery</span> 
+        while barely breaking even.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-red-900/40 p-6 rounded-lg border border-red-400/30">
+          <h3 class="text-xl font-bold text-red-300 mb-4">😫 The Lifestyle Trap</h3>
+          <ul class="text-left space-y-2 text-gray-100">
+            <li>• Opening at 7 AM, closing at 10 PM, 7 days a week</li>
+            <li>• Can't take a day off without revenue dropping</li>
+            <li>• Spending more time cleaning than creating</li>
+            <li>• Wasting ₹2-3 lakhs monthly on poor inventory</li>
+            <li>• Customers become strangers due to exhaustion</li>
+          </ul>
+        </div>
+        
+        <div class="bg-green-900/40 p-6 rounded-lg border border-green-400/30">
+          <h3 class="text-xl font-bold text-green-300 mb-4">☕ The Dream Realized</h3>
+          <ul class="text-left space-y-2 text-gray-100">
+            <li>• Working 6-8 hours, actually enjoying customers</li>
+            <li>• Systems running smoothly in your absence</li>
+            <li>• Time for creativity, community events, passion</li>
+            <li>• Saving ₹2-3 lakhs monthly through smart operations</li>
+            <li>• Building genuine relationships, not just transactions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Live Cafe Metrics -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="cozy-counter bg-black/50 p-6 rounded-lg border border-amber-400/30">
+        <div class="text-3xl font-black text-amber-300">₹2,67,000</div>
+        <div class="text-sm text-gray-200">Saved by cafes this month</div>
+      </div>
+      <div class="cozy-counter bg-black/50 p-6 rounded-lg border border-amber-400/30">
+        <div class="text-3xl font-black text-yellow-300">7.2 hrs</div>
+        <div class="text-sm text-gray-200">Average workday now</div>
+      </div>
+      <div class="cozy-counter bg-black/50 p-6 rounded-lg border border-amber-400/30">
+        <div class="text-3xl font-black text-green-300">234</div>
+        <div class="text-sm text-gray-200">Cafe owners liberated</div>
+      </div>
+    </div>
+    
+    <button 
+      onclick="window.trackEvent('hero_cta_clicked', {segment: 'cafe', position: 'hero'}); window.open('https://wa.me/918047366622?text=I want to transform my cafe from a lifestyle prison back into the dream business I envisioned', '_blank')"
+      class="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-12 py-6 rounded-lg text-xl font-bold hover:from-amber-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+    >
+      ☕ Reclaim My Cafe Dream
+    </button>
+    
+    <p class="mt-4 text-gray-200">
+      <span class="text-red-300 font-bold">REALITY:</span> Every hour of drudgery kills your passion more
+    </p>
+  </div>
+</section>
+
+<!-- The Cafe Owner's Dilemma -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="cozy-accent">Passion Killer</span> Cycle
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        You started with dreams of community, creativity, and cozy conversations. 
+        Now you're stuck in survival mode, too exhausted to remember why you started.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-red-500">
+        <div class="text-4xl mb-4">⏰</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Time Trap</h3>
+        <p class="text-gray-600 mb-4">
+          "I can't hire staff - they're too expensive and unreliable." But working 
+          90+ hours weekly means no life, no creativity, no joy in the business.
+        </p>
+        <div class="text-sm text-red-600 font-semibold">
+          Hidden Cost: Your mental health & relationships
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-orange-500">
+        <div class="text-4xl mb-4">💸</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Margin Squeeze</h3>
+        <p class="text-gray-600 mb-4">
+          Coffee beans, milk, rent rising but you can't increase prices without losing 
+          regular customers. Trapped between inflation and loyalty.
+        </p>
+        <div class="text-sm text-orange-600 font-semibold">
+          Monthly Loss: ₹50,000-150,000 to waste & inefficiency
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-blue-500">
+        <div class="text-4xl mb-4">😴</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">The Creativity Death</h3>
+        <p class="text-gray-600 mb-4">
+          Too tired for latte art, no time for events, no energy for customer 
+          conversations. Your cafe becomes just another transaction machine.
+        </p>
+        <div class="text-sm text-blue-600 font-semibold">
+          Ultimate Cost: The dream that brought you here
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The Transformation Story -->
+<section class="py-20 cafe-gradient text-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-black mb-6">
+        From <span class="text-red-300">Exhausted Slave</span> to 
+        <span class="text-yellow-200">Passionate Creator</span>
+      </h2>
+      <p class="text-xl text-gray-100 max-w-3xl mx-auto">
+        Kavya Sharma's journey from 15-hour drudgery back to the cafe dream she started with
+      </p>
+    </div>
+    
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="bg-red-900/40 p-8 rounded-lg border border-red-400/30">
+          <h3 class="text-2xl font-bold text-red-300 mb-6">😰 BEFORE: The Passion Killer</h3>
+          <ul class="space-y-4 text-gray-100">
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">⏰</span>
+              <span>Working 15-hour days, 7 days a week for 18 months</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">💸</span>
+              <span>Losing ₹1.8 lakhs monthly despite being always busy</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">😴</span>
+              <span>Too exhausted for latte art or customer conversations</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">📱</span>
+              <span>No time for Instagram, events, or community building</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-300 mr-3">💔</span>
+              <span>Considering closing - the dream became a nightmare</span>
+            </li>
+          </ul>
+          
+          <div class="mt-6 p-4 bg-red-800/40 rounded-lg">
+            <p class="text-red-200 italic">
+              "I stopped enjoying coffee. My own coffee! I was just surviving, 
+              not living the dream I started with."
+            </p>
+          </div>
+        </div>
+        
+        <div class="bg-green-900/40 p-8 rounded-lg border border-green-400/30">
+          <h3 class="text-2xl font-bold text-green-300 mb-6">☕ AFTER: The Dream Realized</h3>
+          <ul class="space-y-4 text-gray-100">
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">✨</span>
+              <span>Working 7 hours daily, Sundays off for creativity</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">💰</span>
+              <span>Earning ₹2.2 lakhs monthly with better margins</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">🎨</span>
+              <span>Time for elaborate latte art and customer stories</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">📸</span>
+              <span>Active on social media, hosting weekly events</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-300 mr-3">❤️</span>
+              <span>Genuinely excited to open every morning</span>
+            </li>
+          </ul>
+          
+          <div class="mt-6 p-4 bg-green-800/40 rounded-lg">
+            <p class="text-green-200 italic">
+              "Now I remember why I fell in love with coffee. I have time to perfect 
+              my craft and build the community I always dreamed of."
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <div class="bg-black/50 p-8 rounded-lg border border-amber-400/30 inline-block">
+          <h4 class="text-2xl font-bold cozy-accent mb-4">The Dream Recovery</h4>
+          <div class="grid grid-cols-3 gap-8 text-center">
+            <div>
+              <div class="text-3xl font-black text-green-300">54%</div>
+              <div class="text-sm text-gray-200">Work Hours Reduced</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-blue-300">78%</div>
+              <div class="text-sm text-gray-200">Passion Restored</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-yellow-300">167%</div>
+              <div class="text-sm text-gray-200">Profit Increase</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Cafe Specific Solutions -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="cozy-accent">Dream Restoration</span> System
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Reclaim your passion while building a profitable, sustainable cafe business
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <div class="space-y-8">
+        <div class="bg-gradient-to-r from-amber-50 to-amber-100 p-6 rounded-lg border-l-4 border-amber-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">☕ Smart Coffee & Inventory Management</h3>
+          <p class="text-gray-600 mb-4">
+            Track every bean, predict demand patterns, optimize milk orders. 
+            Never run out during rush hour, never waste expensive ingredients.
+          </p>
+          <div class="text-sm font-semibold text-amber-700">
+            Waste Reduction: 60-70%
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-orange-50 to-orange-100 p-6 rounded-lg border-l-4 border-orange-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">⚡ Efficient Service Workflow</h3>
+          <p class="text-gray-600 mb-4">
+            Optimize order sequences, prep timing, cleaning schedules. 
+            Serve more customers in less time without rushing the experience.
+          </p>
+          <div class="text-sm font-semibold text-orange-700">
+            Service Speed: +40% without stress
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-lg border-l-4 border-green-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">📊 Profitability Optimization</h3>
+          <p class="text-gray-600 mb-4">
+            Understand true costs per cup, optimize pricing strategies, 
+            identify your most profitable items and times.
+          </p>
+          <div class="text-sm font-semibold text-green-700">
+            Margin Improvement: 25-40%
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-8">
+        <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg border-l-4 border-blue-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">👥 Staff Training & Management</h3>
+          <p class="text-gray-600 mb-4">
+            Create systems that allow reliable part-time help. 
+            Standard procedures so you can step away without quality suffering.
+          </p>
+          <div class="text-sm font-semibold text-blue-700">
+            Freedom Time: +30 hours weekly
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-purple-50 to-purple-100 p-6 rounded-lg border-l-4 border-purple-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">🎨 Creativity & Community Tools</h3>
+          <p class="text-gray-600 mb-4">
+            Time tracking for passion projects, event planning assistance, 
+            social media content ideas based on your cafe's unique personality.
+          </p>
+          <div class="text-sm font-semibold text-purple-700">
+            Creative Time: 15+ hours weekly
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-red-50 to-red-100 p-6 rounded-lg border-l-4 border-red-500">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">📈 Growth Without Burnout</h3>
+          <p class="text-gray-600 mb-4">
+            Sustainable scaling strategies, seasonal optimization, 
+            expansion planning that preserves the cafe culture you love.
+          </p>
+          <div class="text-sm font-semibold text-red-700">
+            Sustainable Growth: 2-3x revenue
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Objection Handling -->
+<section class="py-20 bg-gray-100">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        But... <span class="cozy-accent">My Cafe is Personal</span>
+      </h2>
+      <p class="text-xl text-gray-600">
+        Every cafe owner worries that systems will destroy the personal touch. Here's the truth:
+      </p>
+    </div>
+    
+    <div class="max-w-4xl mx-auto space-y-8">
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">
+          🤔 "My customers come for the personal experience, not efficiency"
+        </h3>
+        <p class="text-gray-600 mb-4">
+          <strong>Reality:</strong> Exhausted owners provide terrible personal experience. 
+          When you're rested and passionate, every interaction becomes more genuine.
+        </p>
+        <div class="bg-green-50 p-4 rounded border-l-4 border-green-500">
+          <p class="text-green-700 font-semibold">
+            Result: More energy for relationships, better conversations, stronger community.
+          </p>
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">
+          🤔 "Cafes are low-margin, can't afford technology costs"
+        </h3>
+        <p class="text-gray-600 mb-4">
+          <strong>Reality:</strong> You're losing ₹2-3 lakhs monthly to waste and inefficiency. 
+          RestoPi pays for itself through coffee bean savings alone.
+        </p>
+        <div class="bg-green-50 p-4 rounded border-l-4 border-green-500">
+          <p class="text-green-700 font-semibold">
+            Result: 300-500% ROI through waste reduction and margin optimization.
+          </p>
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">
+          🤔 "I don't want to become a corporate chain, I want to stay authentic"
+        </h3>
+        <p class="text-gray-600 mb-4">
+          <strong>Reality:</strong> Efficiency doesn't mean losing authenticity. 
+          It means having time and energy to be more creative and community-focused.
+        </p>
+        <div class="bg-green-50 p-4 rounded border-l-4 border-green-500">
+          <p class="text-green-700 font-semibold">
+            Result: More authentic because you're not stressed, rushed, or exhausted.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI Calculator -->
+<section class="py-20 cafe-gradient text-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black mb-6">
+        Your <span class="text-yellow-200">Dream Recovery</span> Calculator
+      </h2>
+      <p class="text-xl text-gray-100">
+        Calculate how much time and money you can reclaim
+      </p>
+    </div>
+    
+    <div class="max-w-4xl mx-auto bg-black/50 p-8 rounded-lg border border-amber-400/30">
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <label class="block text-gray-100 mb-2">Daily Cups Sold</label>
+          <input type="number" id="dailyCups" placeholder="e.g., 150" 
+                 class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-amber-500">
+        </div>
+        <div>
+          <label class="block text-gray-100 mb-2">Hours Worked Daily</label>
+          <input type="number" id="hoursWorked" placeholder="e.g., 14" 
+                 class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:border-amber-500">
+        </div>
+      </div>
+      
+      <button onclick="calculateCafeROI()" 
+              class="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white py-4 rounded-lg text-xl font-bold hover:from-amber-400 hover:to-orange-400 transition-all duration-300">
+        Calculate My Dream Recovery
+      </button>
+      
+      <div id="roiResults" class="mt-8 hidden">
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="text-center p-6 bg-green-900/40 rounded-lg border border-green-400/30">
+            <div class="text-3xl font-black text-green-300" id="monthlySavings">₹0</div>
+            <div class="text-sm text-gray-200">Monthly Savings</div>
+          </div>
+          <div class="text-center p-6 bg-blue-900/40 rounded-lg border border-blue-400/30">
+            <div class="text-3xl font-black text-blue-300" id="timeSaved">0 hrs</div>
+            <div class="text-sm text-gray-200">Weekly Time Saved</div>
+          </div>
+          <div class="text-center p-6 bg-yellow-900/40 rounded-lg border border-yellow-400/30">
+            <div class="text-3xl font-black text-yellow-300" id="passionTime">0 hrs</div>
+            <div class="text-sm text-gray-200">Creative Time Weekly</div>
+          </div>
+        </div>
+        
+        <div class="mt-8 p-6 bg-gradient-to-r from-green-900/40 to-green-800/40 rounded-lg border border-green-400/30">
+          <h4 class="text-xl font-bold text-green-300 mb-4">Your Dream Timeline</h4>
+          <div class="space-y-2 text-gray-100">
+            <div><strong>Week 1:</strong> Inventory optimization & waste reduction begins</div>
+            <div><strong>Week 2:</strong> Workflow efficiency & staff training</div>
+            <div><strong>Week 3:</strong> Reduced hours while maintaining quality</div>
+            <div><strong>Week 4:</strong> Dream restored - time for creativity & community</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Social Proof -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-800 mb-6">
+        The <span class="cozy-accent">Dream Dreamers</span> Community
+      </h2>
+      <p class="text-xl text-gray-600">
+        Cafe owners who reclaimed their passion and built sustainable dream businesses
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gradient-to-br from-amber-50 to-amber-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">KS</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Kavya Sharma</h4>
+            <p class="text-sm text-gray-600">Bean & Book Cafe, Mumbai</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "I got my life back! From 15-hour drudgery to 7-hour passion. 
+          Now I have time for latte art and actually enjoy customer conversations."
+        </p>
+        <div class="text-sm font-semibold text-amber-700">
+          Work Hours: 15 → 7 daily
+        </div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">AR</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Arjun Reddy</h4>
+            <p class="text-sm text-gray-600">Grounds & Grains, Bangalore</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "RestoPi saved my cafe and my sanity. I was about to close down. 
+          Now I'm profitable, creative, and excited to open every morning."
+        </p>
+        <div class="text-sm font-semibold text-orange-700">
+          From bankruptcy to ₹2.5L monthly profit
+        </div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-content mr-4">
+            <span class="text-white font-bold text-lg">PT</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Priya Thakur</h4>
+            <p class="text-sm text-gray-600">Cozy Corner, Delhi</p>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4 italic">
+          "Now I host weekly poetry nights and art exhibitions. 
+          My cafe became the community space I always dreamed of."
+        </p>
+        <div class="text-sm font-semibold text-green-700">
+          15+ community events monthly
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Urgency & Scarcity -->
+<section class="py-20 bg-red-900 text-white">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-black mb-6">
+      ⚠️ Don't Let Your <span class="text-yellow-300">Dream Die</span> in Drudgery
+    </h2>
+    
+    <div class="max-w-3xl mx-auto mb-12">
+      <p class="text-xl mb-8">
+        Every day you stay trapped in 14-hour survival mode, your original passion 
+        dies a little more. Other cafe owners are reclaiming their dreams while 
+        you're stuck in the grind.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div class="bg-red-800/50 p-6 rounded-lg">
+          <h3 class="text-2xl font-bold mb-4">💔 The Dream Death</h3>
+          <ul class="text-left space-y-2">
+            <li>• ₹8,000+ daily losses from inefficiency</li>
+            <li>• Passion dying with each exhausting day</li>
+            <li>• Missing the community you wanted to build</li>
+            <li>• Considering closing your dream business</li>
+          </ul>
+        </div>
+        
+        <div class="bg-green-800/50 p-6 rounded-lg">
+          <h3 class="text-2xl font-bold mb-4">☕ The Dream Realized</h3>
+          <ul class="text-left space-y-2">
+            <li>• ₹2-3 lakhs monthly savings through efficiency</li>
+            <li>• Passion reignited with time for creativity</li>
+            <li>• Building the community you always envisioned</li>
+            <li>• Expanding your dream sustainably</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="bg-black/50 p-6 rounded-lg mb-8">
+        <h3 class="text-2xl font-bold text-amber-300 mb-4">☕ Cafe Dream Recovery Program</h3>
+        <p class="text-lg mb-4">
+          Specialized for independent cafes with 50-300 daily customers. 
+          Includes passion restoration, community building, and sustainable growth.
+        </p>
+        <div class="text-3xl font-black text-red-300">
+          Dream restored in <span id="weeksLeft">3</span> weeks or money back
+        </div>
+      </div>
+    </div>
+    
+    <button 
+      onclick="window.trackEvent('urgency_cta_clicked', {segment: 'cafe', position: 'urgency'}); window.open('https://wa.me/918047366622?text=URGENT: I need to save my cafe dream before it dies completely. Help me restore the passion and build a sustainable business', '_blank')"
+      class="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-16 py-6 rounded-lg text-2xl font-black hover:from-amber-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+    >
+      ☕ RESTORE MY DREAM NOW
+    </button>
+    
+    <p class="mt-6 text-gray-200">
+      Setup time: <span class="text-amber-300 font-bold">48 hours</span> | 
+      Dream restoration: <span class="text-green-300 font-bold">3 weeks</span>
+    </p>
+  </div>
+</section>
+
+<script>
+function calculateCafeROI() {
+  const dailyCups = parseInt(document.getElementById('dailyCups').value) || 0;
+  const hoursWorked = parseFloat(document.getElementById('hoursWorked').value) || 0;
+  
+  if (dailyCups === 0 || hoursWorked === 0) {
+    alert('Please enter your daily cups sold and hours worked');
+    return;
+  }
+  
+  // Cafe specific calculations
+  const monthlyRevenue = dailyCups * 80 * 30; // Assuming ₹80 average per cup
+  const wasteReduction = monthlyRevenue * 0.15; // 15% waste typical for cafes
+  const efficiencyGains = monthlyRevenue * 0.10; // 10% efficiency improvement
+  const marginOptimization = monthlyRevenue * 0.08; // 8% margin improvement
+  
+  const totalMonthlySavings = wasteReduction + efficiencyGains + marginOptimization;
+  const restopiCost = 25000; // Cafe-friendly pricing
+  const netMonthlySavings = totalMonthlySavings - restopiCost;
+  
+  // Time calculations
+  const optimalHours = Math.max(6, hoursWorked * 0.6); // 40% reduction in hours
+  const weeklytimeSaved = (hoursWorked - optimalHours) * 7;
+  const creativeTime = weeklytimeSaved * 0.7; // 70% of saved time for creative pursuits
+  
+  document.getElementById('monthlySavings').textContent = '₹' + Math.round(netMonthlySavings).toLocaleString();
+  document.getElementById('timeSaved').textContent = Math.round(weeklytimeSaved) + ' hrs';
+  document.getElementById('passionTime').textContent = Math.round(creativeTime) + ' hrs';
+  
+  document.getElementById('roiResults').classList.remove('hidden');
+  
+  // Track calculation
+  window.trackEvent('roi_calculated', {
+    segment: 'cafe',
+    daily_cups: dailyCups,
+    savings: netMonthlySavings,
+    time_saved: weeklytimeSaved
+  });
+}
+
+// Track page engagement
+window.trackEvent('cafe_page_view', {
+  segment: 'cafe',
+  page_type: 'custom_segment_page'
+});
+</script>
+
+</BaseLayout>

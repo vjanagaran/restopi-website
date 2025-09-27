@@ -1,0 +1,678 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+
+const questions = [
+  {
+    id: 'prediction',
+    category: 'Intelligence',
+    question: 'How do you predict tomorrow\'s demand?',
+    options: [
+      { text: 'Gut feeling based on experience', score: 1 },
+      { text: 'Look at last week\'s same day', score: 2 },
+      { text: 'Basic Excel tracking', score: 3 },
+      { text: 'POS data analysis', score: 4 },
+      { text: 'AI-powered prediction system', score: 5 }
+    ]
+  },
+  {
+    id: 'waste-tracking',
+    category: 'Waste Management',
+    question: 'How do you track food waste?',
+    options: [
+      { text: 'We don\'t track it formally', score: 1 },
+      { text: 'End of day visual estimate', score: 2 },
+      { text: 'Manual waste log (paper/Excel)', score: 3 },
+      { text: 'Digital waste tracking system', score: 4 },
+      { text: 'Real-time waste prevention alerts', score: 5 }
+    ]
+  },
+  {
+    id: 'inventory',
+    category: 'Inventory',
+    question: 'How often do you run out of key ingredients?',
+    options: [
+      { text: 'Multiple times per week', score: 1 },
+      { text: 'Once or twice a week', score: 2 },
+      { text: 'Few times a month', score: 3 },
+      { text: 'Rarely (once a month)', score: 4 },
+      { text: 'Never - perfectly predicted', score: 5 }
+    ]
+  },
+  {
+    id: 'ordering',
+    category: 'Purchasing',
+    question: 'How do you decide order quantities?',
+    options: [
+      { text: 'Rough estimate when stock looks low', score: 1 },
+      { text: 'Fixed quantities every time', score: 2 },
+      { text: 'Based on last month\'s usage', score: 3 },
+      { text: 'Calculate from recent sales data', score: 4 },
+      { text: 'AI predicts exact needs', score: 5 }
+    ]
+  },
+  {
+    id: 'expiry',
+    category: 'Freshness',
+    question: 'How much food expires before use?',
+    options: [
+      { text: 'Significant amount (>10%)', score: 1 },
+      { text: 'Moderate amount (5-10%)', score: 2 },
+      { text: 'Some amount (3-5%)', score: 3 },
+      { text: 'Very little (1-3%)', score: 4 },
+      { text: 'Almost none (<1%)', score: 5 }
+    ]
+  },
+  {
+    id: 'labor',
+    category: 'Staffing',
+    question: 'How do you schedule staff?',
+    options: [
+      { text: 'Fixed schedule regardless of demand', score: 1 },
+      { text: 'Adjust based on general feel', score: 2 },
+      { text: 'Look at last month\'s patterns', score: 3 },
+      { text: 'Analyze sales data for scheduling', score: 4 },
+      { text: 'AI optimizes based on predicted demand', score: 5 }
+    ]
+  },
+  {
+    id: 'menu',
+    category: 'Menu Intelligence',
+    question: 'How do you know which dishes are profitable?',
+    options: [
+      { text: 'We don\'t track individual dish profit', score: 1 },
+      { text: 'Rough idea of food cost %', score: 2 },
+      { text: 'Calculate food cost for each dish', score: 3 },
+      { text: 'Track contribution margin per dish', score: 4 },
+      { text: 'Real-time profit analytics per dish', score: 5 }
+    ]
+  },
+  {
+    id: 'decisions',
+    category: 'Decision Speed',
+    question: 'How long to identify and fix a problem?',
+    options: [
+      { text: 'Usually find out at month-end', score: 1 },
+      { text: 'Within a week', score: 2 },
+      { text: 'Within 2-3 days', score: 3 },
+      { text: 'Next day', score: 4 },
+      { text: 'Real-time alerts and prevention', score: 5 }
+    ]
+  },
+  {
+    id: 'reports',
+    category: 'Visibility',
+    question: 'How quickly can you see today\'s profit?',
+    options: [
+      { text: 'Calculate at month-end only', score: 1 },
+      { text: 'Takes hours to calculate', score: 2 },
+      { text: 'Can calculate in 30 minutes', score: 3 },
+      { text: 'Available in POS end-of-day', score: 4 },
+      { text: 'Live profit dashboard always visible', score: 5 }
+    ]
+  },
+  {
+    id: 'workday',
+    category: 'Liberation',
+    question: 'What time do you usually leave?',
+    options: [
+      { text: 'After midnight most days', score: 1 },
+      { text: 'Between 11 PM - midnight', score: 2 },
+      { text: 'Around 10:30 - 11 PM', score: 3 },
+      { text: 'By 10 PM sometimes', score: 4 },
+      { text: 'Home by 10 PM consistently', score: 5 }
+    ]
+  }
+];
+---
+
+<BaseLayout 
+  title="Restaurant IQ Score - Free Intelligence Assessment | RestoPi"
+  description="Discover your Restaurant IQ Score in 2 minutes. Find ₹2 lakhs of hidden waste in your operations. 500+ restaurants transformed their score with RestoPi."
+>
+  <Navigation />
+  
+  <main class="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <!-- Hero Section -->
+    <section class="py-16 px-4">
+      <div class="max-w-6xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 bg-red-100 text-red-700 px-4 py-2 rounded-full mb-6">
+          <span>🧠</span>
+          <span class="font-semibold">Average restaurant scores only 42/100 - losing ₹2 lakhs monthly</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl font-bold text-pi-indigo mb-6">
+          What's Your Restaurant IQ Score?
+        </h1>
+        
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          Answer 10 questions. Discover hidden waste. See exactly where you're losing money. 
+          Takes 2 minutes. Completely free.
+        </p>
+        
+        <div class="flex flex-wrap justify-center gap-8 text-left max-w-2xl mx-auto">
+          <div class="flex items-start gap-3">
+            <span class="text-green-500 mt-1">✓</span>
+            <div>
+              <div class="font-semibold">Instant Results</div>
+              <div class="text-sm text-gray-600">See your score immediately</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-green-500 mt-1">✓</span>
+            <div>
+              <div class="font-semibold">Money Revealed</div>
+              <div class="text-sm text-gray-600">Find hidden waste in rupees</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-green-500 mt-1">✓</span>
+            <div>
+              <div class="font-semibold">Action Plan</div>
+              <div class="text-sm text-gray-600">Get specific next steps</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Assessment Section -->
+    <section class="py-12 px-4">
+      <div class="max-w-4xl mx-auto">
+        <!-- Progress Bar -->
+        <div class="mb-8">
+          <div class="flex justify-between text-sm text-gray-600 mb-2">
+            <span>Question <span id="currentQuestion">1</span> of 10</span>
+            <span><span id="progressPercentage">10</span>% Complete</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-3">
+            <div id="progressBar" class="bg-spiced-saffron h-3 rounded-full transition-all duration-300" style="width: 10%"></div>
+          </div>
+        </div>
+
+        <!-- Questions -->
+        <div id="assessmentContainer" class="bg-white rounded-2xl shadow-xl p-8">
+          <form id="iqAssessment">
+            {questions.map((q, index) => (
+              <div class={`question-container ${index > 0 ? 'hidden' : ''}`} data-question={index}>
+                <div class="mb-2">
+                  <span class="text-sm text-spiced-saffron font-semibold uppercase tracking-wide">
+                    {q.category}
+                  </span>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">
+                  {q.question}
+                </h2>
+                <div class="space-y-3">
+                  {q.options.map((option, optIndex) => (
+                    <label class="block cursor-pointer">
+                      <input 
+                        type="radio" 
+                        name={q.id} 
+                        value={option.score}
+                        class="hidden peer"
+                        data-question-id={q.id}
+                      />
+                      <div class="border-2 border-gray-200 rounded-lg p-4 hover:border-spiced-saffron peer-checked:border-spiced-saffron peer-checked:bg-orange-50 transition-all">
+                        <div class="flex items-center justify-between">
+                          <span class="text-gray-700 peer-checked:text-gray-900 peer-checked:font-semibold">
+                            {option.text}
+                          </span>
+                          <div class="w-5 h-5 border-2 border-gray-300 rounded-full peer-checked:border-spiced-saffron peer-checked:bg-spiced-saffron"></div>
+                        </div>
+                      </div>
+                    </label>
+                  ))}
+                </div>
+                
+                <div class="mt-8 flex justify-between">
+                  <button 
+                    type="button" 
+                    class={`prev-btn ${index === 0 ? 'invisible' : ''} text-gray-600 hover:text-gray-900`}
+                    data-question={index}
+                  >
+                    ← Previous
+                  </button>
+                  <button 
+                    type="button" 
+                    class={`next-btn bg-spiced-saffron text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-700 transition-all ${index === questions.length - 1 ? 'hidden' : ''}`}
+                    data-question={index}
+                    disabled
+                  >
+                    Next →
+                  </button>
+                  <button 
+                    type="submit" 
+                    class={`bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition-all ${index !== questions.length - 1 ? 'hidden' : ''}`}
+                  >
+                    See My Score →
+                  </button>
+                </div>
+              </div>
+            ))}
+          </form>
+        </div>
+
+        <!-- Results Section (Initially Hidden) -->
+        <div id="resultsContainer" class="hidden">
+          <!-- Score Display -->
+          <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+            <div class="text-center mb-8">
+              <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                Your Restaurant IQ Score
+              </h2>
+              
+              <!-- Score Circle -->
+              <div class="relative inline-flex items-center justify-center">
+                <svg class="transform -rotate-90 w-48 h-48">
+                  <circle
+                    cx="96"
+                    cy="96"
+                    r="88"
+                    stroke="#E5E7EB"
+                    stroke-width="12"
+                    fill="none"
+                  />
+                  <circle
+                    id="scoreCircle"
+                    cx="96"
+                    cy="96"
+                    r="88"
+                    stroke="#C2410C"
+                    stroke-width="12"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-dasharray="553"
+                    stroke-dashoffset="553"
+                    class="transition-all duration-1000"
+                  />
+                </svg>
+                <div class="absolute">
+                  <div id="scoreNumber" class="text-5xl font-bold text-pi-indigo">0</div>
+                  <div class="text-gray-600">out of 100</div>
+                </div>
+              </div>
+              
+              <div id="scoreMessage" class="mt-6 text-xl font-semibold text-gray-900"></div>
+              <div id="scoreDescription" class="mt-2 text-gray-600"></div>
+            </div>
+
+            <!-- Category Breakdown -->
+            <div class="border-t pt-6">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Category Breakdown:</h3>
+              <div id="categoryScores" class="space-y-3">
+                <!-- Filled dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Hidden Waste Analysis -->
+          <div class="bg-gradient-to-r from-red-50 to-red-100 rounded-2xl p-8 mb-8">
+            <h3 class="text-2xl font-bold text-red-600 mb-6">
+              💸 Your Hidden Monthly Waste
+            </h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <div id="wasteAmount" class="text-4xl font-bold text-red-600">₹0</div>
+                <div class="text-gray-600">Lost Every Month</div>
+              </div>
+              <div>
+                <div id="yearlyWaste" class="text-3xl font-bold text-red-500">₹0</div>
+                <div class="text-gray-600">Lost Every Year</div>
+              </div>
+            </div>
+            
+            <div class="mt-6 space-y-3">
+              <div class="flex justify-between items-center p-3 bg-white/50 rounded-lg">
+                <span>Preventable Food Waste</span>
+                <span id="foodWasteAmount" class="font-bold text-red-600">₹0</span>
+              </div>
+              <div class="flex justify-between items-center p-3 bg-white/50 rounded-lg">
+                <span>Poor Demand Prediction</span>
+                <span id="demandWasteAmount" class="font-bold text-red-600">₹0</span>
+              </div>
+              <div class="flex justify-between items-center p-3 bg-white/50 rounded-lg">
+                <span>Inefficient Labor Costs</span>
+                <span id="laborWasteAmount" class="font-bold text-red-600">₹0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Improvement Plan -->
+          <div class="bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-8 mb-8">
+            <h3 class="text-2xl font-bold text-green-600 mb-6">
+              🚀 Your Intelligence Upgrade Path
+            </h3>
+            
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold">1</div>
+                <div>
+                  <h4 class="font-bold text-gray-900">Quick Win (This Week)</h4>
+                  <p id="quickWin" class="text-gray-600">Start tracking daily waste - even on paper</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold">2</div>
+                <div>
+                  <h4 class="font-bold text-gray-900">Big Impact (Next Month)</h4>
+                  <p id="bigImpact" class="text-gray-600">Implement demand prediction for weekends</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold">3</div>
+                <div>
+                  <h4 class="font-bold text-gray-900">Full Transformation (90 Days)</h4>
+                  <p id="transformation" class="text-gray-600">Complete intelligence system preventing all waste</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-6 p-4 bg-white rounded-lg">
+              <div class="flex justify-between items-center mb-2">
+                <span>Your Current IQ Score:</span>
+                <span id="currentIQ" class="font-bold">42</span>
+              </div>
+              <div class="flex justify-between items-center mb-2">
+                <span>Potential IQ Score:</span>
+                <span class="font-bold text-green-600">95+</span>
+              </div>
+              <div class="flex justify-between items-center pt-2 border-t">
+                <span class="font-bold">Potential Monthly Savings:</span>
+                <span id="potentialSavings" class="text-2xl font-bold text-green-600">₹2,00,000+</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparison -->
+          <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-6">
+              How You Compare
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between text-sm text-gray-600 mb-1">
+                  <span>Average Restaurant</span>
+                  <span>42/100</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                  <div class="bg-gray-500 h-3 rounded-full" style="width: 42%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm text-gray-600 mb-1">
+                  <span>Your Score</span>
+                  <span id="yourScoreCompare">0/100</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                  <div id="yourScoreBar" class="bg-spiced-saffron h-3 rounded-full" style="width: 0%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm text-gray-600 mb-1">
+                  <span>RestoPi Restaurants</span>
+                  <span>89/100</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                  <div class="bg-green-500 h-3 rounded-full" style="width: 89%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Section -->
+          <div class="text-center">
+            <h3 class="text-3xl font-bold text-gray-900 mb-4">
+              Ready to Boost Your Restaurant IQ?
+            </h3>
+            <p class="text-xl text-gray-600 mb-8">
+              Join 500+ restaurants using intelligence to save ₹2 lakhs monthly
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+              <button 
+                id="getDetailedReport"
+                class="bg-spiced-saffron text-white px-8 py-4 rounded-lg font-bold hover:bg-orange-700 transition-all inline-flex items-center gap-2"
+              >
+                <span>Get Detailed IQ Report</span>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+              <a 
+                href="/tools/roi-calculator"
+                class="bg-pi-indigo text-white px-8 py-4 rounded-lg font-bold hover:bg-indigo-800 transition-all"
+              >
+                Calculate My Savings
+              </a>
+            </div>
+            
+            <p class="text-sm text-gray-600">
+              Free forever · No credit card · Get results instantly
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+  
+  <script>
+    let currentQuestionIndex = 0;
+    const totalQuestions = 10;
+    const answers = {};
+    
+    // Question Navigation
+    document.querySelectorAll('input[type="radio"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+        const questionId = this.dataset.questionId;
+        answers[questionId] = parseInt(this.value);
+        
+        // Enable next button
+        const container = this.closest('.question-container');
+        const nextBtn = container.querySelector('.next-btn');
+        if (nextBtn) {
+          nextBtn.disabled = false;
+          nextBtn.classList.remove('opacity-50');
+        }
+      });
+    });
+    
+    // Next button handlers
+    document.querySelectorAll('.next-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const currentIndex = parseInt(this.dataset.question);
+        showQuestion(currentIndex + 1);
+      });
+    });
+    
+    // Previous button handlers
+    document.querySelectorAll('.prev-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const currentIndex = parseInt(this.dataset.question);
+        showQuestion(currentIndex - 1);
+      });
+    });
+    
+    function showQuestion(index) {
+      document.querySelectorAll('.question-container').forEach(container => {
+        container.classList.add('hidden');
+      });
+      
+      document.querySelector(`[data-question="${index}"]`).classList.remove('hidden');
+      
+      // Update progress
+      const progress = ((index + 1) / totalQuestions) * 100;
+      document.getElementById('currentQuestion').textContent = index + 1;
+      document.getElementById('progressPercentage').textContent = Math.round(progress);
+      document.getElementById('progressBar').style.width = progress + '%';
+      
+      currentQuestionIndex = index;
+    }
+    
+    // Form submission
+    document.getElementById('iqAssessment').addEventListener('submit', function(e) {
+      e.preventDefault();
+      calculateResults();
+    });
+    
+    function calculateResults() {
+      // Calculate total score
+      let totalScore = 0;
+      let categoryScores = {};
+      
+      const categories = {
+        'prediction': 'Demand Prediction',
+        'waste-tracking': 'Waste Management',
+        'inventory': 'Inventory Control',
+        'ordering': 'Purchasing Intelligence',
+        'expiry': 'Freshness Management',
+        'labor': 'Staff Optimization',
+        'menu': 'Menu Intelligence',
+        'decisions': 'Decision Speed',
+        'reports': 'Visibility & Reporting',
+        'workday': 'Work-Life Balance'
+      };
+      
+      for (const [key, value] of Object.entries(answers)) {
+        totalScore += value;
+        categoryScores[key] = value;
+      }
+      
+      const finalScore = Math.round((totalScore / 50) * 100);
+      
+      // Calculate waste based on score
+      const wasteMultiplier = (100 - finalScore) / 100;
+      const monthlyWaste = Math.round(250000 * wasteMultiplier);
+      const yearlyWaste = monthlyWaste * 12;
+      
+      // Show results
+      document.getElementById('assessmentContainer').classList.add('hidden');
+      document.getElementById('resultsContainer').classList.remove('hidden');
+      
+      // Animate score
+      animateScore(finalScore);
+      
+      // Set score message
+      let message, description;
+      if (finalScore < 30) {
+        message = "Critical - Immediate Action Needed";
+        description = "You're losing significant money daily. RestoPi can transform your operations immediately.";
+      } else if (finalScore < 50) {
+        message = "Below Average - Major Opportunity";
+        description = "You have huge potential for improvement. Most RestoPi users in your range save ₹2+ lakhs monthly.";
+      } else if (finalScore < 70) {
+        message = "Average - Good Potential";
+        description = "You're doing okay but leaving money on the table. Intelligence can take you to the next level.";
+      } else if (finalScore < 85) {
+        message = "Good - Room for Excellence";
+        description = "You're above average! A few optimizations can still save you ₹1 lakh+ monthly.";
+      } else {
+        message = "Excellent - Optimization Opportunity";
+        description = "Great job! Even at your level, RestoPi finds hidden savings averaging ₹50,000 monthly.";
+      }
+      
+      document.getElementById('scoreMessage').textContent = message;
+      document.getElementById('scoreDescription').textContent = description;
+      
+      // Set waste amounts
+      document.getElementById('wasteAmount').textContent = '₹' + monthlyWaste.toLocaleString('en-IN');
+      document.getElementById('yearlyWaste').textContent = '₹' + yearlyWaste.toLocaleString('en-IN');
+      document.getElementById('foodWasteAmount').textContent = '₹' + Math.round(monthlyWaste * 0.4).toLocaleString('en-IN');
+      document.getElementById('demandWasteAmount').textContent = '₹' + Math.round(monthlyWaste * 0.35).toLocaleString('en-IN');
+      document.getElementById('laborWasteAmount').textContent = '₹' + Math.round(monthlyWaste * 0.25).toLocaleString('en-IN');
+      
+      // Set improvement suggestions based on weakest areas
+      const weakestCategory = Object.entries(categoryScores).reduce((a, b) => a[1] < b[1] ? a : b)[0];
+      setImprovementPlan(weakestCategory);
+      
+      // Set comparison
+      document.getElementById('currentIQ').textContent = finalScore;
+      document.getElementById('yourScoreCompare').textContent = finalScore + '/100';
+      document.getElementById('yourScoreBar').style.width = finalScore + '%';
+      document.getElementById('potentialSavings').textContent = '₹' + Math.round(monthlyWaste * 0.85).toLocaleString('en-IN');
+      
+      // Display category scores
+      const categoryContainer = document.getElementById('categoryScores');
+      for (const [key, score] of Object.entries(categoryScores)) {
+        const percentage = (score / 5) * 100;
+        const div = document.createElement('div');
+        div.innerHTML = `
+          <div class="flex justify-between text-sm mb-1">
+            <span>${categories[key]}</span>
+            <span>${score}/5</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-${percentage >= 60 ? 'green' : percentage >= 40 ? 'yellow' : 'red'}-500 h-2 rounded-full" style="width: ${percentage}%"></div>
+          </div>
+        `;
+        categoryContainer.appendChild(div);
+      }
+      
+      // Track event
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'iq_score_calculated', {
+          score: finalScore,
+          monthly_waste: monthlyWaste
+        });
+      }
+    }
+    
+    function animateScore(target) {
+      let current = 0;
+      const increment = target / 50;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        document.getElementById('scoreNumber').textContent = Math.round(current);
+        const offset = 553 - (553 * current) / 100;
+        document.getElementById('scoreCircle').style.strokeDashoffset = offset;
+      }, 20);
+    }
+    
+    function setImprovementPlan(weakestArea) {
+      const plans = {
+        'prediction': {
+          quick: 'Start tracking daily sales patterns in a notebook',
+          big: 'Use last 4 weeks data to predict next week',
+          transform: 'AI-powered demand prediction preventing all waste'
+        },
+        'waste-tracking': {
+          quick: 'Weigh and log waste at end of each day',
+          big: 'Identify top 3 waste items and fix them',
+          transform: 'Real-time waste alerts preventing losses'
+        },
+        'inventory': {
+          quick: 'Set min/max levels for top 10 ingredients',
+          big: 'Implement FIFO and daily inventory counts',
+          transform: 'Automated ordering based on predicted demand'
+        }
+      };
+      
+      const plan = plans[weakestArea] || plans['prediction'];
+      document.getElementById('quickWin').textContent = plan.quick;
+      document.getElementById('bigImpact').textContent = plan.big;
+      document.getElementById('transformation').textContent = plan.transform;
+    }
+    
+    // Get Detailed Report button
+    document.getElementById('getDetailedReport')?.addEventListener('click', function() {
+      const score = document.getElementById('scoreNumber').textContent;
+      const waste = document.getElementById('wasteAmount').textContent;
+      
+      const message = `Restaurant IQ Score: ${score}/100
+Hidden Monthly Waste: ${waste}
+      
+I want my detailed IQ improvement report!`;
+      
+      window.open('https://wa.me/919884248927?text=' + encodeURIComponent(message), '_blank');
+    });
+  </script>
+</BaseLayout>

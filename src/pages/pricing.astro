@@ -1,0 +1,332 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+
+const plans = [
+  {
+    name: "Starter",
+    subtitle: "For single outlets getting started",
+    price: "₹19,999",
+    period: "/month",
+    savings: "Save ₹80,000+ monthly",
+    features: [
+      "Waste Prevention System",
+      "Basic Demand Prediction",
+      "Inventory Management",
+      "Daily Reports",
+      "WhatsApp Support",
+      "4-hour setup"
+    ],
+    limitations: [
+      "Single outlet only",
+      "Basic analytics",
+      "Standard support hours"
+    ],
+    cta: "Start 30-Day Trial",
+    popular: false,
+    bestFor: "Perfect for cafes, QSRs, and small restaurants"
+  },
+  {
+    name: "Growth",
+    subtitle: "For ambitious restaurants ready to scale",
+    price: "₹39,999",
+    period: "/month",
+    savings: "Save ₹2,00,000+ monthly",
+    features: [
+      "Everything in Starter, plus:",
+      "Advanced AI Predictions",
+      "Labor Optimization",
+      "Menu Intelligence",
+      "Multi-outlet support (up to 3)",
+      "Real-time alerts",
+      "Priority support",
+      "Custom integrations"
+    ],
+    limitations: [
+      "Up to 3 outlets",
+      "Standard API limits"
+    ],
+    cta: "Get Started Today",
+    popular: true,
+    bestFor: "Ideal for growing restaurants and small chains"
+  },
+  {
+    name: "Enterprise",
+    subtitle: "For restaurant chains and groups",
+    price: "Custom",
+    period: "pricing",
+    savings: "Save ₹5,00,000+ monthly",
+    features: [
+      "Everything in Growth, plus:",
+      "Unlimited outlets",
+      "Custom AI models",
+      "Dedicated success manager",
+      "24/7 phone support",
+      "Custom reporting",
+      "API access",
+      "Staff training included",
+      "Quarterly business reviews"
+    ],
+    limitations: [],
+    cta: "Schedule Demo",
+    popular: false,
+    bestFor: "Built for multi-outlet chains and restaurant groups"
+  }
+];
+
+const guarantees = [
+  {
+    title: "60-Day Money Back",
+    description: "Not saving money? Get a full refund. No questions asked."
+  },
+  {
+    title: "4-Hour Setup",
+    description: "Our team handles everything. You'll be live before dinner service."
+  },
+  {
+    title: "No Lock-in Contracts",
+    description: "Month-to-month billing. Cancel anytime with one click."
+  }
+];
+
+const faqs = [
+  {
+    question: "How quickly will I see results?",
+    answer: "Most restaurants see 15-20% waste reduction in the first week. By month 2, you'll be saving ₹2+ lakhs monthly."
+  },
+  {
+    question: "Do I need technical knowledge?",
+    answer: "Zero technical knowledge required. If you can use WhatsApp, you can use RestoPi. Our team handles all setup and training."
+  },
+  {
+    question: "What if I have multiple outlets?",
+    answer: "Our Growth plan supports up to 3 outlets. For larger chains, our Enterprise plan offers unlimited outlets with volume discounts."
+  },
+  {
+    question: "Can I change plans later?",
+    answer: "Absolutely! Upgrade or downgrade anytime. Changes take effect immediately, with prorated billing."
+  },
+  {
+    question: "Is my data secure?",
+    answer: "Bank-level encryption protects your data. We're ISO 27001 certified and GDPR compliant. Your data is never shared."
+  },
+  {
+    question: "What kind of support do I get?",
+    answer: "All plans include WhatsApp support. Growth plans get priority support, and Enterprise gets 24/7 phone support with a dedicated manager."
+  }
+];
+---
+
+<BaseLayout 
+  title="Pricing - RestoPi | Save ₹2 Lakhs Monthly Starting at ₹19,999"
+  description="Transparent pricing for RestoPi. Start saving ₹2 lakhs monthly with plans from ₹19,999. 60-day money-back guarantee. No setup fees."
+>
+  <Navigation />
+  
+  <main class="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <!-- Hero Section -->
+    <section class="relative py-20 px-4">
+      <div class="max-w-7xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full mb-6">
+          <span class="font-semibold">Limited Time</span>
+          <span>50% OFF First Month - Only 3 Spots Left</span>
+        </div>
+        
+        <h1 class="text-5xl md:text-6xl font-bold text-pi-indigo mb-6">
+          Start Saving ₹2 Lakhs Monthly
+        </h1>
+        
+        <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Join 500+ restaurants already saving millions. Pick your plan, start your trial, and see results in 7 days.
+        </p>
+        
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700">60-Day Money Back</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700">No Setup Fees</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700">Cancel Anytime</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section class="py-12 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8">
+          {plans.map((plan) => (
+            <div class={`relative bg-white rounded-2xl shadow-xl ${plan.popular ? 'ring-4 ring-spiced-saffron ring-opacity-50 transform scale-105' : ''}`}>
+              {plan.popular && (
+                <div class="absolute -top-5 left-0 right-0 text-center">
+                  <span class="bg-spiced-saffron text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    MOST POPULAR
+                  </span>
+                </div>
+              )}
+              
+              <div class="p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                <p class="text-gray-600 mb-6">{plan.subtitle}</p>
+                
+                <div class="mb-6">
+                  <span class="text-5xl font-bold text-pi-indigo">{plan.price}</span>
+                  <span class="text-gray-600">{plan.period}</span>
+                </div>
+                
+                <div class="bg-green-50 border border-green-200 rounded-lg p-3 mb-6">
+                  <p class="text-green-700 font-semibold">{plan.savings}</p>
+                </div>
+                
+                <p class="text-sm text-gray-600 mb-6">{plan.bestFor}</p>
+                
+                <div class="space-y-3 mb-8">
+                  {plan.features.map((feature) => (
+                    <div class="flex items-start gap-3">
+                      <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                      </svg>
+                      <span class="text-gray-700">{feature}</span>
+                    </div>
+                  ))}
+                  
+                  {plan.limitations.map((limitation) => (
+                    <div class="flex items-start gap-3">
+                      <svg class="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                      </svg>
+                      <span class="text-gray-500">{limitation}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <a 
+                  href={`https://wa.me/919884248927?text=I want to get started with RestoPi ${plan.name} plan!`}
+                  class={`block text-center py-4 px-6 rounded-lg font-semibold transition-all ${
+                    plan.popular 
+                      ? 'bg-spiced-saffron text-white hover:bg-orange-700' 
+                      : 'bg-pi-indigo text-white hover:bg-indigo-800'
+                  }`}
+                >
+                  {plan.cta}
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="py-20 px-4 bg-gray-50">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+          Your Success is Guaranteed
+        </h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          {guarantees.map((guarantee) => (
+            <div class="bg-white rounded-xl p-6 shadow-lg">
+              <h3 class="text-xl font-bold text-pi-indigo mb-3">{guarantee.title}</h3>
+              <p class="text-gray-600">{guarantee.description}</p>
+            </div>
+          ))}
+        </div>
+        
+        <div class="mt-12 bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-8">
+          <div class="text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Still Calculating? Here's the Math:
+            </h3>
+            <div class="grid md:grid-cols-4 gap-6 mt-8">
+              <div>
+                <p class="text-3xl font-bold text-red-600">-₹2,50,000</p>
+                <p class="text-gray-600">Current Monthly Loss</p>
+              </div>
+              <div>
+                <p class="text-3xl font-bold text-pi-indigo">₹39,999</p>
+                <p class="text-gray-600">RestoPi Investment</p>
+              </div>
+              <div>
+                <p class="text-3xl font-bold text-green-600">+₹2,10,001</p>
+                <p class="text-gray-600">Net Monthly Profit</p>
+              </div>
+              <div>
+                <p class="text-3xl font-bold text-spiced-saffron">525%</p>
+                <p class="text-gray-600">ROI First Month</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+          Frequently Asked Questions
+        </h2>
+        
+        <div class="space-y-6">
+          {faqs.map((faq) => (
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
+              <p class="text-gray-600">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 px-4 bg-gradient-to-r from-pi-indigo to-indigo-800">
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <h2 class="text-4xl font-bold mb-6">
+          Every Day You Wait Costs ₹8,333
+        </h2>
+        <p class="text-xl mb-8 opacity-90">
+          Join 500+ restaurants already saving ₹2 lakhs monthly. 
+          Start your trial now, see results in 7 days.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="https://wa.me/919884248927?text=I want to save ₹2 lakhs monthly with RestoPi!"
+            class="bg-white text-pi-indigo px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all inline-flex items-center gap-2"
+          >
+            <span>Start Free Trial</span>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a 
+            href="https://wa.me/919884248927?text=I have questions about RestoPi pricing"
+            class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-pi-indigo transition-all"
+          >
+            Talk to Sales
+          </a>
+        </div>
+        <p class="mt-6 text-sm opacity-75">
+          No credit card required · 60-day money-back guarantee
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+</BaseLayout>

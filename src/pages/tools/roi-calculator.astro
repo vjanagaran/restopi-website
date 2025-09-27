@@ -1,0 +1,477 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+---
+
+<BaseLayout 
+  title="ROI Calculator - See Your ₹2 Lakh Monthly Savings | RestoPi"
+  description="Calculate exactly how much RestoPi will save your restaurant. Most owners save ₹2+ lakhs monthly. Get your personalized savings report in 2 minutes."
+>
+  <Navigation />
+  
+  <main class="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <!-- Hero Section -->
+    <section class="py-16 px-4">
+      <div class="max-w-6xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full mb-6">
+          <span>💰</span>
+          <span class="font-semibold">Average RestoPi restaurant saves ₹2.3 lakhs/month</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl font-bold text-pi-indigo mb-6">
+          See Your Exact Savings in 2 Minutes
+        </h1>
+        
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          No guesswork. Just enter your restaurant details and see exactly how much 
+          money you're losing to waste - and how RestoPi prevents it.
+        </p>
+      </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="py-12 px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+          <form id="roiCalculator" class="space-y-8">
+            <!-- Restaurant Type -->
+            <div>
+              <label class="block text-lg font-semibold text-gray-700 mb-4">
+                What type of restaurant do you run?
+              </label>
+              <div class="grid md:grid-cols-2 gap-4">
+                <button type="button" class="restaurant-type-btn border-2 border-gray-300 rounded-lg p-4 text-left hover:border-spiced-saffron transition-all" data-type="fine-dining" data-multiplier="1.5">
+                  <div class="font-semibold">Fine Dining</div>
+                  <div class="text-sm text-gray-600">Premium ingredients, higher waste potential</div>
+                </button>
+                <button type="button" class="restaurant-type-btn border-2 border-gray-300 rounded-lg p-4 text-left hover:border-spiced-saffron transition-all" data-type="casual-dining" data-multiplier="1.2">
+                  <div class="font-semibold">Casual Dining</div>
+                  <div class="text-sm text-gray-600">Family restaurants, moderate prices</div>
+                </button>
+                <button type="button" class="restaurant-type-btn border-2 border-gray-300 rounded-lg p-4 text-left hover:border-spiced-saffron transition-all" data-type="qsr" data-multiplier="1.0">
+                  <div class="font-semibold">QSR/Fast Food</div>
+                  <div class="text-sm text-gray-600">Quick service, high volume</div>
+                </button>
+                <button type="button" class="restaurant-type-btn border-2 border-gray-300 rounded-lg p-4 text-left hover:border-spiced-saffron transition-all" data-type="cloud-kitchen" data-multiplier="0.8">
+                  <div class="font-semibold">Cloud Kitchen</div>
+                  <div class="text-sm text-gray-600">Delivery only, optimized operations</div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Monthly Revenue -->
+            <div>
+              <label class="block text-lg font-semibold text-gray-700 mb-4">
+                What's your monthly revenue?
+              </label>
+              <div class="relative">
+                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-xl text-gray-500">₹</span>
+                <input 
+                  type="number" 
+                  id="monthlyRevenue" 
+                  class="w-full pl-10 pr-4 py-3 text-lg border-2 border-gray-300 rounded-lg focus:border-spiced-saffron focus:outline-none"
+                  placeholder="2500000"
+                  min="100000"
+                  max="100000000"
+                  step="50000"
+                />
+              </div>
+              <div class="mt-2 text-sm text-gray-600">
+                Quick select: 
+                <button type="button" class="revenue-preset text-spiced-saffron hover:underline mx-1" data-value="1000000">₹10L</button>
+                <button type="button" class="revenue-preset text-spiced-saffron hover:underline mx-1" data-value="2500000">₹25L</button>
+                <button type="button" class="revenue-preset text-spiced-saffron hover:underline mx-1" data-value="5000000">₹50L</button>
+                <button type="button" class="revenue-preset text-spiced-saffron hover:underline mx-1" data-value="10000000">₹1Cr</button>
+              </div>
+            </div>
+
+            <!-- Number of Outlets -->
+            <div>
+              <label class="block text-lg font-semibold text-gray-700 mb-4">
+                How many outlets do you have?
+              </label>
+              <div class="flex gap-4">
+                <button type="button" class="outlet-btn flex-1 border-2 border-gray-300 rounded-lg py-3 hover:border-spiced-saffron transition-all" data-outlets="1">1</button>
+                <button type="button" class="outlet-btn flex-1 border-2 border-gray-300 rounded-lg py-3 hover:border-spiced-saffron transition-all" data-outlets="2">2-3</button>
+                <button type="button" class="outlet-btn flex-1 border-2 border-gray-300 rounded-lg py-3 hover:border-spiced-saffron transition-all" data-outlets="5">4-5</button>
+                <button type="button" class="outlet-btn flex-1 border-2 border-gray-300 rounded-lg py-3 hover:border-spiced-saffron transition-all" data-outlets="10">6-10</button>
+                <button type="button" class="outlet-btn flex-1 border-2 border-gray-300 rounded-lg py-3 hover:border-spiced-saffron transition-all" data-outlets="15">10+</button>
+              </div>
+            </div>
+
+            <!-- Current Challenges -->
+            <div>
+              <label class="block text-lg font-semibold text-gray-700 mb-4">
+                What are your biggest challenges? (Select all that apply)
+              </label>
+              <div class="space-y-3">
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input type="checkbox" class="challenge-checkbox w-5 h-5 text-spiced-saffron" value="waste" data-impact="35000">
+                  <span>Food waste (spoilage, over-prep, expired items)</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input type="checkbox" class="challenge-checkbox w-5 h-5 text-spiced-saffron" value="inventory" data-impact="25000">
+                  <span>Poor inventory management (stockouts or excess)</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input type="checkbox" class="challenge-checkbox w-5 h-5 text-spiced-saffron" value="labor" data-impact="30000">
+                  <span>Labor costs (overstaffing/understaffing)</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input type="checkbox" class="challenge-checkbox w-5 h-5 text-spiced-saffron" value="prediction" data-impact="20000">
+                  <span>Can't predict demand accurately</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input type="checkbox" class="challenge-checkbox w-5 h-5 text-spiced-saffron" value="hours" data-impact="15000">
+                  <span>Working 14+ hours daily</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Calculate Button -->
+            <button 
+              type="submit"
+              class="w-full bg-spiced-saffron text-white py-4 px-6 rounded-lg font-bold text-lg hover:bg-orange-700 transition-all"
+            >
+              Calculate My Savings →
+            </button>
+          </form>
+        </div>
+
+        <!-- Results Section (Initially Hidden) -->
+        <div id="resultsSection" class="hidden mt-12">
+          <!-- Personal Impact -->
+          <div class="bg-gradient-to-r from-red-50 to-red-100 rounded-2xl p-8 mb-8">
+            <h2 class="text-2xl font-bold text-red-600 mb-6">
+              🚨 You're Currently Losing:
+            </h2>
+            <div class="grid md:grid-cols-3 gap-6">
+              <div>
+                <div id="monthlyLoss" class="text-4xl font-bold text-red-600">₹2,50,000</div>
+                <div class="text-gray-600">Every Month</div>
+              </div>
+              <div>
+                <div id="dailyLoss" class="text-3xl font-bold text-red-500">₹8,333</div>
+                <div class="text-gray-600">Every Day</div>
+              </div>
+              <div>
+                <div id="yearlyLoss" class="text-3xl font-bold text-red-500">₹30,00,000</div>
+                <div class="text-gray-600">Every Year</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- With RestoPi -->
+          <div class="bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-8 mb-8">
+            <h2 class="text-2xl font-bold text-green-600 mb-6">
+              ✅ With RestoPi Intelligence:
+            </h2>
+            <div class="grid md:grid-cols-3 gap-6">
+              <div>
+                <div id="monthlySavings" class="text-4xl font-bold text-green-600">₹2,10,000</div>
+                <div class="text-gray-600">Saved Monthly</div>
+              </div>
+              <div>
+                <div id="roiPercentage" class="text-3xl font-bold text-green-500">525%</div>
+                <div class="text-gray-600">ROI</div>
+              </div>
+              <div>
+                <div id="paybackDays" class="text-3xl font-bold text-green-500">7 Days</div>
+                <div class="text-gray-600">Payback Period</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Breakdown -->
+          <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-6">
+              Where Your Savings Come From:
+            </h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
+                <div>
+                  <div class="font-semibold">Waste Prevention</div>
+                  <div class="text-sm text-gray-600">AI predicts and prevents food waste</div>
+                </div>
+                <div class="text-xl font-bold text-green-600">₹85,000/mo</div>
+              </div>
+              <div class="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
+                <div>
+                  <div class="font-semibold">Inventory Optimization</div>
+                  <div class="text-sm text-gray-600">Perfect stock levels, no dead inventory</div>
+                </div>
+                <div class="text-xl font-bold text-green-600">₹65,000/mo</div>
+              </div>
+              <div class="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
+                <div>
+                  <div class="font-semibold">Labor Efficiency</div>
+                  <div class="text-sm text-gray-600">Right staff at right time</div>
+                </div>
+                <div class="text-xl font-bold text-green-600">₹45,000/mo</div>
+              </div>
+              <div class="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
+                <div>
+                  <div class="font-semibold">Demand Prediction</div>
+                  <div class="text-sm text-gray-600">Know tomorrow today, prep perfectly</div>
+                </div>
+                <div class="text-xl font-bold text-green-600">₹35,000/mo</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Life Impact -->
+          <div class="bg-gradient-to-r from-pi-indigo to-indigo-800 text-white rounded-2xl p-8 mb-8">
+            <h3 class="text-2xl font-bold mb-6">
+              🏠 More Than Money - Your Life Back:
+            </h3>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 class="font-bold mb-4">Current Reality:</h4>
+                <ul class="space-y-2 text-white/90">
+                  <li>• Leave restaurant at 1 AM</li>
+                  <li>• Miss family dinners daily</li>
+                  <li>• Constant stress about tomorrow</li>
+                  <li>• No time for strategic thinking</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold mb-4">With RestoPi:</h4>
+                <ul class="space-y-2 text-green-300">
+                  <li>• Home by 10 PM guaranteed</li>
+                  <li>• Family dinner every night</li>
+                  <li>• Know Monday on Saturday</li>
+                  <li>• Time to grow your business</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparison -->
+          <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-6">
+              Investment Comparison:
+            </h3>
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="border-b">
+                    <th class="text-left py-3"></th>
+                    <th class="text-right py-3">Cost</th>
+                    <th class="text-right py-3">Savings</th>
+                    <th class="text-right py-3 text-green-600">Net Profit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b">
+                    <td class="py-4 font-semibold">Do Nothing</td>
+                    <td class="text-right">₹0</td>
+                    <td class="text-right text-red-500">-₹2,50,000</td>
+                    <td class="text-right text-red-600 font-bold">-₹2,50,000</td>
+                  </tr>
+                  <tr class="border-b bg-green-50">
+                    <td class="py-4 font-semibold">RestoPi Growth Plan</td>
+                    <td class="text-right">₹39,999</td>
+                    <td class="text-right text-green-500">+₹2,50,000</td>
+                    <td class="text-right text-green-600 font-bold">+₹2,10,001</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Personalized Message -->
+          <div class="bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-8 mb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              📊 Your Personalized RestoPi Plan:
+            </h3>
+            <p id="personalizedMessage" class="text-gray-700 mb-6">
+              Based on your restaurant type and challenges, we recommend the Growth Plan. 
+              You'll start seeing savings within the first week.
+            </p>
+            <div class="bg-white rounded-lg p-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold">First Month Savings:</span>
+                <span class="text-xl font-bold text-green-600">₹2,10,000</span>
+              </div>
+              <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold">RestoPi Investment:</span>
+                <span class="text-xl">₹39,999</span>
+              </div>
+              <div class="flex justify-between items-center pt-2 border-t">
+                <span class="font-bold">Your Net Profit:</span>
+                <span class="text-2xl font-bold text-green-600">₹1,70,001</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Section -->
+          <div class="text-center">
+            <h3 class="text-3xl font-bold text-gray-900 mb-6">
+              Ready to Save <span id="savingsHighlight" class="text-green-600">₹2,10,000</span> Monthly?
+            </h3>
+            <p class="text-xl text-gray-600 mb-8">
+              Join 500+ restaurants already using intelligence to prevent waste and get home by 10 PM.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <button 
+                id="getReportBtn"
+                class="bg-spiced-saffron text-white px-8 py-4 rounded-lg font-bold hover:bg-orange-700 transition-all inline-flex items-center gap-2"
+              >
+                <span>Get Detailed Report on WhatsApp</span>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+              <button
+                id="scheduleCallBtn"
+                class="bg-pi-indigo text-white px-8 py-4 rounded-lg font-bold hover:bg-indigo-800 transition-all"
+              >
+                Schedule 15-Min Demo Call
+              </button>
+            </div>
+            
+            <p class="mt-6 text-sm text-gray-600">
+              ✓ 60-day money-back guarantee · ✓ No setup fees · ✓ Cancel anytime
+            </p>
+          </div>
+        </div>
+
+        <!-- Testimonial -->
+        <div class="mt-12 bg-gray-50 rounded-2xl p-8">
+          <div class="flex items-start gap-4">
+            <div class="text-4xl">💬</div>
+            <div>
+              <p class="text-lg text-gray-700 italic mb-4">
+                "I was skeptical about the ₹2 lakh savings claim. But the calculator showed ₹2.3 lakhs 
+                for my restaurant. In reality? We saved ₹2.7 lakhs in the first month. 
+                Now I'm home by 9:30 PM every day."
+              </p>
+              <p class="font-semibold text-gray-900">
+                Amit Sharma, Owner of 3 restaurants in Delhi
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+  
+  <script>
+    // Calculator Logic
+    let calculatorData = {
+      restaurantType: '',
+      typeMultiplier: 1,
+      monthlyRevenue: 0,
+      outlets: 1,
+      challenges: []
+    };
+
+    // Restaurant Type Selection
+    document.querySelectorAll('.restaurant-type-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.restaurant-type-btn').forEach(b => {
+          b.classList.remove('border-spiced-saffron', 'bg-orange-50');
+        });
+        this.classList.add('border-spiced-saffron', 'bg-orange-50');
+        calculatorData.restaurantType = this.dataset.type;
+        calculatorData.typeMultiplier = parseFloat(this.dataset.multiplier);
+      });
+    });
+
+    // Revenue Presets
+    document.querySelectorAll('.revenue-preset').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.getElementById('monthlyRevenue').value = this.dataset.value;
+      });
+    });
+
+    // Outlet Selection
+    document.querySelectorAll('.outlet-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.outlet-btn').forEach(b => {
+          b.classList.remove('border-spiced-saffron', 'bg-orange-50');
+        });
+        this.classList.add('border-spiced-saffron', 'bg-orange-50');
+        calculatorData.outlets = parseInt(this.dataset.outlets);
+      });
+    });
+
+    // Form Submission
+    document.getElementById('roiCalculator').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get revenue
+      calculatorData.monthlyRevenue = parseInt(document.getElementById('monthlyRevenue').value) || 2500000;
+      
+      // Get challenges
+      calculatorData.challenges = [];
+      let challengeImpact = 0;
+      document.querySelectorAll('.challenge-checkbox:checked').forEach(checkbox => {
+        calculatorData.challenges.push(checkbox.value);
+        challengeImpact += parseInt(checkbox.dataset.impact);
+      });
+      
+      // Calculate savings
+      const baseWaste = calculatorData.monthlyRevenue * 0.08; // 8% of revenue is typical waste
+      const challengeWaste = challengeImpact * calculatorData.outlets;
+      const typeAdjustment = calculatorData.typeMultiplier;
+      
+      const totalMonthlyLoss = Math.round((baseWaste + challengeWaste) * typeAdjustment);
+      const monthlySavings = Math.round(totalMonthlyLoss * 0.85); // RestoPi prevents 85% of waste
+      const dailyLoss = Math.round(totalMonthlyLoss / 30);
+      const yearlyLoss = totalMonthlyLoss * 12;
+      
+      const restopiCost = calculatorData.outlets > 3 ? 79999 : 39999;
+      const netProfit = monthlySavings - restopiCost;
+      const roi = Math.round((netProfit / restopiCost) * 100);
+      const paybackDays = Math.round(restopiCost / (monthlySavings / 30));
+      
+      // Update results
+      document.getElementById('monthlyLoss').textContent = '₹' + totalMonthlyLoss.toLocaleString('en-IN');
+      document.getElementById('dailyLoss').textContent = '₹' + dailyLoss.toLocaleString('en-IN');
+      document.getElementById('yearlyLoss').textContent = '₹' + yearlyLoss.toLocaleString('en-IN');
+      document.getElementById('monthlySavings').textContent = '₹' + monthlySavings.toLocaleString('en-IN');
+      document.getElementById('roiPercentage').textContent = roi + '%';
+      document.getElementById('paybackDays').textContent = paybackDays + ' Days';
+      document.getElementById('savingsHighlight').textContent = '₹' + monthlySavings.toLocaleString('en-IN');
+      
+      // Show results
+      document.getElementById('resultsSection').classList.remove('hidden');
+      document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+      
+      // Track conversion
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'roi_calculated', {
+          value: monthlySavings,
+          currency: 'INR',
+          restaurant_type: calculatorData.restaurantType,
+          outlets: calculatorData.outlets
+        });
+      }
+    });
+
+    // Get Report Button
+    document.getElementById('getReportBtn')?.addEventListener('click', function() {
+      const message = `ROI Calculator Results:
+Restaurant Type: ${calculatorData.restaurantType}
+Monthly Revenue: ₹${calculatorData.monthlyRevenue.toLocaleString('en-IN')}
+Outlets: ${calculatorData.outlets}
+Potential Savings: ₹${document.getElementById('monthlySavings').textContent}/month
+
+I want my detailed savings report!`;
+      
+      window.open('https://wa.me/919884248927?text=' + encodeURIComponent(message), '_blank');
+    });
+
+    // Schedule Call Button
+    document.getElementById('scheduleCallBtn')?.addEventListener('click', function() {
+      window.location.href = '/contact';
+    });
+  </script>
+</BaseLayout>

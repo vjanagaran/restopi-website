@@ -1,0 +1,442 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+
+const manifesto = [
+  { belief: "No restaurant should fail from preventable waste", icon: "🛡️" },
+  { belief: "Every owner deserves dinner with family", icon: "🏠" },
+  { belief: "Intelligence should be accessible, not exclusive", icon: "🧠" },
+  { belief: "Profit comes from prediction, not luck", icon: "📈" },
+  { belief: "Restaurants are community treasures worth saving", icon: "💖" }
+];
+
+const promises = [
+  "You'll know Monday's prep on Saturday",
+  "You'll prevent waste before it happens",
+  "You'll be home by 10 PM",
+  "You'll see profit, not just reports",
+  "You'll feel confident, not confused"
+];
+
+const standAgainst = [
+  "14-hour days that steal life",
+  "Decisions based on guesswork",
+  "Waste hidden until month-end",
+  "Software that complicates",
+  "Success reserved for chains"
+];
+
+const revolutionTimeline = [
+  {
+    phase: "The Breaking Point",
+    date: "2021",
+    event: "3 Days From Closing",
+    description: "My friend's restaurant was dying. Not from bad food, but from flying blind.",
+    impact: "The realization that sparked everything"
+  },
+  {
+    phase: "The Weekend",
+    date: "One Weekend",
+    event: "Restaurant Becomes Intelligent",
+    description: "We made his restaurant intelligent. It knew Tuesday's rush on Sunday.",
+    impact: "First restaurant transformed"
+  },
+  {
+    phase: "The Transformation",
+    date: "3 Months Later",
+    event: "Second Restaurant Opens",
+    description: "From near-closure to expansion. Intelligence made the difference.",
+    impact: "Proof that intelligence = profit"
+  },
+  {
+    phase: "Today",
+    date: "Now",
+    event: "Three Restaurants & Family Dinners",
+    description: "He runs three restaurants and is home for dinner with his kids.",
+    impact: "500+ restaurants following his path"
+  }
+];
+
+const pledge = [
+  { promise: "The Prediction Promise", detail: "You'll know Monday's needs on Saturday" },
+  { promise: "The Savings Promise", detail: "You'll save at least ₹50,000 in first 30 days" },
+  { promise: "The Simplicity Promise", detail: "Every decision in 5 seconds or less" },
+  { promise: "The Liberation Promise", detail: "You'll be home by 10 PM within 30 days" },
+  { promise: "The Support Promise", detail: "We succeed only when you profit" }
+];
+
+const movementStats = [
+  { number: "500+", label: "Restaurants Liberated", sublabel: "And counting" },
+  { number: "₹100 Cr+", label: "Waste Prevented", sublabel: "Money back in owners' pockets" },
+  { number: "10,000+", label: "Family Dinners", sublabel: "Reclaimed from late nights" },
+  { number: "100%", label: "Success Rate", sublabel: "Every restaurant saves money" }
+];
+
+const threeRules = [
+  {
+    rule: "Clarity Beats Cleverness",
+    explanation: "If a tired restaurant owner at 11 PM can't understand it in 5 seconds, it's too complex."
+  },
+  {
+    rule: "Specificity Beats Generality",
+    explanation: "'Save ₹2 lakhs monthly' beats 'improve profitability'. 'Home by 10 PM' beats 'work-life balance'."
+  },
+  {
+    rule: "Emotion Beats Logic",
+    explanation: "'Dinner with your kids' beats 'operational efficiency'. 'Sleep peacefully' beats 'predictive analytics'."
+  }
+];
+---
+
+<BaseLayout 
+  title="About RestoPi - The 3 Days That Changed Everything | Restaurant Intelligence Revolution"
+  description="How a friend's restaurant 3 days from closing sparked the Restaurant Intelligence Revolution. Now 500+ restaurants save ₹2 lakhs monthly and owners are home by 10 PM."
+>
+  <Navigation />
+  
+  <main class="min-h-screen bg-white">
+    <!-- The Story Hero -->
+    <section class="relative py-20 px-4 bg-gradient-to-b from-pi-indigo to-indigo-900 text-white">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold mb-8">
+          The 3 Days That Changed Everything
+        </h1>
+        
+        <div class="text-lg md:text-xl leading-relaxed space-y-6 opacity-95">
+          <p class="italic">
+            My friend was 3 days from shutting down his restaurant. Not because the food was bad. 
+            Not because customers didn't come. But because he was flying blind.
+          </p>
+          
+          <p class="italic">
+            Every decision was a guess. Every purchase was hope. Every day ended with the question: 
+            'Where did the money go?'
+          </p>
+          
+          <p class="italic font-semibold">
+            In one weekend, we made his restaurant intelligent. Not smart. Not digital. Intelligent. 
+            It knew Tuesday's rush on Sunday. It predicted Thursday's waste on Monday. It turned chaos into clarity.
+          </p>
+          
+          <p class="italic">
+            Three months later, he opened his second restaurant. Today he runs three. 
+            He's home for dinner with his kids.
+          </p>
+          
+          <div class="mt-8 pt-8 border-t border-white/30">
+            <p class="text-2xl font-bold">
+              That's what intelligence does.
+            </p>
+            <p class="text-xl">
+              It doesn't make restaurants digital. It makes them profitable.<br/>
+              It doesn't create reports. It creates time with family.
+            </p>
+          </div>
+          
+          <p class="text-xl font-semibold mt-8">
+            Every restaurant has intelligence buried in their chaos. We just unveil it.
+          </p>
+        </div>
+        
+        <div class="mt-12 text-3xl font-bold">
+          RestoPi. Intelligence that profits. Lives that matter.
+        </div>
+      </div>
+    </section>
+
+    <!-- The Manifesto -->
+    <section class="py-20 px-4 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-pi-indigo mb-16">
+          The RestoPi Manifesto
+        </h2>
+        
+        <div class="grid md:grid-cols-3 gap-12">
+          <!-- We Believe -->
+          <div class="bg-white rounded-xl p-8 shadow-lg">
+            <h3 class="text-2xl font-bold text-pi-indigo mb-6">We Believe:</h3>
+            <div class="space-y-4">
+              {manifesto.map(item => (
+                <div class="flex items-start gap-3">
+                  <span class="text-2xl">{item.icon}</span>
+                  <p class="text-gray-700">{item.belief}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <!-- We Promise -->
+          <div class="bg-white rounded-xl p-8 shadow-lg">
+            <h3 class="text-2xl font-bold text-green-600 mb-6">We Promise:</h3>
+            <div class="space-y-4">
+              {promises.map(promise => (
+                <div class="flex items-start gap-3">
+                  <span class="text-green-500">✓</span>
+                  <p class="text-gray-700">{promise}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <!-- We Stand Against -->
+          <div class="bg-white rounded-xl p-8 shadow-lg">
+            <h3 class="text-2xl font-bold text-red-600 mb-6">We Stand Against:</h3>
+            <div class="space-y-4">
+              {standAgainst.map(item => (
+                <div class="flex items-start gap-3">
+                  <span class="text-red-500">✗</span>
+                  <p class="text-gray-700">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Revolution Timeline -->
+    <section class="py-20 px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-pi-indigo mb-12">
+          From 3 Days to 3 Restaurants: The Journey
+        </h2>
+        
+        <div class="space-y-12">
+          {revolutionTimeline.map((milestone, index) => (
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-4 h-4 bg-spiced-saffron rounded-full mt-2"></div>
+                {index < revolutionTimeline.length - 1 && (
+                  <div class="w-0.5 h-32 bg-gray-300 ml-1.5 mt-2"></div>
+                )}
+              </div>
+              <div class="flex-grow">
+                <div class="text-sm text-spiced-saffron font-bold uppercase tracking-wide">
+                  {milestone.phase} • {milestone.date}
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mt-2">
+                  {milestone.event}
+                </h3>
+                <p class="text-gray-600 mt-2 text-lg">
+                  {milestone.description}
+                </p>
+                <p class="text-pi-indigo font-semibold mt-2">
+                  → {milestone.impact}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- The RestoPi Pledge -->
+    <section class="py-20 px-4 bg-gradient-to-r from-green-50 to-green-100">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-pi-indigo mb-4">
+          The RestoPi Pledge
+        </h2>
+        <p class="text-center text-gray-600 mb-12 text-lg italic">
+          Our public promise to every RestoPi restaurant
+        </p>
+        
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+          <div class="space-y-6">
+            {pledge.map((item, index) => (
+              <div class="flex items-start gap-4">
+                <span class="flex-shrink-0 w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold">
+                  {index + 1}
+                </span>
+                <div>
+                  <h4 class="font-bold text-gray-900">{item.promise}:</h4>
+                  <p class="text-gray-600">{item.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div class="mt-8 pt-6 border-t border-gray-200">
+            <p class="text-center font-bold text-pi-indigo text-lg">
+              If we fail any promise, we work for free until we deliver.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The 100 Restaurant Revolution -->
+    <section class="py-20 px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-pi-indigo mb-6">
+            The 100 Restaurant Revolution
+          </h2>
+          <p class="text-2xl text-gray-700 font-semibold">
+            We're transforming 100 restaurants in 100 days.
+          </p>
+          <p class="text-xl text-gray-600 mt-2">
+            Publicly. Transparently. Dramatically.
+          </p>
+        </div>
+        
+        <!-- Movement Stats -->
+        <div class="grid md:grid-cols-4 gap-8 mb-16">
+          {movementStats.map(stat => (
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+              <div class="text-4xl font-bold text-spiced-saffron mb-2">
+                {stat.number}
+              </div>
+              <div class="font-semibold text-gray-900">
+                {stat.label}
+              </div>
+              <div class="text-sm text-gray-600 mt-1">
+                {stat.sublabel}
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <!-- Movement Symbols -->
+        <div class="bg-pi-indigo text-white rounded-2xl p-8">
+          <h3 class="text-2xl font-bold mb-6">Join the Movement</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-bold mb-2">🔔 The 10 PM Bell</h4>
+              <p class="text-sm opacity-90">Ring when you leave by 10 PM. Share your liberation.</p>
+            </div>
+            <div>
+              <h4 class="font-bold mb-2">π The Intelligence Badge</h4>
+              <p class="text-sm opacity-90">Display proudly. You're a π Certified Intelligent Restaurant.</p>
+            </div>
+            <div>
+              <h4 class="font-bold mb-2">💚 Waste-Free Wednesdays</h4>
+              <p class="text-sm opacity-90">Share your waste prevented every Wednesday.</p>
+            </div>
+            <div>
+              <h4 class="font-bold mb-2">🍽️ Liberation Dinners</h4>
+              <p class="text-sm opacity-90">Monthly meetups - because you're actually free to attend.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Three Rules -->
+    <section class="py-20 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-pi-indigo mb-12">
+          The Three Rules That Guide Everything We Do
+        </h2>
+        
+        <div class="space-y-8">
+          {threeRules.map((item, index) => (
+            <div class="bg-white rounded-xl p-6 shadow-md">
+              <div class="flex items-start gap-4">
+                <span class="text-3xl font-bold text-spiced-saffron">
+                  {index + 1}
+                </span>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    {item.rule}
+                  </h3>
+                  <p class="text-gray-600">
+                    {item.explanation}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Purpose & Mission -->
+    <section class="py-20 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="space-y-12">
+          <div>
+            <h3 class="text-2xl font-bold text-pi-indigo mb-4">Our Purpose</h3>
+            <p class="text-xl text-gray-700">
+              We give restaurant owners their life back by making operations intelligent, not exhausting.
+            </p>
+          </div>
+          
+          <div>
+            <h3 class="text-2xl font-bold text-pi-indigo mb-4">Our Mission</h3>
+            <p class="text-xl text-gray-700">
+              Make 10,000 restaurant owners profitable enough to have a life, not just a business.
+            </p>
+          </div>
+          
+          <div>
+            <h3 class="text-2xl font-bold text-pi-indigo mb-4">Our Vision</h3>
+            <p class="text-xl text-gray-700">
+              By 2030, RestoPi will be the intelligence backbone for 10,000 profitable restaurants globally, 
+              having prevented ₹1,000 Crore in waste and given 10,000 owners their lives back.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Remember Our Why -->
+    <section class="py-20 px-4 bg-gradient-to-r from-pi-indigo to-indigo-800 text-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-12">Remember Our Why</h2>
+        
+        <div class="space-y-6 text-xl">
+          <p>We exist because a restaurant owner was 3 days from closing.</p>
+          <p>We exist because 14-hour days steal lives.</p>
+          <p>We exist because families deserve dinner together.</p>
+          <p>We exist because restaurants are dreams worth saving.</p>
+        </div>
+        
+        <div class="mt-12 pt-12 border-t border-white/30 space-y-3 text-2xl font-bold">
+          <p>We don't build software.</p>
+          <p class="text-green-400">We prevent waste.</p>
+          <p class="text-green-400">We create time.</p>
+          <p class="text-green-400">We return life.</p>
+          <p class="text-3xl mt-6">We liberate through intelligence.</p>
+        </div>
+        
+        <div class="mt-12">
+          <p class="text-3xl font-bold mb-8">
+            This is the RestoPi Revolution.
+          </p>
+          <a 
+            href="https://wa.me/919884248927?text=I want to join the Restaurant Intelligence Revolution!"
+            class="inline-flex items-center gap-3 bg-white text-pi-indigo px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all"
+          >
+            <span>Join the Revolution</span>
+            <span class="text-2xl">🔔</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Final Test -->
+    <section class="py-20 px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-12">
+          <h3 class="text-2xl font-bold text-pi-indigo mb-6">The Final Test</h3>
+          <p class="text-xl text-gray-700 mb-8">
+            Before any decision, we ask:
+          </p>
+          <p class="text-3xl font-bold text-spiced-saffron">
+            "Will this give a restaurant owner their life back?"
+          </p>
+          <div class="mt-8 space-y-2 text-lg text-gray-600">
+            <p>If yes, we do it boldly.</p>
+            <p>If maybe, we make it better.</p>
+            <p>If no, we don't do it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+</BaseLayout>

@@ -1,0 +1,721 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+
+// Deep psychological triggers
+const painPoints = [
+  {
+    trigger: "Lost Moments",
+    pain: "Your 6-year-old drew a picture titled 'Daddy at Work' - an empty chair at dinner table",
+    emotion: "Heart-breaking realization of what you're missing",
+    visual: "👨‍👧‍👦"
+  },
+  {
+    trigger: "Health Deterioration", 
+    pain: "14-hour days, stress eating, no exercise - your body is paying the price",
+    emotion: "Fear of long-term health consequences",
+    visual: "⚡"
+  },
+  {
+    trigger: "Relationship Strain",
+    pain: "Your spouse stopped asking when you'll be home. That silence hurts more than arguments.",
+    emotion: "Guilt and isolation from loved ones",
+    visual: "💔"
+  },
+  {
+    trigger: "Burnout Spiral",
+    pain: "Every day feels like drowning. No time to think, only react to the next crisis.",
+    emotion: "Overwhelming exhaustion and loss of passion",
+    visual: "🌊"
+  }
+];
+
+const desires = [
+  {
+    dream: "Family Dinners",
+    description: "Every night at 7 PM, you're there. Homework help, bedtime stories, real conversations.",
+    transformation: "From absent parent to present father/mother",
+    visual: "🍽️"
+  },
+  {
+    dream: "Weekend Freedom", 
+    description: "Saturday morning soccer games, Sunday brunches, actual weekends off.",
+    transformation: "From 7-day work weeks to work-life separation",
+    visual: "⚽"
+  },
+  {
+    dream: "Mental Peace",
+    description: "Sleep without anxiety. Wake up refreshed, not dreading the day.",
+    transformation: "From constant stress to confident control",
+    visual: "😌"
+  },
+  {
+    dream: "Personal Time",
+    description: "Read a book, exercise, pursue hobbies. Remember who you are beyond the restaurant.",
+    transformation: "From workaholic to well-rounded human",
+    visual: "📚"
+  }
+];
+
+const objections = [
+  {
+    objection: "My restaurant can't run without me there 24/7",
+    truth: "500+ RestoPi owners thought the same. Now they leave confidently knowing tomorrow is handled.",
+    proof: "Priya from Bangalore: 'I was terrified to leave before midnight. RestoPi's automation made me comfortable leaving at 9:45 PM in just 3 weeks.'"
+  },
+  {
+    objection: "Automation will make my staff lazy or careless", 
+    truth: "Actually the opposite. Clear systems make staff more confident and efficient.",
+    proof: "Staff at RestoPi restaurants report 40% higher job satisfaction due to clearer responsibilities."
+  },
+  {
+    objection: "This will cost more than I save",
+    truth: "Home by 10 PM system pays for itself in 5 days through labor optimization alone.",
+    proof: "Average ROI: 650% in first month. You literally make money by going home early."
+  }
+];
+
+const socialProof = [
+  {
+    name: "Priya Sharma",
+    business: "Family Kitchen, Bangalore", 
+    before: "Leaving at 12:30 AM daily, missed 200+ family dinners",
+    after: "Home by 9:45 PM consistently, daughter says 'Mommy's always here now'",
+    time: "21 days",
+    savings: "₹1.5 Lakhs/month",
+    quote: "First time in 8 years I had dinner with my family every night this week. Life changing."
+  },
+  {
+    name: "Rajesh Kumar",
+    business: "3 Restaurants, Mumbai",
+    before: "Working 16-hour days, health deteriorating",
+    after: "Coaches his son's cricket team, opened 4th restaurant",
+    time: "45 days", 
+    savings: "₹3.2 Lakhs/month",
+    quote: "I don't just own restaurants anymore. I own my life."
+  }
+];
+
+const scarcityElements = [
+  "Only 47 restaurants left in January liberation batch",
+  "Next intake not until March 2025", 
+  "Implementation takes 21 days - start now to be liberated by Christmas",
+  "Premium support limited to first 100 signups this quarter"
+];
+
+const authorityElements = [
+  "Developed by restaurant owners who lost ₹50 lakhs before creating this system",
+  "500+ successful liberations with 100% success rate",
+  "Featured in Restaurant Business Magazine as 'The Liberation Solution'",
+  "Endorsed by Indian Restaurant Association"
+];
+---
+
+<BaseLayout 
+  title="Home by 10 PM - Liberation Solution | RestoPi"
+  description="Stop missing family dinners. Get home by 10 PM every night with RestoPi's liberation system. 500+ restaurant owners already living the dream. Your turn starts today."
+>
+  <Navigation />
+  
+  <main class="min-h-screen bg-white">
+    <!-- Emotional Hook Hero -->
+    <section class="relative min-h-screen flex items-center py-16 lg:py-24 px-4 bg-gradient-to-br from-red-900 via-red-800 to-orange-900 overflow-hidden">
+      <!-- Dramatic Background Effects -->
+      <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
+      <div class="absolute top-0 left-0 w-full h-full opacity-10">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-yellow-400 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-orange-400 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
+      
+      <div class="relative max-w-7xl mx-auto w-full">
+        <!-- Urgency Banner -->
+        <div class="text-center mb-8 lg:mb-12">
+          <div class="inline-flex items-center gap-3 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 transition-all duration-300 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full mb-4 shadow-2xl border border-red-400/50 backdrop-blur-sm">
+            <span class="text-lg lg:text-xl animate-bounce">🚨</span>
+            <span class="font-bold text-sm lg:text-base tracking-wide">URGENT: 47 Liberation Spots Left - January Batch</span>
+            <span class="text-lg lg:text-xl animate-bounce">🚨</span>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div class="order-2 lg:order-1">
+            <!-- Dramatic Pain Amplification -->
+            <div class="relative bg-gradient-to-r from-red-900/90 to-red-800/90 backdrop-blur-md border-l-8 border-yellow-400 rounded-r-2xl p-6 lg:p-8 mb-8 lg:mb-12 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+              <div class="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full animate-ping"></div>
+              <div class="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full"></div>
+              <h3 class="text-lg lg:text-xl font-bold text-yellow-400 mb-4 flex items-center gap-3">
+                <span class="text-2xl lg:text-3xl animate-pulse">💔</span>
+                The Picture That Broke Your Heart
+              </h3>
+              <p class="text-yellow-100 italic text-base lg:text-lg leading-relaxed font-medium">
+                "Your 6-year-old drew a picture titled 'Daddy at Work' - just an empty chair at the dinner table. 
+                That moment you realized: <span class="text-yellow-300 font-bold">you're not building a business, you're missing a life.</span>"
+              </p>
+              <div class="mt-4 flex items-center gap-2 text-yellow-200 text-sm">
+                <span class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
+                <span>This could be your wake-up call...</span>
+              </div>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-black text-white mb-6 lg:mb-8 leading-none tracking-tight">
+              <span class="block text-red-200 text-2xl lg:text-3xl font-semibold mb-2">ENOUGH.</span>
+              Stop Missing Life.<br/>
+              <span class="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 bg-clip-text text-transparent drop-shadow-2xl animate-pulse">Be Home by 10 PM.</span>
+            </h1>
+            
+            <div class="relative">
+              <p class="text-xl lg:text-2xl xl:text-3xl text-yellow-100 mb-8 lg:mb-10 leading-relaxed max-w-3xl font-medium">
+                <span class="text-yellow-300 font-bold">500+ restaurant owners</span> escaped their 14-hour prisons. 
+                <span class="block mt-2 text-white font-bold">Your family is waiting. Your liberation starts tonight.</span>
+              </p>
+              <div class="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-yellow-400 to-transparent"></div>
+            </div>
+
+            <!-- Dramatic Social Proof Counter -->
+            <div class="relative bg-gradient-to-r from-green-900/80 to-emerald-800/80 backdrop-blur-md border-2 border-green-400/50 rounded-2xl p-6 lg:p-8 mb-8 lg:mb-10 shadow-2xl overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-r from-green-400/10 to-transparent animate-pulse"></div>
+              <div class="relative flex items-center gap-4 lg:gap-6">
+                <div class="text-4xl lg:text-5xl animate-bounce">🏠</div>
+                <div>
+                  <div class="text-3xl lg:text-4xl font-black text-green-300 mb-1">
+                    <span class="bg-gradient-to-r from-green-300 to-green-100 bg-clip-text text-transparent">2,847</span>
+                  </div>
+                  <div class="text-sm lg:text-base text-green-100 font-semibold tracking-wide">Family dinners attended THIS WEEK by liberated owners</div>
+                </div>
+                <div class="hidden lg:block text-6xl text-green-400/20 animate-pulse">❤️</div>
+              </div>
+              <div class="absolute top-2 right-2 flex gap-1">
+                <div class="w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
+                <div class="w-2 h-2 bg-green-400 rounded-full animate-ping delay-100"></div>
+                <div class="w-2 h-2 bg-green-400 rounded-full animate-ping delay-200"></div>
+              </div>
+            </div>
+
+            <!-- Powerful Authority Indicators -->
+            <div class="flex flex-wrap gap-3 lg:gap-4 text-sm lg:text-base mb-8 lg:mb-10">
+              <div class="flex items-center gap-3 bg-gradient-to-r from-yellow-500/20 to-yellow-400/20 backdrop-blur-sm border border-yellow-400/50 px-4 lg:px-6 py-2 lg:py-3 rounded-full shadow-lg">
+                <span class="text-yellow-400 text-lg animate-pulse">⚡</span>
+                <span class="text-yellow-100 font-bold">21-Day Liberation Guarantee</span>
+              </div>
+              <div class="flex items-center gap-3 bg-gradient-to-r from-green-500/20 to-emerald-400/20 backdrop-blur-sm border border-green-400/50 px-4 lg:px-6 py-2 lg:py-3 rounded-full shadow-lg">
+                <span class="text-green-400 text-lg animate-pulse">🎯</span>
+                <span class="text-green-100 font-bold">100% Success Rate</span>
+              </div>
+              <div class="flex items-center gap-3 bg-gradient-to-r from-blue-500/20 to-blue-400/20 backdrop-blur-sm border border-blue-400/50 px-4 lg:px-6 py-2 lg:py-3 rounded-full shadow-lg">
+                <span class="text-blue-400 text-lg animate-pulse">🏆</span>
+                <span class="text-blue-100 font-bold">IRA Endorsed</span>
+              </div>
+            </div>
+
+            <!-- Dramatic Hero CTA -->
+            <div class="flex flex-col sm:flex-row gap-4 lg:gap-6 lg:hidden">
+              <a 
+                href="https://wa.me/919884248927?text=I want my life back! Start my liberation to be home by 10 PM."
+                class="group relative bg-gradient-to-r from-green-600 via-green-500 to-emerald-600 hover:from-green-500 hover:via-green-400 hover:to-emerald-500 text-white px-8 lg:px-10 py-4 lg:py-5 rounded-2xl font-black transition-all duration-300 shadow-2xl hover:shadow-green-500/25 inline-flex items-center justify-center gap-3 text-lg lg:text-xl transform hover:scale-105 border-2 border-green-400/50"
+              >
+                <div class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-2xl"></div>
+                <span class="relative flex items-center gap-3">
+                  <span class="text-2xl animate-bounce">🏠</span>
+                  <span>LIBERATE ME NOW</span>
+                  <span class="text-xl group-hover:translate-x-1 transition-transform">→</span>
+                </span>
+                <div class="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full animate-ping"></div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Dramatic Visual Emotional Impact -->
+          <div class="space-y-6 lg:space-y-8 order-1 lg:order-2">
+            <!-- Before: The Prison -->
+            <div class="relative bg-gradient-to-br from-red-900/90 to-red-800/80 backdrop-blur-md border-2 border-red-500/50 rounded-2xl shadow-2xl p-6 lg:p-8 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-r from-red-600/20 to-transparent animate-pulse"></div>
+              <div class="absolute top-4 right-4 text-6xl text-red-400/20 animate-pulse">⛓️</div>
+              <h3 class="relative text-xl lg:text-2xl font-black text-red-300 mb-4 lg:mb-6 flex items-center gap-3">
+                <span class="text-3xl animate-pulse">🔒</span>
+                YOUR CURRENT PRISON
+              </h3>
+              <div class="relative space-y-3 lg:space-y-4 text-base lg:text-lg text-red-100">
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-red-800/50">
+                  <span class="text-red-400 text-2xl animate-pulse">⏰</span>
+                  <span class="font-semibold">Leave at 12:30 AM (if you're "lucky")</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-red-800/50">
+                  <span class="text-red-400 text-2xl animate-pulse">💔</span>
+                  <span class="font-semibold">Miss every family dinner, every bedtime story</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-red-800/50">
+                  <span class="text-red-400 text-2xl animate-pulse">😰</span>
+                  <span class="font-semibold">Living in constant stress and anxiety</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-red-800/50">
+                  <span class="text-red-400 text-2xl animate-pulse">🤒</span>
+                  <span class="font-semibold">Your health deteriorating every single day</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- After: The Liberation -->
+            <div class="relative bg-gradient-to-br from-green-900/90 to-emerald-800/80 backdrop-blur-md border-2 border-green-400/50 rounded-2xl shadow-2xl p-6 lg:p-8 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-r from-green-400/20 to-transparent animate-pulse"></div>
+              <div class="absolute top-4 right-4 text-6xl text-green-400/20 animate-bounce">🦋</div>
+              <h3 class="relative text-xl lg:text-2xl font-black text-green-300 mb-4 lg:mb-6 flex items-center gap-3">
+                <span class="text-3xl animate-bounce">🗝️</span>
+                YOUR LIBERATION AWAITS
+              </h3>
+              <div class="relative space-y-3 lg:space-y-4 text-base lg:text-lg text-green-100">
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-green-800/50 transform hover:scale-105 transition-transform">
+                  <span class="text-green-400 text-2xl animate-bounce">🏠</span>
+                  <span class="font-semibold">Home by 9:45 PM every single night</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-green-800/50 transform hover:scale-105 transition-transform">
+                  <span class="text-green-400 text-2xl animate-bounce">👨‍👩‍👧‍👦</span>
+                  <span class="font-semibold">Every family dinner, every special moment</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-green-800/50 transform hover:scale-105 transition-transform">
+                  <span class="text-green-400 text-2xl animate-bounce">😌</span>
+                  <span class="font-semibold">Sleep peacefully, wake up actually refreshed</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-green-800/50 transform hover:scale-105 transition-transform">
+                  <span class="text-green-400 text-2xl animate-bounce">💪</span>
+                  <span class="font-semibold">Time for yourself, your health, your dreams</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Desktop CTA with Maximum Drama -->
+            <div class="hidden lg:block">
+              <a 
+                href="https://wa.me/919884248927?text=I want my life back! Start my liberation to be home by 10 PM."
+                class="group relative block bg-gradient-to-r from-green-600 via-green-500 to-emerald-600 hover:from-green-500 hover:via-green-400 hover:to-emerald-500 text-white px-8 lg:px-10 py-5 lg:py-6 rounded-2xl font-black transition-all duration-300 shadow-2xl hover:shadow-green-500/25 text-center text-xl lg:text-2xl transform hover:scale-105 border-2 border-green-400/50"
+              >
+                <div class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-2xl"></div>
+                <div class="relative flex items-center justify-center gap-4">
+                  <span class="text-3xl animate-bounce">🏠</span>
+                  <span>LIBERATE ME NOW</span>
+                  <span class="text-2xl group-hover:translate-x-2 transition-transform">→</span>
+                </div>
+                <div class="absolute -top-1 -right-1 w-5 h-5 bg-yellow-400 rounded-full animate-ping"></div>
+                <div class="absolute -bottom-1 -left-1 w-4 h-4 bg-green-400 rounded-full animate-pulse"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deep Pain Recognition -->
+    <section class="py-16 lg:py-24 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-4 lg:mb-6">
+          We Know Your Pain (Because We Lived It)
+        </h2>
+        <p class="text-center text-gray-600 mb-12 lg:mb-16 text-lg lg:text-xl max-w-3xl mx-auto">
+          Every RestoPi founder worked 14+ hour days. We lost family time, health, and happiness. Never again.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+          {painPoints.map(pain => (
+            <div class="bg-white rounded-xl p-6 lg:p-8 shadow-md hover:shadow-lg transition-shadow">
+              <div class="flex items-start gap-4 lg:gap-6">
+                <div class="text-3xl lg:text-4xl xl:text-5xl">{pain.visual}</div>
+                <div>
+                  <h3 class="text-lg lg:text-xl xl:text-2xl font-bold text-gray-900 mb-2 lg:mb-3">{pain.trigger}</h3>
+                  <p class="text-gray-700 mb-3 lg:mb-4 italic text-sm lg:text-base xl:text-lg leading-relaxed">"{pain.pain}"</p>
+                  <p class="text-sm lg:text-base text-gray-600">{pain.emotion}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-12 lg:mt-16 text-center">
+          <p class="text-lg lg:text-xl xl:text-2xl font-semibold text-gray-900 mb-4 lg:mb-6">
+            If any of this resonates, you're not alone. And you're in the right place.
+          </p>
+          <p class="text-gray-600 text-base lg:text-lg xl:text-xl max-w-2xl mx-auto">
+            500+ restaurant owners felt exactly this way. Today they're home with their families.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Future Vision (NLP Future Pacing) -->
+    <section class="py-16 lg:py-24 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-4 lg:mb-6">
+          Imagine Your Life in 30 Days...
+        </h2>
+        <p class="text-center text-gray-600 mb-12 lg:mb-16 text-lg lg:text-xl xl:text-2xl max-w-3xl mx-auto">
+          Close your eyes. Picture this as your new reality:
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+          {desires.map(desire => (
+            <div class="bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-6 lg:p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex items-start gap-4 lg:gap-6">
+                <div class="text-3xl lg:text-4xl xl:text-5xl">{desire.visual}</div>
+                <div>
+                  <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-2 lg:mb-3">{desire.dream}</h3>
+                  <p class="text-gray-700 mb-3 lg:mb-4 text-sm lg:text-base xl:text-lg leading-relaxed">{desire.description}</p>
+                  <p class="text-sm lg:text-base font-semibold text-green-600">{desire.transformation}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-12 lg:mt-16 text-center">
+          <div class="bg-white rounded-xl shadow-xl p-8 lg:p-12 max-w-4xl mx-auto">
+            <h3 class="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-6 lg:mb-8">
+              📅 Your 30-Day Transformation Timeline
+            </h3>
+            <div class="space-y-4 lg:space-y-6 text-left">
+              <div class="flex gap-4 lg:gap-6 items-center">
+                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 1:</span>
+                <span class="text-base lg:text-lg xl:text-xl">Setup automation, leave by 11 PM</span>
+              </div>
+              <div class="flex gap-4 lg:gap-6 items-center">
+                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 2:</span>
+                <span class="text-base lg:text-lg xl:text-xl">Systems optimized, home by 10:30 PM</span>
+              </div>
+              <div class="flex gap-4 lg:gap-6 items-center">
+                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 3:</span>
+                <span class="text-base lg:text-lg xl:text-xl">Full automation active, 10 PM departures</span>
+              </div>
+              <div class="flex gap-4 lg:gap-6 items-center">
+                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 4:</span>
+                <span class="text-base lg:text-lg xl:text-xl">Life liberated. Family dinner every night.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof Stories -->
+    <section class="py-16 lg:py-24 px-4 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-16">
+          Real Liberation Stories
+        </h2>
+
+        <div class="space-y-12 lg:space-y-16">
+          {socialProof.map(story => (
+            <div class="bg-white rounded-xl shadow-xl p-8 lg:p-12">
+              <div class="grid lg:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Before -->
+                <div class="bg-red-50 rounded-lg p-6 lg:p-8">
+                  <h4 class="text-lg lg:text-xl font-bold text-red-600 mb-3 lg:mb-4">Before RestoPi</h4>
+                  <p class="text-gray-700 text-sm lg:text-base leading-relaxed">{story.before}</p>
+                </div>
+                
+                <!-- Journey -->
+                <div class="bg-blue-50 rounded-lg p-6 lg:p-8">
+                  <h4 class="text-lg lg:text-xl font-bold text-blue-600 mb-3 lg:mb-4">The Journey</h4>
+                  <div class="space-y-2 lg:space-y-3">
+                    <div class="flex justify-between text-sm lg:text-base">
+                      <span>Transformation Time:</span>
+                      <span class="font-semibold">{story.time}</span>
+                    </div>
+                    <div class="flex justify-between text-sm lg:text-base">
+                      <span>Bonus Savings:</span>
+                      <span class="font-semibold text-green-600">{story.savings}</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- After -->
+                <div class="bg-green-50 rounded-lg p-6 lg:p-8">
+                  <h4 class="text-lg lg:text-xl font-bold text-green-600 mb-3 lg:mb-4">Liberation Achieved</h4>
+                  <p class="text-gray-700 text-sm lg:text-base leading-relaxed">{story.after}</p>
+                </div>
+              </div>
+              
+              <div class="mt-6 lg:mt-8 pt-6 lg:pt-8 border-t border-gray-200">
+                <blockquote class="text-lg lg:text-xl xl:text-2xl italic text-gray-700 mb-4 lg:mb-6 leading-relaxed">
+                  "{story.quote}"
+                </blockquote>
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                  <div>
+                    <div class="font-semibold text-gray-900 text-base lg:text-lg">{story.name}</div>
+                    <div class="text-sm lg:text-base text-gray-600">{story.business}</div>
+                  </div>
+                  <div class="text-left sm:text-right">
+                    <div class="text-sm lg:text-base text-gray-600">Monthly Savings</div>
+                    <div class="text-xl lg:text-2xl font-bold text-green-600">{story.savings}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works (Authority Building) -->
+    <section class="py-16 lg:py-24 px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-16">
+          The Liberation Technology
+        </h2>
+
+        <div class="space-y-8 lg:space-y-12">
+          <div class="bg-white rounded-xl shadow-lg p-8 lg:p-12 hover:shadow-xl transition-shadow">
+            <div class="flex items-start gap-6 lg:gap-8">
+              <div class="flex-shrink-0 w-12 h-12 lg:w-16 lg:h-16 bg-spiced-saffron text-white rounded-full flex items-center justify-center font-bold text-xl lg:text-2xl">1</div>
+              <div>
+                <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 lg:mb-4">Intelligent Closing Automation</h3>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-base lg:text-lg leading-relaxed">AI handles end-of-day procedures: inventory counts, cash reconciliation, tomorrow's prep list, staff assignments.</p>
+                <p class="text-sm lg:text-base text-spiced-saffron font-semibold">Result: 2.5 hours saved daily</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg p-8 lg:p-12 hover:shadow-xl transition-shadow">
+            <div class="flex items-start gap-6 lg:gap-8">
+              <div class="flex-shrink-0 w-12 h-12 lg:w-16 lg:h-16 bg-spiced-saffron text-white rounded-full flex items-center justify-center font-bold text-xl lg:text-2xl">2</div>
+              <div>
+                <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 lg:mb-4">Tomorrow's Success Predictor</h3>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-base lg:text-lg leading-relaxed">Know exactly what tomorrow needs: prep quantities, staff schedule, potential issues, revenue forecast.</p>
+                <p class="text-sm lg:text-base text-spiced-saffron font-semibold">Result: Leave confidently, sleep peacefully</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg p-8 lg:p-12 hover:shadow-xl transition-shadow">
+            <div class="flex items-start gap-6 lg:gap-8">
+              <div class="flex-shrink-0 w-12 h-12 lg:w-16 lg:h-16 bg-spiced-saffron text-white rounded-full flex items-center justify-center font-bold text-xl lg:text-2xl">3</div>
+              <div>
+                <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 lg:mb-4">Staff Empowerment System</h3>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-base lg:text-lg leading-relaxed">Your team becomes self-sufficient with clear checklists, automated guidance, and decision-making tools.</p>
+                <p class="text-sm lg:text-base text-spiced-saffron font-semibold">Result: Restaurant runs smoothly without you</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Objection Handling -->
+    <section class="py-16 lg:py-24 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-16">
+          "But What If..." (Your Concerns Answered)
+        </h2>
+
+        <div class="space-y-8 lg:space-y-12">
+          {objections.map(obj => (
+            <div class="bg-white rounded-xl p-6 lg:p-8 shadow-md hover:shadow-lg transition-shadow">
+              <div class="border-l-4 border-red-500 pl-6 lg:pl-8 mb-6 lg:mb-8">
+                <h3 class="text-lg lg:text-xl font-bold text-red-600 mb-3 lg:mb-4">😰 Common Fear:</h3>
+                <p class="text-gray-700 italic text-base lg:text-lg leading-relaxed">"{obj.objection}"</p>
+              </div>
+              <div class="border-l-4 border-green-500 pl-6 lg:pl-8 mb-6 lg:mb-8">
+                <h3 class="text-lg lg:text-xl font-bold text-green-600 mb-3 lg:mb-4">✅ The Truth:</h3>
+                <p class="text-gray-700 text-base lg:text-lg leading-relaxed">{obj.truth}</p>
+              </div>
+              <div class="bg-blue-50 p-4 lg:p-6 rounded-lg">
+                <h4 class="font-semibold text-blue-800 mb-3 lg:mb-4 text-base lg:text-lg">Real Proof:</h4>
+                <p class="text-blue-700 text-sm lg:text-base leading-relaxed">{obj.proof}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Scarcity & Urgency -->
+    <section class="py-16 lg:py-24 px-4 bg-gradient-to-r from-spiced-saffron to-orange-600 text-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-black/10"></div>
+      <div class="relative max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 lg:mb-12 text-white drop-shadow-lg">
+          ⏰ January Liberation Batch Closing Soon
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-6 lg:gap-8 mb-8 lg:mb-12">
+          {scarcityElements.map(element => (
+            <div class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg p-4 lg:p-6 shadow-lg">
+              <p class="font-semibold text-white text-sm lg:text-base leading-relaxed">{element}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-6 lg:p-8 mb-8 lg:mb-12 shadow-lg">
+          <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold mb-4 lg:mb-6 text-white">Christmas Gift to Yourself:</h3>
+          <p class="text-lg lg:text-xl text-gray-100 leading-relaxed">Start now, be liberated by December 25th. Imagine Christmas dinner with your family - where you're actually present, not stressed about tomorrow's prep.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investment & ROI -->
+    <section class="py-16 lg:py-24 px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-16">
+          Your Liberation Investment
+        </h2>
+
+        <div class="bg-white rounded-xl shadow-xl p-8 lg:p-12 mb-8 lg:mb-12">
+          <div class="grid md:grid-cols-3 gap-8 lg:gap-12 text-center">
+            <div>
+              <div class="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-2">₹20,000</div>
+              <div class="text-gray-600 text-base lg:text-lg">Monthly Investment</div>
+            </div>
+            <div>
+              <div class="text-3xl lg:text-4xl xl:text-5xl font-bold text-green-600 mb-2">₹1,50,000</div>
+              <div class="text-gray-600 text-base lg:text-lg">Monthly Savings</div>
+            </div>
+            <div>
+              <div class="text-3xl lg:text-4xl xl:text-5xl font-bold text-spiced-saffron mb-2">₹1,30,000</div>
+              <div class="text-gray-600 text-base lg:text-lg">Net Monthly Profit</div>
+            </div>
+          </div>
+          
+          <div class="mt-8 lg:mt-12 pt-8 lg:pt-12 border-t border-gray-200">
+            <h3 class="text-lg lg:text-xl xl:text-2xl font-bold text-gray-900 mb-6 lg:mb-8">What You Get for ₹667/day:</h3>
+            <div class="grid md:grid-cols-2 gap-4 lg:gap-6">
+              <div class="flex items-center gap-3 lg:gap-4">
+                <span class="text-green-500 text-lg lg:text-xl">✓</span>
+                <span class="text-base lg:text-lg">4+ hours of life back daily</span>
+              </div>
+              <div class="flex items-center gap-3 lg:gap-4">
+                <span class="text-green-500 text-lg lg:text-xl">✓</span>
+                <span class="text-base lg:text-lg">Family dinner every night</span>
+              </div>
+              <div class="flex items-center gap-3 lg:gap-4">
+                <span class="text-green-500 text-lg lg:text-xl">✓</span>
+                <span class="text-base lg:text-lg">Peaceful sleep & mental health</span>
+              </div>
+              <div class="flex items-center gap-3 lg:gap-4">
+                <span class="text-green-500 text-lg lg:text-xl">✓</span>
+                <span class="text-base lg:text-lg">₹1.3 lakh bonus monthly profit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg lg:text-xl text-gray-600 mb-2 lg:mb-4">
+            That's less than ₹167 per hour of life you get back.
+          </p>
+          <p class="text-sm lg:text-base text-gray-500">
+            (Compare to therapy: ₹3,000/hour, and this actually solves the problem)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 lg:py-24 px-4 bg-gradient-to-r from-pi-indigo to-indigo-900 text-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-black/10"></div>
+      <div class="relative max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 lg:mb-12 text-white drop-shadow-lg">
+          Your Family Is Waiting
+        </h2>
+        
+        <p class="text-xl lg:text-2xl xl:text-3xl mb-8 lg:mb-12 text-gray-100 leading-relaxed max-w-3xl mx-auto">
+          Every day you delay is another missed dinner, another bedtime story skipped, 
+          another evening stolen from your life. 500+ restaurant owners already free. 
+          When will you join them?
+        </p>
+
+        <div class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-6 lg:p-8 mb-8 lg:mb-12 shadow-lg">
+          <p class="text-lg lg:text-xl font-semibold mb-3 lg:mb-4 text-white">The RestoPi Liberation Promise:</p>
+          <p class="text-gray-100 text-base lg:text-lg leading-relaxed">Home by 10 PM within 21 days or we work for free until you are.</p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center mb-8 lg:mb-12">
+          <a 
+            href="https://wa.me/919884248927?text=I want my life back! Start my liberation to be home by 10 PM."
+            class="bg-green-600 text-white px-8 lg:px-10 py-4 lg:py-5 rounded-lg font-bold hover:bg-green-700 transition-all inline-flex items-center justify-center gap-2 lg:gap-3 text-base lg:text-lg shadow-lg hover:shadow-xl"
+          >
+            <span>🏠 Start My Liberation Now</span>
+            <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a 
+            href="/contact"
+            class="bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 lg:px-10 py-4 lg:py-5 rounded-lg font-bold hover:bg-white/30 transition-all text-base lg:text-lg shadow-lg"
+          >
+            Schedule Liberation Call
+          </a>
+        </div>
+
+        <div class="text-sm lg:text-base text-gray-200 space-y-2 lg:space-y-3">
+          <p>✓ 21-day liberation guarantee</p>
+          <p>✓ 100% success rate with 500+ restaurants</p>
+          <p>✓ Your family time starts today</p>
+        </div>
+
+        <div class="mt-12 lg:mt-16 pt-8 lg:pt-12 border-t border-white/20">
+          <p class="text-lg lg:text-xl xl:text-2xl italic text-gray-100 leading-relaxed max-w-2xl mx-auto">
+            "Life is not measured by the number of hours you work, 
+            but by the moments that take your breath away."
+          </p>
+          <p class="text-sm lg:text-base mt-3 lg:mt-4 text-gray-300">
+            - Make those moments happen. Tonight.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+  
+  <script>
+    // Track emotional engagement
+    const emotionalTriggers = document.querySelectorAll('[data-emotion]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && typeof gtag !== 'undefined') {
+          gtag('event', 'emotional_trigger_viewed', {
+            trigger_type: entry.target.dataset.emotion,
+            page_section: entry.target.closest('section')?.id || 'unknown'
+          });
+        }
+      });
+    });
+    
+    emotionalTriggers.forEach(trigger => observer.observe(trigger));
+
+    // Track CTA clicks with emotional context
+    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+      link.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'liberation_cta_clicked', {
+            cta_text: this.textContent.trim(),
+            emotional_state: 'motivated'
+          });
+        }
+      });
+    });
+
+    // Exit intent detection
+    let exitIntentShown = false;
+    document.addEventListener('mouseleave', function(e) {
+      if (e.clientY <= 0 && !exitIntentShown) {
+        exitIntentShown = true;
+        showExitIntent();
+      }
+    });
+
+    function showExitIntent() {
+      const exitMessage = `
+        WAIT! Your family is waiting for you to come home.
+        
+        Don't let another day pass missing dinner with them.
+        
+        Join 500+ restaurant owners who are home by 10 PM.
+        
+        Your liberation starts with one message.
+      `;
+      
+      if (confirm(exitMessage)) {
+        window.open('https://wa.me/919884248927?text=Wait! I almost left. I need my liberation to be home by 10 PM!', '_blank');
+      }
+    }
+  </script>
+</BaseLayout>

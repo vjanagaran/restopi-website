@@ -1,0 +1,399 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+
+const contactMethods = [
+  {
+    icon: "💬",
+    title: "WhatsApp (Fastest)",
+    description: "Get instant response",
+    action: "Message Now",
+    link: "https://wa.me/919884248927?text=Hi, I need help with RestoPi!",
+    responseTime: "< 5 minutes"
+  },
+  {
+    icon: "📞",
+    title: "Call Us",
+    description: "Speak with our team",
+    action: "Call +91 98842-48927",
+    link: "tel:+919884248927",
+    responseTime: "Immediate"
+  },
+  {
+    icon: "📧",
+    title: "Email",
+    description: "For detailed queries",
+    action: "hello@restopi.com",
+    link: "mailto:hello@restopi.com",
+    responseTime: "< 2 hours"
+  }
+];
+
+const offices = [
+  {
+    city: "Bangalore (HQ)",
+    address: "WeWork, Embassy Tech Village, Outer Ring Road, Bangalore 560103",
+    timing: "Mon-Sat: 9 AM - 8 PM"
+  },
+  {
+    city: "Mumbai",
+    address: "WeWork, BKC, Bandra East, Mumbai 400051",
+    timing: "Mon-Sat: 9 AM - 8 PM"
+  },
+  {
+    city: "Delhi NCR",
+    address: "WeWork, Cyber City, Gurugram 122002",
+    timing: "Mon-Sat: 9 AM - 8 PM"
+  }
+];
+
+const reasons = [
+  "See how RestoPi can save you ₹2 lakhs monthly",
+  "Get personalized ROI calculation for your restaurant",
+  "Understand our 4-hour implementation process",
+  "Meet our customer success team",
+  "Get answers to all your questions"
+];
+---
+
+<BaseLayout 
+  title="Contact RestoPi - Start Saving ₹2 Lakhs Monthly Today"
+  description="Contact RestoPi to start saving ₹2 lakhs monthly. WhatsApp, call, or schedule a demo. Get response in 5 minutes. 500+ restaurants already transformed."
+>
+  <Navigation />
+  
+  <main class="min-h-screen bg-white">
+    <!-- Hero Section -->
+    <section class="relative py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <div class="max-w-6xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full mb-6">
+          <span>🔥</span>
+          <span class="font-semibold">3 restaurants started saving ₹2 lakhs in the last hour</span>
+        </div>
+        
+        <h1 class="text-5xl md:text-6xl font-bold text-pi-indigo mb-6">
+          Your ₹2 Lakh Savings Start with One Message
+        </h1>
+        
+        <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          500+ restaurant owners reached out. 100% saw results in 7 days. 
+          Your turn takes just 30 seconds.
+        </p>
+      </div>
+    </section>
+
+    <!-- Quick Contact Methods -->
+    <section class="py-12 px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-6">
+          {contactMethods.map((method) => (
+            <a 
+              href={method.link}
+              class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all transform hover:-translate-y-1 block"
+            >
+              <div class="text-4xl mb-4">{method.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">{method.title}</h3>
+              <p class="text-gray-600 mb-4">{method.description}</p>
+              <div class="flex justify-between items-center">
+                <span class="text-spiced-saffron font-semibold">{method.action}</span>
+                <span class="text-sm text-gray-500">⏱ {method.responseTime}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+        
+        <div class="mt-8 text-center">
+          <p class="text-gray-600">
+            <span class="font-semibold">Pro tip:</span> WhatsApp gets you the fastest response. 
+            Our team is online right now!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-20 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+          <h2 class="text-3xl font-bold text-pi-indigo mb-6">
+            Schedule Your Restaurant Liberation Call
+          </h2>
+          
+          <p class="text-gray-600 mb-8">
+            15-minute call. See exactly how much you'll save. No sales pressure.
+          </p>
+          
+          <form id="contactForm" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                  Your Name *
+                </label>
+                <input 
+                  type="text" 
+                  name="name" 
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-spiced-saffron focus:border-transparent"
+                  placeholder="Rajesh Kumar"
+                />
+              </div>
+              
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                  Restaurant Name *
+                </label>
+                <input 
+                  type="text" 
+                  name="restaurant" 
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-spiced-saffron focus:border-transparent"
+                  placeholder="The Great Indian Kitchen"
+                />
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                  Phone Number *
+                </label>
+                <input 
+                  type="tel" 
+                  name="phone" 
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-spiced-saffron focus:border-transparent"
+                  placeholder="+91 98765 43210"
+                />
+              </div>
+              
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                  Email
+                </label>
+                <input 
+                  type="email" 
+                  name="email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-spiced-saffron focus:border-transparent"
+                  placeholder="rajesh@restaurant.com"
+                />
+              </div>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-2">
+                Number of Outlets *
+              </label>
+              <select 
+                name="outlets" 
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-spiced-saffron focus:border-transparent"
+              >
+                <option value="">Select number of outlets</option>
+                <option value="1">1 outlet</option>
+                <option value="2-3">2-3 outlets</option>
+                <option value="4-5">4-5 outlets</option>
+                <option value="6-10">6-10 outlets</option>
+                <option value="10+">10+ outlets</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-2">
+                Monthly Revenue Range
+              </label>
+              <select 
+                name="revenue"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-spiced-saffron focus:border-transparent"
+              >
+                <option value="">Select monthly revenue</option>
+                <option value="< ₹10 lakhs">Less than ₹10 lakhs</option>
+                <option value="₹10-25 lakhs">₹10-25 lakhs</option>
+                <option value="₹25-50 lakhs">₹25-50 lakhs</option>
+                <option value="₹50 lakhs - 1 crore">₹50 lakhs - 1 crore</option>
+                <option value="> ₹1 crore">More than ₹1 crore</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-2">
+                What's your biggest challenge? *
+              </label>
+              <textarea 
+                name="challenge" 
+                required
+                rows="3"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-spiced-saffron focus:border-transparent"
+                placeholder="Food waste, long hours, unpredictable demand, staff management..."
+              ></textarea>
+            </div>
+            
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+              <p class="text-green-700 font-semibold">
+                🎯 After submitting, you'll receive:
+              </p>
+              <ul class="mt-2 space-y-1 text-green-600 text-sm">
+                <li>• Personalized savings calculation within 5 minutes</li>
+                <li>• WhatsApp message to schedule your call</li>
+                <li>• Free waste audit checklist</li>
+              </ul>
+            </div>
+            
+            <button 
+              type="submit"
+              class="w-full bg-spiced-saffron text-white py-4 px-6 rounded-lg font-bold hover:bg-orange-700 transition-all text-lg"
+            >
+              Get My Savings Calculation →
+            </button>
+            
+            <p class="text-center text-sm text-gray-500">
+              By submitting, you agree to receive WhatsApp messages from RestoPi. 
+              100% spam-free, unsubscribe anytime.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Schedule Section -->
+    <section class="py-20 px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-pi-indigo mb-12">
+          What Happens in Your 15-Minute Call?
+        </h2>
+        
+        <div class="bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-8">
+          <ol class="space-y-4">
+            {reasons.map((reason, index) => (
+              <li class="flex items-start gap-4">
+                <span class="flex-shrink-0 w-8 h-8 bg-spiced-saffron text-white rounded-full flex items-center justify-center font-bold">
+                  {index + 1}
+                </span>
+                <span class="text-gray-700 text-lg">{reason}</span>
+              </li>
+            ))}
+          </ol>
+          
+          <div class="mt-8 text-center">
+            <p class="text-gray-600 italic">
+              "15 minutes with RestoPi saved me ₹2.5 lakhs monthly. Best call I ever made."
+            </p>
+            <p class="text-sm text-gray-500 mt-2">
+              - Amit Shah, Owner of 3 restaurants in Mumbai
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Office Locations -->
+    <section class="py-20 px-4 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-pi-indigo mb-12">
+          Visit Our Offices
+        </h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          {offices.map((office) => (
+            <div class="bg-white rounded-xl shadow-md p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">{office.city}</h3>
+              <p class="text-gray-600 mb-2">{office.address}</p>
+              <p class="text-sm text-spiced-saffron font-semibold">{office.timing}</p>
+            </div>
+          ))}
+        </div>
+        
+        <p class="text-center text-gray-600 mt-8">
+          <span class="font-semibold">Note:</span> We recommend scheduling a call first. 
+          Our team is often at client restaurants helping with implementations.
+        </p>
+      </div>
+    </section>
+
+    <!-- Emergency Support -->
+    <section class="py-12 px-4 bg-red-50">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-2xl font-bold text-red-600 mb-4">
+          🚨 Existing Customer? Need Urgent Support?
+        </h3>
+        <p class="text-gray-700 mb-6">
+          Our success team is available 24/7 for all active RestoPi restaurants
+        </p>
+        <a 
+          href="https://wa.me/919884248927?text=URGENT: I need immediate support!"
+          class="inline-flex items-center gap-2 bg-red-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-red-700 transition-all"
+        >
+          <span>Get Emergency Support</span>
+          <span>→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 px-4 bg-gradient-to-r from-pi-indigo to-indigo-800">
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <h2 class="text-4xl font-bold mb-6">
+          Every Hour = ₹347 Lost to Waste
+        </h2>
+        <p class="text-xl mb-8 opacity-90">
+          While you're thinking, your competitors are already saving ₹2 lakhs monthly.
+        </p>
+        
+        <a 
+          href="https://wa.me/919884248927?text=I want to stop losing money to waste. Help me save ₹2 lakhs monthly!"
+          class="inline-flex items-center gap-3 bg-white text-pi-indigo px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all"
+        >
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          <span>Message on WhatsApp Now</span>
+        </a>
+        
+        <p class="mt-6 text-sm opacity-75">
+          Average response time: 3 minutes
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+  
+  <script>
+    // Handle form submission
+    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(e.target as HTMLFormElement);
+      const data = Object.fromEntries(formData);
+      
+      // Create WhatsApp message
+      const message = 'New RestoPi Inquiry: ' +
+        'Name: ' + data.name + ', ' +
+        'Restaurant: ' + data.restaurant + ', ' +
+        'Phone: ' + data.phone + ', ' +
+        'Email: ' + (data.email || 'Not provided') + ', ' +
+        'Outlets: ' + data.outlets + ', ' +
+        'Revenue: ' + (data.revenue || 'Not provided') + ', ' +
+        'Challenge: ' + data.challenge;
+      
+      // Send to WhatsApp
+      const whatsappUrl = 'https://wa.me/919884248927?text=' + encodeURIComponent(message);
+      
+      // Track conversion
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'generate_lead', {
+          currency: 'INR',
+          value: 39999
+        });
+      }
+      
+      // Redirect to WhatsApp
+      window.open(whatsappUrl, '_blank');
+      
+      // Show success message
+      alert('Thank you! We are redirecting you to WhatsApp for instant support.');
+    });
+  </script>
+</BaseLayout>

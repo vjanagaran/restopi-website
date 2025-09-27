@@ -1,0 +1,719 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+
+// Empire building psychology - scaling fear, control chaos, authority domination
+const painPoints = [
+  {
+    trigger: "Control Chaos",
+    pain: "You're running between 5 outlets daily like a headless chicken. No central view, no real control. You're managing chaos, not an empire.",
+    emotion: "Feeling overwhelmed by your own success",
+    visual: "🤹‍♂️"
+  },
+  {
+    trigger: "Scaling Nightmare", 
+    pain: "Each new outlet multiplies your problems. What worked for 1 restaurant is breaking down at 5. Growth has become your enemy.",
+    emotion: "Success is destroying your sanity",
+    visual: "📈"
+  },
+  {
+    trigger: "Information Blackout",
+    pain: "Outlet 3 is bleeding money while Outlet 1 is thriving. You find out weeks later. Your empire is full of invisible problems.",
+    emotion: "Flying blind across multiple locations",
+    visual: "🙈"
+  },
+  {
+    trigger: "Operational Anarchy",
+    pain: "Each outlet operates differently. Different processes, different standards, different results. You built 5 different businesses, not 1 scalable system.",
+    emotion: "Watching your brand standards crumble",
+    visual: "⚔️"
+  }
+];
+
+const desires = [
+  {
+    dream: "Empire Control",
+    description: "Manage all outlets from one screen. See everything, control everything. Your restaurant empire runs with military precision.",
+    transformation: "From chaos manager to empire commander",
+    visual: "👑"
+  },
+  {
+    dream: "Scaling Mastery", 
+    description: "Each new outlet adds profit, not problems. Scale from 5 to 50 outlets without breaking a sweat. Growth becomes your superpower.",
+    transformation: "From scaling nightmare to expansion expert",
+    visual: "🚀"
+  },
+  {
+    dream: "Unified Intelligence",
+    description: "One dashboard shows all outlets' performance. Problems detected before they cost money. Your empire has eyes everywhere.",
+    transformation: "From information blackout to total visibility",
+    visual: "👁️"
+  },
+  {
+    dream: "Operational Domination",
+    description: "Every outlet operates exactly the same way. Same standards, same systems, same excellence. Your brand is unbreakable.",
+    transformation: "From anarchy to unified excellence",
+    visual: "⚡"
+  }
+];
+
+const objections = [
+  {
+    objection: "Each outlet has unique local needs that can't be centralized",
+    truth: "RestoPi adapts to local needs while maintaining central control. Best of both worlds.",
+    proof: "Pizza Paradise manages 5 outlets across 3 cities with local customization but central oversight."
+  },
+  {
+    objection: "My managers won't like being monitored centrally", 
+    truth: "Managers love RestoPi because it gives them support and removes guesswork. They perform better with clarity.",
+    proof: "Franchise managers report 60% less stress and 40% better performance after RestoPi implementation."
+  },
+  {
+    objection: "Centralized systems are too rigid for restaurant operations",
+    truth: "RestoPi is flexible where needed, rigid where it matters. You control what gets standardized.",
+    proof: "Chain owners report 90% faster new outlet onboarding with RestoPi's flexible standardization."
+  }
+];
+
+const socialProof = [
+  {
+    name: "Franchise Owner",
+    business: "Pizza Paradise Chain, NCR", 
+    before: "Visiting each outlet daily, chaos management",
+    after: "Managing all from single dashboard, profit focus",
+    time: "30 days",
+    savings: "₹4.2 Lakhs/month",
+    quote: "Managing 5 outlets is now easier than managing 1 outlet was before RestoPi."
+  },
+  {
+    name: "Vikash Kumar",
+    business: "Taste Empire, 7 Locations",
+    before: "Different systems per outlet, constant firefighting",
+    after: "Unified operations, predictable growth",
+    time: "42 days", 
+    savings: "₹6.8 Lakhs/month",
+    quote: "RestoPi turned my chaotic multi-outlet nightmare into a smooth-running empire. Scaling is now my competitive advantage."
+  }
+];
+
+const scarcityElements = [
+  "Only 8 multi-outlet spots left in January Empire Management Batch",
+  "Next intake not until October 2025", 
+  "Implementation takes 45 days - start now for Q1 optimization",
+  "Empire-level analytics reserved for chains with 3+ outlets only"
+];
+
+const authorityElements = [
+  "Developed by franchise owners who lost ₹80 lakhs to multi-outlet chaos",
+  "50+ restaurant chains now operate with unified intelligence",
+  "Featured in Franchise India as 'The Empire Management Solution'",
+  "Endorsed by National Restaurant Chain Association"
+];
+---
+
+<BaseLayout 
+  title="Multi-Outlet Restaurant Management - Empire Control | RestoPi"
+  description="Command your restaurant empire. AI-powered multi-outlet management that saved 50+ chains ₹4.2 lakhs monthly. Unified control, scalable growth, total domination."
+>
+  <Navigation />
+  
+  <main class="min-h-screen bg-white">
+    <!-- Empire Control Hero -->
+    <section class="relative min-h-screen flex items-center py-16 lg:py-24 px-4 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 overflow-hidden">
+      <!-- Dramatic Background Effects -->
+      <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
+      <div class="absolute top-0 left-0 w-full h-full opacity-20">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-indigo-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
+      
+      <div class="relative max-w-7xl mx-auto w-full">
+        <!-- Urgency Banner -->
+        <div class="text-center mb-8 lg:mb-12">
+          <div class="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 transition-all duration-300 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full mb-4 shadow-2xl border border-purple-400/50 backdrop-blur-sm">
+            <span class="text-lg lg:text-xl animate-bounce">🏪</span>
+            <span class="font-bold text-sm lg:text-base tracking-wide">URGENT: 8 Empire Management Spots Left</span>
+            <span class="text-lg lg:text-xl animate-bounce">🏪</span>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div class="order-2 lg:order-1">
+            <!-- Dramatic Empire Chaos Story -->
+            <div class="relative bg-gradient-to-r from-purple-900/90 to-purple-800/90 backdrop-blur-md border-l-8 border-gold-400 rounded-r-2xl p-6 lg:p-8 mb-8 lg:mb-12 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+              <div class="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full animate-ping"></div>
+              <div class="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full"></div>
+              <h3 class="text-lg lg:text-xl font-bold text-yellow-400 mb-4 flex items-center gap-3">
+                <span class="text-2xl lg:text-3xl animate-pulse">🤹‍♂️</span>
+                The Multi-Outlet Chaos Destroying Your Empire
+              </h3>
+              <p class="text-yellow-100 italic text-base lg:text-lg leading-relaxed font-medium">
+                "Outlet 3 is losing ₹50,000 monthly. You discover it 6 weeks later during your 'surprise' visit. 
+                <span class="text-yellow-300 font-bold">Your empire is full of invisible failures.</span>"
+              </p>
+              <div class="mt-4 flex items-center gap-2 text-yellow-200 text-sm">
+                <span class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
+                <span>How many outlets are bleeding without you knowing?</span>
+              </div>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-black text-white mb-6 lg:mb-8 leading-none tracking-tight">
+              <span class="block text-purple-200 text-2xl lg:text-3xl font-semibold mb-2">COMMAND YOUR</span>
+              Restaurant Empire.<br/>
+              <span class="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 bg-clip-text text-transparent drop-shadow-2xl animate-pulse">Total Domination.</span>
+            </h1>
+            
+            <div class="relative">
+              <p class="text-xl lg:text-2xl xl:text-3xl text-yellow-100 mb-8 lg:mb-10 leading-relaxed max-w-3xl font-medium">
+                <span class="text-yellow-300 font-bold">50+ restaurant chains</span> unified their empires for total control. 
+                <span class="block mt-2 text-white font-bold">Every day without central command, profits leak away.</span>
+              </p>
+              <div class="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-yellow-400 to-transparent"></div>
+            </div>
+
+            <!-- Dramatic Empire Counter -->
+            <div class="relative bg-gradient-to-r from-yellow-900/80 to-yellow-800/80 backdrop-blur-md border-2 border-yellow-400/50 rounded-2xl p-6 lg:p-8 mb-8 lg:mb-10 shadow-2xl overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-transparent animate-pulse"></div>
+              <div class="relative flex items-center gap-4 lg:gap-6">
+                <div class="text-4xl lg:text-5xl animate-bounce">👑</div>
+                <div>
+                  <div class="text-3xl lg:text-4xl font-black text-yellow-300 mb-1">
+                    <span class="bg-gradient-to-r from-yellow-300 to-yellow-100 bg-clip-text text-transparent">347 Outlets</span>
+                  </div>
+                  <div class="text-sm lg:text-base text-yellow-100 font-semibold tracking-wide">Now under unified RestoPi empire management</div>
+                </div>
+                <div class="hidden lg:block text-6xl text-yellow-400/20 animate-pulse">🏰</div>
+              </div>
+              <div class="absolute top-2 right-2 flex gap-1">
+                <div class="w-2 h-2 bg-yellow-400 rounded-full animate-ping"></div>
+                <div class="w-2 h-2 bg-yellow-400 rounded-full animate-ping delay-100"></div>
+                <div class="w-2 h-2 bg-yellow-400 rounded-full animate-ping delay-200"></div>
+              </div>
+            </div>
+
+            <!-- Powerful Authority Indicators -->
+            <div class="flex flex-wrap gap-3 lg:gap-4 text-sm lg:text-base mb-8 lg:mb-10">
+              <div class="flex items-center gap-3 bg-gradient-to-r from-yellow-500/20 to-yellow-400/20 backdrop-blur-sm border border-yellow-400/50 px-4 lg:px-6 py-2 lg:py-3 rounded-full shadow-lg">
+                <span class="text-yellow-400 text-lg animate-pulse">⚡</span>
+                <span class="text-yellow-100 font-bold">Empire Control</span>
+              </div>
+              <div class="flex items-center gap-3 bg-gradient-to-r from-purple-500/20 to-purple-400/20 backdrop-blur-sm border border-purple-400/50 px-4 lg:px-6 py-2 lg:py-3 rounded-full shadow-lg">
+                <span class="text-purple-400 text-lg animate-pulse">🎯</span>
+                <span class="text-purple-100 font-bold">Unified Intelligence</span>
+              </div>
+              <div class="flex items-center gap-3 bg-gradient-to-r from-indigo-500/20 to-indigo-400/20 backdrop-blur-sm border border-indigo-400/50 px-4 lg:px-6 py-2 lg:py-3 rounded-full shadow-lg">
+                <span class="text-indigo-400 text-lg animate-pulse">🏆</span>
+                <span class="text-indigo-100 font-bold">Chain Association Endorsed</span>
+              </div>
+            </div>
+
+            <!-- Dramatic Hero CTA -->
+            <div class="flex flex-col sm:flex-row gap-4 lg:gap-6 lg:hidden">
+              <a 
+                href="https://wa.me/919884248927?text=COMMAND MY EMPIRE! I need unified multi-outlet management and total control."
+                class="group relative bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-400 hover:to-yellow-500 text-black px-8 lg:px-10 py-4 lg:py-5 rounded-2xl font-black transition-all duration-300 shadow-2xl hover:shadow-yellow-500/25 inline-flex items-center justify-center gap-3 text-lg lg:text-xl transform hover:scale-105 border-2 border-yellow-400/50"
+              >
+                <div class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-2xl"></div>
+                <span class="relative flex items-center gap-3">
+                  <span class="text-2xl animate-bounce">👑</span>
+                  <span>COMMAND MY EMPIRE</span>
+                  <span class="text-xl group-hover:translate-x-1 transition-transform">→</span>
+                </span>
+                <div class="absolute -top-1 -right-1 w-4 h-4 bg-purple-400 rounded-full animate-ping"></div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Dramatic Visual Empire Impact -->
+          <div class="space-y-6 lg:space-y-8 order-1 lg:order-2">
+            <!-- Before: The Chaos -->
+            <div class="relative bg-gradient-to-br from-red-900/90 to-red-800/80 backdrop-blur-md border-2 border-red-500/50 rounded-2xl shadow-2xl p-6 lg:p-8 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-r from-red-600/20 to-transparent animate-pulse"></div>
+              <div class="absolute top-4 right-4 text-6xl text-red-400/20 animate-pulse">⚔️</div>
+              <h3 class="relative text-xl lg:text-2xl font-black text-red-300 mb-4 lg:mb-6 flex items-center gap-3">
+                <span class="text-3xl animate-pulse">🤹‍♂️</span>
+                YOUR OUTLET CHAOS
+              </h3>
+              <div class="relative space-y-3 lg:space-y-4 text-base lg:text-lg text-red-100">
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-red-800/50">
+                  <span class="text-red-400 text-2xl animate-pulse">🏃‍♂️</span>
+                  <span class="font-semibold">Running between outlets like headless chicken</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-red-800/50">
+                  <span class="text-red-400 text-2xl animate-pulse">🙈</span>
+                  <span class="font-semibold">Blind to outlet problems for weeks</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-red-800/50">
+                  <span class="text-red-400 text-2xl animate-pulse">📈</span>
+                  <span class="font-semibold">Growth becomes your worst enemy</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-red-800/50">
+                  <span class="text-red-400 text-2xl animate-pulse">⚔️</span>
+                  <span class="font-semibold">Each outlet operating in anarchy</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- After: The Empire -->
+            <div class="relative bg-gradient-to-br from-yellow-900/90 to-yellow-800/80 backdrop-blur-md border-2 border-yellow-400/50 rounded-2xl shadow-2xl p-6 lg:p-8 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-transparent animate-pulse"></div>
+              <div class="absolute top-4 right-4 text-6xl text-yellow-400/20 animate-bounce">🏰</div>
+              <h3 class="relative text-xl lg:text-2xl font-black text-yellow-300 mb-4 lg:mb-6 flex items-center gap-3">
+                <span class="text-3xl animate-bounce">👑</span>
+                YOUR RESTAURANT EMPIRE
+              </h3>
+              <div class="relative space-y-3 lg:space-y-4 text-base lg:text-lg text-yellow-100">
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-yellow-800/50 transform hover:scale-105 transition-transform">
+                  <span class="text-yellow-400 text-2xl animate-bounce">👁️</span>
+                  <span class="font-semibold">Command all outlets from one screen</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-yellow-800/50 transform hover:scale-105 transition-transform">
+                  <span class="text-yellow-400 text-2xl animate-bounce">🚀</span>
+                  <span class="font-semibold">Scale from 5 to 50 without breaking sweat</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-yellow-800/50 transform hover:scale-105 transition-transform">
+                  <span class="text-yellow-400 text-2xl animate-bounce">📊</span>
+                  <span class="font-semibold">Problems detected before they cost money</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-yellow-800/50 transform hover:scale-105 transition-transform">
+                  <span class="text-yellow-400 text-2xl animate-bounce">⚡</span>
+                  <span class="font-semibold">Every outlet operates with same excellence</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Desktop CTA with Maximum Drama -->
+            <div class="hidden lg:block">
+              <a 
+                href="https://wa.me/919884248927?text=COMMAND MY EMPIRE! I need unified multi-outlet management and total control."
+                class="group relative block bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-400 hover:to-yellow-500 text-black px-8 lg:px-10 py-5 lg:py-6 rounded-2xl font-black transition-all duration-300 shadow-2xl hover:shadow-yellow-500/25 text-center text-xl lg:text-2xl transform hover:scale-105 border-2 border-yellow-400/50"
+              >
+                <div class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-2xl"></div>
+                <div class="relative flex items-center justify-center gap-4">
+                  <span class="text-3xl animate-bounce">👑</span>
+                  <span>COMMAND MY EMPIRE</span>
+                  <span class="text-2xl group-hover:translate-x-2 transition-transform">→</span>
+                </div>
+                <div class="absolute -top-1 -right-1 w-5 h-5 bg-purple-400 rounded-full animate-ping"></div>
+                <div class="absolute -bottom-1 -left-1 w-4 h-4 bg-yellow-400 rounded-full animate-pulse"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deep Empire Pain Recognition -->
+    <section class="py-16 lg:py-24 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-4 lg:mb-6">
+          The Multi-Outlet Nightmares Destroying Your Empire
+        </h2>
+        <p class="text-center text-gray-600 mb-12 lg:mb-16 text-lg lg:text-xl max-w-3xl mx-auto">
+          Every RestoPi empire builder faced the same chaos. Control was an illusion until centralization.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+          {painPoints.map(pain => (
+            <div class="bg-white rounded-xl p-6 lg:p-8 shadow-md hover:shadow-lg transition-shadow">
+              <div class="flex items-start gap-4 lg:gap-6">
+                <div class="text-3xl lg:text-4xl xl:text-5xl">{pain.visual}</div>
+                <div>
+                  <h3 class="text-lg lg:text-xl xl:text-2xl font-bold text-gray-900 mb-2 lg:mb-3">{pain.trigger}</h3>
+                  <p class="text-gray-700 mb-3 lg:mb-4 italic text-sm lg:text-base xl:text-lg leading-relaxed">"{pain.pain}"</p>
+                  <p class="text-sm lg:text-base text-gray-600">{pain.emotion}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-12 lg:mt-16 text-center">
+          <p class="text-lg lg:text-xl xl:text-2xl font-semibold text-gray-900 mb-4 lg:mb-6">
+            Tired of your empire controlling you instead of you controlling it?
+          </p>
+          <p class="text-gray-600 text-base lg:text-lg xl:text-xl max-w-2xl mx-auto">
+            50+ restaurant chains unified their operations. Today it's your turn to command.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Future Vision (Empire Domination) -->
+    <section class="py-16 lg:py-24 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-4 lg:mb-6">
+          Imagine Total Empire Control...
+        </h2>
+        <p class="text-center text-gray-600 mb-12 lg:mb-16 text-lg lg:text-xl xl:text-2xl max-w-3xl mx-auto">
+          Picture your restaurant empire in 45 days:
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+          {desires.map(desire => (
+            <div class="bg-gradient-to-r from-purple-50 to-indigo-100 rounded-xl p-6 lg:p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex items-start gap-4 lg:gap-6">
+                <div class="text-3xl lg:text-4xl xl:text-5xl">{desire.visual}</div>
+                <div>
+                  <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-2 lg:mb-3">{desire.dream}</h3>
+                  <p class="text-gray-700 mb-3 lg:mb-4 text-sm lg:text-base xl:text-lg leading-relaxed">{desire.description}</p>
+                  <p class="text-sm lg:text-base font-semibold text-purple-600">{desire.transformation}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-12 lg:mt-16 text-center">
+          <div class="bg-white rounded-xl shadow-xl p-8 lg:p-12 max-w-4xl mx-auto">
+            <h3 class="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-6 lg:mb-8">
+              👑 Your 45-Day Empire Unification Timeline
+            </h3>
+            <div class="space-y-4 lg:space-y-6 text-left">
+              <div class="flex gap-4 lg:gap-6 items-center">
+                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 1-2:</span>
+                <span class="text-base lg:text-lg xl:text-xl">All outlets connected, central dashboard established</span>
+              </div>
+              <div class="flex gap-4 lg:gap-6 items-center">
+                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 3-4:</span>
+                <span class="text-base lg:text-lg xl:text-xl">Unified processes deployed, standards synchronized</span>
+              </div>
+              <div class="flex gap-4 lg:gap-6 items-center">
+                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 5-6:</span>
+                <span class="text-base lg:text-lg xl:text-xl">Empire analytics active, optimization automated</span>
+              </div>
+              <div class="flex gap-4 lg:gap-6 items-center">
+                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 7:</span>
+                <span class="text-base lg:text-lg xl:text-xl">Total empire control achieved. Scale without limits.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof Stories -->
+    <section class="py-16 lg:py-24 px-4 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-16">
+          Real Empire Management Success
+        </h2>
+
+        <div class="space-y-12 lg:space-y-16">
+          {socialProof.map(story => (
+            <div class="bg-white rounded-xl shadow-xl p-8 lg:p-12">
+              <div class="grid lg:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Before -->
+                <div class="bg-red-50 rounded-lg p-6 lg:p-8">
+                  <h4 class="text-lg lg:text-xl font-bold text-red-600 mb-3 lg:mb-4">Before RestoPi</h4>
+                  <p class="text-gray-700 text-sm lg:text-base leading-relaxed">{story.before}</p>
+                </div>
+                
+                <!-- Journey -->
+                <div class="bg-blue-50 rounded-lg p-6 lg:p-8">
+                  <h4 class="text-lg lg:text-xl font-bold text-blue-600 mb-3 lg:mb-4">The Transformation</h4>
+                  <div class="space-y-2 lg:space-y-3">
+                    <div class="flex justify-between text-sm lg:text-base">
+                      <span>Time to Control:</span>
+                      <span class="font-semibold">{story.time}</span>
+                    </div>
+                    <div class="flex justify-between text-sm lg:text-base">
+                      <span>Empire Savings:</span>
+                      <span class="font-semibold text-green-600">{story.savings}</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- After -->
+                <div class="bg-green-50 rounded-lg p-6 lg:p-8">
+                  <h4 class="text-lg lg:text-xl font-bold text-green-600 mb-3 lg:mb-4">Empire Commanded</h4>
+                  <p class="text-gray-700 text-sm lg:text-base leading-relaxed">{story.after}</p>
+                </div>
+              </div>
+              
+              <div class="mt-6 lg:mt-8 pt-6 lg:pt-8 border-t border-gray-200">
+                <blockquote class="text-lg lg:text-xl xl:text-2xl italic text-gray-700 mb-4 lg:mb-6 leading-relaxed">
+                  "{story.quote}"
+                </blockquote>
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                  <div>
+                    <div class="font-semibold text-gray-900 text-base lg:text-lg">{story.name}</div>
+                    <div class="text-sm lg:text-base text-gray-600">{story.business}</div>
+                  </div>
+                  <div class="text-left sm:text-right">
+                    <div class="text-sm lg:text-base text-gray-600">Monthly Empire Savings</div>
+                    <div class="text-xl lg:text-2xl font-bold text-green-600">{story.savings}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works (Empire Technology) -->
+    <section class="py-16 lg:py-24 px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-16">
+          The Empire Management Technology
+        </h2>
+
+        <div class="space-y-8 lg:space-y-12">
+          <div class="bg-white rounded-xl shadow-lg p-8 lg:p-12 hover:shadow-xl transition-shadow">
+            <div class="flex items-start gap-6 lg:gap-8">
+              <div class="flex-shrink-0 w-12 h-12 lg:w-16 lg:h-16 bg-spiced-saffron text-white rounded-full flex items-center justify-center font-bold text-xl lg:text-2xl">1</div>
+              <div>
+                <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 lg:mb-4">Unified Command Dashboard</h3>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-base lg:text-lg leading-relaxed">One screen showing all outlets' real-time performance. Revenue, costs, problems, opportunities - everything visible instantly.</p>
+                <p class="text-sm lg:text-base text-spiced-saffron font-semibold">Result: Complete empire visibility and control from anywhere</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg p-8 lg:p-12 hover:shadow-xl transition-shadow">
+            <div class="flex items-start gap-6 lg:gap-8">
+              <div class="flex-shrink-0 w-12 h-12 lg:w-16 lg:h-16 bg-spiced-saffron text-white rounded-full flex items-center justify-center font-bold text-xl lg:text-2xl">2</div>
+              <div>
+                <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 lg:mb-4">Standardization Engine</h3>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-base lg:text-lg leading-relaxed">Deploy identical processes across all outlets while maintaining local flexibility. One system, consistent results everywhere.</p>
+                <p class="text-sm lg:text-base text-spiced-saffron font-semibold">Result: Brand consistency with operational excellence</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg p-8 lg:p-12 hover:shadow-xl transition-shadow">
+            <div class="flex items-start gap-6 lg:gap-8">
+              <div class="flex-shrink-0 w-12 h-12 lg:w-16 lg:h-16 bg-spiced-saffron text-white rounded-full flex items-center justify-center font-bold text-xl lg:text-2xl">3</div>
+              <div>
+                <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 lg:mb-4">Cross-Outlet Intelligence</h3>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-base lg:text-lg leading-relaxed">AI compares outlet performance, identifies best practices, automatically shares learnings across your empire.</p>
+                <p class="text-sm lg:text-base text-spiced-saffron font-semibold">Result: Every outlet performs at the level of your best outlet</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Objection Handling -->
+    <section class="py-16 lg:py-24 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-16">
+          "But What If..." (Your Concerns Answered)
+        </h2>
+
+        <div class="space-y-8 lg:space-y-12">
+          {objections.map(obj => (
+            <div class="bg-white rounded-xl p-6 lg:p-8 shadow-md hover:shadow-lg transition-shadow">
+              <div class="border-l-4 border-red-500 pl-6 lg:pl-8 mb-6 lg:mb-8">
+                <h3 class="text-lg lg:text-xl font-bold text-red-600 mb-3 lg:mb-4">😰 Common Fear:</h3>
+                <p class="text-gray-700 italic text-base lg:text-lg leading-relaxed">"{obj.objection}"</p>
+              </div>
+              <div class="border-l-4 border-green-500 pl-6 lg:pl-8 mb-6 lg:mb-8">
+                <h3 class="text-lg lg:text-xl font-bold text-green-600 mb-3 lg:mb-4">✅ The Truth:</h3>
+                <p class="text-gray-700 text-base lg:text-lg leading-relaxed">{obj.truth}</p>
+              </div>
+              <div class="bg-blue-50 p-4 lg:p-6 rounded-lg">
+                <h4 class="font-semibold text-blue-800 mb-3 lg:mb-4 text-base lg:text-lg">Real Proof:</h4>
+                <p class="text-blue-700 text-sm lg:text-base leading-relaxed">{obj.proof}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Scarcity & Urgency -->
+    <section class="py-16 lg:py-24 px-4 bg-gradient-to-r from-spiced-saffron to-orange-600 text-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-black/10"></div>
+      <div class="relative max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 lg:mb-12 text-white drop-shadow-lg">
+          ⏰ January Empire Management Batch Closing
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-6 lg:gap-8 mb-8 lg:mb-12">
+          {scarcityElements.map(element => (
+            <div class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg p-4 lg:p-6 shadow-lg">
+              <p class="font-semibold text-white text-sm lg:text-base leading-relaxed">{element}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-6 lg:p-8 mb-8 lg:mb-12 shadow-lg">
+          <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold mb-4 lg:mb-6 text-white">Command Your Empire:</h3>
+          <p class="text-lg lg:text-xl text-gray-100 leading-relaxed">Every day without central control, your empire bleeds efficiency. Start now, dominate by Q1.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investment & ROI -->
+    <section class="py-16 lg:py-24 px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-16">
+          Your Empire Management Investment
+        </h2>
+
+        <div class="bg-white rounded-xl shadow-xl p-8 lg:p-12 mb-8 lg:mb-12">
+          <div class="grid md:grid-cols-3 gap-8 lg:gap-12 text-center">
+            <div>
+              <div class="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-2">₹40,000</div>
+              <div class="text-gray-600 text-base lg:text-lg">Monthly Investment</div>
+            </div>
+            <div>
+              <div class="text-3xl lg:text-4xl xl:text-5xl font-bold text-green-600 mb-2">₹4,00,000</div>
+              <div class="text-gray-600 text-base lg:text-lg">Monthly Savings</div>
+            </div>
+            <div>
+              <div class="text-3xl lg:text-4xl xl:text-5xl font-bold text-spiced-saffron mb-2">₹3,60,000</div>
+              <div class="text-gray-600 text-base lg:text-lg">Net Empire Profit</div>
+            </div>
+          </div>
+          
+          <div class="mt-8 lg:mt-12 pt-8 lg:pt-12 border-t border-gray-200">
+            <h3 class="text-lg lg:text-xl xl:text-2xl font-bold text-gray-900 mb-6 lg:mb-8">What You Get for ₹1,333/day:</h3>
+            <div class="grid md:grid-cols-2 gap-4 lg:gap-6">
+              <div class="flex items-center gap-3 lg:gap-4">
+                <span class="text-green-500 text-lg lg:text-xl">✓</span>
+                <span class="text-base lg:text-lg">Unified command dashboard</span>
+              </div>
+              <div class="flex items-center gap-3 lg:gap-4">
+                <span class="text-green-500 text-lg lg:text-xl">✓</span>
+                <span class="text-base lg:text-lg">Cross-outlet intelligence system</span>
+              </div>
+              <div class="flex items-center gap-3 lg:gap-4">
+                <span class="text-green-500 text-lg lg:text-xl">✓</span>
+                <span class="text-base lg:text-lg">Standardization and scale engine</span>
+              </div>
+              <div class="flex items-center gap-3 lg:gap-4">
+                <span class="text-green-500 text-lg lg:text-xl">✓</span>
+                <span class="text-base lg:text-lg">₹3.6 lakh empire profit monthly</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg lg:text-xl text-gray-600 mb-2 lg:mb-4">
+            That's ₹1.85 per minute of empire management.
+          </p>
+          <p class="text-sm lg:text-base text-gray-500">
+            (Compare to franchise consultant: ₹15,000/hour, and this works 24/7)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 lg:py-24 px-4 bg-gradient-to-r from-pi-indigo to-indigo-900 text-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-black/10"></div>
+      <div class="relative max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 lg:mb-12 text-white drop-shadow-lg">
+          Command Your Empire Now
+        </h2>
+        
+        <p class="text-xl lg:text-2xl xl:text-3xl mb-8 lg:mb-12 text-gray-100 leading-relaxed max-w-3xl mx-auto">
+          Every day without central control, your empire bleeds efficiency. 50+ chains unified their operations. 
+          When will you stop managing chaos and start commanding success?
+        </p>
+
+        <div class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-6 lg:p-8 mb-8 lg:mb-12 shadow-lg">
+          <p class="text-lg lg:text-xl font-semibold mb-3 lg:mb-4 text-white">The RestoPi Empire Management Promise:</p>
+          <p class="text-gray-100 text-base lg:text-lg leading-relaxed">Achieve unified empire control within 45 days or we work for free until you do.</p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center mb-8 lg:mb-12">
+          <a 
+            href="https://wa.me/919884248927?text=COMMAND MY EMPIRE! I need unified multi-outlet management and total control."
+            class="bg-green-600 text-white px-8 lg:px-10 py-4 lg:py-5 rounded-lg font-bold hover:bg-green-700 transition-all inline-flex items-center justify-center gap-2 lg:gap-3 text-base lg:text-lg shadow-lg hover:shadow-xl"
+          >
+            <span>👑 COMMAND MY EMPIRE NOW</span>
+            <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a 
+            href="/contact"
+            class="bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 lg:px-10 py-4 lg:py-5 rounded-lg font-bold hover:bg-white/30 transition-all text-base lg:text-lg shadow-lg"
+          >
+            Schedule Empire Audit
+          </a>
+        </div>
+
+        <div class="text-sm lg:text-base text-gray-200 space-y-2 lg:space-y-3">
+          <p>✓ 45-day empire unification guarantee</p>
+          <p>✓ Unified intelligence with 347 outlets managed</p>
+          <p>✓ Your empire domination starts today</p>
+        </div>
+
+        <div class="mt-12 lg:mt-16 pt-8 lg:pt-12 border-t border-white/20">
+          <p class="text-lg lg:text-xl xl:text-2xl italic text-gray-100 leading-relaxed max-w-2xl mx-auto">
+            "True power isn't owning many restaurants. It's commanding them as one."
+          </p>
+          <p class="text-sm lg:text-base mt-3 lg:mt-4 text-gray-300">
+            - Stop managing chaos. Start commanding success.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+  
+  <script>
+    // Track empire consciousness
+    const empireElements = document.querySelectorAll('[data-empire]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && typeof gtag !== 'undefined') {
+          gtag('event', 'empire_management_viewed', {
+            empire_type: entry.target.dataset.empire,
+            page_section: entry.target.closest('section')?.id || 'unknown'
+          });
+        }
+      });
+    });
+    
+    empireElements.forEach(element => observer.observe(element));
+
+    // Track CTAs with empire context
+    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+      link.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'multi_outlet_management_cta_clicked', {
+            cta_text: this.textContent.trim(),
+            empire_urgency: 'high'
+          });
+        }
+      });
+    });
+
+    // Empire chaos exit intent
+    let exitIntentShown = false;
+    document.addEventListener('mouseleave', function(e) {
+      if (e.clientY <= 0 && !exitIntentShown) {
+        exitIntentShown = true;
+        showEmpireExitIntent();
+      }
+    });
+
+    function showEmpireExitIntent() {
+      const exitMessage = `
+        WAIT! Your empire is running in chaos.
+        
+        Don't let another day pass without central control.
+        
+        Join 50+ restaurant chains with unified management.
+        
+        Command your empire with one message.
+      `;
+      
+      if (confirm(exitMessage)) {
+        window.open('https://wa.me/919884248927?text=WAIT! Command my empire. I need unified multi-outlet control NOW!', '_blank');
+      }
+    }
+  </script>
+</BaseLayout>

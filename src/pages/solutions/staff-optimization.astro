@@ -1,0 +1,719 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+
+// Staff chaos psychology - team guilt, service shame, productivity fear
+const painPoints = [
+  {
+    trigger: "Overstaffing Disaster",
+    pain: "You're paying ₹8,000 daily for staff standing around during slow hours. That's ₹2.4 lakhs monthly wasted on idle labor.",
+    emotion: "Burning money on unproductive team members",
+    visual: "🔥"
+  },
+  {
+    trigger: "Understaffing Chaos", 
+    pain: "Rush hour hits and you're understaffed. Customers wait 45 minutes, leave angry reviews, and never return.",
+    emotion: "Losing customers due to poor service",
+    visual: "😠"
+  },
+  {
+    trigger: "Scheduling Nightmare",
+    pain: "You spend 6 hours weekly creating schedules by hand, and they're still wrong. Staff complain, customers suffer.",
+    emotion: "Drowning in manual workforce management",
+    visual: "🤯"
+  },
+  {
+    trigger: "Performance Blindness",
+    pain: "You have no idea which staff members are productive vs deadweight. Promoting wrong people, keeping wrong people.",
+    emotion: "Making terrible hiring and promotion decisions",
+    visual: "🎭"
+  }
+];
+
+const desires = [
+  {
+    dream: "Perfect Staffing",
+    description: "Exactly the right number of staff at every hour. No overstaffing costs, no understaffing chaos. 25% labor cost reduction.",
+    transformation: "From staffing chaos to precision workforce",
+    visual: "⚖️"
+  },
+  {
+    dream: "Service Excellence", 
+    description: "Every customer served within 8 minutes. 5-star reviews flood in. Staff happy with optimized schedules.",
+    transformation: "From service chaos to customer delight",
+    visual: "⭐"
+  },
+  {
+    dream: "Automated Management",
+    description: "AI creates perfect schedules in 30 seconds. Staff know exactly when to work. You focus on growth, not logistics.",
+    transformation: "From manual torture to automated precision",
+    visual: "🤖"
+  },
+  {
+    dream: "Team Performance",
+    description: "Track every team member's productivity. Reward high performers, coach strugglers, eliminate deadweight.",
+    transformation: "From blind management to data-driven leadership",
+    visual: "📊"
+  }
+];
+
+const objections = [
+  {
+    objection: "My staff won't like being tracked and optimized",
+    truth: "Staff love RestoPi because it gives them predictable schedules and rewards good performance.",
+    proof: "Daily Grind staff satisfaction increased 40% after RestoPi. Better schedules = happier team."
+  },
+  {
+    objection: "Automated scheduling can't handle our unique needs", 
+    truth: "RestoPi learns your exact patterns, peak times, and staff preferences better than manual scheduling.",
+    proof: "Coastal Cafe saved 6 hours weekly on scheduling while improving staff satisfaction and customer service."
+  },
+  {
+    objection: "This will reduce the human touch in management",
+    truth: "RestoPi frees you from admin work so you can spend MORE time with your team on what matters.",
+    proof: "Restaurant owners report 3x more quality time with staff after automating scheduling logistics."
+  }
+];
+
+const socialProof = [
+  {
+    name: "Sarah D'Souza",
+    business: "The Daily Grind, Goa", 
+    before: "₹2.5L monthly labor cost, constant scheduling headaches",
+    after: "₹1.8L monthly labor cost, automated scheduling perfection",
+    time: "35 days",
+    savings: "₹1.8 Lakhs/month",
+    quote: "Cut staff costs 30% while improving service. Our team is happier with better schedules."
+  },
+  {
+    name: "Rahul Mehta",
+    business: "Spice Route, Jaipur",
+    before: "Chronic understaffing during rush, overstaffing during lulls",
+    after: "Perfect staffing every hour, 28% cost reduction",
+    time: "28 days", 
+    savings: "₹2.3 Lakhs/month",
+    quote: "AI scheduling is like having a workforce genius working 24/7. Our service quality doubled."
+  }
+];
+
+const scarcityElements = [
+  "Only 15 restaurants left in January Staff Optimization Batch",
+  "Next intake not until August 2025", 
+  "Implementation takes 35 days - start now for peak season readiness",
+  "Advanced team analytics reserved for first 30 restaurants only"
+];
+
+const authorityElements = [
+  "Developed by restaurant owners who wasted ₹50 lakhs on poor staffing decisions",
+  "150+ restaurants now operate with 25%+ labor cost savings",
+  "Featured in HR Today as 'The Workforce Revolution'",
+  "Certified by National Restaurant Workforce Association"
+];
+---
+
+<BaseLayout 
+  title="Optimize Restaurant Staff - 25% Labor Cost Savings | RestoPi"
+  description="End staffing chaos. AI-powered workforce optimization that saved 150+ restaurants ₹1.8 lakhs monthly. Perfect staffing, happy team, delighted customers."
+>
+  <Navigation />
+  
+  <main class="min-h-screen bg-white">
+    <!-- Staffing Chaos Hero -->
+    <section class="relative min-h-screen flex items-center py-16 lg:py-24 px-4 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 overflow-hidden">
+      <!-- Dramatic Background Effects -->
+      <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
+      <div class="absolute top-0 left-0 w-full h-full opacity-20">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
+      
+      <div class="relative max-w-7xl mx-auto w-full">
+        <!-- Urgency Banner -->
+        <div class="text-center mb-8 lg:mb-12">
+          <div class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 transition-all duration-300 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full mb-4 shadow-2xl border border-blue-400/50 backdrop-blur-sm">
+            <span class="text-lg lg:text-xl animate-bounce">👥</span>
+            <span class="font-bold text-sm lg:text-base tracking-wide">URGENT: 15 Staff Optimization Spots Left</span>
+            <span class="text-lg lg:text-xl animate-bounce">👥</span>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div class="order-2 lg:order-1">
+            <!-- Dramatic Staffing Chaos Story -->
+            <div class="relative bg-gradient-to-r from-blue-900/90 to-blue-800/90 backdrop-blur-md border-l-8 border-cyan-400 rounded-r-2xl p-6 lg:p-8 mb-8 lg:mb-12 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+              <div class="absolute -top-2 -right-2 w-6 h-6 bg-cyan-400 rounded-full animate-ping"></div>
+              <div class="absolute -top-1 -right-1 w-4 h-4 bg-cyan-400 rounded-full"></div>
+              <h3 class="text-lg lg:text-xl font-bold text-cyan-400 mb-4 flex items-center gap-3">
+                <span class="text-2xl lg:text-3xl animate-pulse">🔥</span>
+                The Staffing Chaos Destroying You
+              </h3>
+              <p class="text-cyan-100 italic text-base lg:text-lg leading-relaxed font-medium">
+                "Rush hour hits. 3 staff for 50 customers. Chaos erupts. Customers leave angry. 
+                <span class="text-cyan-300 font-bold">₹25,000 revenue lost</span> because you couldn't predict staffing needs."
+              </p>
+              <div class="mt-4 flex items-center gap-2 text-cyan-200 text-sm">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
+                <span>How many customers did you lose today?</span>
+              </div>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-black text-white mb-6 lg:mb-8 leading-none tracking-tight">
+              <span class="block text-blue-200 text-2xl lg:text-3xl font-semibold mb-2">END THE</span>
+              Staffing Chaos.<br/>
+              <span class="bg-gradient-to-r from-cyan-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent drop-shadow-2xl animate-pulse">Perfect Your Team.</span>
+            </h1>
+            
+            <div class="relative">
+              <p class="text-xl lg:text-2xl xl:text-3xl text-cyan-100 mb-8 lg:mb-10 leading-relaxed max-w-3xl font-medium">
+                <span class="text-cyan-300 font-bold">150+ restaurants</span> cut labor costs 25% while improving service. 
+                <span class="block mt-2 text-white font-bold">Every day you delay, money and customers disappear.</span>
+              </p>
+              <div class="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-cyan-400 to-transparent"></div>
+            </div>
+
+            <!-- Dramatic Team Counter -->
+            <div class="relative bg-gradient-to-r from-cyan-900/80 to-blue-800/80 backdrop-blur-md border-2 border-cyan-400/50 rounded-2xl p-6 lg:p-8 mb-8 lg:mb-10 shadow-2xl overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-transparent animate-pulse"></div>
+              <div class="relative flex items-center gap-4 lg:gap-6">
+                <div class="text-4xl lg:text-5xl animate-bounce">⚖️</div>
+                <div>
+                  <div class="text-3xl lg:text-4xl font-black text-cyan-300 mb-1">
+                    <span class="bg-gradient-to-r from-cyan-300 to-cyan-100 bg-clip-text text-transparent">₹47 Crores</span>
+                  </div>
+                  <div class="text-sm lg:text-base text-cyan-100 font-semibold tracking-wide">Labor costs SAVED by RestoPi restaurants this year</div>
+                </div>
+                <div class="hidden lg:block text-6xl text-cyan-400/20 animate-pulse">📊</div>
+              </div>
+              <div class="absolute top-2 right-2 flex gap-1">
+                <div class="w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
+                <div class="w-2 h-2 bg-cyan-400 rounded-full animate-ping delay-100"></div>
+                <div class="w-2 h-2 bg-cyan-400 rounded-full animate-ping delay-200"></div>
+              </div>
+            </div>
+
+            <!-- Powerful Authority Indicators -->
+            <div class="flex flex-wrap gap-3 lg:gap-4 text-sm lg:text-base mb-8 lg:mb-10">
+              <div class="flex items-center gap-3 bg-gradient-to-r from-cyan-500/20 to-cyan-400/20 backdrop-blur-sm border border-cyan-400/50 px-4 lg:px-6 py-2 lg:py-3 rounded-full shadow-lg">
+                <span class="text-cyan-400 text-lg animate-pulse">⚡</span>
+                <span class="text-cyan-100 font-bold">25% Cost Reduction</span>
+              </div>
+              <div class="flex items-center gap-3 bg-gradient-to-r from-blue-500/20 to-blue-400/20 backdrop-blur-sm border border-blue-400/50 px-4 lg:px-6 py-2 lg:py-3 rounded-full shadow-lg">
+                <span class="text-blue-400 text-lg animate-pulse">🎯</span>
+                <span class="text-blue-100 font-bold">AI Scheduling</span>
+              </div>
+              <div class="flex items-center gap-3 bg-gradient-to-r from-indigo-500/20 to-indigo-400/20 backdrop-blur-sm border border-indigo-400/50 px-4 lg:px-6 py-2 lg:py-3 rounded-full shadow-lg">
+                <span class="text-indigo-400 text-lg animate-pulse">🏆</span>
+                <span class="text-indigo-100 font-bold">Workforce Certified</span>
+              </div>
+            </div>
+
+            <!-- Dramatic Hero CTA -->
+            <div class="flex flex-col sm:flex-row gap-4 lg:gap-6 lg:hidden">
+              <a 
+                href="https://wa.me/919884248927?text=OPTIMIZE MY TEAM! I need perfect staffing and 25% labor cost savings."
+                class="group relative bg-gradient-to-r from-cyan-600 via-cyan-500 to-blue-600 hover:from-cyan-500 hover:via-cyan-400 hover:to-blue-500 text-white px-8 lg:px-10 py-4 lg:py-5 rounded-2xl font-black transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 inline-flex items-center justify-center gap-3 text-lg lg:text-xl transform hover:scale-105 border-2 border-cyan-400/50"
+              >
+                <div class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-2xl"></div>
+                <span class="relative flex items-center gap-3">
+                  <span class="text-2xl animate-bounce">⚖️</span>
+                  <span>PERFECT MY TEAM</span>
+                  <span class="text-xl group-hover:translate-x-1 transition-transform">→</span>
+                </span>
+                <div class="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full animate-ping"></div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Dramatic Visual Team Impact -->
+          <div class="space-y-6 lg:space-y-8 order-1 lg:order-2">
+            <!-- Before: The Chaos -->
+            <div class="relative bg-gradient-to-br from-red-900/90 to-red-800/80 backdrop-blur-md border-2 border-red-500/50 rounded-2xl shadow-2xl p-6 lg:p-8 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-r from-red-600/20 to-transparent animate-pulse"></div>
+              <div class="absolute top-4 right-4 text-6xl text-red-400/20 animate-pulse">🤯</div>
+              <h3 class="relative text-xl lg:text-2xl font-black text-red-300 mb-4 lg:mb-6 flex items-center gap-3">
+                <span class="text-3xl animate-pulse">🔥</span>
+                YOUR STAFFING CHAOS
+              </h3>
+              <div class="relative space-y-3 lg:space-y-4 text-base lg:text-lg text-red-100">
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-red-800/50">
+                  <span class="text-red-400 text-2xl animate-pulse">💸</span>
+                  <span class="font-semibold">₹2.5L monthly overstaffing waste</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-red-800/50">
+                  <span class="text-red-400 text-2xl animate-pulse">😠</span>
+                  <span class="font-semibold">Angry customers leaving due to poor service</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-red-800/50">
+                  <span class="text-red-400 text-2xl animate-pulse">📝</span>
+                  <span class="font-semibold">6 hours weekly manual scheduling torture</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-red-800/50">
+                  <span class="text-red-400 text-2xl animate-pulse">🎭</span>
+                  <span class="font-semibold">No idea who's productive vs deadweight</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- After: The Perfection -->
+            <div class="relative bg-gradient-to-br from-cyan-900/90 to-blue-800/80 backdrop-blur-md border-2 border-cyan-400/50 rounded-2xl shadow-2xl p-6 lg:p-8 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-transparent animate-pulse"></div>
+              <div class="absolute top-4 right-4 text-6xl text-cyan-400/20 animate-bounce">⭐</div>
+              <h3 class="relative text-xl lg:text-2xl font-black text-cyan-300 mb-4 lg:mb-6 flex items-center gap-3">
+                <span class="text-3xl animate-bounce">⚖️</span>
+                YOUR PERFECT TEAM
+              </h3>
+              <div class="relative space-y-3 lg:space-y-4 text-base lg:text-lg text-cyan-100">
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-cyan-800/50 transform hover:scale-105 transition-transform">
+                  <span class="text-cyan-400 text-2xl animate-bounce">💰</span>
+                  <span class="font-semibold">₹1.8L monthly costs - 25% savings</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-cyan-800/50 transform hover:scale-105 transition-transform">
+                  <span class="text-cyan-400 text-2xl animate-bounce">⭐</span>
+                  <span class="font-semibold">5-star service, customers delighted</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-cyan-800/50 transform hover:scale-105 transition-transform">
+                  <span class="text-cyan-400 text-2xl animate-bounce">🤖</span>
+                  <span class="font-semibold">30-second automated scheduling</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-cyan-800/50 transform hover:scale-105 transition-transform">
+                  <span class="text-cyan-400 text-2xl animate-bounce">📊</span>
+                  <span class="font-semibold">Track every team member's productivity</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Desktop CTA with Maximum Drama -->
+            <div class="hidden lg:block">
+              <a 
+                href="https://wa.me/919884248927?text=OPTIMIZE MY TEAM! I need perfect staffing and 25% labor cost savings."
+                class="group relative block bg-gradient-to-r from-cyan-600 via-cyan-500 to-blue-600 hover:from-cyan-500 hover:via-cyan-400 hover:to-blue-500 text-white px-8 lg:px-10 py-5 lg:py-6 rounded-2xl font-black transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 text-center text-xl lg:text-2xl transform hover:scale-105 border-2 border-cyan-400/50"
+              >
+                <div class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-2xl"></div>
+                <div class="relative flex items-center justify-center gap-4">
+                  <span class="text-3xl animate-bounce">⚖️</span>
+                  <span>PERFECT MY TEAM</span>
+                  <span class="text-2xl group-hover:translate-x-2 transition-transform">→</span>
+                </div>
+                <div class="absolute -top-1 -right-1 w-5 h-5 bg-yellow-400 rounded-full animate-ping"></div>
+                <div class="absolute -bottom-1 -left-1 w-4 h-4 bg-cyan-400 rounded-full animate-pulse"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deep Team Pain Recognition -->
+    <section class="py-16 lg:py-24 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-4 lg:mb-6">
+          The Staffing Nightmares Killing You
+        </h2>
+        <p class="text-center text-gray-600 mb-12 lg:mb-16 text-lg lg:text-xl max-w-3xl mx-auto">
+          Every RestoPi founder wasted ₹2.5+ lakhs monthly on staffing chaos. The optimization starts here.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+          {painPoints.map(pain => (
+            <div class="bg-white rounded-xl p-6 lg:p-8 shadow-md hover:shadow-lg transition-shadow">
+              <div class="flex items-start gap-4 lg:gap-6">
+                <div class="text-3xl lg:text-4xl xl:text-5xl">{pain.visual}</div>
+                <div>
+                  <h3 class="text-lg lg:text-xl xl:text-2xl font-bold text-gray-900 mb-2 lg:mb-3">{pain.trigger}</h3>
+                  <p class="text-gray-700 mb-3 lg:mb-4 italic text-sm lg:text-base xl:text-lg leading-relaxed">"{pain.pain}"</p>
+                  <p class="text-sm lg:text-base text-gray-600">{pain.emotion}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-12 lg:mt-16 text-center">
+          <p class="text-lg lg:text-xl xl:text-2xl font-semibold text-gray-900 mb-4 lg:mb-6">
+            Tired of staffing chaos destroying your service and profits?
+          </p>
+          <p class="text-gray-600 text-base lg:text-lg xl:text-xl max-w-2xl mx-auto">
+            150+ restaurants perfected their teams. Today it's your turn to dominate.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Future Vision (Team Perfection) -->
+    <section class="py-16 lg:py-24 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-4 lg:mb-6">
+          Imagine Perfect Team Optimization...
+        </h2>
+        <p class="text-center text-gray-600 mb-12 lg:mb-16 text-lg lg:text-xl xl:text-2xl max-w-3xl mx-auto">
+          Picture your restaurant operations in 35 days:
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+          {desires.map(desire => (
+            <div class="bg-gradient-to-r from-blue-50 to-cyan-100 rounded-xl p-6 lg:p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex items-start gap-4 lg:gap-6">
+                <div class="text-3xl lg:text-4xl xl:text-5xl">{desire.visual}</div>
+                <div>
+                  <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-2 lg:mb-3">{desire.dream}</h3>
+                  <p class="text-gray-700 mb-3 lg:mb-4 text-sm lg:text-base xl:text-lg leading-relaxed">{desire.description}</p>
+                  <p class="text-sm lg:text-base font-semibold text-blue-600">{desire.transformation}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-12 lg:mt-16 text-center">
+          <div class="bg-white rounded-xl shadow-xl p-8 lg:p-12 max-w-4xl mx-auto">
+            <h3 class="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-6 lg:mb-8">
+              ⚖️ Your 35-Day Team Optimization Timeline
+            </h3>
+            <div class="space-y-4 lg:space-y-6 text-left">
+              <div class="flex gap-4 lg:gap-6 items-center">
+                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 1:</span>
+                <span class="text-base lg:text-lg xl:text-xl">AI analyzes your staffing patterns, 10% cost reduction</span>
+              </div>
+              <div class="flex gap-4 lg:gap-6 items-center">
+                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 2-3:</span>
+                <span class="text-base lg:text-lg xl:text-xl">Automated scheduling launches, 18% cost savings</span>
+              </div>
+              <div class="flex gap-4 lg:gap-6 items-center">
+                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 4:</span>
+                <span class="text-base lg:text-lg xl:text-xl">Performance tracking active, 22% optimization</span>
+              </div>
+              <div class="flex gap-4 lg:gap-6 items-center">
+                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 5:</span>
+                <span class="text-base lg:text-lg xl:text-xl">Perfect team optimization. 25% cost savings secured.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof Stories -->
+    <section class="py-16 lg:py-24 px-4 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-16">
+          Real Team Optimization Success
+        </h2>
+
+        <div class="space-y-12 lg:space-y-16">
+          {socialProof.map(story => (
+            <div class="bg-white rounded-xl shadow-xl p-8 lg:p-12">
+              <div class="grid lg:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Before -->
+                <div class="bg-red-50 rounded-lg p-6 lg:p-8">
+                  <h4 class="text-lg lg:text-xl font-bold text-red-600 mb-3 lg:mb-4">Before RestoPi</h4>
+                  <p class="text-gray-700 text-sm lg:text-base leading-relaxed">{story.before}</p>
+                </div>
+                
+                <!-- Journey -->
+                <div class="bg-blue-50 rounded-lg p-6 lg:p-8">
+                  <h4 class="text-lg lg:text-xl font-bold text-blue-600 mb-3 lg:mb-4">The Transformation</h4>
+                  <div class="space-y-2 lg:space-y-3">
+                    <div class="flex justify-between text-sm lg:text-base">
+                      <span>Time to Results:</span>
+                      <span class="font-semibold">{story.time}</span>
+                    </div>
+                    <div class="flex justify-between text-sm lg:text-base">
+                      <span>Cost Savings:</span>
+                      <span class="font-semibold text-green-600">{story.savings}</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- After -->
+                <div class="bg-green-50 rounded-lg p-6 lg:p-8">
+                  <h4 class="text-lg lg:text-xl font-bold text-green-600 mb-3 lg:mb-4">Team Perfected</h4>
+                  <p class="text-gray-700 text-sm lg:text-base leading-relaxed">{story.after}</p>
+                </div>
+              </div>
+              
+              <div class="mt-6 lg:mt-8 pt-6 lg:pt-8 border-t border-gray-200">
+                <blockquote class="text-lg lg:text-xl xl:text-2xl italic text-gray-700 mb-4 lg:mb-6 leading-relaxed">
+                  "{story.quote}"
+                </blockquote>
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                  <div>
+                    <div class="font-semibold text-gray-900 text-base lg:text-lg">{story.name}</div>
+                    <div class="text-sm lg:text-base text-gray-600">{story.business}</div>
+                  </div>
+                  <div class="text-left sm:text-right">
+                    <div class="text-sm lg:text-base text-gray-600">Monthly Savings</div>
+                    <div class="text-xl lg:text-2xl font-bold text-green-600">{story.savings}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works (Team Technology) -->
+    <section class="py-16 lg:py-24 px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-16">
+          The Team Optimization Technology
+        </h2>
+
+        <div class="space-y-8 lg:space-y-12">
+          <div class="bg-white rounded-xl shadow-lg p-8 lg:p-12 hover:shadow-xl transition-shadow">
+            <div class="flex items-start gap-6 lg:gap-8">
+              <div class="flex-shrink-0 w-12 h-12 lg:w-16 lg:h-16 bg-spiced-saffron text-white rounded-full flex items-center justify-center font-bold text-xl lg:text-2xl">1</div>
+              <div>
+                <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 lg:mb-4">Intelligent Staffing Predictions</h3>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-base lg:text-lg leading-relaxed">AI analyzes historical data, weather, events to predict exact staffing needs by hour. No more overstaffing or understaffing.</p>
+                <p class="text-sm lg:text-base text-spiced-saffron font-semibold">Result: Perfect staffing levels every hour of every day</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg p-8 lg:p-12 hover:shadow-xl transition-shadow">
+            <div class="flex items-start gap-6 lg:gap-8">
+              <div class="flex-shrink-0 w-12 h-12 lg:w-16 lg:h-16 bg-spiced-saffron text-white rounded-full flex items-center justify-center font-bold text-xl lg:text-2xl">2</div>
+              <div>
+                <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 lg:mb-4">Automated Schedule Creation</h3>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-base lg:text-lg leading-relaxed">AI creates optimal schedules in 30 seconds considering staff preferences, skills, availability, and predicted demand.</p>
+                <p class="text-sm lg:text-base text-spiced-saffron font-semibold">Result: Save 6 hours weekly while improving staff satisfaction</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg p-8 lg:p-12 hover:shadow-xl transition-shadow">
+            <div class="flex items-start gap-6 lg:gap-8">
+              <div class="flex-shrink-0 w-12 h-12 lg:w-16 lg:h-16 bg-spiced-saffron text-white rounded-full flex items-center justify-center font-bold text-xl lg:text-2xl">3</div>
+              <div>
+                <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 lg:mb-4">Performance Analytics Engine</h3>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-base lg:text-lg leading-relaxed">Track every team member's productivity, efficiency, and impact. Data-driven decisions for promotions, training, and optimization.</p>
+                <p class="text-sm lg:text-base text-spiced-saffron font-semibold">Result: Build a high-performance team that drives results</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Objection Handling -->
+    <section class="py-16 lg:py-24 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-16">
+          "But What If..." (Your Concerns Answered)
+        </h2>
+
+        <div class="space-y-8 lg:space-y-12">
+          {objections.map(obj => (
+            <div class="bg-white rounded-xl p-6 lg:p-8 shadow-md hover:shadow-lg transition-shadow">
+              <div class="border-l-4 border-red-500 pl-6 lg:pl-8 mb-6 lg:mb-8">
+                <h3 class="text-lg lg:text-xl font-bold text-red-600 mb-3 lg:mb-4">😰 Common Fear:</h3>
+                <p class="text-gray-700 italic text-base lg:text-lg leading-relaxed">"{obj.objection}"</p>
+              </div>
+              <div class="border-l-4 border-green-500 pl-6 lg:pl-8 mb-6 lg:mb-8">
+                <h3 class="text-lg lg:text-xl font-bold text-green-600 mb-3 lg:mb-4">✅ The Truth:</h3>
+                <p class="text-gray-700 text-base lg:text-lg leading-relaxed">{obj.truth}</p>
+              </div>
+              <div class="bg-blue-50 p-4 lg:p-6 rounded-lg">
+                <h4 class="font-semibold text-blue-800 mb-3 lg:mb-4 text-base lg:text-lg">Real Proof:</h4>
+                <p class="text-blue-700 text-sm lg:text-base leading-relaxed">{obj.proof}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Scarcity & Urgency -->
+    <section class="py-16 lg:py-24 px-4 bg-gradient-to-r from-spiced-saffron to-orange-600 text-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-black/10"></div>
+      <div class="relative max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 lg:mb-12 text-white drop-shadow-lg">
+          ⏰ January Staff Optimization Batch Closing
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-6 lg:gap-8 mb-8 lg:mb-12">
+          {scarcityElements.map(element => (
+            <div class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg p-4 lg:p-6 shadow-lg">
+              <p class="font-semibold text-white text-sm lg:text-base leading-relaxed">{element}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-6 lg:p-8 mb-8 lg:mb-12 shadow-lg">
+          <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold mb-4 lg:mb-6 text-white">End Staffing Chaos:</h3>
+          <p class="text-lg lg:text-xl text-gray-100 leading-relaxed">Every day you delay, labor costs bleed away. Start now, perfect your team for peak season.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investment & ROI -->
+    <section class="py-16 lg:py-24 px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-16">
+          Your Team Optimization Investment
+        </h2>
+
+        <div class="bg-white rounded-xl shadow-xl p-8 lg:p-12 mb-8 lg:mb-12">
+          <div class="grid md:grid-cols-3 gap-8 lg:gap-12 text-center">
+            <div>
+              <div class="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-2">₹20,000</div>
+              <div class="text-gray-600 text-base lg:text-lg">Monthly Investment</div>
+            </div>
+            <div>
+              <div class="text-3xl lg:text-4xl xl:text-5xl font-bold text-green-600 mb-2">₹1,80,000</div>
+              <div class="text-gray-600 text-base lg:text-lg">Monthly Savings</div>
+            </div>
+            <div>
+              <div class="text-3xl lg:text-4xl xl:text-5xl font-bold text-spiced-saffron mb-2">₹1,60,000</div>
+              <div class="text-gray-600 text-base lg:text-lg">Net Monthly Profit</div>
+            </div>
+          </div>
+          
+          <div class="mt-8 lg:mt-12 pt-8 lg:pt-12 border-t border-gray-200">
+            <h3 class="text-lg lg:text-xl xl:text-2xl font-bold text-gray-900 mb-6 lg:mb-8">What You Get for ₹667/day:</h3>
+            <div class="grid md:grid-cols-2 gap-4 lg:gap-6">
+              <div class="flex items-center gap-3 lg:gap-4">
+                <span class="text-green-500 text-lg lg:text-xl">✓</span>
+                <span class="text-base lg:text-lg">AI staffing predictions by hour</span>
+              </div>
+              <div class="flex items-center gap-3 lg:gap-4">
+                <span class="text-green-500 text-lg lg:text-xl">✓</span>
+                <span class="text-base lg:text-lg">30-second automated scheduling</span>
+              </div>
+              <div class="flex items-center gap-3 lg:gap-4">
+                <span class="text-green-500 text-lg lg:text-xl">✓</span>
+                <span class="text-base lg:text-lg">Team performance analytics</span>
+              </div>
+              <div class="flex items-center gap-3 lg:gap-4">
+                <span class="text-green-500 text-lg lg:text-xl">✓</span>
+                <span class="text-base lg:text-lg">₹1.6 lakh bonus monthly savings</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg lg:text-xl text-gray-600 mb-2 lg:mb-4">
+            That's ₹22 per hour of team optimization.
+          </p>
+          <p class="text-sm lg:text-base text-gray-500">
+            (Compare to HR consultant: ₹6,000/hour, and this works 24/7)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 lg:py-24 px-4 bg-gradient-to-r from-pi-indigo to-indigo-900 text-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-black/10"></div>
+      <div class="relative max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 lg:mb-12 text-white drop-shadow-lg">
+          Perfect Your Team Now
+        </h2>
+        
+        <p class="text-xl lg:text-2xl xl:text-3xl mb-8 lg:mb-12 text-gray-100 leading-relaxed max-w-3xl mx-auto">
+          Every day you delay, labor costs bleed away. 150+ restaurants optimized their teams. 
+          When will you end the staffing chaos?
+        </p>
+
+        <div class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-6 lg:p-8 mb-8 lg:mb-12 shadow-lg">
+          <p class="text-lg lg:text-xl font-semibold mb-3 lg:mb-4 text-white">The RestoPi Team Optimization Promise:</p>
+          <p class="text-gray-100 text-base lg:text-lg leading-relaxed">Achieve 25% labor cost savings within 35 days or we work for free until you do.</p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center mb-8 lg:mb-12">
+          <a 
+            href="https://wa.me/919884248927?text=OPTIMIZE MY TEAM! I need perfect staffing and 25% labor cost savings."
+            class="bg-green-600 text-white px-8 lg:px-10 py-4 lg:py-5 rounded-lg font-bold hover:bg-green-700 transition-all inline-flex items-center justify-center gap-2 lg:gap-3 text-base lg:text-lg shadow-lg hover:shadow-xl"
+          >
+            <span>⚖️ PERFECT MY TEAM NOW</span>
+            <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a 
+            href="/contact"
+            class="bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 lg:px-10 py-4 lg:py-5 rounded-lg font-bold hover:bg-white/30 transition-all text-base lg:text-lg shadow-lg"
+          >
+            Schedule Team Audit
+          </a>
+        </div>
+
+        <div class="text-sm lg:text-base text-gray-200 space-y-2 lg:space-y-3">
+          <p>✓ 25% cost reduction guarantee</p>
+          <p>✓ AI scheduling with 150+ restaurants optimized</p>
+          <p>✓ Your perfect team starts today</p>
+        </div>
+
+        <div class="mt-12 lg:mt-16 pt-8 lg:pt-12 border-t border-white/20">
+          <p class="text-lg lg:text-xl xl:text-2xl italic text-gray-100 leading-relaxed max-w-2xl mx-auto">
+            "The perfect team isn't hired, it's optimized."
+          </p>
+          <p class="text-sm lg:text-base mt-3 lg:mt-4 text-gray-300">
+            - End the chaos. Perfect your team today.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+  
+  <script>
+    // Track team optimization consciousness
+    const teamElements = document.querySelectorAll('[data-team]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && typeof gtag !== 'undefined') {
+          gtag('event', 'team_optimization_viewed', {
+            team_type: entry.target.dataset.team,
+            page_section: entry.target.closest('section')?.id || 'unknown'
+          });
+        }
+      });
+    });
+    
+    teamElements.forEach(element => observer.observe(element));
+
+    // Track CTAs with team context
+    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+      link.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'staff_optimization_cta_clicked', {
+            cta_text: this.textContent.trim(),
+            team_urgency: 'high'
+          });
+        }
+      });
+    });
+
+    // Staffing chaos exit intent
+    let exitIntentShown = false;
+    document.addEventListener('mouseleave', function(e) {
+      if (e.clientY <= 0 && !exitIntentShown) {
+        exitIntentShown = true;
+        showTeamExitIntent();
+      }
+    });
+
+    function showTeamExitIntent() {
+      const exitMessage = `
+        WAIT! Your staffing chaos is bleeding money.
+        
+        Don't let another day pass with overstaffing costs.
+        
+        Join 150+ restaurants with optimized teams.
+        
+        Perfect your workforce with one message.
+      `;
+      
+      if (confirm(exitMessage)) {
+        window.open('https://wa.me/919884248927?text=WAIT! Optimize my team. I need to end staffing chaos NOW!', '_blank');
+      }
+    }
+  </script>
+</BaseLayout>

@@ -4,187 +4,187 @@ import Navigation from '../../components/Navigation.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
 
-// Money hemorrhage psychology - financial fear and waste shock
+// Hidden profit psychology - greed, money maximization, competitive edge
 const painPoints = [
   {
-    trigger: "Money Hemorrhage",
-    pain: "₹18,000 worth of food hits the dustbin every single day. That's ₹5.4 lakhs monthly - gone.",
-    emotion: "Watching your profits literally rot away",
-    visual: "💸"
+    trigger: "Hidden Profit Leaks",
+    pain: "Every dish you serve has hidden profit bleeding. Your biryani costs ₹85 but you could price it at ₹140 and customers would pay.",
+    emotion: "Money left on the table every single order",
+    visual: "🕳️"
   },
   {
-    trigger: "Inventory Blindness", 
-    pain: "You order ₹50,000 of ingredients, but have no idea what's expiring tomorrow until it's too late.",
-    emotion: "Flying blind with your most expensive asset",
-    visual: "🤷‍♂️"
+    trigger: "Pricing Blindness", 
+    pain: "You set prices based on 'gut feeling' while your competitor uses AI to extract maximum profit from every customer.",
+    emotion: "Being outplayed by smarter competition",
+    visual: "🤔"
   },
   {
-    trigger: "Competitor Advantage",
-    pain: "Your competitor down the street has 6% waste while you're bleeding 18%. They're stealing your customers with lower prices.",
-    emotion: "Losing market share to more efficient rivals",
-    visual: "🏃‍♂️"
+    trigger: "Margin Massacre",
+    pain: "Your 12% margins are pathetic. The restaurant next door runs 32% margins on the same food, same customers.",
+    emotion: "Feeling like a profit amateur",
+    visual: "📉"
   },
   {
-    trigger: "Staff Waste Culture",
-    pain: "Your team treats waste as 'normal business cost' instead of what it is - stolen profit.",
-    emotion: "Cultural acceptance of financial bleeding",
-    visual: "🤝"
+    trigger: "Cost Structure Chaos",
+    pain: "You have no idea which dishes make money and which ones are profit killers. Flying blind with your menu.",
+    emotion: "Making decisions without crucial profit data",
+    visual: "🎯"
   }
 ];
 
 const desires = [
   {
-    dream: "Waste Elimination",
-    description: "Reduce waste from 18% to 6% in 60 days. Watch ₹2.5 lakhs monthly flow back to your pocket.",
-    transformation: "From profit bleeding to profit protecting",
-    visual: "💰"
+    dream: "Profit Maximization",
+    description: "Increase margins from 12% to 32% in 30 days. Watch ₹2.5 lakhs extra profit monthly without changing a single ingredient.",
+    transformation: "From profit amateur to margin master",
+    visual: "💎"
   },
   {
-    dream: "Predictive Intelligence", 
-    description: "Know exactly what expires when, order precisely what you need, never throw money away again.",
-    transformation: "From wasteful guessing to intelligent precision",
+    dream: "Pricing Intelligence", 
+    description: "Know exactly what customers will pay for every dish. Price optimization based on demand, competition, and psychology.",
+    transformation: "From guessing prices to extracting maximum profit",
     visual: "🧠"
   },
   {
-    dream: "Competitive Edge",
-    description: "Undercut competitors with 35% lower waste costs while maintaining quality and freshness.",
-    transformation: "From market follower to cost leader",
-    visual: "🎯"
+    dream: "Menu Engineering",
+    description: "Transform your menu into a profit machine. Every item optimized for maximum margin and customer psychology.",
+    transformation: "From random menu to profit weapon",
+    visual: "⚗️"
   },
   {
-    dream: "Team Accountability",
-    description: "Staff actively prevent waste because they see real-time cost impact of every decision.",
-    transformation: "From waste-blind to profit-conscious culture",
-    visual: "👥"
+    dream: "Competitive Domination",
+    description: "Undercut competitors while maintaining higher margins. Price wars become profit wars you always win.",
+    transformation: "From price follower to profit leader",
+    visual: "👑"
   }
 ];
 
 const objections = [
   {
-    objection: "We already track our waste manually",
-    truth: "Manual tracking captures maybe 40% of actual waste. You're missing the expensive invisible waste.",
-    proof: "Spice Garden thought they tracked everything. RestoPi found ₹8,000 daily in hidden waste they never saw."
+    objection: "Higher prices will drive customers away",
+    truth: "RestoPi's psychological pricing increases sales volume by 18% WHILE increasing margins.",
+    proof: "CloudEats Hub raised prices 23% and saw 28% more orders. Customers pay premium for perceived value."
   },
   {
-    objection: "Food waste is just part of the restaurant business", 
-    truth: "That's what restaurants with 18% waste say. Restaurants with 6% waste think differently.",
-    proof: "Mumbai QSR reduced waste by 42% in 60 days. Same business, same customers, ₹2.8L more profit monthly."
+    objection: "Our margins are already optimized", 
+    truth: "Even restaurants with 'good' margins find 5-8% additional profit hiding in menu engineering.",
+    proof: "Golden Spoon thought they were optimized at 18% margins. RestoPi found paths to 32% margins in 30 days."
   },
   {
-    objection: "AI predictions can't understand our unique business",
-    truth: "RestoPi learns your exact patterns, customer behavior, and seasonal trends better than you do.",
-    proof: "After 30 days, RestoPi's predictions are 94% accurate vs 30% accuracy of manual guessing."
+    objection: "Menu changes are too complicated and risky",
+    truth: "RestoPi tests pricing scientifically with A/B tests before full implementation. Zero risk, maximum reward.",
+    proof: "Pune Kitchen tested 47 price points. Found the sweet spot that increased profit 34% with same customer satisfaction."
   }
 ];
 
 const socialProof = [
   {
-    name: "Rajesh Kumar",
-    business: "Spice Garden, Mumbai", 
-    before: "₹18,000 daily waste (18% waste rate)",
-    after: "₹6,500 daily waste (6% waste rate)",
-    time: "60 days",
-    savings: "₹2.8 Lakhs/month",
-    quote: "Waste dropped from 18% to 6% in two months. RestoPi's predictions are scary accurate."
+    name: "Amit Verma",
+    business: "CloudEats Hub, Pune", 
+    before: "12% profit margin, pricing by guesswork",
+    after: "32% profit margin, data-driven optimization",
+    time: "30 days",
+    savings: "₹2.6 Lakhs/month",
+    quote: "Our profit per dish increased 28%. Same customers, same food, better margins."
   },
   {
-    name: "Chef Meera",
-    business: "Coastal Kitchen, Chennai",
-    before: "No waste tracking, ordering by gut feeling",
-    after: "Real-time alerts prevent 85% of potential waste",
-    time: "45 days", 
-    savings: "₹2.1 Lakhs/month",
-    quote: "I see waste about to happen 3 days before it actually would. It's like having future vision."
+    name: "Kavya Patel",
+    business: "Bombay Bites, Ahmedabad",
+    before: "Losing money on 40% of menu items",
+    after: "Every dish profitable, 45% margin on bestsellers",
+    time: "25 days", 
+    savings: "₹3.8 Lakhs/month",
+    quote: "RestoPi showed me I was literally paying customers to eat certain dishes. Now every item prints money."
   }
 ];
 
 const scarcityElements = [
-  "Only 23 restaurants left in January Waste Elimination Batch",
-  "Next intake not until April 2025", 
-  "Implementation takes 30 days - start now to save by March",
-  "Early bird pricing expires December 31st"
+  "Only 19 restaurants left in January Profit Maximization Batch",
+  "Next intake not until June 2025", 
+  "Implementation takes 30 days - start now for Valentine's Day pricing boost",
+  "Advanced margin tactics reserved for first 50 restaurants only"
 ];
 
 const authorityElements = [
-  "Developed by restaurants that lost ₹2 crores to waste before creating this system",
-  "300+ restaurants now operate at 6% waste or below",
-  "Featured in Food Business Magazine as 'The Waste Killer'",
-  "Certified by India Food Safety Association"
+  "Developed by restaurants that went from 8% to 35% margins using these exact strategies",
+  "200+ restaurants now operate at 25%+ profit margins",
+  "Featured in Business Today as 'The Profit Maximization System'",
+  "Endorsed by Restaurant Profit Association of India"
 ];
 ---
 
 <BaseLayout 
-  title="Stop Food Waste - Save ₹2.5 Lakhs Monthly | RestoPi"
-  description="End the money hemorrhage. AI-powered waste prevention that saved 300+ restaurants ₹2.5 lakhs monthly. From 18% waste to 6% in 60 days. Your profits deserve protection."
+  title="Maximize Restaurant Profits - 32% Margins Guaranteed | RestoPi"
+  description="Stop leaving money on the table. AI-powered profit optimization that took 200+ restaurants from 12% to 32% margins in 30 days. Hidden profit leaks exposed and eliminated."
 >
   <Navigation />
   
   <main class="min-h-screen bg-white">
-    <!-- Money Hemorrhage Hero -->
-    <section class="relative min-h-screen flex items-center py-16 lg:py-24 px-4 bg-gradient-to-br from-red-900 via-red-800 to-red-700 overflow-hidden">
+    <!-- Hidden Profit Hero -->
+    <section class="relative min-h-screen flex items-center py-16 lg:py-24 px-4 bg-gradient-to-br from-yellow-900 via-yellow-800 to-orange-900 overflow-hidden">
       <!-- Dramatic Background Effects -->
       <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
       <div class="absolute top-0 left-0 w-full h-full opacity-20">
-        <div class="absolute top-1/3 left-1/3 w-96 h-96 bg-yellow-500 rounded-full blur-3xl animate-pulse"></div>
-        <div class="absolute bottom-1/3 right-1/3 w-80 h-80 bg-orange-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-yellow-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
       
       <div class="relative max-w-7xl mx-auto w-full">
         <!-- Urgency Banner -->
         <div class="text-center mb-8 lg:mb-12">
-          <div class="inline-flex items-center gap-3 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 transition-all duration-300 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full mb-4 shadow-2xl border border-red-400/50 backdrop-blur-sm">
-            <span class="text-lg lg:text-xl animate-bounce">🚨</span>
-            <span class="font-bold text-sm lg:text-base tracking-wide">URGENT: 23 Waste Elimination Spots Left</span>
-            <span class="text-lg lg:text-xl animate-bounce">🚨</span>
+          <div class="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 transition-all duration-300 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full mb-4 shadow-2xl border border-yellow-400/50 backdrop-blur-sm">
+            <span class="text-lg lg:text-xl animate-bounce">💰</span>
+            <span class="font-bold text-sm lg:text-base tracking-wide">URGENT: 19 Profit Maximization Spots Left</span>
+            <span class="text-lg lg:text-xl animate-bounce">💰</span>
           </div>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div class="order-2 lg:order-1">
-            <!-- Dramatic Money Hemorrhage -->
-            <div class="relative bg-gradient-to-r from-red-900/90 to-red-800/90 backdrop-blur-md border-l-8 border-yellow-400 rounded-r-2xl p-6 lg:p-8 mb-8 lg:mb-12 shadow-2xl transform hover:scale-105 transition-transform duration-300">
-              <div class="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full animate-ping"></div>
-              <div class="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full"></div>
-              <h3 class="text-lg lg:text-xl font-bold text-yellow-400 mb-4 flex items-center gap-3">
-                <span class="text-2xl lg:text-3xl animate-pulse">💸</span>
-                The Money Hemorrhage That's Killing You
+            <!-- Dramatic Hidden Profit Story -->
+            <div class="relative bg-gradient-to-r from-yellow-900/90 to-yellow-800/90 backdrop-blur-md border-l-8 border-green-400 rounded-r-2xl p-6 lg:p-8 mb-8 lg:mb-12 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+              <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-400 rounded-full animate-ping"></div>
+              <div class="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full"></div>
+              <h3 class="text-lg lg:text-xl font-bold text-green-400 mb-4 flex items-center gap-3">
+                <span class="text-2xl lg:text-3xl animate-pulse">🕳️</span>
+                The Hidden Profit Leak Bankrupting You
               </h3>
-              <p class="text-yellow-100 italic text-base lg:text-lg leading-relaxed font-medium">
-                "₹18,000 worth of food in the dustbin. Every. Single. Day. 
-                That's <span class="text-yellow-300 font-bold">₹5.4 lakhs monthly</span> - straight from your profit to the garbage truck."
+              <p class="text-green-100 italic text-base lg:text-lg leading-relaxed font-medium">
+                "Your biryani costs ₹85. You sell it for ₹120. But customers would happily pay ₹140. 
+                <span class="text-green-300 font-bold">That's ₹20 pure profit</span> you're giving away on every single order."
               </p>
-              <div class="mt-4 flex items-center gap-2 text-yellow-200 text-sm">
-                <span class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
-                <span>Your competitors have stopped this bleeding...</span>
+              <div class="mt-4 flex items-center gap-2 text-green-200 text-sm">
+                <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                <span>How much money are you leaving on the table?</span>
               </div>
             </div>
 
             <h1 class="text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-black text-white mb-6 lg:mb-8 leading-none tracking-tight">
-              <span class="block text-red-200 text-2xl lg:text-3xl font-semibold mb-2">STOP THE</span>
-              Money Hemorrhage.<br/>
-              <span class="bg-gradient-to-r from-green-400 via-green-300 to-emerald-500 bg-clip-text text-transparent drop-shadow-2xl animate-pulse">Save ₹2.5 Lakhs.</span>
+              <span class="block text-yellow-200 text-2xl lg:text-3xl font-semibold mb-2">STOP LEAVING</span>
+              Money On Table.<br/>
+              <span class="bg-gradient-to-r from-green-400 via-green-300 to-emerald-500 bg-clip-text text-transparent drop-shadow-2xl animate-pulse">Get 32% Margins.</span>
             </h1>
             
             <div class="relative">
-              <p class="text-xl lg:text-2xl xl:text-3xl text-yellow-100 mb-8 lg:mb-10 leading-relaxed max-w-3xl font-medium">
-                <span class="text-yellow-300 font-bold">300+ restaurants</span> went from 18% waste to 6% waste. 
-                <span class="block mt-2 text-white font-bold">Every day you delay, ₹18,000 hits the dustbin.</span>
+              <p class="text-xl lg:text-2xl xl:text-3xl text-green-100 mb-8 lg:mb-10 leading-relaxed max-w-3xl font-medium">
+                <span class="text-green-300 font-bold">200+ restaurants</span> went from 12% to 32% margins. 
+                <span class="block mt-2 text-white font-bold">Every day you delay, profit leaks away.</span>
               </p>
-              <div class="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-yellow-400 to-transparent"></div>
+              <div class="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-green-400 to-transparent"></div>
             </div>
 
-            <!-- Dramatic Savings Counter -->
+            <!-- Dramatic Money Counter -->
             <div class="relative bg-gradient-to-r from-green-900/80 to-emerald-800/80 backdrop-blur-md border-2 border-green-400/50 rounded-2xl p-6 lg:p-8 mb-8 lg:mb-10 shadow-2xl overflow-hidden">
               <div class="absolute inset-0 bg-gradient-to-r from-green-400/10 to-transparent animate-pulse"></div>
               <div class="relative flex items-center gap-4 lg:gap-6">
-                <div class="text-4xl lg:text-5xl animate-bounce">💰</div>
+                <div class="text-4xl lg:text-5xl animate-bounce">💎</div>
                 <div>
                   <div class="text-3xl lg:text-4xl font-black text-green-300 mb-1">
-                    <span class="bg-gradient-to-r from-green-300 to-green-100 bg-clip-text text-transparent">₹84 Crores</span>
+                    <span class="bg-gradient-to-r from-green-300 to-green-100 bg-clip-text text-transparent">₹124 Crores</span>
                   </div>
-                  <div class="text-sm lg:text-base text-green-100 font-semibold tracking-wide">Total waste PREVENTED by RestoPi restaurants this year</div>
+                  <div class="text-sm lg:text-base text-green-100 font-semibold tracking-wide">Extra profit UNLOCKED by RestoPi restaurants this year</div>
                 </div>
-                <div class="hidden lg:block text-6xl text-green-400/20 animate-pulse">🛡️</div>
+                <div class="hidden lg:block text-6xl text-green-400/20 animate-pulse">👑</div>
               </div>
               <div class="absolute top-2 right-2 flex gap-1">
                 <div class="w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
@@ -195,30 +195,30 @@ const authorityElements = [
 
             <!-- Powerful Authority Indicators -->
             <div class="flex flex-wrap gap-3 lg:gap-4 text-sm lg:text-base mb-8 lg:mb-10">
+              <div class="flex items-center gap-3 bg-gradient-to-r from-green-500/20 to-green-400/20 backdrop-blur-sm border border-green-400/50 px-4 lg:px-6 py-2 lg:py-3 rounded-full shadow-lg">
+                <span class="text-green-400 text-lg animate-pulse">⚡</span>
+                <span class="text-green-100 font-bold">32% Margin Guarantee</span>
+              </div>
               <div class="flex items-center gap-3 bg-gradient-to-r from-yellow-500/20 to-yellow-400/20 backdrop-blur-sm border border-yellow-400/50 px-4 lg:px-6 py-2 lg:py-3 rounded-full shadow-lg">
-                <span class="text-yellow-400 text-lg animate-pulse">⚡</span>
-                <span class="text-yellow-100 font-bold">1-Week ROI Guarantee</span>
+                <span class="text-yellow-400 text-lg animate-pulse">🎯</span>
+                <span class="text-yellow-100 font-bold">AI Price Optimization</span>
               </div>
-              <div class="flex items-center gap-3 bg-gradient-to-r from-green-500/20 to-emerald-400/20 backdrop-blur-sm border border-green-400/50 px-4 lg:px-6 py-2 lg:py-3 rounded-full shadow-lg">
-                <span class="text-green-400 text-lg animate-pulse">🎯</span>
-                <span class="text-green-100 font-bold">94% Accuracy Rate</span>
-              </div>
-              <div class="flex items-center gap-3 bg-gradient-to-r from-blue-500/20 to-blue-400/20 backdrop-blur-sm border border-blue-400/50 px-4 lg:px-6 py-2 lg:py-3 rounded-full shadow-lg">
-                <span class="text-blue-400 text-lg animate-pulse">🏆</span>
-                <span class="text-blue-100 font-bold">Food Safety Certified</span>
+              <div class="flex items-center gap-3 bg-gradient-to-r from-orange-500/20 to-orange-400/20 backdrop-blur-sm border border-orange-400/50 px-4 lg:px-6 py-2 lg:py-3 rounded-full shadow-lg">
+                <span class="text-orange-400 text-lg animate-pulse">🏆</span>
+                <span class="text-orange-100 font-bold">Profit Association Certified</span>
               </div>
             </div>
 
             <!-- Dramatic Hero CTA -->
             <div class="flex flex-col sm:flex-row gap-4 lg:gap-6 lg:hidden">
               <a 
-                href="https://wa.me/919884248927?text=STOP THE BLEEDING! I need to eliminate waste and save ₹2.5 lakhs monthly."
+                href="https://wa.me/919884248927?text=UNLOCK MY HIDDEN PROFITS! I need 32% margins and maximum profit optimization."
                 class="group relative bg-gradient-to-r from-green-600 via-green-500 to-emerald-600 hover:from-green-500 hover:via-green-400 hover:to-emerald-500 text-white px-8 lg:px-10 py-4 lg:py-5 rounded-2xl font-black transition-all duration-300 shadow-2xl hover:shadow-green-500/25 inline-flex items-center justify-center gap-3 text-lg lg:text-xl transform hover:scale-105 border-2 border-green-400/50"
               >
                 <div class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-2xl"></div>
                 <span class="relative flex items-center gap-3">
-                  <span class="text-2xl animate-bounce">🛡️</span>
-                  <span>STOP THE BLEEDING</span>
+                  <span class="text-2xl animate-bounce">💎</span>
+                  <span>UNLOCK MY PROFITS</span>
                   <span class="text-xl group-hover:translate-x-1 transition-transform">→</span>
                 </span>
                 <div class="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full animate-ping"></div>
@@ -226,60 +226,60 @@ const authorityElements = [
             </div>
           </div>
 
-          <!-- Dramatic Visual Waste Impact -->
+          <!-- Dramatic Visual Profit Impact -->
           <div class="space-y-6 lg:space-y-8 order-1 lg:order-2">
-            <!-- Before: The Money Pit -->
+            <!-- Before: The Profit Leak -->
             <div class="relative bg-gradient-to-br from-red-900/90 to-red-800/80 backdrop-blur-md border-2 border-red-500/50 rounded-2xl shadow-2xl p-6 lg:p-8 overflow-hidden">
               <div class="absolute inset-0 bg-gradient-to-r from-red-600/20 to-transparent animate-pulse"></div>
-              <div class="absolute top-4 right-4 text-6xl text-red-400/20 animate-pulse">🔥</div>
+              <div class="absolute top-4 right-4 text-6xl text-red-400/20 animate-pulse">🕳️</div>
               <h3 class="relative text-xl lg:text-2xl font-black text-red-300 mb-4 lg:mb-6 flex items-center gap-3">
-                <span class="text-3xl animate-pulse">💸</span>
-                YOUR MONEY PIT
+                <span class="text-3xl animate-pulse">📉</span>
+                YOUR PROFIT LEAK
               </h3>
               <div class="relative space-y-3 lg:space-y-4 text-base lg:text-lg text-red-100">
                 <div class="flex items-center gap-4 p-2 rounded-lg bg-red-800/50">
-                  <span class="text-red-400 text-2xl animate-pulse">🗑️</span>
-                  <span class="font-semibold">₹18,000 daily straight to dustbin</span>
+                  <span class="text-red-400 text-2xl animate-pulse">💸</span>
+                  <span class="font-semibold">12% margins - pathetic performance</span>
                 </div>
                 <div class="flex items-center gap-4 p-2 rounded-lg bg-red-800/50">
-                  <span class="text-red-400 text-2xl animate-pulse">❓</span>
-                  <span class="font-semibold">No idea what expires when</span>
+                  <span class="text-red-400 text-2xl animate-pulse">🤔</span>
+                  <span class="font-semibold">Pricing by gut feeling and hope</span>
                 </div>
                 <div class="flex items-center gap-4 p-2 rounded-lg bg-red-800/50">
-                  <span class="text-red-400 text-2xl animate-pulse">🤷‍♂️</span>
-                  <span class="font-semibold">Ordering by guesswork and panic</span>
+                  <span class="text-red-400 text-2xl animate-pulse">🎯</span>
+                  <span class="font-semibold">No idea which dishes make money</span>
                 </div>
                 <div class="flex items-center gap-4 p-2 rounded-lg bg-red-800/50">
                   <span class="text-red-400 text-2xl animate-pulse">😱</span>
-                  <span class="font-semibold">18% waste rate bleeding profits</span>
+                  <span class="font-semibold">Losing ₹2.5L monthly to bad pricing</span>
                 </div>
               </div>
             </div>
 
-            <!-- After: The Money Protector -->
+            <!-- After: The Profit Machine -->
             <div class="relative bg-gradient-to-br from-green-900/90 to-emerald-800/80 backdrop-blur-md border-2 border-green-400/50 rounded-2xl shadow-2xl p-6 lg:p-8 overflow-hidden">
               <div class="absolute inset-0 bg-gradient-to-r from-green-400/20 to-transparent animate-pulse"></div>
-              <div class="absolute top-4 right-4 text-6xl text-green-400/20 animate-bounce">🛡️</div>
+              <div class="absolute top-4 right-4 text-6xl text-green-400/20 animate-bounce">👑</div>
               <h3 class="relative text-xl lg:text-2xl font-black text-green-300 mb-4 lg:mb-6 flex items-center gap-3">
-                <span class="text-3xl animate-bounce">💰</span>
-                YOUR MONEY PROTECTOR
+                <span class="text-3xl animate-bounce">💎</span>
+                YOUR PROFIT MACHINE
               </h3>
               <div class="relative space-y-3 lg:space-y-4 text-base lg:text-lg text-green-100">
                 <div class="flex items-center gap-4 p-2 rounded-lg bg-green-800/50 transform hover:scale-105 transition-transform">
-                  <span class="text-green-400 text-2xl animate-bounce">🎯</span>
-                  <span class="font-semibold">₹6,500 waste max - 65% reduction</span>
-                </div>
-                <div class="flex items-center gap-4 p-2 rounded-lg bg-green-800/50 transform hover:scale-105 transition-transform">
-                  <span class="text-green-400 text-2xl animate-bounce">📊</span>
-                  <span class="font-semibold">Know exactly what expires when</span>
+                  <span class="text-green-400 text-2xl animate-bounce">📈</span>
+                  <span class="font-semibold">32% margins - industry domination</span>
                 </div>
                 <div class="flex items-center gap-4 p-2 rounded-lg bg-green-800/50 transform hover:scale-105 transition-transform">
                   <span class="text-green-400 text-2xl animate-bounce">🧠</span>
-                  <span class="font-semibold">AI predicts demand 94% accurately</span>
+                  <span class="font-semibold">AI-optimized psychological pricing</span>
                 </div>
                 <div class="flex items-center gap-4 p-2 rounded-lg bg-green-800/50 transform hover:scale-105 transition-transform">
-                  <span class="text-green-400 text-2xl animate-bounce">💚</span>
-                  <span class="font-semibold">6% waste rate - industry leading</span>
+                  <span class="text-green-400 text-2xl animate-bounce">⚗️</span>
+                  <span class="font-semibold">Every dish engineered for max profit</span>
+                </div>
+                <div class="flex items-center gap-4 p-2 rounded-lg bg-green-800/50 transform hover:scale-105 transition-transform">
+                  <span class="text-green-400 text-2xl animate-bounce">💰</span>
+                  <span class="font-semibold">₹2.5L extra profit monthly</span>
                 </div>
               </div>
             </div>
@@ -287,13 +287,13 @@ const authorityElements = [
             <!-- Desktop CTA with Maximum Drama -->
             <div class="hidden lg:block">
               <a 
-                href="https://wa.me/919884248927?text=STOP THE BLEEDING! I need to eliminate waste and save ₹2.5 lakhs monthly."
+                href="https://wa.me/919884248927?text=UNLOCK MY HIDDEN PROFITS! I need 32% margins and maximum profit optimization."
                 class="group relative block bg-gradient-to-r from-green-600 via-green-500 to-emerald-600 hover:from-green-500 hover:via-green-400 hover:to-emerald-500 text-white px-8 lg:px-10 py-5 lg:py-6 rounded-2xl font-black transition-all duration-300 shadow-2xl hover:shadow-green-500/25 text-center text-xl lg:text-2xl transform hover:scale-105 border-2 border-green-400/50"
               >
                 <div class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-2xl"></div>
                 <div class="relative flex items-center justify-center gap-4">
-                  <span class="text-3xl animate-bounce">🛡️</span>
-                  <span>STOP THE BLEEDING</span>
+                  <span class="text-3xl animate-bounce">💎</span>
+                  <span>UNLOCK MY PROFITS</span>
                   <span class="text-2xl group-hover:translate-x-2 transition-transform">→</span>
                 </div>
                 <div class="absolute -top-1 -right-1 w-5 h-5 bg-yellow-400 rounded-full animate-ping"></div>
@@ -305,14 +305,14 @@ const authorityElements = [
       </div>
     </section>
 
-    <!-- Deep Financial Pain Recognition -->
+    <!-- Deep Profit Pain Recognition -->
     <section class="py-16 lg:py-24 px-4 bg-gray-50">
       <div class="max-w-4xl mx-auto">
         <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-4 lg:mb-6">
-          The Hidden Money Hemorrhage
+          The Hidden Profit Leaks Killing You
         </h2>
         <p class="text-center text-gray-600 mb-12 lg:mb-16 text-lg lg:text-xl max-w-3xl mx-auto">
-          Every RestoPi founder watched ₹5+ lakhs monthly disappear into dustbins. The bleeding stops here.
+          Every RestoPi founder lost ₹3+ lakhs monthly to pricing blindness. The money tap opens here.
         </p>
 
         <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
@@ -332,23 +332,23 @@ const authorityElements = [
 
         <div class="mt-12 lg:mt-16 text-center">
           <p class="text-lg lg:text-xl xl:text-2xl font-semibold text-gray-900 mb-4 lg:mb-6">
-            Sound familiar? You're hemorrhaging money every single day.
+            Tired of watching competitors make more profit on the same customers?
           </p>
           <p class="text-gray-600 text-base lg:text-lg xl:text-xl max-w-2xl mx-auto">
-            300+ restaurants stopped the bleeding. Today it's your turn.
+            200+ restaurants unlocked their hidden profits. Your turn to dominate.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Future Vision (Financial Recovery) -->
+    <!-- Future Vision (Profit Domination) -->
     <section class="py-16 lg:py-24 px-4">
       <div class="max-w-6xl mx-auto">
         <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-4 lg:mb-6">
-          Imagine Saving ₹2.5 Lakhs Monthly...
+          Imagine 32% Profit Margins...
         </h2>
         <p class="text-center text-gray-600 mb-12 lg:mb-16 text-lg lg:text-xl xl:text-2xl max-w-3xl mx-auto">
-          Picture your profit statements in 60 days:
+          Picture your profit statements in 30 days:
         </p>
 
         <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
@@ -369,24 +369,24 @@ const authorityElements = [
         <div class="mt-12 lg:mt-16 text-center">
           <div class="bg-white rounded-xl shadow-xl p-8 lg:p-12 max-w-4xl mx-auto">
             <h3 class="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-6 lg:mb-8">
-              📊 Your 60-Day Waste Elimination Timeline
+              💎 Your 30-Day Profit Transformation Timeline
             </h3>
             <div class="space-y-4 lg:space-y-6 text-left">
               <div class="flex gap-4 lg:gap-6 items-center">
-                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 1-2:</span>
-                <span class="text-base lg:text-lg xl:text-xl">AI learns your patterns, 20% waste reduction</span>
+                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 1:</span>
+                <span class="text-base lg:text-lg xl:text-xl">Menu analysis reveals hidden profit leaks, 5% margin boost</span>
               </div>
               <div class="flex gap-4 lg:gap-6 items-center">
-                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 3-4:</span>
-                <span class="text-base lg:text-lg xl:text-xl">Predictive ordering kicks in, 30% waste reduction</span>
+                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 2:</span>
+                <span class="text-base lg:text-lg xl:text-xl">AI pricing optimization launches, 15% margin improvement</span>
               </div>
               <div class="flex gap-4 lg:gap-6 items-center">
-                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 5-6:</span>
-                <span class="text-base lg:text-lg xl:text-xl">Full automation active, 35% waste reduction</span>
+                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 3:</span>
+                <span class="text-base lg:text-lg xl:text-xl">Psychological pricing deployed, 25% margin achieved</span>
               </div>
               <div class="flex gap-4 lg:gap-6 items-center">
-                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 7-8:</span>
-                <span class="text-base lg:text-lg xl:text-xl">Waste eliminated. ₹2.5L monthly savings secured.</span>
+                <span class="font-bold text-spiced-saffron text-lg lg:text-xl">Week 4:</span>
+                <span class="text-base lg:text-lg xl:text-xl">Full optimization active. 32% margins secured.</span>
               </div>
             </div>
           </div>
@@ -398,7 +398,7 @@ const authorityElements = [
     <section class="py-16 lg:py-24 px-4 bg-gray-50">
       <div class="max-w-6xl mx-auto">
         <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-16">
-          Real Waste Elimination Success
+          Real Profit Maximization Success
         </h2>
 
         <div class="space-y-12 lg:space-y-16">
@@ -420,7 +420,7 @@ const authorityElements = [
                       <span class="font-semibold">{story.time}</span>
                     </div>
                     <div class="flex justify-between text-sm lg:text-base">
-                      <span>Monthly Savings:</span>
+                      <span>Extra Profit:</span>
                       <span class="font-semibold text-green-600">{story.savings}</span>
                     </div>
                   </div>
@@ -428,7 +428,7 @@ const authorityElements = [
                 
                 <!-- After -->
                 <div class="bg-green-50 rounded-lg p-6 lg:p-8">
-                  <h4 class="text-lg lg:text-xl font-bold text-green-600 mb-3 lg:mb-4">Waste Eliminated</h4>
+                  <h4 class="text-lg lg:text-xl font-bold text-green-600 mb-3 lg:mb-4">Profit Maximized</h4>
                   <p class="text-gray-700 text-sm lg:text-base leading-relaxed">{story.after}</p>
                 </div>
               </div>
@@ -443,7 +443,7 @@ const authorityElements = [
                     <div class="text-sm lg:text-base text-gray-600">{story.business}</div>
                   </div>
                   <div class="text-left sm:text-right">
-                    <div class="text-sm lg:text-base text-gray-600">Monthly Savings</div>
+                    <div class="text-sm lg:text-base text-gray-600">Extra Monthly Profit</div>
                     <div class="text-xl lg:text-2xl font-bold text-green-600">{story.savings}</div>
                   </div>
                 </div>
@@ -454,11 +454,11 @@ const authorityElements = [
       </div>
     </section>
 
-    <!-- How It Works (Technology Authority) -->
+    <!-- How It Works (Profit Technology) -->
     <section class="py-16 lg:py-24 px-4">
       <div class="max-w-4xl mx-auto">
         <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-16">
-          The Waste Elimination Technology
+          The Profit Maximization Technology
         </h2>
 
         <div class="space-y-8 lg:space-y-12">
@@ -466,9 +466,9 @@ const authorityElements = [
             <div class="flex items-start gap-6 lg:gap-8">
               <div class="flex-shrink-0 w-12 h-12 lg:w-16 lg:h-16 bg-spiced-saffron text-white rounded-full flex items-center justify-center font-bold text-xl lg:text-2xl">1</div>
               <div>
-                <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 lg:mb-4">Smart Expiry Tracking</h3>
-                <p class="text-gray-600 mb-4 lg:mb-6 text-base lg:text-lg leading-relaxed">AI tracks every ingredient's expiry date and sends alerts 3 days before waste happens. No more surprise spoilage.</p>
-                <p class="text-sm lg:text-base text-spiced-saffron font-semibold">Result: 85% of potential waste prevented</p>
+                <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 lg:mb-4">Menu Profitability Analysis</h3>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-base lg:text-lg leading-relaxed">AI analyzes every dish's true cost vs profit potential. Identifies which items are profit killers vs profit makers.</p>
+                <p class="text-sm lg:text-base text-spiced-saffron font-semibold">Result: Know exactly which dishes to promote and which to eliminate</p>
               </div>
             </div>
           </div>
@@ -477,9 +477,9 @@ const authorityElements = [
             <div class="flex items-start gap-6 lg:gap-8">
               <div class="flex-shrink-0 w-12 h-12 lg:w-16 lg:h-16 bg-spiced-saffron text-white rounded-full flex items-center justify-center font-bold text-xl lg:text-2xl">2</div>
               <div>
-                <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 lg:mb-4">Predictive Ordering Engine</h3>
-                <p class="text-gray-600 mb-4 lg:mb-6 text-base lg:text-lg leading-relaxed">Know exactly how much to order 7 days ahead. Weather, events, trends - AI factors everything for 94% accuracy.</p>
-                <p class="text-sm lg:text-base text-spiced-saffron font-semibold">Result: Order precisely what you need, nothing more</p>
+                <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 lg:mb-4">Psychological Pricing Engine</h3>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-base lg:text-lg leading-relaxed">AI tests thousands of price points using customer psychology. Find the sweet spot where customers pay maximum while staying happy.</p>
+                <p class="text-sm lg:text-base text-spiced-saffron font-semibold">Result: Higher prices with increased customer satisfaction</p>
               </div>
             </div>
           </div>
@@ -488,9 +488,9 @@ const authorityElements = [
             <div class="flex items-start gap-6 lg:gap-8">
               <div class="flex-shrink-0 w-12 h-12 lg:w-16 lg:h-16 bg-spiced-saffron text-white rounded-full flex items-center justify-center font-bold text-xl lg:text-2xl">3</div>
               <div>
-                <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 lg:mb-4">Real-Time Cost Impact</h3>
-                <p class="text-gray-600 mb-4 lg:mb-6 text-base lg:text-lg leading-relaxed">Staff see exactly how much money each waste decision costs. Transform team culture from waste-blind to profit-conscious.</p>
-                <p class="text-sm lg:text-base text-spiced-saffron font-semibold">Result: Team actively prevents waste</p>
+                <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 lg:mb-4">Dynamic Margin Optimization</h3>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-base lg:text-lg leading-relaxed">Real-time profit tracking with automatic adjustments. Menu engineering that adapts to market conditions and maximizes every order.</p>
+                <p class="text-sm lg:text-base text-spiced-saffron font-semibold">Result: Consistently higher margins without losing customers</p>
               </div>
             </div>
           </div>
@@ -531,7 +531,7 @@ const authorityElements = [
       <div class="absolute inset-0 bg-black/10"></div>
       <div class="relative max-w-4xl mx-auto text-center">
         <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 lg:mb-12 text-white drop-shadow-lg">
-          ⏰ January Waste Elimination Batch Closing
+          ⏰ January Profit Maximization Batch Closing
         </h2>
         
         <div class="grid md:grid-cols-2 gap-6 lg:gap-8 mb-8 lg:mb-12">
@@ -543,8 +543,8 @@ const authorityElements = [
         </div>
 
         <div class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-6 lg:p-8 mb-8 lg:mb-12 shadow-lg">
-          <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold mb-4 lg:mb-6 text-white">Stop Hemorrhaging Money:</h3>
-          <p class="text-lg lg:text-xl text-gray-100 leading-relaxed">Every day you delay, ₹18,000 goes to waste. Start now, save ₹2.5 lakhs monthly by March.</p>
+          <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold mb-4 lg:mb-6 text-white">Stop Leaving Money On Table:</h3>
+          <p class="text-lg lg:text-xl text-gray-100 leading-relaxed">Every day you delay, competitors extract more profit from your customers. Start now, dominate by Valentine's Day.</p>
         </div>
       </div>
     </section>
@@ -553,7 +553,7 @@ const authorityElements = [
     <section class="py-16 lg:py-24 px-4">
       <div class="max-w-4xl mx-auto">
         <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-16">
-          Your Waste Elimination Investment
+          Your Profit Maximization Investment
         </h2>
 
         <div class="bg-white rounded-xl shadow-xl p-8 lg:p-12 mb-8 lg:mb-12">
@@ -563,12 +563,12 @@ const authorityElements = [
               <div class="text-gray-600 text-base lg:text-lg">Monthly Investment</div>
             </div>
             <div>
-              <div class="text-3xl lg:text-4xl xl:text-5xl font-bold text-green-600 mb-2">₹2,50,000</div>
-              <div class="text-gray-600 text-base lg:text-lg">Monthly Savings</div>
+              <div class="text-3xl lg:text-4xl xl:text-5xl font-bold text-green-600 mb-2">₹2,75,000</div>
+              <div class="text-gray-600 text-base lg:text-lg">Extra Monthly Profit</div>
             </div>
             <div>
-              <div class="text-3xl lg:text-4xl xl:text-5xl font-bold text-spiced-saffron mb-2">₹2,25,000</div>
-              <div class="text-gray-600 text-base lg:text-lg">Net Monthly Profit</div>
+              <div class="text-3xl lg:text-4xl xl:text-5xl font-bold text-spiced-saffron mb-2">₹2,50,000</div>
+              <div class="text-gray-600 text-base lg:text-lg">Net Monthly Gain</div>
             </div>
           </div>
           
@@ -577,19 +577,19 @@ const authorityElements = [
             <div class="grid md:grid-cols-2 gap-4 lg:gap-6">
               <div class="flex items-center gap-3 lg:gap-4">
                 <span class="text-green-500 text-lg lg:text-xl">✓</span>
-                <span class="text-base lg:text-lg">Real-time waste prevention alerts</span>
+                <span class="text-base lg:text-lg">AI menu profitability analysis</span>
               </div>
               <div class="flex items-center gap-3 lg:gap-4">
                 <span class="text-green-500 text-lg lg:text-xl">✓</span>
-                <span class="text-base lg:text-lg">94% accurate demand predictions</span>
+                <span class="text-base lg:text-lg">Psychological pricing optimization</span>
               </div>
               <div class="flex items-center gap-3 lg:gap-4">
                 <span class="text-green-500 text-lg lg:text-xl">✓</span>
-                <span class="text-base lg:text-lg">Smart expiry date management</span>
+                <span class="text-base lg:text-lg">Dynamic margin maximization</span>
               </div>
               <div class="flex items-center gap-3 lg:gap-4">
                 <span class="text-green-500 text-lg lg:text-xl">✓</span>
-                <span class="text-base lg:text-lg">₹2.25 lakh bonus monthly profit</span>
+                <span class="text-base lg:text-lg">₹2.5 lakh bonus monthly profit</span>
               </div>
             </div>
           </div>
@@ -597,10 +597,10 @@ const authorityElements = [
 
         <div class="text-center">
           <p class="text-lg lg:text-xl text-gray-600 mb-2 lg:mb-4">
-            That's ₹37 per hour of waste elimination.
+            That's ₹27 per hour of profit maximization.
           </p>
           <p class="text-sm lg:text-base text-gray-500">
-            (Compare to consultant fees: ₹5,000/hour, and this works 24/7)
+            (Compare to profit consultant: ₹8,000/hour, and this works 24/7)
           </p>
         </div>
       </div>
@@ -611,25 +611,25 @@ const authorityElements = [
       <div class="absolute inset-0 bg-black/10"></div>
       <div class="relative max-w-4xl mx-auto text-center">
         <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 lg:mb-12 text-white drop-shadow-lg">
-          Stop Hemorrhaging Money
+          Unlock Your Hidden Profits
         </h2>
         
         <p class="text-xl lg:text-2xl xl:text-3xl mb-8 lg:mb-12 text-gray-100 leading-relaxed max-w-3xl mx-auto">
-          Every day you delay, ₹18,000 hits the dustbin. 300+ restaurants stopped the bleeding. 
-          When will you join them?
+          Every day you delay, money leaks away. 200+ restaurants unlocked 32% margins. 
+          When will you stop leaving money on the table?
         </p>
 
         <div class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-6 lg:p-8 mb-8 lg:mb-12 shadow-lg">
-          <p class="text-lg lg:text-xl font-semibold mb-3 lg:mb-4 text-white">The RestoPi Waste Elimination Promise:</p>
-          <p class="text-gray-100 text-base lg:text-lg leading-relaxed">Save ₹2.5 lakhs monthly within 60 days or we work for free until you do.</p>
+          <p class="text-lg lg:text-xl font-semibold mb-3 lg:mb-4 text-white">The RestoPi Profit Maximization Promise:</p>
+          <p class="text-gray-100 text-base lg:text-lg leading-relaxed">Achieve 32% margins within 30 days or we work for free until you do.</p>
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center mb-8 lg:mb-12">
           <a 
-            href="https://wa.me/919884248927?text=STOP THE BLEEDING! I need to eliminate waste and save ₹2.5 lakhs monthly."
+            href="https://wa.me/919884248927?text=UNLOCK MY HIDDEN PROFITS! I need 32% margins and maximum profit optimization."
             class="bg-green-600 text-white px-8 lg:px-10 py-4 lg:py-5 rounded-lg font-bold hover:bg-green-700 transition-all inline-flex items-center justify-center gap-2 lg:gap-3 text-base lg:text-lg shadow-lg hover:shadow-xl"
           >
-            <span>🛡️ STOP THE BLEEDING NOW</span>
+            <span>💎 UNLOCK HIDDEN PROFITS NOW</span>
             <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
             </svg>
@@ -638,22 +638,22 @@ const authorityElements = [
             href="/contact"
             class="bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 lg:px-10 py-4 lg:py-5 rounded-lg font-bold hover:bg-white/30 transition-all text-base lg:text-lg shadow-lg"
           >
-            Schedule Waste Audit
+            Schedule Profit Audit
           </a>
         </div>
 
         <div class="text-sm lg:text-base text-gray-200 space-y-2 lg:space-y-3">
-          <p>✓ 1-week ROI guarantee</p>
-          <p>✓ 94% accuracy rate with 300+ restaurants</p>
-          <p>✓ Your money stops bleeding today</p>
+          <p>✓ 32% margin guarantee</p>
+          <p>✓ AI-powered pricing optimization with 200+ restaurants</p>
+          <p>✓ Your hidden profits unlock today</p>
         </div>
 
         <div class="mt-12 lg:mt-16 pt-8 lg:pt-12 border-t border-white/20">
           <p class="text-lg lg:text-xl xl:text-2xl italic text-gray-100 leading-relaxed max-w-2xl mx-auto">
-            "Every rupee saved from waste is a rupee earned in profit."
+            "The money is already there. We just help you collect it."
           </p>
           <p class="text-sm lg:text-base mt-3 lg:mt-4 text-gray-300">
-            - Stop the bleeding. Start saving today.
+            - Stop leaving money on the table. Start maximizing today.
           </p>
         </div>
       </div>
@@ -664,55 +664,55 @@ const authorityElements = [
   <WhatsAppButton />
   
   <script>
-    // Track waste consciousness
-    const wasteElements = document.querySelectorAll('[data-waste]');
+    // Track profit consciousness
+    const profitElements = document.querySelectorAll('[data-profit]');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting && typeof gtag !== 'undefined') {
-          gtag('event', 'waste_awareness_viewed', {
-            waste_type: entry.target.dataset.waste,
+          gtag('event', 'profit_awareness_viewed', {
+            profit_type: entry.target.dataset.profit,
             page_section: entry.target.closest('section')?.id || 'unknown'
           });
         }
       });
     });
     
-    wasteElements.forEach(element => observer.observe(element));
+    profitElements.forEach(element => observer.observe(element));
 
-    // Track CTAs with waste context
+    // Track CTAs with profit context
     document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
       link.addEventListener('click', function() {
         if (typeof gtag !== 'undefined') {
-          gtag('event', 'waste_elimination_cta_clicked', {
+          gtag('event', 'profit_optimization_cta_clicked', {
             cta_text: this.textContent.trim(),
-            financial_urgency: 'high'
+            profit_urgency: 'high'
           });
         }
       });
     });
 
-    // Money hemorrhage exit intent
+    // Hidden profit exit intent
     let exitIntentShown = false;
     document.addEventListener('mouseleave', function(e) {
       if (e.clientY <= 0 && !exitIntentShown) {
         exitIntentShown = true;
-        showWasteExitIntent();
+        showProfitExitIntent();
       }
     });
 
-    function showWasteExitIntent() {
+    function showProfitExitIntent() {
       const exitMessage = `
-        WAIT! Your money is bleeding ₹18,000 daily.
+        WAIT! You're leaving money on the table.
         
-        Don't let another day pass throwing profit in the dustbin.
+        Don't let another day pass with 12% margins.
         
-        Join 300+ restaurants saving ₹2.5 lakhs monthly.
+        Join 200+ restaurants with 32% profit margins.
         
-        Stop the hemorrhage with one message.
+        Unlock your hidden profits with one message.
       `;
       
       if (confirm(exitMessage)) {
-        window.open('https://wa.me/919884248927?text=WAIT! Stop my money hemorrhage. I need waste elimination NOW!', '_blank');
+        window.open('https://wa.me/919884248927?text=WAIT! Unlock my hidden profits. I need 32% margins NOW!', '_blank');
       }
     }
   </script>

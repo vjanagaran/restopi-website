@@ -21,6 +21,67 @@ const {
   <title>{title}</title>
   <meta name="description" content={description} />
   
+  <!-- Canonical URL -->
+  <link rel="canonical" href={Astro.url.href} />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.url.href} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={new URL(image, Astro.url.origin).href} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="RestoPi" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content={Astro.url.href} />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={new URL(image, Astro.url.origin).href} />
+  <meta name="twitter:creator" content="@RestoPi_AI" />
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "RestoPi",
+      "alternateName": "RestoPi Restaurant Intelligence",
+      "url": "https://www.restopi.com",
+      "logo": "https://www.restopi.com/logo.png",
+      "description": "AI-powered restaurant intelligence platform helping owners save ₹2 lakhs monthly and achieve work-life balance",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-98842-48927",
+        "contactType": "sales",
+        "availableLanguage": ["English", "Hindi"]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/restopi",
+        "https://twitter.com/RestoPi_AI"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "name": "Restaurant Intelligence Platform",
+        "description": "Complete restaurant automation and intelligence suite",
+        "priceCurrency": "INR",
+        "price": "40000",
+        "priceValidUntil": "2025-12-31"
+      }
+    }
+  </script>
+  
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">

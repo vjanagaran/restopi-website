@@ -1,0 +1,677 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+---
+
+<BaseLayout 
+  title="Restaurant Liberation Resources - Save ₹2 Lakhs Monthly | RestoPi"
+  description="Comprehensive guides, community, and intelligence tools to liberate restaurant owners from operational chaos. Join 5,000+ owners saving ₹2 lakhs monthly and getting home by 10 PM."
+>
+
+<Navigation />
+
+<style>
+  @keyframes liberationPulse {
+    0%, 100% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.05); opacity: 1; }
+  }
+  
+  @keyframes resourceFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .liberation-icon {
+    animation: liberationPulse 3s ease-in-out infinite;
+  }
+  
+  .resource-card {
+    animation: resourceFloat 4s ease-in-out infinite;
+  }
+  
+  .resource-card:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  .resource-card:nth-child(3) {
+    animation-delay: 1s;
+  }
+  
+  .resources-gradient {
+    background: linear-gradient(135deg, #2D2A6E 0%, #3b82f6 100%);
+  }
+  
+  .pillar-accent {
+    background: linear-gradient(45deg, #16A34A, #10B981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .coming-soon-glow {
+    box-shadow: 0 0 20px rgba(45, 42, 110, 0.3);
+    border: 2px dashed rgba(45, 42, 110, 0.5);
+  }
+</style>
+
+<!-- Hero Section: The Liberation Hub -->
+<section class="bg-gradient-to-br from-indigo-900 via-blue-800 to-indigo-900 text-white py-20 relative overflow-hidden">
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="text-center mb-16">
+      <span class="inline-block liberation-icon text-6xl mb-6">🎓</span>
+      <h1 class="text-5xl md:text-6xl font-black mb-6 leading-tight">
+        The Restaurant <span class="pillar-accent">Liberation</span> Hub
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-100 max-w-4xl mx-auto mb-8 leading-relaxed">
+        Everything you need to save ₹2 lakhs monthly, get home by 10 PM, and transform your restaurant 
+        from operational chaos into a predictive profit machine.
+      </p>
+      
+      <!-- Quick Stats -->
+      <div class="grid md:grid-cols-4 gap-6 mb-12">
+        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+          <div class="text-3xl font-black text-green-300">5,000+</div>
+          <div class="text-sm text-gray-200">Owners Liberated</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+          <div class="text-3xl font-black text-yellow-300">₹2L+</div>
+          <div class="text-sm text-gray-200">Monthly Savings</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+          <div class="text-3xl font-black text-blue-300">10 PM</div>
+          <div class="text-sm text-gray-200">Home Guarantee</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+          <div class="text-3xl font-black text-purple-300">95%</div>
+          <div class="text-sm text-gray-200">Success Rate</div>
+        </div>
+      </div>
+      
+      <a href="#resource-pillars" class="inline-block bg-gradient-to-r from-green-500 to-emerald-600 text-white px-10 py-4 rounded-lg font-black text-xl hover:from-green-400 hover:to-emerald-500 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+        🚀 Start Your Liberation Journey
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Resource Pillars Overview -->
+<section id="resource-pillars" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-900 mb-6">
+        Five Pillars of <span class="pillar-accent">Restaurant Liberation</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Our comprehensive framework covers every aspect of restaurant transformation, 
+        from financial liberation to community empowerment.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- Pillar 1: Liberation Economics -->
+      <div class="resource-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-green-500">
+        <div class="text-5xl mb-4">💰</div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Liberation Economics</h3>
+        <p class="text-gray-600 mb-6">
+          The ₹2 Lakh Freedom Formula - Transform cost centers into profit centers through 
+          systematic waste prevention and margin optimization.
+        </p>
+        
+        <div class="space-y-3 mb-6">
+          <div class="flex items-center gap-3">
+            <span class="text-green-500">✓</span>
+            <span class="text-sm">Waste Prevention Playbook</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-green-500">✓</span>
+            <span class="text-sm">Profit Optimization Tools</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-green-500">✓</span>
+            <span class="text-sm">ROI Calculators</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-green-500">✓</span>
+            <span class="text-sm">Cost Reduction Strategies</span>
+          </div>
+        </div>
+        
+        <a href="/resources/guides" class="inline-block bg-green-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-600 transition-all">
+          Explore Guides →
+        </a>
+      </div>
+      
+      <!-- Pillar 2: Time Intelligence -->
+      <div class="resource-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-blue-500">
+        <div class="text-5xl mb-4">🏠</div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Time Intelligence</h3>
+        <p class="text-gray-600 mb-6">
+          Home by 10 PM Revolution - Automated operations and delegation frameworks 
+          that guarantee work-life balance.
+        </p>
+        
+        <div class="space-y-3 mb-6">
+          <div class="flex items-center gap-3">
+            <span class="text-blue-500">✓</span>
+            <span class="text-sm">Automation Manual</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-blue-500">✓</span>
+            <span class="text-sm">Delegation Frameworks</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-blue-500">✓</span>
+            <span class="text-sm">Time Liberation Tools</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-blue-500">✓</span>
+            <span class="text-sm">Life Balance Strategies</span>
+          </div>
+        </div>
+        
+        <a href="/resources/guides" class="inline-block bg-blue-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-600 transition-all">
+          Explore Guides →
+        </a>
+      </div>
+      
+      <!-- Pillar 3: Predictive Operations -->
+      <div class="resource-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-purple-500">
+        <div class="text-5xl mb-4">📈</div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Predictive Operations</h3>
+        <p class="text-gray-600 mb-6">
+          Monday on Saturday Methodology - AI-driven demand forecasting and 
+          inventory intelligence for predictive mastery.
+        </p>
+        
+        <div class="space-y-3 mb-6">
+          <div class="flex items-center gap-3">
+            <span class="text-purple-500">✓</span>
+            <span class="text-sm">Forecasting Guides</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-purple-500">✓</span>
+            <span class="text-sm">Demand Prediction Tools</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-purple-500">✓</span>
+            <span class="text-sm">Inventory Intelligence</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-purple-500">✓</span>
+            <span class="text-sm">Seasonal Planning</span>
+          </div>
+        </div>
+        
+        <a href="/resources/guides" class="inline-block bg-purple-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-purple-600 transition-all">
+          Explore Guides →
+        </a>
+      </div>
+      
+      <!-- Pillar 4: Community Empowerment -->
+      <div class="resource-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-orange-500">
+        <div class="text-5xl mb-4">👥</div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Community Empowerment</h3>
+        <p class="text-gray-600 mb-6">
+          Restaurant Owner Circle of Success - Peer learning networks, mentorship 
+          programs, and collaborative transformation journeys.
+        </p>
+        
+        <div class="space-y-3 mb-6">
+          <div class="flex items-center gap-3">
+            <span class="text-orange-500">✓</span>
+            <span class="text-sm">10+ Regional Chapters</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-orange-500">✓</span>
+            <span class="text-sm">Peer Mentorship</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-orange-500">✓</span>
+            <span class="text-sm">Success Story Sharing</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-orange-500">✓</span>
+            <span class="text-sm">Expert AMA Sessions</span>
+          </div>
+        </div>
+        
+        <div class="coming-soon-glow bg-gray-50 px-6 py-3 rounded-lg text-center">
+          <span class="text-orange-600 font-bold">🚀 Coming Q1 2025</span>
+        </div>
+      </div>
+      
+      <!-- Pillar 5: Industry Evolution -->
+      <div class="resource-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-teal-500">
+        <div class="text-5xl mb-4">🔮</div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Industry Evolution</h3>
+        <p class="text-gray-600 mb-6">
+          Future-Ready Restaurant Blueprint - Emerging trends, sustainability practices, 
+          and future-proofing strategies for competitive advantage.
+        </p>
+        
+        <div class="space-y-3 mb-6">
+          <div class="flex items-center gap-3">
+            <span class="text-teal-500">✓</span>
+            <span class="text-sm">Trend Analysis Reports</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-teal-500">✓</span>
+            <span class="text-sm">Technology Adoption</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-teal-500">✓</span>
+            <span class="text-sm">Sustainability Frameworks</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-teal-500">✓</span>
+            <span class="text-sm">Future Strategy Content</span>
+          </div>
+        </div>
+        
+        <div class="coming-soon-glow bg-gray-50 px-6 py-3 rounded-lg text-center">
+          <span class="text-teal-600 font-bold">📊 Intelligence Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Current Resources Available -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-900 mb-6">
+        Available Now: <span class="pillar-accent">Liberation Foundations</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Start your transformation journey today with our cornerstone resources. 
+        More advanced tools and community features launching Q1 2025.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+      <!-- Comprehensive Guides -->
+      <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border border-green-200">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="text-4xl">📚</div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900">Comprehensive Guides</h3>
+            <p class="text-green-700">Free, actionable playbooks for immediate implementation</p>
+          </div>
+        </div>
+        
+        <div class="space-y-4 mb-8">
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h4 class="font-bold text-gray-800 mb-2">₹2 Lakh Waste Prevention Playbook</h4>
+            <p class="text-sm text-gray-600">Complete 7-day audit framework + implementation tools</p>
+            <div class="text-xs text-green-600 mt-2">50 pages • Available Now</div>
+          </div>
+          
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h4 class="font-bold text-gray-800 mb-2">Home by 10 PM Automation Manual</h4>
+            <p class="text-sm text-gray-600">Delegation frameworks + closing procedure templates</p>
+            <div class="text-xs text-green-600 mt-2">40 pages • Available Now</div>
+          </div>
+          
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h4 class="font-bold text-gray-800 mb-2">Demand Prediction Mastery Guide</h4>
+            <p class="text-sm text-gray-600">Forecasting methodologies + seasonal planning</p>
+            <div class="text-xs text-green-600 mt-2">35 pages • Available Now</div>
+          </div>
+          
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h4 class="font-bold text-gray-800 mb-2">Restaurant Profit Optimization Bible</h4>
+            <p class="text-sm text-gray-600">Menu engineering + margin maximization tactics</p>
+            <div class="text-xs text-green-600 mt-2">60 pages • Available Now</div>
+          </div>
+        </div>
+        
+        <a href="/resources/guides" class="block w-full bg-green-600 text-white text-center py-4 rounded-lg font-bold hover:bg-green-700 transition-all">
+          Access All Guides →
+        </a>
+      </div>
+      
+      <!-- Success Stories & Case Studies -->
+      <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl border border-blue-200">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="text-4xl">📖</div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900">Success Stories</h3>
+            <p class="text-blue-700">Real transformations from restaurant owners like you</p>
+          </div>
+        </div>
+        
+        <div class="space-y-4 mb-8">
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h4 class="font-bold text-gray-800 mb-2">Mumbai Burger Chain Saves ₹8L Monthly</h4>
+            <p class="text-sm text-gray-600">QSR transformation: 40% waste reduction in 60 days</p>
+            <div class="text-xs text-blue-600 mt-2">Rajesh Kumar • QSR Revolution</div>
+          </div>
+          
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h4 class="font-bold text-gray-800 mb-2">Delhi Chef Goes from 16 to 8 Hour Days</h4>
+            <p class="text-sm text-gray-600">Fine dining automation: Complete life transformation</p>
+            <div class="text-xs text-blue-600 mt-2">Chef Arjun • Liberation Success</div>
+          </div>
+          
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h4 class="font-bold text-gray-800 mb-2">Pune Cloud Kitchen's 5-Brand Empire</h4>
+            <p class="text-sm text-gray-600">Multi-brand scaling: From chaos to systematic growth</p>
+            <div class="text-xs text-blue-600 mt-2">Amit Verma • Scaling Specialist</div>
+          </div>
+          
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h4 class="font-bold text-gray-800 mb-2">Goa Cafe's Life Transformation</h4>
+            <p class="text-sm text-gray-600">Work-life balance: Passion project to profitable business</p>
+            <div class="text-xs text-blue-600 mt-2">Sarah D'Souza • Cafe Liberation</div>
+          </div>
+        </div>
+        
+        <a href="/resources/case-studies" class="block w-full bg-blue-600 text-white text-center py-4 rounded-lg font-bold hover:bg-blue-700 transition-all">
+          Read Success Stories →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Tools Preview -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-900 mb-6">
+        Interactive <span class="pillar-accent">Liberation Tools</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Calculate your transformation potential with our comprehensive assessment tools. 
+        Get personalized recommendations and liberation roadmaps.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <!-- ROI Calculator -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+        <div class="text-3xl mb-4">🧮</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-3">Restaurant Liberation Calculator</h3>
+        <p class="text-sm text-gray-600 mb-4">Calculate exact savings potential and ROI timeline for your restaurant</p>
+        <div class="text-xs text-green-600 mb-4">Free • Instant Results</div>
+        <a href="/tools/roi-calculator" class="block w-full bg-green-500 text-white text-center py-3 rounded font-bold hover:bg-green-600 transition-all">
+          Calculate Now →
+        </a>
+      </div>
+      
+      <!-- Waste Audit Tool -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+        <div class="text-3xl mb-4">🔍</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-3">Waste Prevention Audit</h3>
+        <p class="text-sm text-gray-600 mb-4">50-point comprehensive assessment with immediate recommendations</p>
+        <div class="text-xs text-blue-600 mb-4">Free • Detailed Report</div>
+        <a href="/tools/waste-audit" class="block w-full bg-blue-500 text-white text-center py-3 rounded font-bold hover:bg-blue-600 transition-all">
+          Start Audit →
+        </a>
+      </div>
+      
+      <!-- Time Assessment -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+        <div class="text-3xl mb-4">⏰</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-3">10 PM Readiness Check</h3>
+        <p class="text-sm text-gray-600 mb-4">Automation opportunity scanner and time optimization planner</p>
+        <div class="text-xs text-purple-600 mb-4">Free • Action Plan</div>
+        <a href="/tools/time-assessment" class="block w-full bg-purple-500 text-white text-center py-3 rounded font-bold hover:bg-purple-600 transition-all">
+          Check Readiness →
+        </a>
+      </div>
+      
+      <!-- Demand Predictor -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+        <div class="text-3xl mb-4">📊</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-3">Demand Prediction Trainer</h3>
+        <p class="text-sm text-gray-600 mb-4">Test forecast accuracy and identify seasonal patterns</p>
+        <div class="text-xs text-orange-600 mb-4">Free • Accuracy Score</div>
+        <a href="/tools/demand-predictor" class="block w-full bg-orange-500 text-white text-center py-3 rounded font-bold hover:bg-orange-600 transition-all">
+          Test Accuracy →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Coming Soon: Advanced Resources -->
+<section class="py-20 resources-gradient text-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black mb-6">
+        Coming Soon: <span class="text-yellow-300">Advanced Liberation Platform</span>
+      </h2>
+      <p class="text-xl text-gray-100 max-w-3xl mx-auto">
+        We're building the most comprehensive restaurant intelligence ecosystem. 
+        Be among the first to access these game-changing resources.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- RestoPi Academy -->
+      <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20">
+        <div class="text-4xl mb-4">🎓</div>
+        <h3 class="text-2xl font-bold mb-4">RestoPi Academy</h3>
+        <p class="text-gray-100 mb-6">
+          Structured learning paths with expert-led courses, certifications, 
+          and hands-on implementation support.
+        </p>
+        
+        <div class="space-y-3 mb-6">
+          <div class="flex items-center gap-3">
+            <span class="text-yellow-300">📘</span>
+            <span class="text-sm">8-Week Waste Prevention Mastery</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-yellow-300">⚡</span>
+            <span class="text-sm">6-Week Automation Excellence</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-yellow-300">💰</span>
+            <span class="text-sm">10-Week Profit Optimization</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-yellow-300">🏪</span>
+            <span class="text-sm">12-Week Multi-Location Management</span>
+          </div>
+        </div>
+        
+        <div class="bg-yellow-500/20 px-4 py-3 rounded-lg text-center">
+          <span class="text-yellow-300 font-bold">🚀 Launch: Q1 2025</span>
+        </div>
+      </div>
+      
+      <!-- Liberation Community -->
+      <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20">
+        <div class="text-4xl mb-4">🤝</div>
+        <h3 class="text-2xl font-bold mb-4">Liberation Community</h3>
+        <p class="text-gray-100 mb-6">
+          Connect with 5,000+ restaurant owners, access expert mentorship, 
+          and accelerate your transformation through peer learning.
+        </p>
+        
+        <div class="space-y-3 mb-6">
+          <div class="flex items-center gap-3">
+            <span class="text-green-300">🌍</span>
+            <span class="text-sm">10+ Regional Chapters</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-green-300">👨‍🍳</span>
+            <span class="text-sm">Segment-Specific Groups</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-green-300">🎯</span>
+            <span class="text-sm">Expert AMA Sessions</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-green-300">🏆</span>
+            <span class="text-sm">Peer Mentorship Program</span>
+          </div>
+        </div>
+        
+        <div class="bg-green-500/20 px-4 py-3 rounded-lg text-center">
+          <span class="text-green-300 font-bold">👥 Beta: Q1 2025</span>
+        </div>
+      </div>
+      
+      <!-- Intelligence Reports -->
+      <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20">
+        <div class="text-4xl mb-4">📊</div>
+        <h3 class="text-2xl font-bold mb-4">Industry Intelligence</h3>
+        <p class="text-gray-100 mb-6">
+          Monthly trend analysis, market insights, and predictive intelligence 
+          to keep your restaurant ahead of industry evolution.
+        </p>
+        
+        <div class="space-y-3 mb-6">
+          <div class="flex items-center gap-3">
+            <span class="text-blue-300">📈</span>
+            <span class="text-sm">Monthly Liberation Index</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-blue-300">🔮</span>
+            <span class="text-sm">Industry Trend Predictions</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-blue-300">💡</span>
+            <span class="text-sm">Innovation Spotlights</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-blue-300">🎯</span>
+            <span class="text-sm">Strategic Planning Insights</span>
+          </div>
+        </div>
+        
+        <div class="bg-blue-500/20 px-4 py-3 rounded-lg text-center">
+          <span class="text-blue-300 font-bold">📰 Coming: Q2 2025</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-12">
+      <a href="https://wa.me/919884248927?text=I want early access to RestoPi Academy and Community when they launch" 
+         class="inline-block bg-gradient-to-r from-yellow-400 to-amber-500 text-gray-900 px-10 py-4 rounded-lg font-black text-xl hover:from-yellow-300 hover:to-amber-400 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+        🚀 Get Early Access Notification
+      </a>
+      <p class="mt-4 text-gray-200">
+        Join the waitlist for exclusive beta access and founder pricing
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Your Liberation Journey Starts Here -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-black text-gray-900 mb-6">
+        Your <span class="pillar-accent">Liberation Journey</span> Starts Here
+      </h2>
+      <p class="text-xl text-gray-600 mb-12">
+        Join thousands of restaurant owners who've transformed their operations from chaos to liberation. 
+        Start with our free resources and work your way up to advanced community and academy features.
+      </p>
+      
+      <!-- Journey Steps -->
+      <div class="grid md:grid-cols-4 gap-6 mb-12">
+        <div class="text-center">
+          <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+          <h3 class="font-bold text-gray-800 mb-2">Start with Guides</h3>
+          <p class="text-sm text-gray-600">Download free playbooks and begin immediate implementation</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+          <h3 class="font-bold text-gray-800 mb-2">Use Tools</h3>
+          <p class="text-sm text-gray-600">Calculate your potential and assess current state with our calculators</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+          <h3 class="font-bold text-gray-800 mb-2">Learn Stories</h3>
+          <p class="text-sm text-gray-600">Get inspired by real transformation journeys from peers</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-orange-100 text-orange-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+          <h3 class="font-bold text-gray-800 mb-2">Join Community</h3>
+          <p class="text-sm text-gray-600">Connect with experts and peers for accelerated growth</p>
+        </div>
+      </div>
+      
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/resources/guides" 
+           class="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-bold hover:from-green-400 hover:to-emerald-500 transition-all">
+          📚 Start with Free Guides
+        </a>
+        
+        <a href="/tools/roi-calculator" 
+           class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-8 py-4 rounded-lg font-bold hover:from-blue-400 hover:to-indigo-500 transition-all">
+          🧮 Calculate Your ROI
+        </a>
+        
+        <a href="https://wa.me/919884248927?text=I want to start my restaurant liberation journey with RestoPi resources" 
+           class="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-bold hover:from-purple-400 hover:to-pink-500 transition-all">
+          💬 Get Personal Guidance
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<Footer />
+<WhatsAppButton />
+
+<script>
+// Track resource page engagement
+if (window.trackEvent) {
+  window.trackEvent('resources_page_view', {
+    page_type: 'resources_hub',
+    resource_pillars: 5,
+    available_resources: 'guides_casestudies_tools'
+  });
+}
+
+// Track pillar engagement
+document.querySelectorAll('a[href^="/resources/"]').forEach(link => {
+  link.addEventListener('click', function() {
+    const resourceType = this.href.split('/resources/')[1].split('/')[0];
+    if (window.trackEvent) {
+      window.trackEvent('resource_pillar_clicked', {
+        pillar_type: resourceType,
+        source: 'resources_hub'
+      });
+    }
+  });
+});
+
+// Track tool engagement
+document.querySelectorAll('a[href^="/tools/"]').forEach(link => {
+  link.addEventListener('click', function() {
+    const toolType = this.href.split('/tools/')[1];
+    if (window.trackEvent) {
+      window.trackEvent('liberation_tool_clicked', {
+        tool_type: toolType,
+        source: 'resources_hub'
+      });
+    }
+  });
+});
+
+// Track coming soon interest
+document.querySelector('a[href*="early access"]')?.addEventListener('click', function() {
+  if (window.trackEvent) {
+    window.trackEvent('early_access_interest', {
+      features: 'academy_community_intelligence',
+      source: 'resources_hub'
+    });
+  }
+});
+</script>
+
+</BaseLayout>

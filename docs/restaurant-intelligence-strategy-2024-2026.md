@@ -717,7 +717,7 @@ This document outlines RestoPi's comprehensive strategy to establish market lead
 - `/resources/cities/bangalore/`
 
 #### Secondary Cities (Tier 2)
-**Target Markets:** Hyderabad, Kolkata, Ahmedabad, Jaipur, Kochi
+**Target Markets:** Hyderabad, Kolkata, Ahmedabad, Jaipur, Kochi, Salem, Namakkal
 
 **Content Strategy:**
 - Regional content hubs

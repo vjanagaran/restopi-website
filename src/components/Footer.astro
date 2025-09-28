@@ -1,48 +1,326 @@
 ---
 // src/components/Footer.astro
+// Comprehensive footer component for all RestoPi pages
 ---
 
-<footer class="bg-gray-900 text-white py-12">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="grid md:grid-cols-4 gap-8">
-      <div>
-        <h3 class="text-2xl font-bold mb-4">Resto<span class="text-[#C2410C]">Pi</span></h3>
-        <p class="text-gray-400">Restaurant Intelligence Revolution</p>
-      </div>
-      
-      <div>
-        <h4 class="font-semibold mb-4">Solutions</h4>
-        <ul class="space-y-2 text-gray-400">
-          <li><a href="/waste-prevention" class="hover:text-white">Waste Prevention</a></li>
-          <li><a href="/home-by-10pm" class="hover:text-white">10 PM Liberation</a></li>
-          <li><a href="/demand-prediction" class="hover:text-white">Demand Prediction</a></li>
-        </ul>
-      </div>
-      
-      <div>
-        <h4 class="font-semibold mb-4">Company</h4>
-        <ul class="space-y-2 text-gray-400">
-          <li><a href="/about" class="hover:text-white">About Us</a></li>
-          <li><a href="/contact" class="hover:text-white">Contact</a></li>
-          <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
-        </ul>
-      </div>
-      
-      <div>
-        <h4 class="font-semibold mb-4">Connect</h4>
-        <p class="text-gray-400 mb-4">📱 +91 98842-48927</p>
-        <a 
-          href="https://wa.me/919884248927"
-          target="_blank"
-          class="inline-block bg-green-500 hover:bg-green-600 px-4 py-2 rounded-full transition-all"
-        >
-          WhatsApp Us
-        </a>
+<footer class="bg-gradient-to-b from-gray-900 to-black text-white">
+  <!-- Main Footer Content -->
+  <div class="py-16 px-4 md:px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        
+        <!-- Brand Section - Spans 2 columns on large screens -->
+        <div class="lg:col-span-2">
+          <div class="mb-6">
+            <h3 class="text-3xl font-black mb-3">
+              Resto<span class="text-[#C2410C]">Pi</span>
+            </h3>
+            <p class="text-gray-400 text-lg font-medium mb-4">
+              Restaurant Intelligence Revolution
+            </p>
+            <p class="text-gray-500 mb-6">
+              Liberating restaurant owners from operational chaos. 
+              Save ₹2 lakhs monthly, get home by 10 PM.
+            </p>
+          </div>
+          
+          <!-- Key Metrics -->
+          <div class="flex flex-wrap gap-4 mb-6">
+            <div class="bg-gray-800/50 px-4 py-2 rounded-lg">
+              <span class="text-green-400 font-bold">5,000+</span>
+              <span class="text-gray-400 text-sm ml-1">Owners</span>
+            </div>
+            <div class="bg-gray-800/50 px-4 py-2 rounded-lg">
+              <span class="text-yellow-400 font-bold">₹2L+</span>
+              <span class="text-gray-400 text-sm ml-1">Saved</span>
+            </div>
+            <div class="bg-gray-800/50 px-4 py-2 rounded-lg">
+              <span class="text-blue-400 font-bold">10 PM</span>
+              <span class="text-gray-400 text-sm ml-1">Home</span>
+            </div>
+          </div>
+          
+          <!-- WhatsApp CTA -->
+          <a 
+            href="https://wa.me/919884248927?text=I want to save ₹2 lakhs monthly with RestoPi!"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+            onclick="window.trackEvent && window.trackEvent('footer_whatsapp_clicked', {source: 'footer_brand'})"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            Start Liberation Journey
+          </a>
+        </div>
+        
+        <!-- Solutions Column -->
+        <div>
+          <h4 class="font-bold text-white mb-4 text-lg">Solutions</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li>
+              <a href="/solutions/waste-prevention" class="hover:text-green-400 transition-colors">
+                🗑️ Waste Prevention
+              </a>
+            </li>
+            <li>
+              <a href="/solutions/home-by-10pm" class="hover:text-green-400 transition-colors">
+                🏠 10 PM Liberation
+              </a>
+            </li>
+            <li>
+              <a href="/solutions/demand-prediction" class="hover:text-green-400 transition-colors">
+                📈 Demand Prediction
+              </a>
+            </li>
+            <li>
+              <a href="/solutions/profit-optimization" class="hover:text-green-400 transition-colors">
+                💰 Profit Optimization
+              </a>
+            </li>
+            <li>
+              <a href="/solutions/staff-optimization" class="hover:text-green-400 transition-colors">
+                👥 Staff Optimization
+              </a>
+            </li>
+            <li>
+              <a href="/solutions/multi-outlet-management" class="hover:text-green-400 transition-colors">
+                🏪 Multi-Outlet
+              </a>
+            </li>
+            <li>
+              <a href="/solutions" class="hover:text-green-400 transition-colors font-semibold">
+                View All Solutions →
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Segments Column -->
+        <div>
+          <h4 class="font-bold text-white mb-4 text-lg">Segments</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li>
+              <a href="/segments/qsr" class="hover:text-green-400 transition-colors">
+                🍔 Quick Service
+              </a>
+            </li>
+            <li>
+              <a href="/segments/fine-dining" class="hover:text-green-400 transition-colors">
+                🍽️ Fine Dining
+              </a>
+            </li>
+            <li>
+              <a href="/segments/casual-dining" class="hover:text-green-400 transition-colors">
+                🍴 Casual Dining
+              </a>
+            </li>
+            <li>
+              <a href="/segments/cloud-kitchens" class="hover:text-green-400 transition-colors">
+                ☁️ Cloud Kitchens
+              </a>
+            </li>
+            <li>
+              <a href="/segments/cafes-bakeries" class="hover:text-green-400 transition-colors">
+                ☕ Cafes & Bakeries
+              </a>
+            </li>
+            <li>
+              <a href="/segments/bars-pubs" class="hover:text-green-400 transition-colors">
+                🍺 Bars & Pubs
+              </a>
+            </li>
+            <li>
+              <a href="/segments" class="hover:text-green-400 transition-colors font-semibold">
+                All Segments →
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div>
+          <h4 class="font-bold text-white mb-4 text-lg">Resources</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li>
+              <a href="/resources" class="hover:text-green-400 transition-colors">
+                🎓 Liberation Hub
+              </a>
+            </li>
+            <li>
+              <a href="/resources/guides" class="hover:text-green-400 transition-colors">
+                📚 Free Guides
+              </a>
+            </li>
+            <li>
+              <a href="/resources/case-studies" class="hover:text-green-400 transition-colors">
+                📖 Success Stories
+              </a>
+            </li>
+            <li>
+              <a href="/tools/roi-calculator" class="hover:text-green-400 transition-colors">
+                🧮 ROI Calculator
+              </a>
+            </li>
+            <li>
+              <a href="/tools/restaurant-iq-score" class="hover:text-green-400 transition-colors">
+                🎯 IQ Score Test
+              </a>
+            </li>
+            <li>
+              <a href="/resources/blog" class="hover:text-green-400 transition-colors">
+                📰 Blog
+                <span class="text-xs bg-yellow-500 text-black px-2 py-0.5 rounded ml-1">Soon</span>
+              </a>
+            </li>
+            <li>
+              <a href="/resources/community" class="hover:text-green-400 transition-colors">
+                👥 Community
+                <span class="text-xs bg-blue-500 text-white px-2 py-0.5 rounded ml-1">Q1 2025</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div>
+          <h4 class="font-bold text-white mb-4 text-lg">Company</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li>
+              <a href="/about" class="hover:text-green-400 transition-colors">
+                About RestoPi
+              </a>
+            </li>
+            <li>
+              <a href="/pricing" class="hover:text-green-400 transition-colors">
+                Pricing Plans
+              </a>
+            </li>
+            <li>
+              <a href="/contact" class="hover:text-green-400 transition-colors">
+                Contact Us
+              </a>
+            </li>
+            <li>
+              <a href="/privacy" class="hover:text-green-400 transition-colors">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="/terms" class="hover:text-green-400 transition-colors">
+                Terms of Service
+              </a>
+            </li>
+            <li>
+              <a href="/careers" class="hover:text-green-400 transition-colors">
+                Careers
+                <span class="text-xs bg-green-500 text-white px-2 py-0.5 rounded ml-1">Hiring</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
       </div>
     </div>
-    
-    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-      <p>&copy; 2025 RestoPi. All rights reserved. | Save ₹2 Lakhs Monthly</p>
+  </div>
+  
+  <!-- Regional Presence Bar -->
+  <div class="border-t border-gray-800 py-6 px-4 md:px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <span class="text-gray-500 text-sm">Serving restaurants in:</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-gray-400 text-sm">Mumbai</span>
+            <span class="text-gray-600">•</span>
+            <span class="text-gray-400 text-sm">Delhi</span>
+            <span class="text-gray-600">•</span>
+            <span class="text-gray-400 text-sm">Bangalore</span>
+            <span class="text-gray-600">•</span>
+            <span class="text-gray-400 text-sm">Pune</span>
+            <span class="text-gray-600">•</span>
+            <span class="text-gray-400 text-sm">Chennai</span>
+            <span class="text-gray-600">•</span>
+            <span class="text-gray-400 text-sm">Hyderabad</span>
+            <span class="text-gray-600">•</span>
+            <span class="text-gray-400 text-sm">Kolkata</span>
+            <span class="text-gray-600">•</span>
+            <span class="text-gray-400 text-sm">20+ Cities</span>
+          </div>
+        </div>
+        
+        <!-- Social Media Links -->
+        <div class="flex items-center gap-4">
+          <a href="https://www.linkedin.com/company/restopi" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-400 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="https://www.twitter.com/restopi" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-300 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@restopi" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-red-500 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/restopi" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-pink-500 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bottom Bar -->
+  <div class="border-t border-gray-800 py-6 px-4 md:px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="text-center md:text-left">
+          <p class="text-gray-400 text-sm">
+            © 2025 RestoPi Technologies Pvt. Ltd. All rights reserved.
+          </p>
+          <p class="text-gray-500 text-xs mt-1">
+            Built with ❤️ for restaurant owners across India
+          </p>
+        </div>
+        
+        <div class="flex items-center gap-6">
+          <div class="flex items-center gap-2">
+            <span class="text-green-400 text-2xl font-bold">₹2L+</span>
+            <span class="text-gray-400 text-sm">Monthly Savings</span>
+          </div>
+          <div class="w-px h-8 bg-gray-700"></div>
+          <div class="flex items-center gap-2">
+            <span class="text-blue-400 text-2xl font-bold">10 PM</span>
+            <span class="text-gray-400 text-sm">Home Guarantee</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
+
+<!-- Footer Analytics Script -->
+<script>
+  // Track footer link clicks
+  document.querySelectorAll('footer a').forEach(link => {
+    link.addEventListener('click', function() {
+      const linkText = this.textContent.trim();
+      const linkHref = this.getAttribute('href');
+      
+      if (window.trackEvent) {
+        window.trackEvent('footer_link_clicked', {
+          link_text: linkText,
+          link_href: linkHref,
+          link_section: this.closest('div')?.querySelector('h4')?.textContent || 'bottom'
+        });
+      }
+    });
+  });
+</script>

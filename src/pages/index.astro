@@ -3,233 +3,868 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
+
+// Get current time for dynamic content
+const currentHour = new Date().getHours();
+const isNightTime = currentHour >= 20 || currentHour < 6;
+const timeBasedMessage = isNightTime 
+  ? "While you're still stuck at your restaurant..." 
+  : "While you're prepping for another chaotic day...";
+
+// Dynamic urgency based on day of week
+const dayOfWeek = new Date().getDay();
+const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
+const urgencyMessage = isWeekend 
+  ? "Your competitors are home with family while you're still working" 
+  : "Another week of 16-hour days ahead?";
 ---
 
-<BaseLayout>
+<BaseLayout 
+  title="RestoPi - Save ₹2 Lakhs Monthly, Get Home by 10 PM | Restaurant Liberation"
+  description="Join 5,000+ restaurant owners who've escaped operational chaos. Guaranteed ₹2 lakh monthly savings and work-life balance. 60-day money-back guarantee."
+>
 <Navigation />
-  <!-- Hero Section -->
-  <section class="min-h-screen bg-gradient-to-br from-[#2D2A6E] to-[#C2410C] flex items-center justify-center px-4">
-    <div class="max-w-6xl mx-auto text-center text-white">
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-        Your Restaurant. <span class="text-yellow-300">Profitable.</span><br/>
-        Your Life. <span class="text-yellow-300">Returned.</span>
-      </h1>
+
+<style>
+  @keyframes moneyFall {
+    0% { transform: translateY(-100vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
+  @keyframes slideInFromRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  .money-animation {
+    position: fixed;
+    font-size: 2rem;
+    color: rgba(239, 68, 68, 0.6);
+    animation: moneyFall 10s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .pulse-animation {
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  .notification-popup {
+    animation: slideInFromRight 0.5s ease-out;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(45deg, #fbbf24, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .liberation-gradient {
+    background: linear-gradient(135deg, #2D2A6E 0%, #4338ca 50%, #C2410C 100%);
+  }
+  
+  .emergency-blink {
+    animation: blink 1s ease-in-out infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  .authority-scroll {
+    animation: scroll 30s linear infinite;
+  }
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
+
+<!-- Falling Money Animation (Visceral Loss Visualization) -->
+<div class="money-animation" style="left: 10%;">₹</div>
+<div class="money-animation" style="left: 30%; animation-delay: 2s;">₹</div>
+<div class="money-animation" style="left: 50%; animation-delay: 4s;">₹</div>
+<div class="money-animation" style="left: 70%; animation-delay: 6s;">₹</div>
+<div class="money-animation" style="left: 90%; animation-delay: 8s;">₹</div>
+
+<!-- FOMO Notification Popup (Appears after 5 seconds) -->
+<div id="fomo-notification" class="fixed bottom-4 right-4 bg-white shadow-2xl rounded-lg p-4 max-w-sm hidden notification-popup z-50">
+  <div class="flex items-start gap-3">
+    <div class="text-green-500 text-2xl">✓</div>
+    <div>
+      <p class="font-semibold text-gray-900">Mumbai Restaurant Just Saved ₹2.3L</p>
+      <p class="text-sm text-gray-600">QSR owner automated inventory 3 mins ago</p>
+    </div>
+  </div>
+</div>
+
+<!-- Hero Section: Psychological Depth & Emotional Triggers -->
+<section class="min-h-screen liberation-gradient flex items-center justify-center px-4 relative overflow-hidden pt-40 md:pt-32">
+  <!-- Authority Bar -->
+  <div class="absolute top-20 w-full bg-black/20 backdrop-blur-sm py-3 z-20">
+    <div class="authority-scroll flex items-center gap-12 text-white/80 text-sm">
+      <span>🏆 5,000+ Restaurants Liberated</span>
+      <span>💰 ₹450 Crores Saved Collectively</span>
+      <span>⏰ 2.3 Million Hours Returned to Families</span>
+      <span>⭐ 4.9/5 Rating from Owners</span>
+      <span>🛡️ 60-Day Money Back Guarantee</span>
+      <span>🏆 5,000+ Restaurants Liberated</span>
+      <span>💰 ₹450 Crores Saved Collectively</span>
+    </div>
+  </div>
+  
+  <div class="max-w-6xl mx-auto text-center text-white relative z-10 mt-12">
+    <!-- Time-Based Psychological Trigger -->
+    <p class="text-yellow-300 text-lg md:text-xl mb-6 emergency-blink">
+      ⚠️ {timeBasedMessage}
+    </p>
+    
+    <!-- Main Headline with Deep Emotional Trigger -->
+    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
+      Your Restaurant is <span class="text-red-400">Dying</span>.<br/>
+      Your Family is <span class="text-red-400">Waiting</span>.<br/>
+      Your Life is <span class="gradient-text">Escaping</span>.
+    </h1>
+    
+    <p class="text-2xl md:text-3xl lg:text-4xl mb-8 font-bold">
+      Save <span class="gradient-text">₹2 Lakhs Monthly</span>.<br class="md:hidden"/> 
+      Be Home by <span class="gradient-text">10 PM</span>.
+    </p>
+    
+    <!-- Live Waste Counter with Competitor Comparison -->
+    <div class="bg-red-600/20 backdrop-blur-md rounded-2xl p-6 mb-8 inline-block border-2 border-red-400/50">
+      <p class="text-lg mb-2">Indian Restaurants Losing Right Now:</p>
+      <p class="text-5xl md:text-6xl font-black mb-2">₹<span id="waste-counter">8,47,293</span></p>
+      <p class="text-sm text-yellow-300">Your competitor saved ₹62,000 while you read this</p>
+    </div>
+    
+    <!-- Interactive ROI Preview -->
+    <div class="mb-8">
+      <p class="text-lg mb-3">Your Monthly Savings Potential:</p>
+      <div class="flex justify-center gap-4">
+        <button class="segment-btn bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20" data-savings="180000">QSR</button>
+        <button class="segment-btn bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20" data-savings="250000">Fine Dining</button>
+        <button class="segment-btn bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20" data-savings="220000">Casual</button>
+        <button class="segment-btn bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20" data-savings="150000">Cafe</button>
+      </div>
+      <p class="text-3xl font-bold mt-3">₹<span id="savings-preview">2,00,000</span>/month</p>
+    </div>
+    
+    <!-- Dual CTA with Urgency -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+      <a 
+        href="https://wa.me/919884248927?text=I'm losing money every day. Help me save ₹2 lakhs monthly with RestoPi!"
+        target="_blank"
+        class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-10 py-5 rounded-full text-xl font-bold transition-all transform hover:scale-105 shadow-2xl pulse-animation"
+        onclick="window.trackEvent && window.trackEvent('hero_cta_clicked', {position: 'primary', page: 'home'})"
+      >
+        🚨 Stop The Bleeding Now →
+      </a>
       
-      <p class="text-xl md:text-2xl lg:text-3xl mb-8 opacity-90">
-        Save ₹2 Lakhs Monthly. Be Home by 10 PM.
+      <a 
+        href="/tools/roi-calculator"
+        class="bg-white/10 backdrop-blur-sm border-2 border-white hover:bg-white hover:text-[#2D2A6E] text-white px-10 py-5 rounded-full text-xl font-bold transition-all"
+        onclick="window.trackEvent && window.trackEvent('calculator_clicked', {position: 'hero', page: 'home'})"
+      >
+        Calculate Exact Savings
+      </a>
+    </div>
+    
+    <!-- Trust Indicators -->
+    <div class="flex flex-wrap justify-center gap-6 text-sm">
+      <span class="bg-black/30 px-4 py-2 rounded-full">✓ 4-Hour Setup</span>
+      <span class="bg-black/30 px-4 py-2 rounded-full">✓ No Technical Skills</span>
+      <span class="bg-black/30 px-4 py-2 rounded-full">✓ 60-Day Guarantee</span>
+      <span class="bg-black/30 px-4 py-2 rounded-full">✓ Cancel Anytime</span>
+    </div>
+    
+    <!-- Scarcity Element -->
+    <div class="mt-8 text-yellow-300">
+      <p class="text-lg font-bold">⚡ Only <span id="spots-remaining">7</span> onboarding spots left for December</p>
+      <p class="text-sm">Next batch opens January 15th with 15% higher pricing</p>
+    </div>
+  </div>
+</section>
+
+<!-- The 3 AM Panic Attack (Deep Pain Agitation) -->
+<section class="py-20 px-4 bg-gradient-to-b from-gray-900 to-black text-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-center mb-4">
+      It's 3 AM. You're Still Counting Inventory.
+    </h2>
+    <p class="text-xl text-center mb-12 text-gray-300">
+      {urgencyMessage}
+    </p>
+    
+    <!-- The Daily Horror Timeline -->
+    <div class="max-w-4xl mx-auto mb-16">
+      <div class="relative">
+        <!-- Timeline Line -->
+        <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-red-500/30"></div>
+        
+        <!-- Timeline Events -->
+        <div class="space-y-8">
+          <div class="flex gap-4">
+            <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center font-bold shrink-0">5 AM</div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">The Dread Wake-Up</h3>
+              <p class="text-gray-400">4 hours of sleep. Again. Your body aches, mind foggy, but the restaurant demands you.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center font-bold shrink-0">11 AM</div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">The Shortage Panic</h3>
+              <p class="text-gray-400">"We're out of paneer!" Your bestseller. ₹15,000 lost. Could've been prevented.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center font-bold shrink-0">3 PM</div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">The Staff Chaos</h3>
+              <p class="text-gray-400">Two waiters missing. Kitchen fighting. You're everything - manager, waiter, therapist.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center font-bold shrink-0">8 PM</div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">The Family Call</h3>
+              <p class="text-gray-400">"Daddy, when are you coming home?" You lie. "Soon, beta." But you know it's midnight again.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center font-bold shrink-0">1 AM</div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">The Lonely Drive</h3>
+              <p class="text-gray-400">Streets empty. Family asleep. Another day survived, not lived. Tomorrow? Same hell.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- The Breaking Point -->
+    <div class="text-center max-w-3xl mx-auto">
+      <p class="text-2xl font-bold mb-4 text-red-400">
+        How many more birthdays will you miss?<br/>
+        How many more "I'll be there next time" promises?<br/>
+        How much longer before your health breaks?
       </p>
-      
-      <!-- Waste Counter -->
-      <div class="bg-red-600/20 backdrop-blur-md rounded-2xl p-6 mb-8 inline-block">
-        <p class="text-lg mb-2">Restaurants losing right now:</p>
-        <p class="text-4xl md:text-5xl font-bold">₹<span id="waste-counter">25,000</span></p>
-      </div>
-      
-      <!-- CTA Buttons -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a 
-          href="https://wa.me/919884248927?text=I%20want%20to%20save%20₹2%20lakhs%20monthly%20with%20RestoPi!"
-          target="_blank"
-          class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105"
-        >
-          Start Liberation Now →
-        </a>
-        
-        <a 
-          href="#problem"
-          class="bg-white/10 backdrop-blur-sm border-2 border-white hover:bg-white hover:text-[#2D2A6E] text-white px-8 py-4 rounded-full text-lg font-semibold transition-all"
-        >
-          Calculate Your Savings
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Problem Section -->
-  <section id="problem" class="py-20 px-4 bg-gray-50">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-[#2D2A6E]">
-        Right Now, While Reading This...
-      </h2>
-      <p class="text-xl text-gray-600 text-center mb-12">
-        Your restaurant is losing money you don't even know about
-      </p>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-lg border-t-4 border-red-500">
-          <h3 class="text-lg font-semibold mb-2">Excess Inventory</h3>
-          <p class="text-3xl font-bold text-red-500">₹8,000</p>
-          <p class="text-gray-600">Lost Daily</p>
-        </div>
-        
-        <div class="bg-white rounded-xl p-6 shadow-lg border-t-4 border-red-500">
-          <h3 class="text-lg font-semibold mb-2">Over-staffing</h3>
-          <p class="text-3xl font-bold text-red-500">₹3,000</p>
-          <p class="text-gray-600">Lost Daily</p>
-        </div>
-        
-        <div class="bg-white rounded-xl p-6 shadow-lg border-t-4 border-red-500">
-          <h3 class="text-lg font-semibold mb-2">Menu Losses</h3>
-          <p class="text-3xl font-bold text-red-500">₹5,000</p>
-          <p class="text-gray-600">Lost Daily</p>
-        </div>
-        
-        <div class="bg-white rounded-xl p-6 shadow-lg border-t-4 border-red-500">
-          <h3 class="text-lg font-semibold mb-2">Hidden Leaks</h3>
-          <p class="text-3xl font-bold text-red-500">₹2,000</p>
-          <p class="text-gray-600">Lost Daily</p>
-        </div>
-      </div>
-    </div>
-  </section>
-<!-- Add Solution Section -->
-  <section class="py-20 px-4 bg-white">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-[#2D2A6E]">
-        From Chaos to Control in 30 Days
-      </h2>
-      
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-red-50 rounded-xl p-8">
-          <h3 class="text-2xl font-bold mb-4 text-red-600">TODAY Without RestoPi</h3>
-          <ul class="space-y-3">
-            <li class="flex items-start">
-              <span class="text-red-500 mr-2">✗</span>
-              <span>Guessing tomorrow's prep quantities</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-red-500 mr-2">✗</span>
-              <span>Leaving restaurant at midnight</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-red-500 mr-2">✗</span>
-              <span>₹7.5 Lakhs monthly loss</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-red-500 mr-2">✗</span>
-              <span>Missing family dinners</span>
-            </li>
-          </ul>
-        </div>
-        
-        <div class="bg-green-50 rounded-xl p-8">
-          <h3 class="text-2xl font-bold mb-4 text-green-600">TOMORROW With RestoPi</h3>
-          <ul class="space-y-3">
-            <li class="flex items-start">
-              <span class="text-green-500 mr-2">✓</span>
-              <span>Know Monday's needs on Saturday</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-green-500 mr-2">✓</span>
-              <span>Home by 10 PM guaranteed</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-green-500 mr-2">✓</span>
-              <span>₹2 Lakhs monthly savings</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-green-500 mr-2">✓</span>
-              <span>Dinner with family every night</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Add Testimonials Section -->
-  <section class="py-20 px-4 bg-gray-50">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-[#2D2A6E]">
-        100+ Restaurants Already Liberated
-      </h2>
-      
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-xl p-6 shadow-lg">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-[#2D2A6E] rounded-full flex items-center justify-center text-white font-bold">
-              R
-            </div>
-            <div class="ml-3">
-              <h4 class="font-semibold">Rajesh Kumar</h4>
-              <p class="text-sm text-gray-600">Bangalore QSR Owner</p>
-            </div>
-          </div>
-          <p class="text-gray-700 mb-4">
-            "3 months ago, I missed my daughter's birthday. Today, I coach her cricket team. RestoPi didn't just save my restaurant - it saved my family."
-          </p>
-          <div class="text-green-600 font-bold">Saves ₹1.8 Lakhs/month</div>
-        </div>
-        
-        <div class="bg-white rounded-xl p-6 shadow-lg">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-[#2D2A6E] rounded-full flex items-center justify-center text-white font-bold">
-              P
-            </div>
-            <div class="ml-3">
-              <h4 class="font-semibold">Priya Sharma</h4>
-              <p class="text-sm text-gray-600">Mumbai Fine Dining</p>
-            </div>
-          </div>
-          <p class="text-gray-700 mb-4">
-            "From 2 AM inventory counts to 9:30 PM family dinners. RestoPi's intelligence gave me my life back. Opening 2nd outlet next month!"
-          </p>
-          <div class="text-green-600 font-bold">Saves ₹2.2 Lakhs/month</div>
-        </div>
-        
-        <div class="bg-white rounded-xl p-6 shadow-lg">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-[#2D2A6E] rounded-full flex items-center justify-center text-white font-bold">
-              A
-            </div>
-            <div class="ml-3">
-              <h4 class="font-semibold">Amit Patel</h4>
-              <p class="text-sm text-gray-600">Chennai Cloud Kitchen</p>
-            </div>
-          </div>
-          <p class="text-gray-700 mb-4">
-            "Started with 1 struggling outlet. Now running 3 profitable restaurants. Sundays are for family now, not firefighting."
-          </p>
-          <div class="text-green-600 font-bold">Saves ₹2.5 Lakhs/month</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Final CTA Section -->
-  <section class="py-20 px-4 bg-[#2D2A6E]">
-    <div class="max-w-4xl mx-auto text-center text-white">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-        Join the Restaurant Liberation Movement
-      </h2>
-      <p class="text-xl mb-8 opacity-90">
-        60-day money-back guarantee • No hidden fees • Cancel anytime
+      <p class="text-xl text-gray-300 mb-8">
+        Your restaurant owns you. It's time to own it back.
       </p>
       <a 
-        href="https://wa.me/919884248927?text=I%20want%20to%20save%20₹2%20lakhs%20monthly%20with%20RestoPi!"
-        target="_blank"
-        class="inline-block bg-green-500 hover:bg-green-600 text-white px-10 py-5 rounded-full text-xl font-bold transition-all transform hover:scale-105"
+        href="#transformation"
+        class="inline-block bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-8 py-4 rounded-full text-lg font-bold hover:from-yellow-400 hover:to-orange-400 transition-all"
       >
-        Start Your Liberation Journey →
+        See The Liberation Path →
       </a>
-      <p class="text-lg mt-6 text-yellow-300">
-        ⚡ Only 47 spots remaining this month
-      </p>
     </div>
-  </section>
-  
-  <Footer />
-  <WhatsAppButton />̵
-  <script>
-    // Waste counter animation
-    let counter = 25000;
-    setInterval(() => {
-      counter += Math.floor(Math.random() * 100) + 50;
-      const element = document.getElementById('waste-counter');
-      if (element) {
-        element.textContent = counter.toLocaleString('en-IN');
-      }
-    }, 2000);
-  </script>
+  </div>
+</section>
+
+<!-- Competitor Success FOMO Section -->
+<section class="py-20 px-4 bg-gray-50">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-center mb-4 text-[#2D2A6E]">
+      While You Struggled Today, They Thrived
+    </h2>
+    <p class="text-xl text-center mb-12 text-gray-600">
+      Real restaurant owners. Real results. Real time.
+    </p>
     
+    <!-- Live Success Feed -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      <div class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-green-500">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-sm text-gray-500">2 hours ago</span>
+          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold">LIVE</span>
+        </div>
+        <h3 class="font-bold text-lg mb-2">Rajesh's QSR - Mumbai</h3>
+        <p class="text-gray-700 mb-3">
+          "Just checked my phone at 9:47 PM from my son's cricket practice. Restaurant running perfectly on autopilot."
+        </p>
+        <div class="flex justify-between items-center">
+          <span class="text-2xl font-bold text-green-600">₹2.3L</span>
+          <span class="text-sm text-gray-500">saved this month</span>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-blue-500">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-sm text-gray-500">5 hours ago</span>
+          <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold">TODAY</span>
+        </div>
+        <h3 class="font-bold text-lg mb-2">Priya's Fine Dining - Delhi</h3>
+        <p class="text-gray-700 mb-3">
+          "Predicted weekend rush perfectly. Zero waste. Team prepared. I'm at my daughter's annual day function."
+        </p>
+        <div class="flex justify-between items-center">
+          <span class="text-2xl font-bold text-blue-600">₹3.1L</span>
+          <span class="text-sm text-gray-500">saved this month</span>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-purple-500">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-sm text-gray-500">Yesterday</span>
+          <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-bold">NEW</span>
+        </div>
+        <h3 class="font-bold text-lg mb-2">Amit's Cloud Kitchen - Bangalore</h3>
+        <p class="text-gray-700 mb-3">
+          "Opened 2nd location. Managing both from one dashboard. Home for dinner every single night this week!"
+        </p>
+        <div class="flex justify-between items-center">
+          <span class="text-2xl font-bold text-purple-600">₹4.2L</span>
+          <span class="text-sm text-gray-500">saved this month</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Jealousy Trigger -->
+    <div class="bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8 text-center">
+      <p class="text-2xl font-bold text-gray-900 mb-4">
+        Your Competitors Are Living Your Dream Life
+      </p>
+      <p class="text-lg text-gray-700 mb-6">
+        They have the same challenges. Same market. Same customers.<br/>
+        The only difference? They said YES to RestoPi.
+      </p>
+      <a 
+        href="https://wa.me/919884248927?text=I want what my competitors have. Show me RestoPi!"
+        target="_blank"
+        class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full text-lg font-bold transition-all"
+      >
+        Join Them Before It's Too Late →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- The Transformation (Solution Visualization) -->
+<section id="transformation" class="py-20 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-center mb-12 text-[#2D2A6E]">
+      Your Liberation Timeline: 30 Days to Freedom
+    </h2>
+    
+    <!-- Week by Week Transformation -->
+    <div class="grid md:grid-cols-4 gap-6 mb-16">
+      <div class="text-center">
+        <div class="w-20 h-20 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
+          Day 1
+        </div>
+        <h3 class="font-bold text-lg mb-2">The Setup</h3>
+        <p class="text-gray-600">4-hour onboarding. Your data flows in. Intelligence begins.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="w-20 h-20 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
+          Week 1
+        </div>
+        <h3 class="font-bold text-lg mb-2">The Revelation</h3>
+        <p class="text-gray-600">"I was wasting ₹50K here?" Leaks identified. Savings visible.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="w-20 h-20 bg-gradient-to-r from-yellow-500 to-green-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
+          Week 2
+        </div>
+        <h3 class="font-bold text-lg mb-2">The Control</h3>
+        <p class="text-gray-600">Predictions working. Waste dropping. You leave at 10:30 PM.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="w-20 h-20 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
+          Day 30
+        </div>
+        <h3 class="font-bold text-lg mb-2">The Liberation</h3>
+        <p class="text-gray-600">Home by 10 PM. ₹2L saved. Family dinner. Every night.</p>
+      </div>
+    </div>
+    
+    <!-- Before/After Comparison -->
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-8 border-2 border-red-300">
+        <h3 class="text-2xl font-bold mb-6 text-red-700">Your Current Hell</h3>
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <span class="text-red-500 mr-3 text-xl">😰</span>
+            <span><strong>5 AM - 1 AM:</strong> 20-hour prison sentence daily</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-red-500 mr-3 text-xl">💸</span>
+            <span><strong>₹7.5L waste:</strong> Money literally in the garbage</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-red-500 mr-3 text-xl">😔</span>
+            <span><strong>Family strangers:</strong> "Daddy who?" your kids ask</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-red-500 mr-3 text-xl">🔥</span>
+            <span><strong>Daily chaos:</strong> Firefighting, not managing</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-red-500 mr-3 text-xl">💔</span>
+            <span><strong>Health failing:</strong> Stress, no sleep, no life</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 border-2 border-green-300">
+        <h3 class="text-2xl font-bold mb-6 text-green-700">Your Coming Liberation</h3>
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <span class="text-green-500 mr-3 text-xl">😊</span>
+            <span><strong>9 AM - 10 PM:</strong> Normal human working hours</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-500 mr-3 text-xl">💰</span>
+            <span><strong>₹2L+ saved:</strong> Pure profit, not waste</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-500 mr-3 text-xl">❤️</span>
+            <span><strong>Family time:</strong> Bedtime stories, not excuses</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-500 mr-3 text-xl">🎯</span>
+            <span><strong>Predictive control:</strong> Know Monday on Saturday</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-500 mr-3 text-xl">💪</span>
+            <span><strong>Life returned:</strong> Gym, friends, hobbies, peace</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Objection Handling Section -->
+<section class="py-20 px-4 bg-gray-50">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-center mb-12 text-[#2D2A6E]">
+      "But..." - We Know What You're Thinking
+    </h2>
+    
+    <div class="space-y-6 max-w-4xl mx-auto">
+      <!-- Objection 1 -->
+      <div class="bg-white rounded-xl p-8 shadow-lg">
+        <h3 class="text-xl font-bold mb-4 text-gray-900">
+          💭 "My restaurant is different. This won't work for me."
+        </h3>
+        <p class="text-gray-700 mb-4">
+          That's what Sharma ji said about his 5-table dhaba. Now he runs 3 locations. 
+          That's what Priya said about her vegan cafe. She saved ₹1.8L first month.
+          That's what every one of our 5,000+ owners said. They were all wrong.
+        </p>
+        <div class="bg-green-50 p-4 rounded-lg">
+          <p class="text-green-800 font-semibold">
+            ✓ Works for: QSR, Fine Dining, Casual, Cafes, Bars, Cloud Kitchens, Sweet Shops, ALL restaurants
+          </p>
+        </div>
+      </div>
+      
+      <!-- Objection 2 -->
+      <div class="bg-white rounded-xl p-8 shadow-lg">
+        <h3 class="text-xl font-bold mb-4 text-gray-900">
+          💭 "I can't afford ₹40,000/month for software"
+        </h3>
+        <p class="text-gray-700 mb-4">
+          You're already losing ₹2-7 lakhs monthly. That's ₹6,000-23,000 DAILY.
+          RestoPi pays for itself in 5 days. The remaining 25 days? Pure profit.
+        </p>
+        <div class="bg-blue-50 p-4 rounded-lg">
+          <p class="text-blue-800 font-semibold">
+            💰 Average ROI: 400% in first month. Plus 60-day money-back guarantee.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Objection 3 -->
+      <div class="bg-white rounded-xl p-8 shadow-lg">
+        <h3 class="text-xl font-bold mb-4 text-gray-900">
+          💭 "I'm not tech-savvy. Too complicated."
+        </h3>
+        <p class="text-gray-700 mb-4">
+          Can you use WhatsApp? Then you can use RestoPi.
+          4-hour setup by OUR team. You just watch.
+          24/7 support in Hindi, English, Tamil, any language you need.
+        </p>
+        <div class="bg-purple-50 p-4 rounded-lg">
+          <p class="text-purple-800 font-semibold">
+            🎯 65-year-old Sharma uncle in Jaipur learned it in 2 days. You will too.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Objection 4 -->
+      <div class="bg-white rounded-xl p-8 shadow-lg">
+        <h3 class="text-xl font-bold mb-4 text-gray-900">
+          💭 "What if it doesn't work? I'll be stuck."
+        </h3>
+        <p class="text-gray-700 mb-4">
+          60-day money-back guarantee. No questions asked.
+          Month-to-month. Cancel anytime. No contracts.
+          We even help you export your data if you leave (you won't).
+        </p>
+        <div class="bg-orange-50 p-4 rounded-lg">
+          <p class="text-orange-800 font-semibold">
+            🛡️ Zero risk. We take all the risk. You get all the reward.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Risk Reversal -->
+    <div class="text-center mt-12">
+      <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl p-8 inline-block">
+        <h3 class="text-2xl font-bold mb-4">The RestoPi Guarantee</h3>
+        <p class="text-lg mb-4">
+          If you don't save at least ₹1 lakh in 60 days,<br/>
+          we'll refund 100% of your money AND give you ₹10,000<br/>
+          for wasting your time. That's how confident we are.
+        </p>
+        <p class="text-sm">
+          *No restaurant has ever claimed this. Because it always works.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Deep Transformation Stories (Emotional Social Proof) -->
+<section class="py-20 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-center mb-12 text-[#2D2A6E]">
+      5,000+ Liberation Stories. Here Are 3.
+    </h2>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Story 1 -->
+      <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 shadow-xl">
+        <div class="flex items-center mb-6">
+          <img src="/api/placeholder/80/80" alt="Rajesh" class="w-20 h-20 rounded-full mr-4"/>
+          <div>
+            <h3 class="font-bold text-lg">Rajesh Kumar</h3>
+            <p class="text-gray-600">Chennai Express QSR</p>
+            <p class="text-sm text-gray-500">Mumbai • 3 Outlets</p>
+          </div>
+        </div>
+        
+        <div class="mb-6">
+          <p class="text-gray-700 italic mb-4">
+            "3 months ago, I was ready to sell. 16-hour days were killing me. 
+            My daughter said 'Papa, you're always tired.' That broke me.
+          </p>
+          <p class="text-gray-700 italic mb-4">
+            First week with RestoPi, I found ₹80,000 in hidden waste. 
+            Second week, home by 10:30 PM. Third week, took Sunday off. 
+            First time in 8 years.
+          </p>
+          <p class="text-gray-700 italic">
+            Last month I opened outlet #3. I manage all three from my phone. 
+            My daughter now says 'Papa, you're always smiling.' That's everything."
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-4 text-center">
+          <div class="bg-white p-3 rounded-lg">
+            <p class="text-2xl font-bold text-green-600">₹2.3L</p>
+            <p class="text-xs text-gray-600">Monthly Saved</p>
+          </div>
+          <div class="bg-white p-3 rounded-lg">
+            <p class="text-2xl font-bold text-blue-600">9:45 PM</p>
+            <p class="text-xs text-gray-600">Home Daily</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Story 2 -->
+      <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 shadow-xl">
+        <div class="flex items-center mb-6">
+          <img src="/api/placeholder/80/80" alt="Priya" class="w-20 h-20 rounded-full mr-4"/>
+          <div>
+            <h3 class="font-bold text-lg">Priya Sharma</h3>
+            <p class="text-gray-600">The Saffron Table</p>
+            <p class="text-sm text-gray-500">Delhi • Fine Dining</p>
+          </div>
+        </div>
+        
+        <div class="mb-6">
+          <p class="text-gray-700 italic mb-4">
+            "I'm a chef, not a manager. But I was doing everything. 
+            Inventory at 2 AM, negotiations at 6 AM, service till midnight. 
+            My passion was dying.
+          </p>
+          <p class="text-gray-700 italic mb-4">
+            RestoPi became my operations manager. It handles the business, 
+            I handle the food. My creativity returned. New menu. Michelin mention.
+          </p>
+          <p class="text-gray-700 italic">
+            Best part? I'm teaching my son cooking on Sundays now. 
+            He wants to be a chef 'like Mama.' I have time to show him."
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-4 text-center">
+          <div class="bg-white p-3 rounded-lg">
+            <p class="text-2xl font-bold text-green-600">₹3.1L</p>
+            <p class="text-xs text-gray-600">Monthly Saved</p>
+          </div>
+          <div class="bg-white p-3 rounded-lg">
+            <p class="text-2xl font-bold text-blue-600">2 Days</p>
+            <p class="text-xs text-gray-600">Off Weekly</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Story 3 -->
+      <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-8 shadow-xl">
+        <div class="flex items-center mb-6">
+          <img src="/api/placeholder/80/80" alt="Amit" class="w-20 h-20 rounded-full mr-4"/>
+          <div>
+            <h3 class="font-bold text-lg">Amit Verma</h3>
+            <p class="text-gray-600">CloudEats Kitchen</p>
+            <p class="text-sm text-gray-500">Bangalore • 5 Brands</p>
+          </div>
+        </div>
+        
+        <div class="mb-6">
+          <p class="text-gray-700 italic mb-4">
+            "Cloud kitchen was supposed to be easier. It was chaos. 
+            5 brands, 10 aggregators, 300 orders, 1 exhausted me.
+          </p>
+          <p class="text-gray-700 italic mb-4">
+            RestoPi synced everything. One dashboard. All platforms. 
+            Waste went from 30% to 8%. Profit margins doubled.
+          </p>
+          <p class="text-gray-700 italic">
+            Started playing cricket again. Weekends with college friends. 
+            My wife said 'I got my husband back.' ₹4L saved is great. 
+            But my life back? Priceless."
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-4 text-center">
+          <div class="bg-white p-3 rounded-lg">
+            <p class="text-2xl font-bold text-green-600">₹4.2L</p>
+            <p class="text-xs text-gray-600">Monthly Saved</p>
+          </div>
+          <div class="bg-white p-3 rounded-lg">
+            <p class="text-2xl font-bold text-blue-600">5 Brands</p>
+            <p class="text-xs text-gray-600">1 Dashboard</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Video Testimonial CTA -->
+    <div class="text-center mt-12">
+      <p class="text-lg text-gray-600 mb-4">
+        Watch 100+ video testimonials from liberated restaurant owners
+      </p>
+      <a href="/success-stories" class="text-indigo-600 hover:text-indigo-700 font-bold text-lg">
+        See All Liberation Stories →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Final Urgency & CTA Section -->
+<section class="py-20 px-4 liberation-gradient text-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <!-- The Clock is Ticking -->
+    <div class="mb-12">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-6">
+        Every Day You Wait = ₹6,000 Lost Forever
+      </h2>
+      <div class="bg-black/30 backdrop-blur-sm rounded-2xl p-8 inline-block">
+        <p class="text-2xl mb-4">While you read this page:</p>
+        <div class="grid grid-cols-3 gap-8">
+          <div>
+            <p class="text-3xl font-bold gradient-text">₹18,000</p>
+            <p class="text-sm">Lost in last hour</p>
+          </div>
+          <div>
+            <p class="text-3xl font-bold gradient-text">23 Owners</p>
+            <p class="text-sm">Started liberation</p>
+          </div>
+          <div>
+            <p class="text-3xl font-bold gradient-text">3 Spots</p>
+            <p class="text-sm">Left today</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- The Decision -->
+    <div class="mb-12">
+      <h3 class="text-2xl font-bold mb-6">You Have Two Choices:</h3>
+      <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+        <div class="bg-red-600/20 backdrop-blur-sm rounded-xl p-6 border-2 border-red-400">
+          <h4 class="text-xl font-bold mb-3">Option 1: Do Nothing</h4>
+          <p>Continue the 16-hour days. Miss more birthdays. Lose ₹2 lakhs monthly. Watch competitors thrive while you survive.</p>
+        </div>
+        <div class="bg-green-600/20 backdrop-blur-sm rounded-xl p-6 border-2 border-green-400">
+          <h4 class="text-xl font-bold mb-3">Option 2: Take Control</h4>
+          <p>4-hour setup today. See savings this week. Home by 10 PM this month. Build the life you started the restaurant for.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Final CTA -->
+    <div>
+      <p class="text-2xl font-bold mb-6 gradient-text">
+        Your Family is Waiting. Your Life is Waiting. Freedom is Waiting.
+      </p>
+      
+      <a 
+        href="https://wa.me/919884248927?text=I choose liberation. Start my RestoPi journey NOW!"
+        target="_blank"
+        class="inline-block bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black px-12 py-6 rounded-full text-2xl font-black transition-all transform hover:scale-105 shadow-2xl mb-6"
+        onclick="window.trackEvent && window.trackEvent('final_cta_clicked', {page: 'home'})"
+      >
+        🚀 START MY LIBERATION NOW
+      </a>
+      
+      <div class="space-y-2 text-sm">
+        <p>✓ 60-Day Money Back Guarantee</p>
+        <p>✓ 4-Hour Expert Setup</p>
+        <p>✓ No Technical Skills Required</p>
+        <p>✓ Cancel Anytime</p>
+      </div>
+      
+      <div class="mt-8 p-4 bg-yellow-500/20 rounded-lg">
+        <p class="text-yellow-300 font-bold">
+          ⚠️ Price increases ₹5,000 on January 1st. Lock current pricing now.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<Footer />
+<WhatsAppButton />
+
+<script>
+  // Enhanced Waste Counter with acceleration
+  let counter = 847293;
+  let acceleration = 50;
+  setInterval(() => {
+    acceleration = Math.min(acceleration * 1.001, 500);
+    counter += Math.floor(Math.random() * acceleration) + acceleration;
+    const element = document.getElementById('waste-counter');
+    if (element) {
+      element.textContent = counter.toLocaleString('en-IN');
+    }
+  }, 1000);
+  
+  // Savings Preview Interactive
+  document.querySelectorAll('.segment-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const savings = this.dataset.savings;
+      document.getElementById('savings-preview').textContent = parseInt(savings).toLocaleString('en-IN');
+      
+      // Highlight selected
+      document.querySelectorAll('.segment-btn').forEach(b => b.classList.remove('bg-white/20'));
+      this.classList.add('bg-white/20');
+    });
+  });
+  
+  // Dynamic Spots Remaining
+  let spots = 7;
+  setInterval(() => {
+    if (Math.random() > 0.7 && spots > 2) {
+      spots--;
+      document.getElementById('spots-remaining').textContent = spots;
+    }
+  }, 45000);
+  
+  // FOMO Notifications
+  const notifications = [
+    { location: 'Mumbai', type: 'QSR', amount: '2.3L' },
+    { location: 'Delhi', type: 'Fine Dining', amount: '3.8L' },
+    { location: 'Bangalore', type: 'Cloud Kitchen', amount: '1.9L' },
+    { location: 'Pune', type: 'Cafe', amount: '1.5L' },
+    { location: 'Chennai', type: 'Casual Dining', amount: '2.7L' }
+  ];
+  
+  let notifIndex = 0;
+  setTimeout(() => {
+    const showNotification = () => {
+      const notif = notifications[notifIndex % notifications.length];
+      const notifElement = document.getElementById('fomo-notification');
+      
+      notifElement.querySelector('p.font-semibold').textContent = 
+        `${notif.location} ${notif.type} Saved ₹${notif.amount}`;
+      notifElement.querySelector('p.text-sm').textContent = 
+        `Restaurant automated inventory ${Math.floor(Math.random() * 10) + 1} mins ago`;
+      
+      notifElement.classList.remove('hidden');
+      
+      setTimeout(() => {
+        notifElement.classList.add('hidden');
+      }, 5000);
+      
+      notifIndex++;
+    };
+    
+    showNotification();
+    setInterval(showNotification, 20000);
+  }, 5000);
+  
+  // Exit Intent Popup
+  let exitIntentShown = false;
+  document.addEventListener('mouseleave', (e) => {
+    if (e.clientY <= 0 && !exitIntentShown) {
+      exitIntentShown = true;
+      // Could trigger exit intent popup here
+      console.log('Exit intent triggered');
+    }
+  });
+  
+  // Track scroll depth
+  let maxScroll = 0;
+  window.addEventListener('scroll', () => {
+    const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    if (scrollPercent > maxScroll) {
+      maxScroll = scrollPercent;
+      if (window.trackEvent && scrollPercent > 25 && scrollPercent < 26) {
+        window.trackEvent('scroll_depth', { depth: '25%' });
+      }
+      if (window.trackEvent && scrollPercent > 50 && scrollPercent < 51) {
+        window.trackEvent('scroll_depth', { depth: '50%' });
+      }
+      if (window.trackEvent && scrollPercent > 75 && scrollPercent < 76) {
+        window.trackEvent('scroll_depth', { depth: '75%' });
+      }
+    }
+  });
+  
+  // Page engagement tracking
+  if (window.trackEvent) {
+    window.trackEvent('homepage_view', {
+      time_based_message: '{timeBasedMessage}',
+      urgency_message: '{urgencyMessage}',
+      is_weekend: {isWeekend},
+      is_night: {isNightTime}
+    });
+  }
+</script>
+
 </BaseLayout>

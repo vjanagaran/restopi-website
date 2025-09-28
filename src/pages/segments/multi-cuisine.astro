@@ -1,11 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
 ---
 
 <BaseLayout 
   title="Multi-Cuisine Liberation - Master All, Waste None | RestoPi"
   description="Transform your multi-cuisine restaurant from an inventory nightmare into a unified profit machine. Achieve ₹2.7L+ monthly savings across all cuisines."
 >
+
+<Navigation />
 
 <style>
   @keyframes worldSpin {
@@ -601,4 +606,6 @@ window.trackEvent('multi_cuisine_page_view', {
 });
 </script>
 
+<Footer />
+<WhatsAppButton />
 </BaseLayout>

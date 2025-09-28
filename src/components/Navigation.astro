@@ -1,8 +1,23 @@
 ---
 // src/components/Navigation.astro
+import segmentsData from '../data/segments.json';
+
+const solutions = [
+  { name: 'Waste Prevention', href: '/solutions/waste-prevention' },
+  { name: 'Demand Prediction', href: '/solutions/demand-prediction' },
+  { name: 'Profit Optimization', href: '/solutions/profit-optimization' },
+  { name: 'Staff Optimization', href: '/solutions/staff-optimization' },
+  { name: 'Multi-Outlet Management', href: '/solutions/multi-outlet-management' },
+  { name: 'Home by 10 PM', href: '/solutions/home-by-10pm' }
+];
+
+const segments = segmentsData.segments.map(segment => ({
+  name: segment.shortName,
+  href: `/segments/${segment.slug}`
+}));
 ---
 
-<nav class="fixed top-0 left-0 right-0 bg-[#2D2A6E] text-white z-40 shadow-lg">
+<nav class="fixed top-0 left-0 right-0 bg-[#2D2A6E] text-white z-50 shadow-lg">
   <div class="max-w-7xl mx-auto px-4">
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
@@ -14,8 +29,44 @@
       
       <!-- Desktop Menu -->
       <div class="hidden md:flex items-center space-x-8">
-        <a href="/solutions" class="hover:text-yellow-300 transition-colors">Solutions</a>
-        <a href="/segments" class="hover:text-yellow-300 transition-colors">Segments</a>
+        <!-- Solutions Mega Menu -->
+        <div class="relative group">
+          <button class="hover:text-yellow-300 transition-colors flex items-center">
+            Solutions
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute top-full left-0 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-200 bg-white text-gray-800 rounded-lg shadow-xl min-w-[280px] p-4 mt-2">
+            <div class="grid grid-cols-1 gap-2">
+              {solutions.map(solution => (
+                <a href={solution.href} class="block px-3 py-2 rounded hover:bg-gray-100 transition-colors text-sm">
+                  {solution.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Segments Mega Menu -->
+        <div class="relative group">
+          <button class="hover:text-yellow-300 transition-colors flex items-center">
+            Segments
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute top-full left-0 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-200 bg-white text-gray-800 rounded-lg shadow-xl min-w-[320px] p-4 mt-2">
+            <div class="grid grid-cols-2 gap-2">
+              {segments.map(segment => (
+                <a href={segment.href} class="block px-3 py-2 rounded hover:bg-gray-100 transition-colors text-sm">
+                  {segment.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
         <a href="/pricing" class="hover:text-yellow-300 transition-colors">Pricing</a>
         <a href="/resources" class="hover:text-yellow-300 transition-colors">Resources</a>
         <a href="/about" class="hover:text-yellow-300 transition-colors">About</a>
@@ -38,8 +89,40 @@
     
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden pb-4">
-      <a href="/solutions" class="block py-2 hover:text-yellow-300">Solutions</a>
-      <a href="/segments" class="block py-2 hover:text-yellow-300">Segments</a>
+      <!-- Solutions Mobile Submenu -->
+      <div class="mb-2">
+        <button id="mobile-solutions-toggle" class="flex items-center justify-between w-full py-2 hover:text-yellow-300 text-left">
+          Solutions
+          <svg class="w-4 h-4 transition-transform" id="mobile-solutions-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="mobile-solutions-menu" class="hidden pl-4 space-y-1">
+          {solutions.map(solution => (
+            <a href={solution.href} class="block py-1 text-sm text-gray-300 hover:text-yellow-300">
+              {solution.name}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Segments Mobile Submenu -->
+      <div class="mb-2">
+        <button id="mobile-segments-toggle" class="flex items-center justify-between w-full py-2 hover:text-yellow-300 text-left">
+          Segments
+          <svg class="w-4 h-4 transition-transform" id="mobile-segments-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="mobile-segments-menu" class="hidden pl-4 grid grid-cols-2 gap-1">
+          {segments.map(segment => (
+            <a href={segment.href} class="block py-1 text-xs text-gray-300 hover:text-yellow-300">
+              {segment.name}
+            </a>
+          ))}
+        </div>
+      </div>
+
       <a href="/pricing" class="block py-2 hover:text-yellow-300">Pricing</a>
       <a href="/resources" class="block py-2 hover:text-yellow-300">Resources</a>
       <a href="/about" class="block py-2 hover:text-yellow-300">About</a>
@@ -58,7 +141,25 @@
   const menuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
   
+  const solutionsToggle = document.getElementById('mobile-solutions-toggle');
+  const solutionsMenu = document.getElementById('mobile-solutions-menu');
+  const solutionsIcon = document.getElementById('mobile-solutions-icon');
+  
+  const segmentsToggle = document.getElementById('mobile-segments-toggle');
+  const segmentsMenu = document.getElementById('mobile-segments-menu');
+  const segmentsIcon = document.getElementById('mobile-segments-icon');
+  
   menuButton?.addEventListener('click', () => {
     mobileMenu?.classList.toggle('hidden');
+  });
+  
+  solutionsToggle?.addEventListener('click', () => {
+    solutionsMenu?.classList.toggle('hidden');
+    solutionsIcon?.classList.toggle('rotate-180');
+  });
+  
+  segmentsToggle?.addEventListener('click', () => {
+    segmentsMenu?.classList.toggle('hidden');
+    segmentsIcon?.classList.toggle('rotate-180');
   });
 </script>

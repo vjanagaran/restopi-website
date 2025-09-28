@@ -1,11 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
 ---
 
 <BaseLayout 
   title="Cafe Liberation - Lifestyle Business, Not Life Prison | RestoPi"
   description="Transform your cafe from a 14-hour lifestyle trap into a profitable passion project. Achieve ₹2L+ monthly savings while living the cafe dream you originally envisioned."
 >
+
+<Navigation />
 
 <style>
   @keyframes coffeeSwirl {
@@ -665,4 +670,6 @@ window.trackEvent('cafe_page_view', {
 });
 </script>
 
+<Footer />
+<WhatsAppButton />
 </BaseLayout>

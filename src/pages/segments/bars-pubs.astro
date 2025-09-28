@@ -1,11 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
 ---
 
 <BaseLayout 
   title="Bar & Pub Liberation - Pour Profits, Not Losses | RestoPi"
   description="Transform your bar from a pour-cost nightmare into a profit powerhouse. Achieve ₹3L+ monthly savings while building the social hub you dreamed of."
 >
+
+<Navigation />
 
 <style>
   @keyframes pourFlow {
@@ -598,4 +603,6 @@ window.trackEvent('bar_pub_page_view', {
 });
 </script>
 
+<Footer />
+<WhatsAppButton />
 </BaseLayout>

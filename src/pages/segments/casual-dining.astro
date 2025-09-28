@@ -1,11 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
 ---
 
 <BaseLayout 
   title="Casual Dining Liberation - Balance Without Burnout | RestoPi"
   description="Transform your casual dining restaurant from chaos to calm. Achieve ₹3L+ monthly savings while maintaining the perfect balance of quality and efficiency."
 >
+
+<Navigation />
 
 <style>
   @keyframes balanceFloat {
@@ -43,74 +48,104 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 </style>
 
 <!-- Hero Section: The Balance Struggle -->
-<section class="balance-gradient text-white py-20 relative overflow-hidden casual-dining-bg">
-  <div class="container mx-auto px-6 text-center relative z-10">
-    <div class="mb-8">
-      <span class="inline-block balance-icon text-6xl mb-4">⚖️</span>
-      <h1 class="text-6xl font-black mb-6 leading-tight">
-        The <span class="text-yellow-300">Impossible Balance</span><br>
-        Quality vs. <span class="casual-accent">Speed vs. Profit</span>
+<section class="bg-gradient-to-br from-orange-900 via-red-800 to-orange-700 text-white py-20 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <div class="inline-block bg-orange-600/20 backdrop-blur-sm border border-orange-300/30 text-orange-100 px-6 py-3 rounded-full text-sm font-bold mb-6">
+        ⚖️ CASUAL DINING CAUGHT IN THE IMPOSSIBLE BALANCE
+      </div>
+      <h1 class="text-5xl md:text-7xl font-black mb-8 leading-tight">
+        Casual Dining Owners:<br/>
+        <span class="text-orange-300">Stop the</span> ₹3.2 Lakh 
+        <span class="text-red-300">Balance Nightmare</span>
       </h1>
-    </div>
-    
-    <div class="max-w-4xl mx-auto mb-12">
-      <p class="text-2xl text-gray-200 mb-8 leading-relaxed">
-        You're stuck in the middle ground - too fast for fine dining, too slow for quick service. 
-        Customers want restaurant quality at QSR speed, while you're <span class="text-red-300 font-bold">bleeding profits</span> 
-        trying to please everyone.
+      <p class="text-2xl md:text-3xl text-orange-100 mb-8 max-w-4xl mx-auto leading-relaxed">
+        Stuck between fast food and fine dining - customers want quality at speed while you're 
+        <span class="text-red-400 font-bold">bleeding profits</span> trying to be everything to everyone.
+        <span class="text-yellow-300 font-bold">Master the perfect balance without the chaos.</span>
       </p>
       
-      <div class="grid md:grid-cols-2 gap-8 mb-12">
-        <div class="bg-red-900/40 p-6 rounded-lg border border-red-400/30">
-          <h3 class="text-xl font-bold text-red-300 mb-4">😵 The Balancing Act Crisis</h3>
-          <ul class="text-left space-y-2 text-gray-200">
-            <li>• Rushed service = disappointed customers</li>
-            <li>• Quality focus = long wait times & complaints</li>
-            <li>• Staff overwhelmed during peak hours</li>
-            <li>• Wasting ₹3-5 lakhs monthly on efficiency gaps</li>
-            <li>• Working 14+ hours with no time for family</li>
-          </ul>
+      <!-- Balance Problem Stats -->
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+        <div class="bg-orange-800/50 backdrop-blur-sm rounded-lg p-6 border border-orange-600/30">
+          <div class="text-4xl font-black text-orange-300 mb-2">12 Min</div>
+          <div class="text-orange-100">Average Wait Time Kills Business</div>
         </div>
-        
-        <div class="bg-green-900/40 p-6 rounded-lg border border-green-400/30">
-          <h3 class="text-xl font-bold text-green-300 mb-4">⚡ The Perfect Balance</h3>
-          <ul class="text-left space-y-2 text-gray-200">
-            <li>• Consistent quality at optimal speed</li>
-            <li>• Happy customers, shorter wait times</li>
-            <li>• Empowered staff handling peak hours smoothly</li>
-            <li>• Saving ₹3-5 lakhs monthly through efficiency</li>
-            <li>• Home by 9 PM with peace of mind</li>
-          </ul>
+        <div class="bg-red-800/50 backdrop-blur-sm rounded-lg p-6 border border-red-600/30">
+          <div class="text-4xl font-black text-red-300 mb-2">₹3.2L</div>
+          <div class="text-red-100">Monthly Loss from Poor Balance</div>
+        </div>
+        <div class="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-600/30">
+          <div class="text-4xl font-black text-gray-300 mb-2">18%</div>
+          <div class="text-gray-100">Food Waste from Wrong Prep</div>
         </div>
       </div>
+
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href="https://wa.me/919884248927?text=SOLVE%20my%20casual%20dining%20balance%20nightmare!" 
+           class="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-400 hover:to-orange-500 text-white px-12 py-6 rounded-xl font-black text-2xl transition-all transform hover:scale-105 shadow-2xl">
+          ⚖️ ACHIEVE PERFECT BALANCE
+        </a>
+        <a href="/demo" 
+           class="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-12 py-6 rounded-xl font-black text-2xl transition-all border-2 border-white/30">
+          See Balance Solution
+        </a>
+      </div>
+      
+      <div class="mt-8 text-orange-200">
+        <p class="text-lg">⚡ 8-Minute Service &nbsp;•&nbsp; 💰 Quality Without Compromise &nbsp;•&nbsp; 📈 3x Higher Profits</p>
+      </div>
+    
+    <!-- Before/After Balance Comparison -->
+    <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <div class="bg-red-800/30 backdrop-blur-sm rounded-2xl p-8 border border-red-600/30">
+        <h3 class="text-2xl font-black text-red-300 mb-6 flex items-center gap-3">
+          😵 The Balancing Act Crisis
+        </h3>
+        <ul class="space-y-4 text-red-100">
+          <li class="flex items-start gap-3">
+            <span class="text-red-400 text-xl">⏱️</span>
+            <span>Rushed service = disappointed customers</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-red-400 text-xl">🐌</span>
+            <span>Quality focus = long wait times & complaints</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-red-400 text-xl">😰</span>
+            <span>Staff overwhelmed during peak hours</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-red-400 text-xl">💸</span>
+            <span>Wasting ₹3-5 lakhs monthly on efficiency gaps</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="bg-orange-800/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-600/30">
+        <h3 class="text-2xl font-black text-orange-300 mb-6 flex items-center gap-3">
+          ⚡ The Perfect Balance
+        </h3>
+        <ul class="space-y-4 text-orange-100">
+          <li class="flex items-start gap-3">
+            <span class="text-orange-400 text-xl">🎯</span>
+            <span>Consistent quality at optimal 8-minute service</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-orange-400 text-xl">😊</span>
+            <span>Happy customers, shorter wait times</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-orange-400 text-xl">💪</span>
+            <span>Empowered staff handling peak hours smoothly</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-orange-400 text-xl">💰</span>
+            <span>Saving ₹3-5 lakhs monthly through efficiency</span>
+          </li>
+        </ul>
+      </div>
     </div>
-    
-    <!-- Live Balance Metrics -->
-    <div class="grid md:grid-cols-3 gap-6 mb-12">
-      <div class="balance-counter bg-black/50 p-6 rounded-lg border border-orange-400/30">
-        <div class="text-3xl font-black text-orange-300">₹4,23,000</div>
-        <div class="text-sm text-gray-300">Saved by casual dining this month</div>
-      </div>
-      <div class="balance-counter bg-black/50 p-6 rounded-lg border border-orange-400/30">
-        <div class="text-3xl font-black text-yellow-300">8.5 min</div>
-        <div class="text-sm text-gray-300">Average service time now</div>
-      </div>
-      <div class="balance-counter bg-black/50 p-6 rounded-lg border border-orange-400/30">
-        <div class="text-3xl font-black text-green-300">89</div>
-        <div class="text-sm text-gray-300">Casual dining owners balanced</div>
-      </div>
-    </div>
-    
-    <button 
-      onclick="window.trackEvent('hero_cta_clicked', {segment: 'casual_dining', position: 'hero'}); window.open('https://wa.me/918047366622?text=I want to achieve the perfect balance in my casual dining restaurant - quality, speed, and profits', '_blank')"
-      class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-12 py-6 rounded-lg text-xl font-bold hover:from-orange-400 hover:to-red-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
-    >
-      ⚖️ Achieve Perfect Balance Now
-    </button>
-    
-    <p class="mt-4 text-gray-300">
-      <span class="text-red-300 font-bold">REALITY CHECK:</span> Every day of imbalance costs you ₹12,000+
-    </p>
   </div>
 </section>
 
@@ -663,4 +698,6 @@ window.trackEvent('casual_dining_page_view', {
 });
 </script>
 
+<Footer />
+<WhatsAppButton />
 </BaseLayout>

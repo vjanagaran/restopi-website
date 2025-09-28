@@ -1,11 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
 ---
 
 <BaseLayout 
   title="Cloud Kitchen Scale Revolution - Invisible Empire Builder | RestoPi"
   description="Transform your cloud kitchen from order chaos to scaling machine. Achieve ₹4L+ monthly savings while building your invisible food empire."
 >
+
+<Navigation />
 
 <style>
   @keyframes cloudFloat {
@@ -665,4 +670,6 @@ window.trackEvent('cloud_kitchen_page_view', {
 });
 </script>
 
+<Footer />
+<WhatsAppButton />
 </BaseLayout>
